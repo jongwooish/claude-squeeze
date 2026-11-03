@@ -1,6 +1,6 @@
 # claude-squeeze
 
-[![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](../v0.1_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](../v0.1_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#설치) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
+[![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](../V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](../V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#설치) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
 
 [English](../README.md) | **한국어** | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
 
@@ -20,7 +20,7 @@ squeeze는 그 출력이 컨텍스트에 들어가기 **전에** 막습니다.
 
 ## 효과
 
-실제 로그 7개를 squeeze에 통과시킨 결과입니다 ([측정 방법](../v0.1_squeeze-sentinel/docs/bench.md)):
+실제 로그 7개를 squeeze에 통과시킨 결과입니다 ([측정 방법](../V0.1-Sentinel/v0.1_squeeze-sentinel/docs/bench.md)):
 
 | 로그 | 줄 수 전 → 후 | 토큰 전 → 후 (추정) | 절약 | 에러·경고 메시지 보존 |
 |---|---:|---:|---:|---:|
@@ -49,7 +49,7 @@ squeeze는 그 출력이 컨텍스트에 들어가기 **전에** 막습니다.
 
 | 버전 | 이름 | 추가되는 것 | 상태 |
 |---|---|---|---|
-| [v0.1](../v0.1_squeeze-sentinel/README/README.ko.md) | **Sentinel** | 출력이 많은 명령과 큰 파일 통째 읽기를 잡는 Claude Code 훅, `squeeze run`, `compress`, `clip`, `report` | ✅ v0.1.0 |
+| [v0.1](../V0.1-Sentinel/v0.1_squeeze-sentinel/README/README.ko.md) | **Sentinel** | 출력이 많은 명령과 큰 파일 통째 읽기를 잡는 Claude Code 훅, `squeeze run`, `compress`, `clip`, `report` | ✅ v0.1.0 |
 | v0.2 | **Interceptor** | claude.ai에 긴 텍스트를 붙여넣을 때 줄일지 물어보는 브라우저 확장 | 🛠 계획 중 |
 | v0.3 | **Conduit** | Claude 데스크톱 앱용 MCP 서버: Claude가 로그를 이미 줄인 상태로 읽음 | 🛠 계획 중 |
 
@@ -122,7 +122,7 @@ FAILED test_inventory.py::test_missing_sku - KeyError: 'B7'
 [squeeze] 217 lines (15.8 KB) → 39 lines (1.9 KB). Full output: .squeeze/raw/20261103-044044-45b0e7.log (exit 1)
 ```
 
-v0.1 전체 문서: [v0.1_squeeze-sentinel/README.ko.md](../v0.1_squeeze-sentinel/README/README.ko.md). 한국어 가이드: [docs/guide](../v0.1_squeeze-sentinel/docs/guide/index.md).
+v0.1 전체 문서: [V0.1-Sentinel/v0.1_squeeze-sentinel/README.ko.md](../V0.1-Sentinel/v0.1_squeeze-sentinel/README/README.ko.md). 한국어 가이드: [docs/guide](../V0.1-Sentinel/v0.1_squeeze-sentinel/docs/guide/index.md).
 
 ## 설치
 
@@ -170,7 +170,7 @@ squeeze report    # 컨텍스트에서 막아낸 양 확인
 | `squeeze bench <폴더> [--markdown]` | `*.log` 재생해서 측정 |
 | `squeeze version` | 버전 출력 |
 
-명령 앞에 `SQUEEZE_SKIP=1`을 붙이면 그 명령만 원본 출력을 받습니다. 설정은 `.squeeze/config.json` ([전체 키](../v0.1_squeeze-sentinel/README/README.ko.md#설정)).
+명령 앞에 `SQUEEZE_SKIP=1`을 붙이면 그 명령만 원본 출력을 받습니다. 설정은 `.squeeze/config.json` ([전체 키](../V0.1-Sentinel/v0.1_squeeze-sentinel/README/README.ko.md#설정)).
 
 ## 동작 원리
 
@@ -232,11 +232,12 @@ A. 앞자리가 0인 동안은 명령 이름이나 설정이 바뀔 수 있다�
 claude-squeeze/
 ├── README.md                    ← 프로젝트 소개 (영어, 기본)
 ├── readme/                      ← 번역본: 한국어, 일본어, 중국어, 스페인어, 프랑스어
-├── v0.1_squeeze-sentinel/       ← v0.1: CLI + Claude Code 훅 (Rust, 의존성 없음)
-│   ├── README/                     v0.1 전체 문서 (6개 언어)
-│   ├── src/
-│   ├── docs/                       벤치마크 방법, 사용자 가이드(한국어)
-│   └── testdata/fixtures/          테스트와 벤치마크에 쓰는 로그
+├── V0.1-Sentinel/
+│   └── v0.1_squeeze-sentinel/   ← v0.1: CLI + Claude Code 훅 (Rust, 의존성 없음)
+│       ├── README/                     v0.1 전체 문서 (6개 언어)
+│       ├── src/
+│       ├── docs/                       벤치마크 방법, 사용자 가이드(한국어)
+│       └── testdata/fixtures/          테스트와 벤치마크에 쓰는 로그
 ├── install.sh / install.ps1
 ├── changelog/                   ← CHANGELOG 6개 언어
 └── Cargo.toml                   ← 워크스페이스
@@ -247,10 +248,10 @@ claude-squeeze/
 ```bash
 cargo test
 cargo clippy --all-targets -- -D warnings
-cargo run --release -- bench v0.1_squeeze-sentinel/testdata/fixtures
+cargo run --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
-새 테스트 로그를 환영합니다: 실제 `*.log`(비밀 정보와 개인 경로 제거)를 `v0.1_squeeze-sentinel/testdata/fixtures/`에 추가하세요. 에러·경고가 하나라도 사라지면 테스트가 실패합니다. 버그와 아이디어: [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues).
+새 테스트 로그를 환영합니다: 실제 `*.log`(비밀 정보와 개인 경로 제거)를 `V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures/`에 추가하세요. 에러·경고가 하나라도 사라지면 테스트가 실패합니다. 버그와 아이디어: [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues).
 
 ## 커뮤니티
 

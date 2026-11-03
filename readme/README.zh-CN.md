@@ -1,6 +1,6 @@
 # claude-squeeze
 
-[![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](../v0.1_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](../v0.1_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#安装) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
+[![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](../V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](../V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#安装) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
 
 [English](../README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | **简体中文** | [Español](README.es.md) | [Français](README.fr.md)
 
@@ -20,7 +20,7 @@ squeeze 在这些输出进入上下文**之前**就把它们拦下。
 
 ## 效果
 
-用 squeeze 处理 7 份真实日志的结果（[测量方法](../v0.1_squeeze-sentinel/docs/bench.md)）：
+用 squeeze 处理 7 份真实日志的结果（[测量方法](../V0.1-Sentinel/v0.1_squeeze-sentinel/docs/bench.md)）：
 
 | 日志 | 行数 前 → 后 | Token 前 → 后（估算） | 节省 | 保留的不同错误/警告 |
 |---|---:|---:|---:|---:|
@@ -49,7 +49,7 @@ squeeze 在这些输出进入上下文**之前**就把它们拦下。
 
 | 版本 | 名称 | 新增内容 | 状态 |
 |---|---|---|---|
-| [v0.1](../v0.1_squeeze-sentinel/README/README.zh-CN.md) | **Sentinel** | 拦截高输出命令和整文件读取的 Claude Code 钩子，`squeeze run`、`compress`、`clip`、`report` | ✅ v0.1.0 |
+| [v0.1](../V0.1-Sentinel/v0.1_squeeze-sentinel/README/README.zh-CN.md) | **Sentinel** | 拦截高输出命令和整文件读取的 Claude Code 钩子，`squeeze run`、`compress`、`clip`、`report` | ✅ v0.1.0 |
 | v0.2 | **Interceptor** | 在 claude.ai 粘贴长文本时询问是否压缩的浏览器扩展 | 🛠 计划中 |
 | v0.3 | **Conduit** | 面向 Claude 桌面应用的 MCP 服务器：Claude 读取的日志已经压缩好 | 🛠 计划中 |
 
@@ -122,7 +122,7 @@ FAILED test_inventory.py::test_missing_sku - KeyError: 'B7'
 [squeeze] 217 lines (15.8 KB) → 39 lines (1.9 KB). Full output: .squeeze/raw/20261103-044044-45b0e7.log (exit 1)
 ```
 
-v0.1 完整文档：[v0.1_squeeze-sentinel/README.zh-CN.md](../v0.1_squeeze-sentinel/README/README.zh-CN.md)。
+v0.1 完整文档：[V0.1-Sentinel/v0.1_squeeze-sentinel/README.zh-CN.md](../V0.1-Sentinel/v0.1_squeeze-sentinel/README/README.zh-CN.md)。
 
 ## 安装
 
@@ -170,7 +170,7 @@ squeeze report    # 查看挡在上下文之外的量
 | `squeeze bench <dir> [--markdown]` | 回放 `*.log` 文件并测量 |
 | `squeeze version` | 显示版本 |
 
-在命令前加 `SQUEEZE_SKIP=1` 可以让这一次拿到原始输出。配置在 `.squeeze/config.json`（[全部选项](../v0.1_squeeze-sentinel/README/README.zh-CN.md#配置)）。
+在命令前加 `SQUEEZE_SKIP=1` 可以让这一次拿到原始输出。配置在 `.squeeze/config.json`（[全部选项](../V0.1-Sentinel/v0.1_squeeze-sentinel/README/README.zh-CN.md#配置)）。
 
 ## 工作原理
 
@@ -232,11 +232,12 @@ Claude 运行: squeeze run -- 'npm test'   （照常应用你的权限规则）
 claude-squeeze/
 ├── README.md                    ← 项目概览（英文，默认）
 ├── readme/                      ← 译文：韩语、日语、中文、西班牙语、法语
-├── v0.1_squeeze-sentinel/       ← v0.1：CLI + Claude Code 钩子（Rust，无依赖）
-│   ├── README/                     v0.1 完整文档（6 种语言）
-│   ├── src/
-│   ├── docs/                       基准测试方法、用户指南（韩语）
-│   └── testdata/fixtures/          测试和基准测试使用的日志
+├── V0.1-Sentinel/
+│   └── v0.1_squeeze-sentinel/   ← v0.1：CLI + Claude Code 钩子（Rust，无依赖）
+│       ├── README/                     v0.1 完整文档（6 种语言）
+│       ├── src/
+│       ├── docs/                       基准测试方法、用户指南（韩语）
+│       └── testdata/fixtures/          测试和基准测试使用的日志
 ├── install.sh / install.ps1
 ├── changelog/                   ← CHANGELOG（6 种语言）
 └── Cargo.toml                   ← 工作区
@@ -247,10 +248,10 @@ claude-squeeze/
 ```bash
 cargo test
 cargo clippy --all-targets -- -D warnings
-cargo run --release -- bench v0.1_squeeze-sentinel/testdata/fixtures
+cargo run --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
-欢迎提交新的测试日志：把真实的 `*.log`（去掉敏感信息和个人路径）放进 `v0.1_squeeze-sentinel/testdata/fixtures/`。只要丢失任何一条不同的错误或警告，测试就会失败。问题和想法：[GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues)。
+欢迎提交新的测试日志：把真实的 `*.log`（去掉敏感信息和个人路径）放进 `V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures/`。只要丢失任何一条不同的错误或警告，测试就会失败。问题和想法：[GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues)。
 
 ## 社区
 

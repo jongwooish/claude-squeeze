@@ -1,6 +1,6 @@
 # claude-squeeze
 
-[![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](../v0.1_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](../v0.1_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#installation) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
+[![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](../V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](../V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#installation) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
 
 [English](../README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | **Français**
 
@@ -20,7 +20,7 @@ squeeze arrête cette sortie **avant** qu'elle n'entre dans le contexte.
 
 ## Effet
 
-Sept logs réels passés dans squeeze ([méthode](../v0.1_squeeze-sentinel/docs/bench.md)) :
+Sept logs réels passés dans squeeze ([méthode](../V0.1-Sentinel/v0.1_squeeze-sentinel/docs/bench.md)) :
 
 | Log | Lignes avant → après | Tokens avant → après (est.) | Économie | Erreurs/avertissements distincts conservés |
 |---|---:|---:|---:|---:|
@@ -49,7 +49,7 @@ Chaque version a son propre dossier et son README. Les releases sont des tags su
 
 | Version | Nom | Ce qu'elle ajoute | Statut |
 |---|---|---|---|
-| [v0.1](../v0.1_squeeze-sentinel/README/README.fr.md) | **Sentinel** | Hooks Claude Code qui interceptent les commandes bavardes et les lectures de fichiers entiers, `squeeze run`, `compress`, `clip`, `report` | ✅ v0.1.0 |
+| [v0.1](../V0.1-Sentinel/v0.1_squeeze-sentinel/README/README.fr.md) | **Sentinel** | Hooks Claude Code qui interceptent les commandes bavardes et les lectures de fichiers entiers, `squeeze run`, `compress`, `clip`, `report` | ✅ v0.1.0 |
 | v0.2 | **Interceptor** | Extension de navigateur qui propose de réduire un long texte quand vous le collez dans claude.ai | 🛠 Prévue |
 | v0.3 | **Conduit** | Serveur MCP pour l'application de bureau Claude : Claude lit vos logs déjà réduits | 🛠 Prévue |
 
@@ -122,7 +122,7 @@ FAILED test_inventory.py::test_missing_sku - KeyError: 'B7'
 [squeeze] 217 lines (15.8 KB) → 39 lines (1.9 KB). Full output: .squeeze/raw/20261103-044044-45b0e7.log (exit 1)
 ```
 
-Documentation complète de la v0.1 : [v0.1_squeeze-sentinel/README.fr.md](../v0.1_squeeze-sentinel/README/README.fr.md).
+Documentation complète de la v0.1 : [V0.1-Sentinel/v0.1_squeeze-sentinel/README.fr.md](../V0.1-Sentinel/v0.1_squeeze-sentinel/README/README.fr.md).
 
 ## Installation
 
@@ -170,7 +170,7 @@ squeeze report    # voyez ce qui est resté hors du contexte
 | `squeeze bench <dir> [--markdown]` | Rejouer des fichiers `*.log` et mesurer |
 | `squeeze version` | Afficher la version |
 
-Préfixez une commande par `SQUEEZE_SKIP=1` pour obtenir une fois sa sortie brute. La configuration est dans `.squeeze/config.json` ([toutes les clés](../v0.1_squeeze-sentinel/README/README.fr.md#configuration)).
+Préfixez une commande par `SQUEEZE_SKIP=1` pour obtenir une fois sa sortie brute. La configuration est dans `.squeeze/config.json` ([toutes les clés](../V0.1-Sentinel/v0.1_squeeze-sentinel/README/README.fr.md#configuration)).
 
 ## Fonctionnement
 
@@ -232,11 +232,12 @@ R. Tant que la version majeure vaut 0, les noms de commandes et la configuration
 claude-squeeze/
 ├── README.md                    ← présentation du projet (anglais, par défaut)
 ├── readme/                      ← traductions : coréen, japonais, chinois, espagnol, français
-├── v0.1_squeeze-sentinel/       ← v0.1 : CLI + hooks Claude Code (Rust, sans dépendance)
-│   ├── README/                     documentation complète de la v0.1 (6 langues)
-│   ├── src/
-│   ├── docs/                       méthode du benchmark, guide utilisateur (coréen)
-│   └── testdata/fixtures/          logs utilisés par les tests et le benchmark
+├── V0.1-Sentinel/
+│   └── v0.1_squeeze-sentinel/   ← v0.1 : CLI + hooks Claude Code (Rust, sans dépendance)
+│       ├── README/                     documentation complète de la v0.1 (6 langues)
+│       ├── src/
+│       ├── docs/                       méthode du benchmark, guide utilisateur (coréen)
+│       └── testdata/fixtures/          logs utilisés par les tests et le benchmark
 ├── install.sh / install.ps1
 ├── changelog/                   ← CHANGELOG en 6 langues
 └── Cargo.toml                   ← workspace
@@ -247,10 +248,10 @@ claude-squeeze/
 ```bash
 cargo test
 cargo clippy --all-targets -- -D warnings
-cargo run --release -- bench v0.1_squeeze-sentinel/testdata/fixtures
+cargo run --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
-Les nouveaux logs de test sont bienvenus : ajoutez un vrai `*.log` (sans secrets ni chemins personnels) dans `v0.1_squeeze-sentinel/testdata/fixtures/`. Les tests échouent si une erreur ou un avertissement distinct est perdu. Bugs et idées : [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues).
+Les nouveaux logs de test sont bienvenus : ajoutez un vrai `*.log` (sans secrets ni chemins personnels) dans `V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures/`. Les tests échouent si une erreur ou un avertissement distinct est perdu. Bugs et idées : [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues).
 
 ## Communauté
 

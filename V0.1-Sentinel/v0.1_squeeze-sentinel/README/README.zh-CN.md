@@ -4,13 +4,13 @@
 
 > 💬 **欢迎反馈。** 改进建议、v1.0 发布、版本更新、安装错误或任何其他问题，请[提交 Issue](https://github.com/jongwooish/claude-squeeze/issues/new/choose)（支持 6 种语言）。
 
-← [返回 squeeze](../../readme/README.zh-CN.md)
+← [返回 squeeze](../../../readme/README.zh-CN.md)
 
 Sentinel 是守在 Claude Code 和 shell 之间的哨兵。当 Claude 准备运行会塞满上下文的命令（安装、构建、测试、日志），或一次性读取巨大的文件时，Sentinel 会把它引导到简短的版本。Claude 依然能拿到每一条错误和警告。
 
 单个可执行文件，Rust 编写，**零依赖**，支持 macOS、Linux 和 Windows。
 
-**需要什么：** 无。这就是基础的 `squeeze` 程序。后续版本都建立在它之上：v0.3 Conduit 在同一个程序里新增命令（更新即可获得），v0.2 Interceptor 是一个独立的浏览器扩展，有没有它都能用。参见[各版本之间的关系](../../readme/README.zh-CN.md#各版本之间的关系)。
+**需要什么：** 无。这就是基础的 `squeeze` 程序。后续版本都建立在它之上：v0.3 Conduit 在同一个程序里新增命令（更新即可获得），v0.2 Interceptor 是一个独立的浏览器扩展，有没有它都能用。参见[各版本之间的关系](../../../readme/README.zh-CN.md#各版本之间的关系)。
 
 ## 效果
 
@@ -191,7 +191,7 @@ Claude 运行: squeeze run -- 'npm test'   （照常应用你的权限规则）
 ```bash
 cargo test                       # 单元测试（包括测试日志检查）
 cargo clippy -- -D warnings
-cargo run -- bench v0.1_squeeze-sentinel/testdata/fixtures
+cargo run -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
 欢迎提交新的测试日志：把真实的 `*.log`（先去掉敏感信息和个人路径）放进 `testdata/fixtures/`。只要丢失任何一条不同的错误或警告，测试就会失败。

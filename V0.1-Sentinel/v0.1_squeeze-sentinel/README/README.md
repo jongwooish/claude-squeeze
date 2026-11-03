@@ -4,13 +4,13 @@
 
 > 💬 **Feedback welcome.** Improvements, the v1.0 release, version updates, install errors or any other trouble: please [open an issue](https://github.com/jongwooish/claude-squeeze/issues/new/choose) (6 languages OK).
 
-← [Back to squeeze](../../README.md)
+← [Back to squeeze](../../../README.md)
 
 Sentinel stands guard between Claude Code and your shell. When Claude is about to run a command that floods the context (installs, builds, tests, logs) or read a huge file in one go, Sentinel redirects it to a short version. Claude still gets every error and warning.
 
 Single binary, written in Rust, **zero dependencies**. Works on macOS, Linux and Windows.
 
-**Requires:** nothing. This is the base `squeeze` program. Later versions build on it: v0.3 Conduit adds a command to this same program (update to get it), while v0.2 Interceptor is a separate browser extension that works with or without it. See [how the versions fit together](../../README.md#how-the-versions-fit-together).
+**Requires:** nothing. This is the base `squeeze` program. Later versions build on it: v0.3 Conduit adds a command to this same program (update to get it), while v0.2 Interceptor is a separate browser extension that works with or without it. See [how the versions fit together](../../../README.md#how-the-versions-fit-together).
 
 ## Effect
 
@@ -191,7 +191,7 @@ Please leave improvements and problems in [Issues](https://github.com/jongwooish
 ```bash
 cargo test                       # unit tests, including fixture checks
 cargo clippy -- -D warnings
-cargo run -- bench v0.1_squeeze-sentinel/testdata/fixtures
+cargo run -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
 New fixtures are welcome: add a real `*.log` (remove secrets and personal paths first) to `testdata/fixtures/`. The tests fail if any distinct error or warning is lost.

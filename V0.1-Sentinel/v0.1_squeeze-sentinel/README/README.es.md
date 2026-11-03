@@ -4,13 +4,13 @@
 
 > 💬 **Se agradecen comentarios.** Mejoras, el lanzamiento de la v1.0, actualizaciones, errores de instalación o cualquier otro problema: [abre un issue](https://github.com/jongwooish/claude-squeeze/issues/new/choose) (6 idiomas).
 
-← [Volver a squeeze](../../readme/README.es.md)
+← [Volver a squeeze](../../../readme/README.es.md)
 
 Sentinel hace guardia entre Claude Code y tu shell. Cuando Claude va a ejecutar un comando que inunda el contexto (instalaciones, builds, tests, logs) o a leer de una vez un archivo enorme, Sentinel lo redirige a una versión corta. Claude sigue recibiendo cada error y advertencia.
 
 Un solo binario, escrito en Rust, **cero dependencias**. Funciona en macOS, Linux y Windows.
 
-**Requisitos:** ninguno. Este es el programa base `squeeze`. Las versiones posteriores se construyen sobre él: v0.3 Conduit añade un comando a este mismo programa (actualiza para tenerlo), mientras que v0.2 Interceptor es una extensión de navegador aparte que funciona con o sin él. Consulta [cómo encajan las versiones](../../readme/README.es.md#cómo-encajan-las-versiones).
+**Requisitos:** ninguno. Este es el programa base `squeeze`. Las versiones posteriores se construyen sobre él: v0.3 Conduit añade un comando a este mismo programa (actualiza para tenerlo), mientras que v0.2 Interceptor es una extensión de navegador aparte que funciona con o sin él. Consulta [cómo encajan las versiones](../../../readme/README.es.md#cómo-encajan-las-versiones).
 
 ## Efecto
 
@@ -191,7 +191,7 @@ Deja mejoras y problemas en [Issues](https://github.com/jongwooish/claude-squeez
 ```bash
 cargo test                       # tests unitarios, incluidas las comprobaciones de logs
 cargo clippy -- -D warnings
-cargo run -- bench v0.1_squeeze-sentinel/testdata/fixtures
+cargo run -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
 Se agradecen nuevos logs de prueba: añade un `*.log` real (quita antes secretos y rutas personales) a `testdata/fixtures/`. Los tests fallan si se pierde cualquier error o advertencia distinto.

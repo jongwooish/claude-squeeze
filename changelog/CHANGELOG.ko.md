@@ -6,7 +6,7 @@
 
 ## [0.1.0] - 2026-11-03 — Sentinel
 
-첫 릴리스. 코드는 [`v0.1_squeeze-sentinel/`](../v0.1_squeeze-sentinel/)에 있습니다.
+첫 릴리스. 코드는 [`V0.1-Sentinel/v0.1_squeeze-sentinel/`](../V0.1-Sentinel/v0.1_squeeze-sentinel/)에 있습니다.
 
 ### 추가
 

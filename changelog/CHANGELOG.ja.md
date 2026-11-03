@@ -6,7 +6,7 @@
 
 ## [0.1.0] - 2026-11-03 — Sentinel
 
-最初のリリース。コードは [`v0.1_squeeze-sentinel/`](../v0.1_squeeze-sentinel/) にあります。
+最初のリリース。コードは [`V0.1-Sentinel/v0.1_squeeze-sentinel/`](../V0.1-Sentinel/v0.1_squeeze-sentinel/) にあります。
 
 ### 追加
 

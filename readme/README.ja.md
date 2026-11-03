@@ -1,6 +1,6 @@
 # claude-squeeze
 
-[![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](../v0.1_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](../v0.1_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#インストール) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
+[![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](../V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](../V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#インストール) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
 
 [English](../README.md) | [한국어](README.ko.md) | **日本語** | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
 
@@ -20,7 +20,7 @@ squeeze はその出力がコンテキストに入る**前に**止めます。
 
 ## 効果
 
-実際のログ 7 件を squeeze に通した結果です（[測定方法](../v0.1_squeeze-sentinel/docs/bench.md)）:
+実際のログ 7 件を squeeze に通した結果です（[測定方法](../V0.1-Sentinel/v0.1_squeeze-sentinel/docs/bench.md)）:
 
 | ログ | 行数 前 → 後 | トークン 前 → 後（推定） | 削減 | エラー・警告メッセージの保持 |
 |---|---:|---:|---:|---:|
@@ -49,7 +49,7 @@ squeeze はその出力がコンテキストに入る**前に**止めます。
 
 | バージョン | 名前 | 追加されるもの | 状態 |
 |---|---|---|---|
-| [v0.1](../v0.1_squeeze-sentinel/README/README.ja.md) | **Sentinel** | 出力の多いコマンドと大きなファイルの丸読みを捕まえる Claude Code フック、`squeeze run`、`compress`、`clip`、`report` | ✅ v0.1.0 |
+| [v0.1](../V0.1-Sentinel/v0.1_squeeze-sentinel/README/README.ja.md) | **Sentinel** | 出力の多いコマンドと大きなファイルの丸読みを捕まえる Claude Code フック、`squeeze run`、`compress`、`clip`、`report` | ✅ v0.1.0 |
 | v0.2 | **Interceptor** | claude.ai に長いテキストを貼り付けたとき縮めるか尋ねるブラウザ拡張 | 🛠 予定 |
 | v0.3 | **Conduit** | Claude デスクトップアプリ用 MCP サーバー: Claude がログを縮めた状態で読む | 🛠 予定 |
 
@@ -122,7 +122,7 @@ FAILED test_inventory.py::test_missing_sku - KeyError: 'B7'
 [squeeze] 217 lines (15.8 KB) → 39 lines (1.9 KB). Full output: .squeeze/raw/20261103-044044-45b0e7.log (exit 1)
 ```
 
-v0.1 の詳しいドキュメント: [v0.1_squeeze-sentinel/README.ja.md](../v0.1_squeeze-sentinel/README/README.ja.md)。
+v0.1 の詳しいドキュメント: [V0.1-Sentinel/v0.1_squeeze-sentinel/README.ja.md](../V0.1-Sentinel/v0.1_squeeze-sentinel/README/README.ja.md)。
 
 ## インストール
 
@@ -170,7 +170,7 @@ squeeze report    # コンテキストから締め出した量を確認
 | `squeeze bench <dir> [--markdown]` | `*.log` を再生して測定 |
 | `squeeze version` | バージョンを表示 |
 
-コマンドの前に `SQUEEZE_SKIP=1` を付けると、そのコマンドだけ生の出力を得られます。設定は `.squeeze/config.json`（[全キー](../v0.1_squeeze-sentinel/README/README.ja.md#設定)）。
+コマンドの前に `SQUEEZE_SKIP=1` を付けると、そのコマンドだけ生の出力を得られます。設定は `.squeeze/config.json`（[全キー](../V0.1-Sentinel/v0.1_squeeze-sentinel/README/README.ja.md#設定)）。
 
 ## 仕組み
 
@@ -232,11 +232,12 @@ A. メジャーバージョンが 0 の間は、コマンド名や設定が変�
 claude-squeeze/
 ├── README.md                    ← プロジェクト概要（英語、既定）
 ├── readme/                      ← 翻訳: 韓国語、日本語、中国語、スペイン語、フランス語
-├── v0.1_squeeze-sentinel/       ← v0.1: CLI + Claude Code フック（Rust、依存なし）
-│   ├── README/                     v0.1 の詳しいドキュメント（6 言語）
-│   ├── src/
-│   ├── docs/                       ベンチマーク方法、ユーザーガイド（韓国語）
-│   └── testdata/fixtures/          テストとベンチマークで使うログ
+├── V0.1-Sentinel/
+│   └── v0.1_squeeze-sentinel/   ← v0.1: CLI + Claude Code フック（Rust、依存なし）
+│       ├── README/                     v0.1 の詳しいドキュメント（6 言語）
+│       ├── src/
+│       ├── docs/                       ベンチマーク方法、ユーザーガイド（韓国語）
+│       └── testdata/fixtures/          テストとベンチマークで使うログ
 ├── install.sh / install.ps1
 ├── changelog/                   ← CHANGELOG（6 言語）
 └── Cargo.toml                   ← ワークスペース
@@ -247,10 +248,10 @@ claude-squeeze/
 ```bash
 cargo test
 cargo clippy --all-targets -- -D warnings
-cargo run --release -- bench v0.1_squeeze-sentinel/testdata/fixtures
+cargo run --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
-新しいテストログを歓迎します: 実際の `*.log`（秘密情報と個人的なパスは削除）を `v0.1_squeeze-sentinel/testdata/fixtures/` に追加してください。エラー・警告が一つでも失われるとテストが失敗します。バグとアイデア: [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues)。
+新しいテストログを歓迎します: 実際の `*.log`（秘密情報と個人的なパスは削除）を `V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures/` に追加してください。エラー・警告が一つでも失われるとテストが失敗します。バグとアイデア: [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues)。
 
 ## コミュニティ
 
