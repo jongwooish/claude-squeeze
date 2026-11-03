@@ -2,13 +2,13 @@
 
 [English](README.md) | [한국어](README.ko.md) | **日本語** | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
 
-← [squeeze に戻る](../README.ja.md)
+← [squeeze に戻る](../readme/README.ja.md)
 
 Sentinel は Claude Code とシェルの間に立つ見張り番です。Claude がコンテキストをあふれさせるコマンド（インストール、ビルド、テスト、ログ）を実行しようとしたり、巨大なファイルを丸ごと読もうとしたりすると、Sentinel が短い版へ誘導します。Claude はエラーと警告をすべて受け取ります。
 
 単一バイナリ、Rust 製、**依存関係ゼロ**。macOS、Linux、Windows で動作します。
 
-**必要なもの:** なし。これが基本の `squeeze` プログラムです。以降のバージョンはこの上に積み上がります。v0.3 Conduit は同じプログラムにコマンドを追加し（更新すれば使えます）、v0.2 Interceptor はこのプログラムの有無にかかわらず動く別のブラウザ拡張です。[バージョン同士の関係](../README.ja.md#バージョン同士の関係)を参照。
+**必要なもの:** なし。これが基本の `squeeze` プログラムです。以降のバージョンはこの上に積み上がります。v0.3 Conduit は同じプログラムにコマンドを追加し（更新すれば使えます）、v0.2 Interceptor はこのプログラムの有無にかかわらず動く別のブラウザ拡張です。[バージョン同士の関係](../readme/README.ja.md#バージョン同士の関係)を参照。
 
 ## 効果
 

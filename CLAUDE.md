@@ -6,7 +6,7 @@ Guidance for Claude Code when working in this repository.
 
 - One folder per version. Now: `v0.1_squeeze-sentinel/`. Planned: `v0.2_squeeze-interceptor/` (browser extension), `v0.3_squeeze-conduit/` (MCP server).
 - Root `Cargo.toml` is a workspace. The `squeeze` binary crate is `v0.1_squeeze-sentinel/`.
-- READMEs exist in 6 languages (en, ko, ja, zh-CN, es, fr) at the root and in `v0.1_squeeze-sentinel/`. When you change one, update all six, keeping the same sections and numbers.
+- Root README: `README.md` (English, the default) plus translations in `readme/README.{ko,ja,zh-CN,es,fr}.md`. CHANGELOG: `changelog/CHANGELOG.md` (English, read by the release workflow) plus translations in the same folder. `v0.1_squeeze-sentinel/` has its own README in all six languages. When you change one, update all six, keeping the same sections and numbers.
 
 ## Rules
 

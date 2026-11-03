@@ -2,13 +2,13 @@
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | **Français**
 
-← [Retour à squeeze](../README.fr.md)
+← [Retour à squeeze](../readme/README.fr.md)
 
 Sentinel monte la garde entre Claude Code et votre shell. Quand Claude s'apprête à lancer une commande qui inonde le contexte (installations, builds, tests, logs) ou à lire d'un coup un énorme fichier, Sentinel le redirige vers une version courte. Claude reçoit toujours chaque erreur et chaque avertissement.
 
 Un seul binaire, écrit en Rust, **zéro dépendance**. Fonctionne sous macOS, Linux et Windows.
 
-**Prérequis :** aucun. C'est le programme `squeeze` de base. Les versions suivantes s'appuient dessus : v0.3 Conduit ajoute une commande à ce même programme (mettez-le à jour pour l'obtenir), tandis que v0.2 Interceptor est une extension de navigateur séparée qui fonctionne avec ou sans lui. Voir [comment les versions s'articulent](../README.fr.md#comment-les-versions-sarticulent).
+**Prérequis :** aucun. C'est le programme `squeeze` de base. Les versions suivantes s'appuient dessus : v0.3 Conduit ajoute une commande à ce même programme (mettez-le à jour pour l'obtenir), tandis que v0.2 Interceptor est une extension de navigateur séparée qui fonctionne avec ou sans lui. Voir [comment les versions s'articulent](../readme/README.fr.md#comment-les-versions-sarticulent).
 
 ## Effet
 

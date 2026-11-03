@@ -6,7 +6,7 @@ Les changements notables sont listés ici. Les versions suivent le [versionnage 
 
 ## [0.1.0] - 2026-11-03 — Sentinel
 
-Première version. Code dans [`v0.1_squeeze-sentinel/`](v0.1_squeeze-sentinel/).
+Première version. Code dans [`v0.1_squeeze-sentinel/`](../v0.1_squeeze-sentinel/).
 
 ### Ajouté
 

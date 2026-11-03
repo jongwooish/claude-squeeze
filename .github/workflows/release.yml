@@ -74,8 +74,8 @@ jobs:
       - name: Release notes from CHANGELOG
         run: |
           ver="${TAG#v}"
-          awk -v v="$ver" '$0 ~ "^## \\[?v?"v {f=1; next} /^## / && f {exit} f' CHANGELOG.md > notes.md
-          [ -s notes.md ] || echo "See CHANGELOG.md" > notes.md
+          awk -v v="$ver" '$0 ~ "^## \\[?v?"v {f=1; next} /^## / && f {exit} f' changelog/CHANGELOG.md > notes.md
+          [ -s notes.md ] || echo "See changelog/CHANGELOG.md" > notes.md
         env:
           TAG: ${{ github.event.release.tag_name || github.ref_name }}
       - name: Publish

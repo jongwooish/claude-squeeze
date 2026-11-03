@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](v0.1_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](v0.1_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#install) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**English** | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
+**English** | [한국어](readme/README.ko.md) | [日本語](readme/README.ja.md) | [简体中文](readme/README.zh-CN.md) | [Español](readme/README.es.md) | [Français](readme/README.fr.md)
 
 **Spend your Claude tokens on thinking, not on log spam.**
 
@@ -227,15 +227,16 @@ A. While the major version is 0, command names and config may still change. v1.0
 ## Repository layout
 
 ```
-squeeze/
-├── README.md                    ← project overview (6 languages)
+claude-squeeze/
+├── README.md                    ← project overview (English)
+├── readme/                      ← translations: ko, ja, zh-CN, es, fr
 ├── v0.1_squeeze-sentinel/       ← v0.1: CLI + Claude Code hooks (Rust, no dependencies)
 │   ├── README.md                   full v0.1 docs (6 languages)
 │   ├── src/
 │   ├── docs/                       benchmark method, user guide (Korean)
 │   └── testdata/fixtures/          logs used by tests and the benchmark
 ├── install.sh / install.ps1
-├── CHANGELOG.md (6 languages)
+├── changelog/                   ← CHANGELOG in 6 languages
 └── Cargo.toml                   ← workspace
 ```
 

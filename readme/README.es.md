@@ -1,8 +1,8 @@
 # claude-squeeze
 
-[![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](v0.1_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](v0.1_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#instalación) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](../v0.1_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](../v0.1_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#instalación) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
 
-[English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | **Español** | [Français](README.fr.md)
+[English](../README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | **Español** | [Français](README.fr.md)
 
 **Gasta tus tokens de Claude en pensar, no en logs interminables.**
 
@@ -18,7 +18,7 @@ squeeze detiene esa salida **antes** de que entre en el contexto.
 
 ## Efecto
 
-Siete logs reales procesados con squeeze ([método](v0.1_squeeze-sentinel/docs/bench.md)):
+Siete logs reales procesados con squeeze ([método](../v0.1_squeeze-sentinel/docs/bench.md)):
 
 | Log | Líneas antes → después | Tokens antes → después (est.) | Ahorro | Errores/advertencias distintos conservados |
 |---|---:|---:|---:|---:|
@@ -47,7 +47,7 @@ Cada versión tiene su propia carpeta y README. Las versiones publicadas son eti
 
 | Versión | Nombre | Qué añade | Estado |
 |---|---|---|---|
-| [v0.1](v0.1_squeeze-sentinel/README.es.md) | **Sentinel** | Hooks de Claude Code que atrapan comandos ruidosos y lecturas completas de archivos, `squeeze run`, `compress`, `clip`, `report` | ✅ v0.1.0 |
+| [v0.1](../v0.1_squeeze-sentinel/README.es.md) | **Sentinel** | Hooks de Claude Code que atrapan comandos ruidosos y lecturas completas de archivos, `squeeze run`, `compress`, `clip`, `report` | ✅ v0.1.0 |
 | v0.2 | **Interceptor** | Extensión de navegador que ofrece reducir el texto largo al pegarlo en claude.ai | 🛠 Planeada |
 | v0.3 | **Conduit** | Servidor MCP para la app de escritorio de Claude: Claude lee tus logs ya reducidos | 🛠 Planeada |
 
@@ -120,7 +120,7 @@ FAILED test_inventory.py::test_missing_sku - KeyError: 'B7'
 [squeeze] 217 lines (15.8 KB) → 39 lines (1.9 KB). Full output: .squeeze/raw/20261103-044044-45b0e7.log (exit 1)
 ```
 
-Documentación completa de la v0.1: [v0.1_squeeze-sentinel/README.es.md](v0.1_squeeze-sentinel/README.es.md).
+Documentación completa de la v0.1: [v0.1_squeeze-sentinel/README.es.md](../v0.1_squeeze-sentinel/README.es.md).
 
 ## Instalación
 
@@ -168,7 +168,7 @@ squeeze report    # mira lo que se quedó fuera del contexto
 | `squeeze bench <dir> [--markdown]` | Reproducir archivos `*.log` y medir |
 | `squeeze version` | Mostrar la versión |
 
-Antepón `SQUEEZE_SKIP=1` a un comando para obtener su salida original una vez. La configuración está en `.squeeze/config.json` ([todas las claves](v0.1_squeeze-sentinel/README.es.md#configuración)).
+Antepón `SQUEEZE_SKIP=1` a un comando para obtener su salida original una vez. La configuración está en `.squeeze/config.json` ([todas las claves](../v0.1_squeeze-sentinel/README.es.md#configuración)).
 
 ## Cómo funciona
 
@@ -227,15 +227,16 @@ R. Mientras la versión mayor sea 0, los nombres de comandos y la configuración
 ## Estructura del repositorio
 
 ```
-squeeze/
-├── README.md                    ← resumen del proyecto (6 idiomas)
+claude-squeeze/
+├── README.md                    ← resumen del proyecto (inglés, por defecto)
+├── readme/                      ← traducciones: coreano, japonés, chino, español, francés
 ├── v0.1_squeeze-sentinel/       ← v0.1: CLI + hooks de Claude Code (Rust, sin dependencias)
 │   ├── README.md                   documentación completa de la v0.1 (6 idiomas)
 │   ├── src/
 │   ├── docs/                       método del benchmark, guía de usuario (coreano)
 │   └── testdata/fixtures/          logs usados por los tests y el benchmark
 ├── install.sh / install.ps1
-├── CHANGELOG.md (6 idiomas)
+├── changelog/                   ← CHANGELOG en 6 idiomas
 └── Cargo.toml                   ← workspace
 ```
 
@@ -251,4 +252,4 @@ Se agradecen nuevos logs de prueba: añade un `*.log` real (sin secretos ni ruta
 
 ## Licencia
 
-MIT. Consulta [LICENSE](LICENSE). squeeze es una herramienta comunitaria no oficial y no está afiliada a Anthropic.
+MIT. Consulta [LICENSE](../LICENSE). squeeze es una herramienta comunitaria no oficial y no está afiliada a Anthropic.
