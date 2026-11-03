@@ -1,31 +1,22 @@
 name: Bug report / 버그 신고
-description: squeeze crashed, printed something wrong, or broke a session / squeeze 오류, 잘못된 출력, 세션 문제 / クラッシュ、誤った出力、セッションの不具合 / 崩溃、输出错误或会话出问题 / Fallo, salida incorrecta o sesión rota / Plantage, sortie incorrecte ou session cassée
+description: squeeze crashed, printed something wrong, or broke a session / squeeze 오류, 잘못된 출력, 세션 문제
 title: '[bug] '
 labels:
 - bug
 body:
 - type: markdown
   attributes:
-    value: 'You can write in any of the six languages. / 6개 언어 중 아무 언어로나 쓰세요. / 6 言語のどれでも書けます。 / 六种语言任选。 / Puedes escribir en cualquiera de los seis idiomas. / Écrivez dans l''une des six langues.
+    value: 'English or Korean is preferred; other languages are welcome. / 영어나 한국어를 권장하지만 다른 언어도 괜찮아요.
 
 
-      **English**: Remove secrets (tokens, passwords, internal hostnames, personal paths) before pasting logs.
+      **Read first / 먼저 읽어주세요**: [Issue guide / 이슈 작성 가이드](https://github.com/jongwooish/claude-squeeze/blob/main/.github/ISSUE_GUIDE.md)
 
-      **한국어**: 로그를 붙여넣기 전에 비밀 정보(토큰, 비밀번호, 내부 호스트명, 개인 경로)를 지워주세요.
-
-      **日本語**: ログを貼る前に秘密情報（トークン、パスワード、内部ホスト名、個人的なパス）を削除してください。
-
-      **中文**：粘贴日志前请删除敏感信息（令牌、密码、内部主机名、个人路径）。
-
-      **Español**: Quita los secretos (tokens, contraseñas, hosts internos, rutas personales) antes de pegar logs.
-
-      **Français** : retirez les secrets (jetons, mots de passe, noms d''hôtes internes, chemins personnels) avant de coller des logs.
 
       '
 - type: input
   id: version
   attributes:
-    label: squeeze version / squeeze 버전 / squeeze のバージョン / squeeze 版本 / Versión de squeeze / Version de squeeze
+    label: squeeze version / squeeze 버전
     placeholder: squeeze 0.1.0
     description: '`squeeze version`'
   validations:
@@ -33,7 +24,7 @@ body:
 - type: dropdown
   id: os
   attributes:
-    label: Operating system / 운영체제 / OS / 操作系统 / Sistema operativo / Système d'exploitation
+    label: Operating system / 운영체제
     options:
     - macOS (Apple Silicon)
     - macOS (Intel)
@@ -41,18 +32,18 @@ body:
     - Linux (ARM64)
     - Windows (x86_64)
     - Windows (ARM64)
-    - Other / 기타 / その他 / 其他 / Otro / Autre
+    - Other / 기타
   validations:
     required: true
 - type: input
   id: shell
   attributes:
-    label: Shell and Claude Code version / 셸과 Claude Code 버전 / シェルと Claude Code のバージョン / Shell 和 Claude Code 版本 / Shell y versión de Claude Code / Shell et version de Claude Code
+    label: Shell and Claude Code version / 셸과 Claude Code 버전
     placeholder: bash 5.2, Claude Code 2.x / Git Bash, WSL, PowerShell
 - type: dropdown
   id: area
   attributes:
-    label: Which part? / 어느 부분? / どの部分? / 哪个部分？ / ¿Qué parte? / Quelle partie ?
+    label: Which part? / 어느 부분?
     options:
     - squeeze run / compress
     - Bash guard (hook pre-bash)
@@ -61,13 +52,13 @@ body:
     - squeeze clip
     - squeeze report
     - Installer (install.sh / install.ps1)
-    - Other / 기타 / その他 / 其他 / Otro / Autre
+    - Other / 기타
   validations:
     required: true
 - type: textarea
   id: steps
   attributes:
-    label: Steps to reproduce / 재현 방법 / 再現手順 / 复现步骤 / Pasos para reproducir / Étapes pour reproduire
+    label: Steps to reproduce / 재현 방법
     placeholder: '1. squeeze init
 
       2. ...
@@ -78,18 +69,18 @@ body:
 - type: textarea
   id: expected
   attributes:
-    label: Expected result / 기대한 결과 / 期待した結果 / 期望结果 / Resultado esperado / Résultat attendu
+    label: Expected result / 기대한 결과
   validations:
     required: true
 - type: textarea
   id: actual
   attributes:
-    label: What happened / 실제 결과 / 実際の結果 / 实际结果 / Qué pasó / Ce qui s'est passé
+    label: What happened / 실제 결과
     render: text
   validations:
     required: true
 - type: textarea
   id: config
   attributes:
-    label: .squeeze/config.json (if changed) / .squeeze/config.json (바꿨다면) / .squeeze/config.json（変更した場合） / .squeeze/config.json（如有修改） / .squeeze/config.json (si lo cambiaste) / .squeeze/config.json (si modifié)
+    label: .squeeze/config.json (if changed) / .squeeze/config.json (바꿨다면)
     render: json

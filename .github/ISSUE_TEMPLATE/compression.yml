@@ -1,61 +1,52 @@
 name: Compression problem / 압축 문제
-description: A line was dropped, too much was kept, or a command was (not) caught / 중요한 줄 누락, 절약 부족, 명령 오탐·미탐 / 重要な行の欠落、節約不足、コマンドの誤検出・見逃し / 丢失重要行、节省太少、命令误拦或漏拦 / Línea perdida, poco ahorro o comando (no) detectado / Ligne perdue, trop peu d'économie, commande (non) interceptée
+description: A line was dropped, too much was kept, or a command was (not) caught / 중요한 줄 누락, 절약 부족, 명령 오탐·미탐
 title: '[compression] '
 labels:
 - bug
 body:
 - type: markdown
   attributes:
-    value: 'You can write in any of the six languages. / 6개 언어 중 아무 언어로나 쓰세요. / 6 言語のどれでも書けます。 / 六种语言任选。 / Puedes escribir en cualquiera de los seis idiomas. / Écrivez dans l''une des six langues.
+    value: 'English or Korean is preferred; other languages are welcome. / 영어나 한국어를 권장하지만 다른 언어도 괜찮아요.
 
 
-      **English**: Remove secrets (tokens, passwords, internal hostnames, personal paths) before pasting logs.
+      **Read first / 먼저 읽어주세요**: [Issue guide / 이슈 작성 가이드](https://github.com/jongwooish/claude-squeeze/blob/main/.github/ISSUE_GUIDE.md)
 
-      **한국어**: 로그를 붙여넣기 전에 비밀 정보(토큰, 비밀번호, 내부 호스트명, 개인 경로)를 지워주세요.
-
-      **日本語**: ログを貼る前に秘密情報（トークン、パスワード、内部ホスト名、個人的なパス）を削除してください。
-
-      **中文**：粘贴日志前请删除敏感信息（令牌、密码、内部主机名、个人路径）。
-
-      **Español**: Quita los secretos (tokens, contraseñas, hosts internos, rutas personales) antes de pegar logs.
-
-      **Français** : retirez les secrets (jetons, mots de passe, noms d''hôtes internes, chemins personnels) avant de coller des logs.
 
       '
 - type: dropdown
   id: kind
   attributes:
-    label: What went wrong? / 무엇이 문제였나요? / 何が問題でしたか? / 出了什么问题？ / ¿Qué falló? / Qu'est-ce qui n'allait pas ?
+    label: What went wrong? / 무엇이 문제였나요?
     options:
-    - An important line was dropped / 중요한 줄이 빠짐 / 重要な行が消えた / 重要的行被丢弃 / Se perdió una línea importante / Une ligne importante a disparu
-    - Too much was kept / 너무 많이 남음 / 残しすぎ / 保留太多 / Se conservó demasiado / Trop de lignes conservées
-    - A noisy command was NOT redirected / 시끄러운 명령이 안 잡힘 / 出力の多いコマンドが誘導されない / 高输出命令未被拦截 / Un comando ruidoso NO se redirigió / Une commande bavarde n'a PAS été redirigée
-    - A command was redirected but should not be / 잡히면 안 되는 명령이 잡힘 / 誘導すべきでないコマンドが誘導された / 不该拦截的命令被拦截 / Se redirigió un comando que no debía / Une commande a été redirigée à tort
-    - Read guard problem / Read 가드 문제 / Read ガードの問題 / Read 守卫问题 / Problema con la guardia de Read / Problème de la garde Read
+    - An important line was dropped / 중요한 줄이 빠짐
+    - Too much was kept / 너무 많이 남음
+    - A noisy command was NOT redirected / 시끄러운 명령이 안 잡힘
+    - A command was redirected but should not be / 잡히면 안 되는 명령이 잡힘
+    - Read guard problem / Read 가드 문제
   validations:
     required: true
 - type: input
   id: command
   attributes:
-    label: The command / 명령어 / コマンド / 命令 / El comando / La commande
+    label: The command / 명령어
     placeholder: npm run build -- --verbose
   validations:
     required: true
 - type: textarea
   id: missing
   attributes:
-    label: Line(s) that should have been kept / 남았어야 할 줄 / 残すべきだった行 / 应保留的行 / Línea(s) que debían conservarse / Ligne(s) à conserver
+    label: Line(s) that should have been kept / 남았어야 할 줄
     render: text
 - type: textarea
   id: log
   attributes:
-    label: Sample of the original output / 원본 출력 일부 / 元の出力のサンプル / 原始输出示例 / Muestra de la salida original / Extrait de la sortie d'origine
-    description: Attach long logs as a file. It may become a test fixture. / 긴 로그는 파일로 첨부. 테스트 로그로 쓰일 수 있음. / 長いログはファイルで添付。テストに使われる場合があります。 / 长日志请作为文件附加，可能被用作测试数据。 / Adjunta los logs largos como archivo. Puede usarse como prueba. / Joignez les longs logs en fichier. Ils peuvent servir de test.
+    label: Sample of the original output / 원본 출력 일부
+    description: Attach long logs as a file. It may become a test fixture. / 긴 로그는 파일로 첨부. 테스트 로그로 쓰일 수 있음.
     render: text
 - type: input
   id: version
   attributes:
-    label: squeeze version and OS / squeeze 버전과 운영체제 / squeeze のバージョンと OS / squeeze 版本和操作系统 / Versión de squeeze y SO / Version de squeeze et OS
+    label: squeeze version and OS / squeeze 버전과 운영체제
     placeholder: squeeze 0.1.0, Ubuntu 24.04
   validations:
     required: true

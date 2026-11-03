@@ -1,75 +1,66 @@
 name: Install / update / version problem / 설치·업데이트·버전 문제
-description: Installer failed, a release file is missing, or an update broke something / 설치 실패, 릴리스 파일 누락, 업데이트 후 문제 / インストール失敗、リリースファイル欠落、更新後の不具合 / 安装失败、发布文件缺失或更新后出问题 / Fallo del instalador, archivo ausente o una actualización rompió algo / Échec d'installation, fichier manquant ou mise à jour problématique
+description: Installer failed, a release file is missing, or an update broke something / 설치 실패, 릴리스 파일 누락, 업데이트 후 문제
 title: '[version] '
 labels:
 - bug
 body:
 - type: markdown
   attributes:
-    value: 'You can write in any of the six languages. / 6개 언어 중 아무 언어로나 쓰세요. / 6 言語のどれでも書けます。 / 六种语言任选。 / Puedes escribir en cualquiera de los seis idiomas. / Écrivez dans l''une des six langues.
+    value: 'English or Korean is preferred; other languages are welcome. / 영어나 한국어를 권장하지만 다른 언어도 괜찮아요.
 
 
-      **English**: Remove secrets (tokens, passwords, internal hostnames, personal paths) before pasting logs.
+      **Read first / 먼저 읽어주세요**: [Issue guide / 이슈 작성 가이드](https://github.com/jongwooish/claude-squeeze/blob/main/.github/ISSUE_GUIDE.md)
 
-      **한국어**: 로그를 붙여넣기 전에 비밀 정보(토큰, 비밀번호, 내부 호스트명, 개인 경로)를 지워주세요.
-
-      **日本語**: ログを貼る前に秘密情報（トークン、パスワード、内部ホスト名、個人的なパス）を削除してください。
-
-      **中文**：粘贴日志前请删除敏感信息（令牌、密码、内部主机名、个人路径）。
-
-      **Español**: Quita los secretos (tokens, contraseñas, hosts internos, rutas personales) antes de pegar logs.
-
-      **Français** : retirez les secrets (jetons, mots de passe, noms d''hôtes internes, chemins personnels) avant de coller des logs.
 
       '
 - type: dropdown
   id: kind
   attributes:
-    label: What kind of problem? / 어떤 문제인가요? / どんな問題? / 什么问题？ / ¿Qué tipo de problema? / Quel type de problème ?
+    label: What kind of problem? / 어떤 문제인가요?
     options:
-    - Installer failed / 설치 스크립트 실패 / インストーラーが失敗 / 安装脚本失败 / Falló el instalador / L'installateur a échoué
-    - Release file missing or checksum mismatch / 릴리스 파일 없음 또는 체크섬 불일치 / リリースファイルがない／チェックサム不一致 / 发布文件缺失或校验和不符 / Falta un archivo o el checksum no coincide / Fichier absent ou somme de contrôle incorrecte
-    - Broke after updating / 업데이트 후 고장 / 更新後に壊れた / 更新后出问题 / Se rompió tras actualizar / Cassé après la mise à jour
-    - Old settings or hooks stopped working / 이전 설정·훅이 동작 안 함 / 以前の設定やフックが動かない / 旧设置或钩子失效 / Ajustes o hooks antiguos dejaron de funcionar / Anciens réglages ou hooks ne marchent plus
-    - cargo install failed / cargo install 실패 / cargo install が失敗 / cargo install 失败 / Falló cargo install / cargo install a échoué
-    - Other / 기타 / その他 / 其他 / Otro / Autre
+    - Installer failed / 설치 스크립트 실패
+    - Release file missing or checksum mismatch / 릴리스 파일 없음 또는 체크섬 불일치
+    - Broke after updating / 업데이트 후 고장
+    - Old settings or hooks stopped working / 이전 설정·훅이 동작 안 함
+    - cargo install failed / cargo install 실패
+    - Other / 기타
   validations:
     required: true
 - type: input
   id: from
   attributes:
-    label: Version before / 이전 버전 / 以前のバージョン / 之前的版本 / Versión anterior / Version précédente
+    label: Version before / 이전 버전
     placeholder: squeeze 0.1.0
 - type: input
   id: to
   attributes:
-    label: Version now / 현재 버전 / 現在のバージョン / 当前版本 / Versión actual / Version actuelle
+    label: Version now / 현재 버전
     placeholder: squeeze 0.2.0
   validations:
     required: true
 - type: dropdown
   id: method
   attributes:
-    label: How did you install it? / 설치 방법 / インストール方法 / 安装方式 / ¿Cómo lo instalaste? / Méthode d'installation
+    label: How did you install it? / 설치 방법
     options:
     - install.sh (macOS / Linux)
     - install.ps1 (Windows)
     - cargo install --git
-    - Downloaded a release file / 릴리스 파일 직접 다운로드 / リリースファイルを手動で取得 / 手动下载发布文件 / Descargué un archivo de la versión / Fichier de release téléchargé à la main
-    - Built from a clone / 직접 빌드 / クローンからビルド / 从克隆仓库构建 / Compilado desde un clon / Compilé depuis un clone
+    - Downloaded a release file / 릴리스 파일 직접 다운로드
+    - Built from a clone / 직접 빌드
   validations:
     required: true
 - type: input
   id: os
   attributes:
-    label: OS and CPU / 운영체제와 CPU / OS と CPU / 操作系统和 CPU / SO y CPU / OS et processeur
+    label: OS and CPU / 운영체제와 CPU
     placeholder: Windows 11 x64
   validations:
     required: true
 - type: textarea
   id: output
   attributes:
-    label: Full error or output / 전체 오류 또는 출력 / エラーや出力の全文 / 完整错误或输出 / Error o salida completa / Erreur ou sortie complète
+    label: Full error or output / 전체 오류 또는 출력
     render: text
   validations:
     required: true

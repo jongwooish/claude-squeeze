@@ -1,11 +1,14 @@
 blank_issues_enabled: true
 contact_links:
+- name: '📌 Read first: Issue guide / 먼저 읽기: 이슈 작성 가이드'
+  url: https://github.com/jongwooish/claude-squeeze/blob/main/.github/ISSUE_GUIDE.md
+  about: How to write a report that gets fixed fast (6 languages) / 빨리 해결되는 이슈 쓰는 법 (6개 언어)
 - name: Questions and troubleshooting / 질문·문제 해결
   url: https://github.com/jongwooish/claude-squeeze/discussions/categories/q-a
-  about: Not sure it is a bug? Ask in Discussions. / 버그인지 모르겠다면 Discussions에 질문하세요. / バグか分からなければ Discussions で質問を。 / 不确定是不是 bug？请在 Discussions 提问。 / ¿No sabes si es un error? Pregunta en Discussions. / Pas sûr que ce soit un bug ? Demandez dans Discussions.
+  about: Not sure it is a bug? Ask in Discussions. / 버그인지 모르겠다면 Discussions에 질문하세요.
 - name: Roadmap and v1.0 feedback / 로드맵·v1.0 의견
   url: https://github.com/jongwooish/claude-squeeze/discussions/categories/ideas
-  about: Upcoming versions and what v1.0 should include. / 다음 버전과 v1.0에 들어갈 것. / 次のバージョンと v1.0 に含めるもの。 / 后续版本以及 v1.0 应包含什么。 / Próximas versiones y qué debe incluir la v1.0. / Prochaines versions et contenu de la v1.0.
+  about: Upcoming versions and what v1.0 should include. / 다음 버전과 v1.0에 들어갈 것.
 - name: Security problem / 보안 문제
   url: https://github.com/jongwooish/claude-squeeze/blob/main/.github/SECURITY.md
-  about: Do not open a public issue. Report privately. / 공개 이슈 대신 비공개로 신고하세요. / 公開 Issue ではなく非公開で報告してください。 / 请勿公开提交，请私下报告。 / No abras un issue público. Infórmalo en privado. / N'ouvrez pas d'issue publique. Signalez-le en privé.
+  about: Do not open a public issue. Report privately. / 공개 이슈 대신 비공개로 신고하세요.

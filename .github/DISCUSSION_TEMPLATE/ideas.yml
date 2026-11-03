@@ -2,24 +2,27 @@ title: '[roadmap] '
 body:
 - type: markdown
   attributes:
-    value: 'You can write in any of the six languages. / 6개 언어 중 아무 언어로나 쓰세요. / 6 言語のどれでも書けます。 / 六种语言任选。 / Puedes escribir en cualquiera de los seis idiomas. / Écrivez dans l''une des six langues.
+    value: 'English or Korean is preferred; other languages are welcome. / 영어나 한국어를 권장하지만 다른 언어도 괜찮아요.
+
+
+      **Read first / 먼저 읽어주세요**: [Issue guide / 이슈 작성 가이드](https://github.com/jongwooish/claude-squeeze/blob/main/.github/ISSUE_GUIDE.md)
 
 
       '
 - type: dropdown
   id: topic
   attributes:
-    label: Topic / 주제 / トピック / 主题 / Tema / Sujet
+    label: Topic / 주제
     options:
     - v0.2 Interceptor
     - v0.3 Conduit
-    - What v1.0 should include / v1.0에 들어갈 것 / v1.0 に含めるべきもの / v1.0 应包含什么 / Qué debe incluir la v1.0 / Ce que la v1.0 doit inclure
-    - A new idea / 새 아이디어 / 新しいアイデア / 新想法 / Una idea nueva / Une nouvelle idée
+    - What v1.0 should include / v1.0에 들어갈 것
+    - A new idea / 새 아이디어
   validations:
     required: true
 - type: textarea
   id: idea
   attributes:
-    label: Your thoughts / 의견 / ご意見 / 你的想法 / Tu opinión / Votre avis
+    label: Your thoughts / 의견
   validations:
     required: true

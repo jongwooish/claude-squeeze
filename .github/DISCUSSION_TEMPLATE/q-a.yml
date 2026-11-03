@@ -2,32 +2,23 @@ title: '[help] '
 body:
 - type: markdown
   attributes:
-    value: 'You can write in any of the six languages. / 6개 언어 중 아무 언어로나 쓰세요. / 6 言語のどれでも書けます。 / 六种语言任选。 / Puedes escribir en cualquiera de los seis idiomas. / Écrivez dans l''une des six langues.
+    value: 'English or Korean is preferred; other languages are welcome. / 영어나 한국어를 권장하지만 다른 언어도 괜찮아요.
 
 
-      **English**: Remove secrets (tokens, passwords, internal hostnames, personal paths) before pasting logs.
+      **Read first / 먼저 읽어주세요**: [Issue guide / 이슈 작성 가이드](https://github.com/jongwooish/claude-squeeze/blob/main/.github/ISSUE_GUIDE.md)
 
-      **한국어**: 로그를 붙여넣기 전에 비밀 정보(토큰, 비밀번호, 내부 호스트명, 개인 경로)를 지워주세요.
-
-      **日本語**: ログを貼る前に秘密情報（トークン、パスワード、内部ホスト名、個人的なパス）を削除してください。
-
-      **中文**：粘贴日志前请删除敏感信息（令牌、密码、内部主机名、个人路径）。
-
-      **Español**: Quita los secretos (tokens, contraseñas, hosts internos, rutas personales) antes de pegar logs.
-
-      **Français** : retirez les secrets (jetons, mots de passe, noms d''hôtes internes, chemins personnels) avant de coller des logs.
 
       '
 - type: input
   id: version
   attributes:
-    label: squeeze version and OS / squeeze 버전과 운영체제 / squeeze のバージョンと OS / squeeze 版本和操作系统 / Versión de squeeze y SO / Version de squeeze et OS
+    label: squeeze version and OS / squeeze 버전과 운영체제
     placeholder: squeeze 0.1.0, macOS 15
   validations:
     required: true
 - type: textarea
   id: question
   attributes:
-    label: Your question / 질문 내용 / 質問 / 你的问题 / Tu pregunta / Votre question
+    label: Your question / 질문 내용
   validations:
     required: true
