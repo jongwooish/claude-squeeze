@@ -15,8 +15,15 @@ $tmp = Join-Path ([IO.Path]::GetTempPath()) ("squeeze-" + [guid]::NewGuid())
 New-Item -ItemType Directory -Path $tmp | Out-Null
 try {
     Write-Host "squeeze-install: downloading $asset ($Version)"
-    Invoke-WebRequest "$base/$asset" -OutFile (Join-Path $tmp $asset) -UseBasicParsing
-    Invoke-WebRequest "$base/checksums.txt" -OutFile (Join-Path $tmp "checksums.txt") -UseBasicParsing
+    try {
+        Invoke-WebRequest "$base/$asset" -OutFile (Join-Path $tmp $asset) -UseBasicParsing
+        Invoke-WebRequest "$base/checksums.txt" -OutFile (Join-Path $tmp "checksums.txt") -UseBasicParsing
+    } catch {
+        Write-Host "squeeze-install: could not download $asset ($Version)." -ForegroundColor Yellow
+        Write-Host "squeeze-install: check https://github.com/$Repo/releases for available versions," -ForegroundColor Yellow
+        Write-Host "squeeze-install: or build from source: cargo install --git https://github.com/$Repo squeeze" -ForegroundColor Yellow
+        return
+    }
 
     $line = Get-Content (Join-Path $tmp "checksums.txt") | Where-Object { $_ -match "\s$([regex]::Escape($asset))$" }
     if (-not $line) { throw "$asset not listed in checksums.txt" }

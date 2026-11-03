@@ -36,7 +36,7 @@ asset="squeeze-$target.tar.gz"
 
 tmp="$(mktemp -d)"; trap 'rm -rf "$tmp"' EXIT
 say "downloading $asset ($VERSION)"
-curl -fsSL "$base/$asset" -o "$tmp/$asset" || die "download failed: $base/$asset"
+curl -fsSL "$base/$asset" -o "$tmp/$asset" || die "could not download $asset ($VERSION). See https://github.com/$REPO/releases, or build from source: cargo install --git https://github.com/$REPO squeeze"
 curl -fsSL "$base/checksums.txt" -o "$tmp/checksums.txt" || die "could not download checksums.txt"
 
 expected="$(awk -v a="$asset" '$2==a {print $1}' "$tmp/checksums.txt")"
