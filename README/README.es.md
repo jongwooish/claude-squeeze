@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](../V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](../V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#instalación) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
 
-[English](../README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | **Español** | [Français](README.fr.md)
+[English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | **Español** | [Français](README.fr.md)
 
 > 💬 **Se agradecen comentarios.** Mejoras, el lanzamiento de la v1.0, actualizaciones, errores de instalación o cualquier otro problema: [abre un issue](https://github.com/jongwooish/claude-squeeze/issues/new/choose) (6 idiomas).
 
@@ -128,10 +128,10 @@ Documentación completa de la v0.1: [V0.1-Sentinel/v0.1_squeeze-sentinel/README.
 
 ```bash
 # macOS / Linux
-curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.sh | bash
 
 # Windows (PowerShell)
-irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.ps1 | iex
 
 # Desde el código fuente (cualquier sistema con Rust 1.80+)
 cargo install --git https://github.com/jongwooish/claude-squeeze squeeze
@@ -230,25 +230,29 @@ R. Mientras la versión mayor sea 0, los nombres de comandos y la configuración
 
 ```
 claude-squeeze/
-├── README.md                    ← resumen del proyecto (inglés, por defecto)
-├── readme/                      ← traducciones: coreano, japonés, chino, español, francés
-├── V0.1-Sentinel/
+├── README/                      ← resumen del proyecto en 6 idiomas (README.md = inglés)
+├── CHANGELOG/                   ← CHANGELOG en 6 idiomas
+├── V0.1-Sentinel/               ← v0.1 Sentinel
+│   ├── README.md                   resumen de la versión
 │   └── v0.1_squeeze-sentinel/   ← v0.1: CLI + hooks de Claude Code (Rust, sin dependencias)
-│       ├── README/                     documentación completa de la v0.1 (6 idiomas)
+│       ├── README.md               documentación completa de la v0.1 (inglés)
+│       ├── README/                 traducciones (5 idiomas)
 │       ├── src/
-│       ├── docs/                       método del benchmark, guía de usuario (coreano)
-│       └── testdata/fixtures/          logs usados por los tests y el benchmark
-├── install.sh / install.ps1
-├── changelog/                   ← CHANGELOG en 6 idiomas
-└── Cargo.toml                   ← workspace
+│       ├── docs/                   método del benchmark, guía de usuario (coreano)
+│       └── testdata/fixtures/      logs usados por los tests y el benchmark
+├── INSTALL/                     ← install.sh / install.ps1
+├── CARGO/                       ← Cargo.toml / Cargo.lock (workspace de Rust)
+├── .github/                     ← formularios de issues, CI, release, README de portada
+├── CLAUDE.md
+└── LICENSE
 ```
 
 ## Contribuir
 
 ```bash
-cargo test
-cargo clippy --all-targets -- -D warnings
-cargo run --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
+cargo test --manifest-path CARGO/Cargo.toml
+cargo clippy --manifest-path CARGO/Cargo.toml --all-targets -- -D warnings
+cargo run --manifest-path CARGO/Cargo.toml --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
 Se agradecen nuevos logs de prueba: añade un `*.log` real (sin secretos ni rutas personales) a `V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures/`. Los tests fallan si se pierde cualquier error o advertencia distinto. Errores e ideas: [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues).

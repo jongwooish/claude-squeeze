@@ -1,16 +1,16 @@
 # v0.1 Sentinel
 
-[English](README.md) | [한국어](README.ko.md) | **日本語** | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
+[English](../README.md) | [한국어](README.ko.md) | **日本語** | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
 
 > 💬 **フィードバック歓迎。** 改善点、v1.0 のリリース、バージョン更新、インストールエラーなど、どんな問題でも [Issue を作成してください](https://github.com/jongwooish/claude-squeeze/issues/new/choose)（6 言語対応）。
 
-← [squeeze に戻る](../../../readme/README.ja.md)
+← [squeeze に戻る](../../../README/README.ja.md)
 
 Sentinel は Claude Code とシェルの間に立つ見張り番です。Claude がコンテキストをあふれさせるコマンド（インストール、ビルド、テスト、ログ）を実行しようとしたり、巨大なファイルを丸ごと読もうとしたりすると、Sentinel が短い版へ誘導します。Claude はエラーと警告をすべて受け取ります。
 
 単一バイナリ、Rust 製、**依存関係ゼロ**。macOS、Linux、Windows で動作します。
 
-**必要なもの:** なし。これが基本の `squeeze` プログラムです。以降のバージョンはこの上に積み上がります。v0.3 Conduit は同じプログラムにコマンドを追加し（更新すれば使えます）、v0.2 Interceptor はこのプログラムの有無にかかわらず動く別のブラウザ拡張です。[バージョン同士の関係](../../../readme/README.ja.md#バージョン同士の関係)を参照。
+**必要なもの:** なし。これが基本の `squeeze` プログラムです。以降のバージョンはこの上に積み上がります。v0.3 Conduit は同じプログラムにコマンドを追加し（更新すれば使えます）、v0.2 Interceptor はこのプログラムの有無にかかわらず動く別のブラウザ拡張です。[バージョン同士の関係](../../../README/README.ja.md#バージョン同士の関係)を参照。
 
 ## 効果
 
@@ -77,9 +77,9 @@ FAILED test_inventory.py::test_missing_sku - KeyError: 'B7'
 
 ```bash
 # macOS / Linux
-curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.sh | bash
 # Windows (PowerShell)
-irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.ps1 | iex
 # ソースから
 cargo install --git https://github.com/jongwooish/claude-squeeze squeeze
 ```
@@ -189,9 +189,9 @@ A. `squeeze clip` を通して長いテキストを貼るときだけです。
 ## コントリビュート
 
 ```bash
-cargo test                       # 単体テスト（テストログの検査を含む）
-cargo clippy -- -D warnings
-cargo run -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
+cargo test --manifest-path CARGO/Cargo.toml                       # 単体テスト（テストログの検査を含む）
+cargo clippy --manifest-path CARGO/Cargo.toml -- -D warnings
+cargo run --manifest-path CARGO/Cargo.toml -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
 新しいテストログを歓迎します: 実際の `*.log`（先に秘密情報と個人的なパスを削除）を `testdata/fixtures/` に追加してください。異なるエラー・警告が一つでも失われるとテストが失敗します。

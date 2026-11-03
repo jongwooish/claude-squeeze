@@ -6,8 +6,8 @@
 
 | 방법 | 명령 |
 |---|---|
-| macOS / Linux | `curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.sh \| bash` |
-| Windows (PowerShell) | `irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.ps1 \| iex` |
+| macOS / Linux | `curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.sh \| bash` |
+| Windows (PowerShell) | `irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.ps1 \| iex` |
 | 소스에서 빌드 | `cargo install --git https://github.com/jongwooish/claude-squeeze squeeze` |
 
 설치 스크립트는 릴리스의 `checksums.txt`로 SHA-256을 확인한 뒤 설치합니다.

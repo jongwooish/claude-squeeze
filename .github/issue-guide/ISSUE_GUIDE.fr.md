@@ -17,7 +17,7 @@ claude-squeeze s'améliore grâce aux personnes qui nous disent ce qui n'a pas m
 
 1. **Vérifiez votre version** : lancez `squeeze version`. Si ce n'est pas la [dernière release](https://github.com/jongwooish/claude-squeeze/releases/latest), mettez à jour d'abord. Le problème est peut-être déjà corrigé.
 2. **Cherchez dans les issues existantes** : quelqu'un l'a peut-être déjà signalé. Dans ce cas, ajoutez un 👍 ou un commentaire avec vos détails plutôt qu'une nouvelle issue.
-3. **Parcourez la [FAQ](https://github.com/jongwooish/claude-squeeze/blob/main/readme/README.fr.md#faq)** : les questions courantes y sont traitées.
+3. **Parcourez la [FAQ](https://github.com/jongwooish/claude-squeeze/blob/main/README/README.fr.md#faq)** : les questions courantes y sont traitées.
 
 ### Choisissez le bon formulaire
 
@@ -65,7 +65,7 @@ Vous avez trouvé un **problème de sécurité** ? Ne le publiez pas. Suivez [SE
 - Nous lisons chaque issue et lui ajoutons une étiquette (`bug`, `enhancement`, `question`, …).
 - C'est un projet open source personnel : une réponse peut prendre quelques jours. Merci de votre patience.
 - Nous pourrons vous poser une question complémentaire. Y répondre est souvent le chemin le plus court vers une correction.
-- Les corrections et nouveautés sont listées dans le [CHANGELOG](../../changelog/CHANGELOG.fr.md) et annoncées dans les [Releases](https://github.com/jongwooish/claude-squeeze/releases). Cliquez sur **Watch → Custom → Releases** pour être notifié.
+- Les corrections et nouveautés sont listées dans le [CHANGELOG](../../CHANGELOG/CHANGELOG.fr.md) et annoncées dans les [Releases](https://github.com/jongwooish/claude-squeeze/releases). Cliquez sur **Watch → Custom → Releases** pour être notifié.
 
 ### Quelques règles bienveillantes
 

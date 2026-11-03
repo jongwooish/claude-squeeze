@@ -16,7 +16,7 @@ jobs:
       matrix:
         include:
           - { target: x86_64-unknown-linux-musl, os: ubuntu-latest, archive: tar.gz }
-          - { target: aarch64-unknown-linux-musl, os: ubuntu-latest, archive: tar.gz, cross: true }
+          - { target: aarch64-unknown-linux-musl, os: ubuntu-24.04-arm, archive: tar.gz }
           - { target: x86_64-apple-darwin, os: macos-latest, archive: tar.gz }
           - { target: aarch64-apple-darwin, os: macos-latest, archive: tar.gz }
           - { target: x86_64-pc-windows-msvc, os: windows-latest, archive: zip }
@@ -30,30 +30,22 @@ jobs:
         with:
           targets: ${{ matrix.target }}
       - name: Install musl tools
-        if: contains(matrix.target, 'musl') && !matrix.cross
+        if: contains(matrix.target, 'musl')
         run: sudo apt-get update && sudo apt-get install -y musl-tools
-      - name: Install cross
-        if: matrix.cross
-        run: cargo install cross --locked
       - name: Build
         shell: bash
-        run: |
-          if [ "${{ matrix.cross }}" = "true" ]; then
-            cross build --release --target ${{ matrix.target }}
-          else
-            cargo build --release --target ${{ matrix.target }}
-          fi
+        run: cargo build --manifest-path CARGO/Cargo.toml --release --target ${{ matrix.target }}
       - name: Package
         shell: bash
         run: |
           name=squeeze-${{ matrix.target }}
           mkdir -p dist
           if [ "${{ matrix.archive }}" = "zip" ]; then
-            cp target/${{ matrix.target }}/release/squeeze.exe .
-            7z a dist/$name.zip squeeze.exe LICENSE README.md
+            cp CARGO/target/${{ matrix.target }}/release/squeeze.exe .
+            cp README/README.md . && 7z a dist/$name.zip squeeze.exe LICENSE README.md
           else
-            cp target/${{ matrix.target }}/release/squeeze .
-            tar czf dist/$name.tar.gz squeeze LICENSE README.md
+            cp CARGO/target/${{ matrix.target }}/release/squeeze .
+            cp README/README.md . && tar czf dist/$name.tar.gz squeeze LICENSE README.md
           fi
       - uses: actions/upload-artifact@v4
         with:
@@ -74,8 +66,8 @@ jobs:
       - name: Release notes from CHANGELOG
         run: |
           ver="${TAG#v}"
-          awk -v v="$ver" '$0 ~ "^## \\[?v?"v {f=1; next} /^## / && f {exit} f' changelog/CHANGELOG.md > notes.md
-          [ -s notes.md ] || echo "See changelog/CHANGELOG.md" > notes.md
+          awk -v v="$ver" '$0 ~ "^## \\[?v?"v {f=1; next} /^## / && f {exit} f' CHANGELOG/CHANGELOG.md > notes.md
+          [ -s notes.md ] || echo "See CHANGELOG/CHANGELOG.md" > notes.md
         env:
           TAG: ${{ github.event.release.tag_name || github.ref_name }}
       - name: Publish

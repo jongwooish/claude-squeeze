@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Install squeeze from the latest GitHub release.
-#   curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.sh | bash
 # Pin a version:  ... | SQUEEZE_VERSION=v0.1.0 bash
 # Install dir:    ... | SQUEEZE_INSTALL_DIR=$HOME/.local/bin bash
 set -euo pipefail

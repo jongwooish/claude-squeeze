@@ -1,8 +1,9 @@
 # claude-squeeze
+<!-- Generated from README/README.md for the GitHub front page. Edit README/README.md instead. -->
 
-[![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#install) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](../V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](../V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#install) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
 
-**English** | [한국어](readme/README.ko.md) | [日本語](readme/README.ja.md) | [简体中文](readme/README.zh-CN.md) | [Español](readme/README.es.md) | [Français](readme/README.fr.md)
+**English** | [한국어](../README/README.ko.md) | [日本語](../README/README.ja.md) | [简体中文](../README/README.zh-CN.md) | [Español](../README/README.es.md) | [Français](../README/README.fr.md)
 
 > 💬 **Feedback welcome.** Improvements, the v1.0 release, version updates, install errors or any other trouble: please [open an issue](https://github.com/jongwooish/claude-squeeze/issues/new/choose) (6 languages OK).
 
@@ -20,7 +21,7 @@ squeeze stops that output **before** it enters the context.
 
 ## Effect
 
-Seven real-world logs replayed through squeeze ([method](V0.1-Sentinel/v0.1_squeeze-sentinel/docs/bench.md)):
+Seven real-world logs replayed through squeeze ([method](../V0.1-Sentinel/v0.1_squeeze-sentinel/docs/bench.md)):
 
 | Log | Lines before → after | Tokens before → after (est.) | Saved | Distinct errors/warnings kept |
 |---|---:|---:|---:|---:|
@@ -49,7 +50,7 @@ Each version has its own folder and README. Releases are tags on the whole repos
 
 | Version | Name | What it adds | Status |
 |---|---|---|---|
-| [v0.1](V0.1-Sentinel/v0.1_squeeze-sentinel/) | **Sentinel** | Claude Code hooks that catch noisy commands and whole-file reads, `squeeze run`, `compress`, `clip`, `report` | ✅ v0.1.0 |
+| [v0.1](../V0.1-Sentinel/v0.1_squeeze-sentinel/) | **Sentinel** | Claude Code hooks that catch noisy commands and whole-file reads, `squeeze run`, `compress`, `clip`, `report` | ✅ v0.1.0 |
 | v0.2 | **Interceptor** | Browser extension that offers to squeeze long text when you paste it into claude.ai | 🛠 Planned |
 | v0.3 | **Conduit** | MCP server for the Claude desktop app: Claude reads your logs already squeezed | 🛠 Planned |
 
@@ -122,16 +123,16 @@ FAILED test_inventory.py::test_missing_sku - KeyError: 'B7'
 [squeeze] 217 lines (15.8 KB) → 39 lines (1.9 KB). Full output: .squeeze/raw/20261103-044044-45b0e7.log (exit 1)
 ```
 
-Full v0.1 documentation: [V0.1-Sentinel/v0.1_squeeze-sentinel/README.md](V0.1-Sentinel/v0.1_squeeze-sentinel/README/README.md).
+Full v0.1 documentation: [V0.1-Sentinel/v0.1_squeeze-sentinel/README.md](../V0.1-Sentinel/v0.1_squeeze-sentinel/README.md).
 
 ## Install
 
 ```bash
 # macOS / Linux
-curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.sh | bash
 
 # Windows (PowerShell)
-irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.ps1 | iex
 
 # From source (any OS with Rust 1.80+)
 cargo install --git https://github.com/jongwooish/claude-squeeze squeeze
@@ -170,7 +171,7 @@ squeeze report    # see what was kept out of context
 | `squeeze bench <dir> [--markdown]` | Replay `*.log` files and measure |
 | `squeeze version` | Print the version |
 
-Prefix a command with `SQUEEZE_SKIP=1` to get its raw output once. Settings live in `.squeeze/config.json` ([all keys](V0.1-Sentinel/v0.1_squeeze-sentinel/README/README.md#configuration)).
+Prefix a command with `SQUEEZE_SKIP=1` to get its raw output once. Settings live in `.squeeze/config.json` ([all keys](../V0.1-Sentinel/v0.1_squeeze-sentinel/README.md#configuration)).
 
 ## How it works
 
@@ -230,25 +231,29 @@ A. While the major version is 0, command names and config may still change. v1.0
 
 ```
 claude-squeeze/
-├── README.md                    ← project overview (English)
-├── readme/                      ← translations: ko, ja, zh-CN, es, fr
-├── V0.1-Sentinel/
+├── README/                      ← overview in 6 languages (README.md = English)
+├── CHANGELOG/                   ← CHANGELOG in 6 languages
+├── V0.1-Sentinel/               ← v0.1 Sentinel
+│   ├── README.md                   version overview
 │   └── v0.1_squeeze-sentinel/   ← v0.1: CLI + Claude Code hooks (Rust, no dependencies)
-│       ├── README/                     full v0.1 docs (6 languages)
+│       ├── README.md               full v0.1 docs (English)
+│       ├── README/                 translations (5 languages)
 │       ├── src/
-│       ├── docs/                       benchmark method, user guide (Korean)
-│       └── testdata/fixtures/          logs used by tests and the benchmark
-├── install.sh / install.ps1
-├── changelog/                   ← CHANGELOG in 6 languages
-└── Cargo.toml                   ← workspace
+│       ├── docs/                   benchmark method, user guide (Korean)
+│       └── testdata/fixtures/      logs used by tests and the benchmark
+├── INSTALL/                     ← install.sh / install.ps1
+├── CARGO/                       ← Cargo.toml / Cargo.lock (Rust workspace)
+├── .github/                     ← issue forms, CI, release, front-page README
+├── CLAUDE.md
+└── LICENSE
 ```
 
 ## Contributing
 
 ```bash
-cargo test
-cargo clippy --all-targets -- -D warnings
-cargo run --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
+cargo test --manifest-path CARGO/Cargo.toml
+cargo clippy --manifest-path CARGO/Cargo.toml --all-targets -- -D warnings
+cargo run --manifest-path CARGO/Cargo.toml --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
 New fixtures are welcome: add a real `*.log` (secrets and personal paths removed) to `V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures/`. Tests fail if any distinct error or warning is lost. Bugs and ideas: [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues).
@@ -268,8 +273,8 @@ New fixtures are welcome: add a real `*.log` (secrets and personal paths removed
 | Talk about the roadmap and what v1.0 should include | [Discussions → Ideas](https://github.com/jongwooish/claude-squeeze/discussions/categories/ideas) |
 | Hear about new versions | [Discussions → Announcements](https://github.com/jongwooish/claude-squeeze/discussions/categories/announcements) and [Releases](https://github.com/jongwooish/claude-squeeze/releases) (click **Watch → Custom → Releases** to get notified) |
 
-Any of the six languages is fine. Security problems: see [SECURITY.md](.github/SECURITY.md). How to contribute: [CONTRIBUTING.md](.github/CONTRIBUTING.md).
+Any of the six languages is fine. Security problems: see [SECURITY.md](SECURITY.md). How to contribute: [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-MIT. See [LICENSE](LICENSE). squeeze is an unofficial community tool and is not affiliated with Anthropic.
+MIT. See [LICENSE](../LICENSE). squeeze is an unofficial community tool and is not affiliated with Anthropic.

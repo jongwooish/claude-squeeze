@@ -1,16 +1,16 @@
 # v0.1 Sentinel
 
-[English](README.md) | **한국어** | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
+[English](../README.md) | **한국어** | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
 
 > 💬 **피드백 환영.** 개선사항, v1.0 출시, 버전 업데이트, 설치 오류 등 어떤 문제든 [Issues에 남겨주세요](https://github.com/jongwooish/claude-squeeze/issues/new/choose) (6개 언어 모두 가능).
 
-← [squeeze로 돌아가기](../../../readme/README.ko.md)
+← [squeeze로 돌아가기](../../../README/README.ko.md)
 
 Sentinel은 Claude Code와 셸 사이를 지키는 보초입니다. Claude가 컨텍스트를 가득 채울 명령(설치, 빌드, 테스트, 로그)을 실행하거나 거대한 파일을 통째로 읽으려 하면, Sentinel이 짧은 버전으로 돌려보냅니다. Claude는 에러와 경고를 빠짐없이 받습니다.
 
 단일 실행 파일, Rust로 작성, **의존성 0개**. macOS, Linux, Windows에서 동작합니다.
 
-**필요한 것:** 없음. 이것이 기본 `squeeze` 프로그램입니다. 이후 버전은 이 위에 쌓입니다: v0.3 Conduit은 같은 프로그램에 명령을 추가하고(업데이트하면 생김), v0.2 Interceptor는 이 프로그램이 있든 없든 동작하는 별도의 브라우저 확장입니다. [버전끼리의 관계](../../../readme/README.ko.md#버전끼리의-관계) 참고.
+**필요한 것:** 없음. 이것이 기본 `squeeze` 프로그램입니다. 이후 버전은 이 위에 쌓입니다: v0.3 Conduit은 같은 프로그램에 명령을 추가하고(업데이트하면 생김), v0.2 Interceptor는 이 프로그램이 있든 없든 동작하는 별도의 브라우저 확장입니다. [버전끼리의 관계](../../../README/README.ko.md#버전끼리의-관계) 참고.
 
 ## 효과
 
@@ -77,9 +77,9 @@ FAILED test_inventory.py::test_missing_sku - KeyError: 'B7'
 
 ```bash
 # macOS / Linux
-curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.sh | bash
 # Windows (PowerShell)
-irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.ps1 | iex
 # 소스에서
 cargo install --git https://github.com/jongwooish/claude-squeeze squeeze
 ```
@@ -189,9 +189,9 @@ A. `squeeze clip`을 거쳐 긴 텍스트를 붙여넣을 때만 줄어듭니다
 ## 기여하기
 
 ```bash
-cargo test                       # 단위 테스트 (테스트 로그 검사 포함)
-cargo clippy -- -D warnings
-cargo run -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
+cargo test --manifest-path CARGO/Cargo.toml                       # 단위 테스트 (테스트 로그 검사 포함)
+cargo clippy --manifest-path CARGO/Cargo.toml -- -D warnings
+cargo run --manifest-path CARGO/Cargo.toml -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
 새 테스트 로그를 환영합니다: 실제 `*.log`(비밀 정보와 개인 경로를 먼저 지우고)를 `testdata/fixtures/`에 추가하세요. 서로 다른 에러·경고가 하나라도 사라지면 테스트가 실패합니다.

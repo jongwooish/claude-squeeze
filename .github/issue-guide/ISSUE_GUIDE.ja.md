@@ -17,7 +17,7 @@ claude-squeeze は、皆さんが教えてくれる問題点や要望のおか�
 
 1. **バージョンを確認**: `squeeze version` を実行してください。[最新リリース](https://github.com/jongwooish/claude-squeeze/releases/latest)でなければ、まず更新を。すでに直っているかもしれません。
 2. **既存の Issue を検索**: 誰かがもう報告しているかもしれません。その場合は新しく作らず、👍 や状況のコメントを付けてください。
-3. **[FAQ](https://github.com/jongwooish/claude-squeeze/blob/main/readme/README.ja.md#faq) をざっと見る**: よくある質問はそこに答えがあります。
+3. **[FAQ](https://github.com/jongwooish/claude-squeeze/blob/main/README/README.ja.md#faq) をざっと見る**: よくある質問はそこに答えがあります。
 
 ### 合うフォームを選ぶ
 
@@ -65,7 +65,7 @@ squeeze が出力を圧縮すると、最後の行に完全なログの保存先
 - すべての Issue を読んでラベル（`bug`、`enhancement`、`question` など）を付けます。
 - 個人のオープンソースプロジェクトなので、返信まで数日かかることがあります。ご了承ください。
 - 追加で質問することがあります。答えてもらうのが一番早い解決につながることがよくあります。
-- 修正や新機能は [CHANGELOG](../../changelog/CHANGELOG.ja.md) に記載し、[Releases](https://github.com/jongwooish/claude-squeeze/releases) でお知らせします。**Watch → Custom → Releases** で通知を受け取れます。
+- 修正や新機能は [CHANGELOG](../../CHANGELOG/CHANGELOG.ja.md) に記載し、[Releases](https://github.com/jongwooish/claude-squeeze/releases) でお知らせします。**Watch → Custom → Releases** で通知を受け取れます。
 
 ### いくつかのお願い
 

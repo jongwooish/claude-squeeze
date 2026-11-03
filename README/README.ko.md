@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](../V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](../V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#설치) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
 
-[English](../README.md) | **한국어** | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
+[English](README.md) | **한국어** | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
 
 > 💬 **피드백 환영.** 개선사항, v1.0 출시, 버전 업데이트, 설치 오류 등 어떤 문제든 [Issues에 남겨주세요](https://github.com/jongwooish/claude-squeeze/issues/new/choose) (6개 언어 모두 가능).
 
@@ -128,10 +128,10 @@ v0.1 전체 문서: [V0.1-Sentinel/v0.1_squeeze-sentinel/README.ko.md](../V0.1-S
 
 ```bash
 # macOS / Linux
-curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.sh | bash
 
 # Windows (PowerShell)
-irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.ps1 | iex
 
 # 소스에서 (Rust 1.80+ 가 있는 모든 OS)
 cargo install --git https://github.com/jongwooish/claude-squeeze squeeze
@@ -230,25 +230,29 @@ A. 앞자리가 0인 동안은 명령 이름이나 설정이 바뀔 수 있다�
 
 ```
 claude-squeeze/
-├── README.md                    ← 프로젝트 소개 (영어, 기본)
-├── readme/                      ← 번역본: 한국어, 일본어, 중국어, 스페인어, 프랑스어
-├── V0.1-Sentinel/
+├── README/                      ← 프로젝트 소개 6개 언어 (README.md = 영어)
+├── CHANGELOG/                   ← CHANGELOG 6개 언어
+├── V0.1-Sentinel/               ← v0.1 Sentinel
+│   ├── README.md                   버전 소개
 │   └── v0.1_squeeze-sentinel/   ← v0.1: CLI + Claude Code 훅 (Rust, 의존성 없음)
-│       ├── README/                     v0.1 전체 문서 (6개 언어)
+│       ├── README.md               v0.1 전체 문서 (영어)
+│       ├── README/                 번역본 (5개 언어)
 │       ├── src/
-│       ├── docs/                       벤치마크 방법, 사용자 가이드(한국어)
-│       └── testdata/fixtures/          테스트와 벤치마크에 쓰는 로그
-├── install.sh / install.ps1
-├── changelog/                   ← CHANGELOG 6개 언어
-└── Cargo.toml                   ← 워크스페이스
+│       ├── docs/                   벤치마크 방법, 사용자 가이드(한국어)
+│       └── testdata/fixtures/      테스트와 벤치마크에 쓰는 로그
+├── INSTALL/                     ← install.sh / install.ps1
+├── CARGO/                       ← Cargo.toml / Cargo.lock (Rust 워크스페이스)
+├── .github/                     ← 이슈 양식, CI, 릴리스, 첫 화면용 README
+├── CLAUDE.md
+└── LICENSE
 ```
 
 ## 기여하기
 
 ```bash
-cargo test
-cargo clippy --all-targets -- -D warnings
-cargo run --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
+cargo test --manifest-path CARGO/Cargo.toml
+cargo clippy --manifest-path CARGO/Cargo.toml --all-targets -- -D warnings
+cargo run --manifest-path CARGO/Cargo.toml --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
 새 테스트 로그를 환영합니다: 실제 `*.log`(비밀 정보와 개인 경로 제거)를 `V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures/`에 추가하세요. 에러·경고가 하나라도 사라지면 테스트가 실패합니다. 버그와 아이디어: [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues).

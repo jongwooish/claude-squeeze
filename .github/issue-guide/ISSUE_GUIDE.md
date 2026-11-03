@@ -65,7 +65,7 @@ Found a **security problem**? Please do not post it publicly. Follow [SECURITY.m
 - We read every issue and add a label (`bug`, `enhancement`, `question`, …).
 - This is a personal open-source project, so a reply can take a few days. Thank you for your patience.
 - We may ask a follow-up question. Answering it is often the fastest way to a fix.
-- Fixes and new features are listed in the [CHANGELOG](../../changelog/CHANGELOG.md) and announced in [Releases](https://github.com/jongwooish/claude-squeeze/releases). Click **Watch → Custom → Releases** to get notified.
+- Fixes and new features are listed in the [CHANGELOG](../../CHANGELOG/CHANGELOG.md) and announced in [Releases](https://github.com/jongwooish/claude-squeeze/releases). Click **Watch → Custom → Releases** to get notified.
 
 ### A few kind rules
 

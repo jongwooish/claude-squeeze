@@ -17,7 +17,7 @@ claude-squeeze 之所以不断变好，靠的是大家反馈的问题和愿望�
 
 1. **确认版本**：运行 `squeeze version`。如果不是[最新版本](https://github.com/jongwooish/claude-squeeze/releases/latest)，请先更新，问题可能已经修复。
 2. **搜索已有 Issue**：也许已经有人报告过。如果有，请点 👍 或在评论中补充你的情况，而不是新建。
-3. **浏览一下 [FAQ](https://github.com/jongwooish/claude-squeeze/blob/main/readme/README.zh-CN.md#faq)**：常见问题在那里已有解答。
+3. **浏览一下 [FAQ](https://github.com/jongwooish/claude-squeeze/blob/main/README/README.zh-CN.md#faq)**：常见问题在那里已有解答。
 
 ### 选择合适的表单
 
@@ -65,7 +65,7 @@ squeeze 压缩输出后，最后一行会显示完整日志的保存位置（`.s
 - 我们会阅读每一个 Issue 并加上标签（`bug`、`enhancement`、`question` 等）。
 - 这是个人开源项目，回复可能需要几天，感谢你的耐心。
 - 我们可能会追问一些细节，及时回答往往是最快的修复途径。
-- 修复和新功能会写进 [CHANGELOG](../../changelog/CHANGELOG.zh-CN.md)，并在 [Releases](https://github.com/jongwooish/claude-squeeze/releases) 中公布。点击 **Watch → Custom → Releases** 即可收到通知。
+- 修复和新功能会写进 [CHANGELOG](../../CHANGELOG/CHANGELOG.zh-CN.md)，并在 [Releases](https://github.com/jongwooish/claude-squeeze/releases) 中公布。点击 **Watch → Custom → Releases** 即可收到通知。
 
 ### 几条友好约定
 

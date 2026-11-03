@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](../V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](../V0.1-Sentinel/v0.1_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#安装) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
 
-[English](../README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | **简体中文** | [Español](README.es.md) | [Français](README.fr.md)
+[English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | **简体中文** | [Español](README.es.md) | [Français](README.fr.md)
 
 > 💬 **欢迎反馈。** 改进建议、v1.0 发布、版本更新、安装错误或任何其他问题，请[提交 Issue](https://github.com/jongwooish/claude-squeeze/issues/new/choose)（支持 6 种语言）。
 
@@ -128,10 +128,10 @@ v0.1 完整文档：[V0.1-Sentinel/v0.1_squeeze-sentinel/README.zh-CN.md](../V0.
 
 ```bash
 # macOS / Linux
-curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.sh | bash
 
 # Windows (PowerShell)
-irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.ps1 | iex
 
 # 从源码安装（任何装有 Rust 1.80+ 的系统）
 cargo install --git https://github.com/jongwooish/claude-squeeze squeeze
@@ -230,25 +230,29 @@ Claude 运行: squeeze run -- 'npm test'   （照常应用你的权限规则）
 
 ```
 claude-squeeze/
-├── README.md                    ← 项目概览（英文，默认）
-├── readme/                      ← 译文：韩语、日语、中文、西班牙语、法语
-├── V0.1-Sentinel/
+├── README/                      ← 项目概览（6 种语言，README.md = 英文）
+├── CHANGELOG/                   ← CHANGELOG（6 种语言）
+├── V0.1-Sentinel/               ← v0.1 Sentinel
+│   ├── README.md                   版本概览
 │   └── v0.1_squeeze-sentinel/   ← v0.1：CLI + Claude Code 钩子（Rust，无依赖）
-│       ├── README/                     v0.1 完整文档（6 种语言）
+│       ├── README.md               v0.1 完整文档（英文）
+│       ├── README/                 译文（5 种语言）
 │       ├── src/
-│       ├── docs/                       基准测试方法、用户指南（韩语）
-│       └── testdata/fixtures/          测试和基准测试使用的日志
-├── install.sh / install.ps1
-├── changelog/                   ← CHANGELOG（6 种语言）
-└── Cargo.toml                   ← 工作区
+│       ├── docs/                   基准测试方法、用户指南（韩语）
+│       └── testdata/fixtures/      测试和基准测试使用的日志
+├── INSTALL/                     ← install.sh / install.ps1
+├── CARGO/                       ← Cargo.toml / Cargo.lock（Rust 工作区）
+├── .github/                     ← Issue 表单、CI、发布、首页显示用 README
+├── CLAUDE.md
+└── LICENSE
 ```
 
 ## 参与贡献
 
 ```bash
-cargo test
-cargo clippy --all-targets -- -D warnings
-cargo run --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
+cargo test --manifest-path CARGO/Cargo.toml
+cargo clippy --manifest-path CARGO/Cargo.toml --all-targets -- -D warnings
+cargo run --manifest-path CARGO/Cargo.toml --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
 欢迎提交新的测试日志：把真实的 `*.log`（去掉敏感信息和个人路径）放进 `V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures/`。只要丢失任何一条不同的错误或警告，测试就会失败。问题和想法：[GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues)。

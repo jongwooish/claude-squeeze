@@ -1,5 +1,5 @@
 # Install squeeze from the latest GitHub release (Windows).
-#   irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.ps1 | iex
+#   irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.ps1 | iex
 # Pin a version:  $env:SQUEEZE_VERSION = "v0.1.0"; irm ... | iex
 $ErrorActionPreference = "Stop"
 

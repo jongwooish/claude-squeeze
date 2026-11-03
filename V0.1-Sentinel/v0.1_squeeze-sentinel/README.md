@@ -1,20 +1,20 @@
 # v0.1 Sentinel
 
-**English** | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
+**English** | [한국어](README/README.ko.md) | [日本語](README/README.ja.md) | [简体中文](README/README.zh-CN.md) | [Español](README/README.es.md) | [Français](README/README.fr.md)
 
 > 💬 **Feedback welcome.** Improvements, the v1.0 release, version updates, install errors or any other trouble: please [open an issue](https://github.com/jongwooish/claude-squeeze/issues/new/choose) (6 languages OK).
 
-← [Back to squeeze](../../../README.md)
+← [Back to squeeze](../../README/README.md)
 
 Sentinel stands guard between Claude Code and your shell. When Claude is about to run a command that floods the context (installs, builds, tests, logs) or read a huge file in one go, Sentinel redirects it to a short version. Claude still gets every error and warning.
 
 Single binary, written in Rust, **zero dependencies**. Works on macOS, Linux and Windows.
 
-**Requires:** nothing. This is the base `squeeze` program. Later versions build on it: v0.3 Conduit adds a command to this same program (update to get it), while v0.2 Interceptor is a separate browser extension that works with or without it. See [how the versions fit together](../../../README.md#how-the-versions-fit-together).
+**Requires:** nothing. This is the base `squeeze` program. Later versions build on it: v0.3 Conduit adds a command to this same program (update to get it), while v0.2 Interceptor is a separate browser extension that works with or without it. See [how the versions fit together](../../README/README.md#how-the-versions-fit-together).
 
 ## Effect
 
-Fixture replay, 7 logs, 83,325 → 5,128 estimated tokens (**−93.8%**), every distinct error and warning kept. Details and method: [docs/bench.md](../docs/bench.md).
+Fixture replay, 7 logs, 83,325 → 5,128 estimated tokens (**−93.8%**), every distinct error and warning kept. Details and method: [docs/bench.md](docs/bench.md).
 
 What Claude sees after `squeeze run -- pytest -v` (217 lines in, 39 out). This is the real output for the `pytest-fail.log` fixture:
 
@@ -77,9 +77,9 @@ FAILED test_inventory.py::test_missing_sku - KeyError: 'B7'
 
 ```bash
 # macOS / Linux
-curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.sh | bash
 # Windows (PowerShell)
-irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.ps1 | iex
 # From source
 cargo install --git https://github.com/jongwooish/claude-squeeze squeeze
 ```
@@ -157,7 +157,7 @@ short output ──▶ Claude  (errors, warnings, head, tail, footer with log pa
 
 Why "deny with a hint" instead of rewriting the command silently? A hook that rewrites a command also has to approve it, which would skip your permission prompts. squeeze never does that.
 
-More: [docs/guide/how-it-works.md](../docs/guide/how-it-works.md) (Korean).
+More: [docs/guide/how-it-works.md](docs/guide/how-it-works.md) (Korean).
 
 ## Where it applies
 
@@ -189,9 +189,9 @@ Please leave improvements and problems in [Issues](https://github.com/jongwooish
 ## Contributing
 
 ```bash
-cargo test                       # unit tests, including fixture checks
-cargo clippy -- -D warnings
-cargo run -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
+cargo test --manifest-path CARGO/Cargo.toml                       # unit tests, including fixture checks
+cargo clippy --manifest-path CARGO/Cargo.toml -- -D warnings
+cargo run --manifest-path CARGO/Cargo.toml -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
 New fixtures are welcome: add a real `*.log` (remove secrets and personal paths first) to `testdata/fixtures/`. The tests fail if any distinct error or warning is lost.

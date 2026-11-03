@@ -18,10 +18,10 @@ Remove secrets and personal paths before pasting logs. Security problems go thro
 ## Code
 
 ```bash
-cargo test
-cargo fmt --check
-cargo clippy --all-targets -- -D warnings
-cargo run --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
+cargo test --manifest-path CARGO/Cargo.toml
+cargo fmt --manifest-path CARGO/Cargo.toml --check
+cargo clippy --manifest-path CARGO/Cargo.toml --all-targets -- -D warnings
+cargo run --manifest-path CARGO/Cargo.toml --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
 - No new dependencies: squeeze uses the standard library only.

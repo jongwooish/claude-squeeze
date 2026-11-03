@@ -17,7 +17,7 @@ claude-squeeze는 여러분이 알려주는 문제점과 바라는 점 덕분에
 
 1. **버전 확인**: `squeeze version`을 실행해보세요. [최신 릴리스](https://github.com/jongwooish/claude-squeeze/releases/latest)가 아니라면 먼저 업데이트해 주세요. 이미 고쳐졌을 수도 있어요.
 2. **기존 이슈 검색**: 누군가 이미 올렸을 수 있어요. 있다면 새로 만들지 말고 👍나 자신의 상황을 댓글로 달아주세요.
-3. **[FAQ](https://github.com/jongwooish/claude-squeeze/blob/main/readme/README.ko.md#faq) 훑어보기**: 자주 묻는 질문은 거기 답이 있어요.
+3. **[FAQ](https://github.com/jongwooish/claude-squeeze/blob/main/README/README.ko.md#faq) 훑어보기**: 자주 묻는 질문은 거기 답이 있어요.
 
 ### 알맞은 양식 고르기
 
@@ -65,7 +65,7 @@ squeeze가 출력을 압축하면 마지막 줄에 전체 로그가 저장된 �
 - 모든 이슈를 읽고 라벨(`bug`, `enhancement`, `question` 등)을 붙여요.
 - 개인 오픈소스 프로젝트라 답변에 며칠 걸릴 수 있어요. 기다려 주셔서 고마워요.
 - 추가로 질문을 드릴 수 있어요. 답해주시는 게 가장 빨리 고치는 길인 경우가 많아요.
-- 수정 사항과 새 기능은 [CHANGELOG](../../changelog/CHANGELOG.ko.md)에 적고 [Releases](https://github.com/jongwooish/claude-squeeze/releases)에서 알려드려요. **Watch → Custom → Releases**를 누르면 알림을 받을 수 있어요.
+- 수정 사항과 새 기능은 [CHANGELOG](../../CHANGELOG/CHANGELOG.ko.md)에 적고 [Releases](https://github.com/jongwooish/claude-squeeze/releases)에서 알려드려요. **Watch → Custom → Releases**를 누르면 알림을 받을 수 있어요.
 
 ### 몇 가지 부탁
 
