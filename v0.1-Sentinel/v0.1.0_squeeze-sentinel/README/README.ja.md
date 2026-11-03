@@ -1,4 +1,4 @@
-# v0.1 Sentinel
+# v0.1.0 Sentinel
 
 [English](../README.md) | [한국어](README.ko.md) | **日本語** | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
 
@@ -191,7 +191,7 @@ A. `squeeze clip` を通して長いテキストを貼るときだけです。
 ```bash
 cargo test --manifest-path CARGO/Cargo.toml                       # 単体テスト（テストログの検査を含む）
 cargo clippy --manifest-path CARGO/Cargo.toml -- -D warnings
-cargo run --manifest-path CARGO/Cargo.toml -- bench v0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
+cargo run --manifest-path CARGO/Cargo.toml -- bench v0.1-Sentinel/v0.1.0_squeeze-sentinel/testdata/fixtures
 ```
 
 新しいテストログを歓迎します: 実際の `*.log`（先に秘密情報と個人的なパスを削除）を `testdata/fixtures/` に追加してください。異なるエラー・警告が一つでも失われるとテストが失敗します。

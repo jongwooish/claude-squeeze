@@ -6,7 +6,7 @@ Aquí se recogen los cambios importantes. Las versiones siguen [Versionado Semá
 
 ## [0.1.0] - 2026-11-03 — Sentinel
 
-Primera versión. Código en [`v0.1-Sentinel/v0.1_squeeze-sentinel/`](../v0.1-Sentinel/v0.1_squeeze-sentinel/).
+Primera versión. Código en [`v0.1-Sentinel/v0.1.0_squeeze-sentinel/`](../v0.1-Sentinel/v0.1.0_squeeze-sentinel/).
 
 ### Añadido
 

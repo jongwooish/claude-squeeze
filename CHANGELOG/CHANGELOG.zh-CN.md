@@ -6,7 +6,7 @@
 
 ## [0.1.0] - 2026-11-03 — Sentinel
 
-首个版本。代码位于 [`v0.1-Sentinel/v0.1_squeeze-sentinel/`](../v0.1-Sentinel/v0.1_squeeze-sentinel/)。
+首个版本。代码位于 [`v0.1-Sentinel/v0.1.0_squeeze-sentinel/`](../v0.1-Sentinel/v0.1.0_squeeze-sentinel/)。
 
 ### 新增
 

@@ -1,5 +1,5 @@
 [workspace]
-members = ["../v0.1-Sentinel/v0.1_squeeze-sentinel"]
+members = ["../v0.1-Sentinel/v0.1.0_squeeze-sentinel"]
 resolver = "2"
 
 [profile.release]

@@ -1,4 +1,4 @@
-# v0.1 Sentinel
+# v0.1.0 Sentinel
 
 [English](../README.md) | **한국어** | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
 
@@ -191,7 +191,7 @@ A. `squeeze clip`을 거쳐 긴 텍스트를 붙여넣을 때만 줄어듭니다
 ```bash
 cargo test --manifest-path CARGO/Cargo.toml                       # 단위 테스트 (테스트 로그 검사 포함)
 cargo clippy --manifest-path CARGO/Cargo.toml -- -D warnings
-cargo run --manifest-path CARGO/Cargo.toml -- bench v0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
+cargo run --manifest-path CARGO/Cargo.toml -- bench v0.1-Sentinel/v0.1.0_squeeze-sentinel/testdata/fixtures
 ```
 
 새 테스트 로그를 환영합니다: 실제 `*.log`(비밀 정보와 개인 경로를 먼저 지우고)를 `testdata/fixtures/`에 추가하세요. 서로 다른 에러·경고가 하나라도 사라지면 테스트가 실패합니다.

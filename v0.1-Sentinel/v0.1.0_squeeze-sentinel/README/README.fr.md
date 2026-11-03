@@ -1,4 +1,4 @@
-# v0.1 Sentinel
+# v0.1.0 Sentinel
 
 [English](../README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | **Français**
 
@@ -191,7 +191,7 @@ Laissez améliorations et problèmes dans les [Issues](https://github.com/jongwo
 ```bash
 cargo test --manifest-path CARGO/Cargo.toml                       # tests unitaires, y compris les vérifications des logs
 cargo clippy --manifest-path CARGO/Cargo.toml -- -D warnings
-cargo run --manifest-path CARGO/Cargo.toml -- bench v0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
+cargo run --manifest-path CARGO/Cargo.toml -- bench v0.1-Sentinel/v0.1.0_squeeze-sentinel/testdata/fixtures
 ```
 
 Les nouveaux logs de test sont bienvenus : ajoutez un vrai `*.log` (secrets et chemins personnels retirés au préalable) dans `testdata/fixtures/`. Les tests échouent si une erreur ou un avertissement distinct est perdu.

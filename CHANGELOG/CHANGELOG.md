@@ -6,7 +6,7 @@ All notable changes are listed here. Versions follow [Semantic Versioning](https
 
 ## [0.1.0] - 2026-11-03 — Sentinel
 
-First release. Code in [`v0.1-Sentinel/v0.1_squeeze-sentinel/`](../v0.1-Sentinel/v0.1_squeeze-sentinel/).
+First release. Code in [`v0.1-Sentinel/v0.1.0_squeeze-sentinel/`](../v0.1-Sentinel/v0.1.0_squeeze-sentinel/).
 
 ### Added
 
