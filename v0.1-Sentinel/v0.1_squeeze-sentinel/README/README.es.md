@@ -191,7 +191,7 @@ Deja mejoras y problemas en [Issues](https://github.com/jongwooish/claude-squeez
 ```bash
 cargo test --manifest-path CARGO/Cargo.toml                       # tests unitarios, incluidas las comprobaciones de logs
 cargo clippy --manifest-path CARGO/Cargo.toml -- -D warnings
-cargo run --manifest-path CARGO/Cargo.toml -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
+cargo run --manifest-path CARGO/Cargo.toml -- bench v0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
 Se agradecen nuevos logs de prueba: añade un `*.log` real (quita antes secretos y rutas personales) a `testdata/fixtures/`. Los tests fallan si se pierde cualquier error o advertencia distinto.

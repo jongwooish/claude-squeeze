@@ -191,7 +191,7 @@ Claude 运行: squeeze run -- 'npm test'   （照常应用你的权限规则）
 ```bash
 cargo test --manifest-path CARGO/Cargo.toml                       # 单元测试（包括测试日志检查）
 cargo clippy --manifest-path CARGO/Cargo.toml -- -D warnings
-cargo run --manifest-path CARGO/Cargo.toml -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
+cargo run --manifest-path CARGO/Cargo.toml -- bench v0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
 欢迎提交新的测试日志：把真实的 `*.log`（先去掉敏感信息和个人路径）放进 `testdata/fixtures/`。只要丢失任何一条不同的错误或警告，测试就会失败。

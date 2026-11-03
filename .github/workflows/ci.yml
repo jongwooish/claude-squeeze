@@ -22,4 +22,4 @@ jobs:
       - run: cargo test --manifest-path CARGO/Cargo.toml
       - name: Bench (fixture replay)
         if: matrix.os == 'ubuntu-latest'
-        run: cargo run --manifest-path CARGO/Cargo.toml --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
+        run: cargo run --manifest-path CARGO/Cargo.toml --release -- bench v0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures

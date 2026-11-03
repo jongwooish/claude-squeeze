@@ -191,7 +191,7 @@ Please leave improvements and problems in [Issues](https://github.com/jongwooish
 ```bash
 cargo test --manifest-path CARGO/Cargo.toml                       # unit tests, including fixture checks
 cargo clippy --manifest-path CARGO/Cargo.toml -- -D warnings
-cargo run --manifest-path CARGO/Cargo.toml -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
+cargo run --manifest-path CARGO/Cargo.toml -- bench v0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
 New fixtures are welcome: add a real `*.log` (remove secrets and personal paths first) to `testdata/fixtures/`. The tests fail if any distinct error or warning is lost.

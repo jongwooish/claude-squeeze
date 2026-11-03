@@ -21,7 +21,7 @@ Remove secrets and personal paths before pasting logs. Security problems go thro
 cargo test --manifest-path CARGO/Cargo.toml
 cargo fmt --manifest-path CARGO/Cargo.toml --check
 cargo clippy --manifest-path CARGO/Cargo.toml --all-targets -- -D warnings
-cargo run --manifest-path CARGO/Cargo.toml --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
+cargo run --manifest-path CARGO/Cargo.toml --release -- bench v0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures
 ```
 
 - No new dependencies: squeeze uses the standard library only.
@@ -30,4 +30,4 @@ cargo run --manifest-path CARGO/Cargo.toml --release -- bench V0.1-Sentinel/v0.1
 
 ## Test fixtures
 
-A real log that squeeze handles badly is the best contribution. Add it as `V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures/<name>.log` (secrets and personal paths removed). The tests fail if any distinct error or warning in it is lost, so a fixture keeps the bug fixed for good.
+A real log that squeeze handles badly is the best contribution. Add it as `v0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures/<name>.log` (secrets and personal paths removed). The tests fail if any distinct error or warning in it is lost, so a fixture keeps the bug fixed for good.

@@ -15,7 +15,7 @@ The unit tests run the same check and fail if any distinct message is lost.
 ## Results (v0.1.0)
 
 ```
-cargo run --manifest-path CARGO/Cargo.toml --release -- bench V0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures --markdown
+cargo run --manifest-path CARGO/Cargo.toml --release -- bench v0.1-Sentinel/v0.1_squeeze-sentinel/testdata/fixtures --markdown
 ```
 
 | Log | Lines before → after | Tokens before → after (est.) | Saved | Distinct errors/warnings kept |

@@ -1,4 +1,4 @@
-# V0.1 · Sentinel
+# v0.1 · Sentinel
 
 **English** · [한국어](v0.1_squeeze-sentinel/README/README.ko.md) · [日本語](v0.1_squeeze-sentinel/README/README.ja.md) · [简体中文](v0.1_squeeze-sentinel/README/README.zh-CN.md) · [Español](v0.1_squeeze-sentinel/README/README.es.md) · [Français](v0.1_squeeze-sentinel/README/README.fr.md)
 
