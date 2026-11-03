@@ -4,6 +4,8 @@
 
 [English](../README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | **简体中文** | [Español](README.es.md) | [Français](README.fr.md)
 
+> 💬 **欢迎反馈。** 改进建议、v1.0 发布、版本更新、安装错误或任何其他问题，请[提交 Issue](https://github.com/jongwooish/claude-squeeze/issues/new/choose)（支持 6 种语言）。
+
 **把 Claude 的 token 用在思考上，而不是刷屏的日志上。**
 
 squeeze 让冗长的命令输出和对大文件的整体读取不进入 Claude 的上下文。Claude 仍然能看到每一条错误和警告，以及开头和结尾的几行。完整日志保存在你的磁盘上，需要时随时查看。

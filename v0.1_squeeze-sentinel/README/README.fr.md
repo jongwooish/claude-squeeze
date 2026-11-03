@@ -2,6 +2,8 @@
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | **Français**
 
+> 💬 **Vos retours sont bienvenus.** Améliorations, sortie de la v1.0, mises à jour, erreurs d'installation ou tout autre souci : [ouvrez une issue](https://github.com/jongwooish/claude-squeeze/issues/new/choose) (6 langues).
+
 ← [Retour à squeeze](../../readme/README.fr.md)
 
 Sentinel monte la garde entre Claude Code et votre shell. Quand Claude s'apprête à lancer une commande qui inonde le contexte (installations, builds, tests, logs) ou à lire d'un coup un énorme fichier, Sentinel le redirige vers une version courte. Claude reçoit toujours chaque erreur et chaque avertissement.

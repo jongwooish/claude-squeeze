@@ -4,6 +4,8 @@
 
 [English](../README.md) | **한국어** | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
 
+> 💬 **피드백 환영.** 개선사항, v1.0 출시, 버전 업데이트, 설치 오류 등 어떤 문제든 [Issues에 남겨주세요](https://github.com/jongwooish/claude-squeeze/issues/new/choose) (6개 언어 모두 가능).
+
 **Claude 토큰은 로그 쓰레기가 아니라 생각하는 데 쓰세요.**
 
 squeeze는 긴 명령 출력과 큰 파일 읽기가 Claude의 컨텍스트에 들어가지 않게 막습니다. Claude는 에러와 경고, 처음과 마지막 줄은 그대로 봅니다. 전체 로그는 필요할 때를 위해 내 디스크에 저장됩니다.

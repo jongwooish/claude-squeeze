@@ -4,6 +4,8 @@
 
 **English** | [한국어](readme/README.ko.md) | [日本語](readme/README.ja.md) | [简体中文](readme/README.zh-CN.md) | [Español](readme/README.es.md) | [Français](readme/README.fr.md)
 
+> 💬 **Feedback welcome.** Improvements, the v1.0 release, version updates, install errors or any other trouble: please [open an issue](https://github.com/jongwooish/claude-squeeze/issues/new/choose) (6 languages OK).
+
 **Spend your Claude tokens on thinking, not on log spam.**
 
 squeeze keeps long command output and large file reads out of Claude's context. Claude still sees every error and warning, plus the first and last lines. The full log is saved on your disk in case it is needed.

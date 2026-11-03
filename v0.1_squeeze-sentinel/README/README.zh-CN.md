@@ -2,6 +2,8 @@
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | **简体中文** | [Español](README.es.md) | [Français](README.fr.md)
 
+> 💬 **欢迎反馈。** 改进建议、v1.0 发布、版本更新、安装错误或任何其他问题，请[提交 Issue](https://github.com/jongwooish/claude-squeeze/issues/new/choose)（支持 6 种语言）。
+
 ← [返回 squeeze](../../readme/README.zh-CN.md)
 
 Sentinel 是守在 Claude Code 和 shell 之间的哨兵。当 Claude 准备运行会塞满上下文的命令（安装、构建、测试、日志），或一次性读取巨大的文件时，Sentinel 会把它引导到简短的版本。Claude 依然能拿到每一条错误和警告。

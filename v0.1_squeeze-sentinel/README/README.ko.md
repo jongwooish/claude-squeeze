@@ -2,6 +2,8 @@
 
 [English](README.md) | **한국어** | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
 
+> 💬 **피드백 환영.** 개선사항, v1.0 출시, 버전 업데이트, 설치 오류 등 어떤 문제든 [Issues에 남겨주세요](https://github.com/jongwooish/claude-squeeze/issues/new/choose) (6개 언어 모두 가능).
+
 ← [squeeze로 돌아가기](../../readme/README.ko.md)
 
 Sentinel은 Claude Code와 셸 사이를 지키는 보초입니다. Claude가 컨텍스트를 가득 채울 명령(설치, 빌드, 테스트, 로그)을 실행하거나 거대한 파일을 통째로 읽으려 하면, Sentinel이 짧은 버전으로 돌려보냅니다. Claude는 에러와 경고를 빠짐없이 받습니다.
