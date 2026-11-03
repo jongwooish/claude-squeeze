@@ -3,6 +3,8 @@ name: Release
 on:
   push:
     tags: ["v*"]
+  release:
+    types: [published]
 
 permissions:
   contents: write
@@ -22,6 +24,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.release.tag_name || github.ref }}
       - uses: dtolnay/rust-toolchain@stable
         with:
           targets: ${{ matrix.target }}
@@ -69,13 +73,19 @@ jobs:
         run: cd dist && sha256sum * > checksums.txt && cat checksums.txt
       - name: Release notes from CHANGELOG
         run: |
-          ver="${GITHUB_REF_NAME#v}"
+          ver="${TAG#v}"
           awk -v v="$ver" '$0 ~ "^## \\[?v?"v {f=1; next} /^## / && f {exit} f' CHANGELOG.md > notes.md
           [ -s notes.md ] || echo "See CHANGELOG.md" > notes.md
+        env:
+          TAG: ${{ github.event.release.tag_name || github.ref_name }}
       - name: Publish
         env:
           GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name || github.ref_name }}
         run: |
-          gh release create "$GITHUB_REF_NAME" dist/* \
-            --title "$GITHUB_REF_NAME — Sentinel" \
-            --notes-file notes.md
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist/* --clobber
+            gh release edit "$TAG" --title "$TAG — Sentinel" --notes-file notes.md
+          else
+            gh release create "$TAG" dist/* --title "$TAG — Sentinel" --notes-file notes.md
+          fi
