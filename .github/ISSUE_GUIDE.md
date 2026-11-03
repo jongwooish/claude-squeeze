@@ -1,9 +1,9 @@
 # 📌 Issue guide · 이슈 작성 가이드
 
-**English** · [한국어](#한국어) · [日本語](#日本語) · [简体中文](#简体中文) · [Español](#español) · [Français](#français)
+**👇 Click your language to open the guide.** · **👇 아래에서 언어를 눌러 펼치세요.** · **👇 言語をクリックして開いてください。** · **👇 点击你的语言展开。** · **👇 Haz clic en tu idioma para abrirla.** · **👇 Cliquez sur votre langue pour l'ouvrir.**
 
 <details open>
-<summary><b>English</b></summary>
+<summary><h3>🇺🇸 English</h3></summary>
 
 ## English
 
@@ -83,7 +83,7 @@ Thank you for helping make claude-squeeze better! 🙏
 </details>
 
 <details>
-<summary><b>한국어</b></summary>
+<summary><h3>🇰🇷 한국어</h3></summary>
 
 ## 한국어
 
@@ -163,7 +163,7 @@ claude-squeeze를 더 좋게 만들어 주셔서 고마워요! 🙏
 </details>
 
 <details>
-<summary><b>日本語</b></summary>
+<summary><h3>🇯🇵 日本語</h3></summary>
 
 ## 日本語
 
@@ -243,7 +243,7 @@ claude-squeeze をより良くしてくれてありがとうございます！ �
 </details>
 
 <details>
-<summary><b>简体中文</b></summary>
+<summary><h3>🇨🇳 简体中文</h3></summary>
 
 ## 简体中文
 
@@ -323,7 +323,7 @@ squeeze 压缩输出后，最后一行会显示完整日志的保存位置（`.s
 </details>
 
 <details>
-<summary><b>Español</b></summary>
+<summary><h3>🇪🇸 Español</h3></summary>
 
 ## Español
 
@@ -403,7 +403,7 @@ Los logs pueden contener cosas que no quieres publicar. Antes de pegar, quita o 
 </details>
 
 <details>
-<summary><b>Français</b></summary>
+<summary><h3>🇫🇷 Français</h3></summary>
 
 ## Français
 
