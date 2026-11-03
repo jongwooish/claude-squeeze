@@ -47,7 +47,7 @@ squeeze 在这些输出进入上下文**之前**就把它们拦下。
 
 | 版本 | 名称 | 新增内容 | 状态 |
 |---|---|---|---|
-| [v0.1](../v0.1_squeeze-sentinel/README.zh-CN.md) | **Sentinel** | 拦截高输出命令和整文件读取的 Claude Code 钩子，`squeeze run`、`compress`、`clip`、`report` | ✅ v0.1.0 |
+| [v0.1](../v0.1_squeeze-sentinel/README/README.zh-CN.md) | **Sentinel** | 拦截高输出命令和整文件读取的 Claude Code 钩子，`squeeze run`、`compress`、`clip`、`report` | ✅ v0.1.0 |
 | v0.2 | **Interceptor** | 在 claude.ai 粘贴长文本时询问是否压缩的浏览器扩展 | 🛠 计划中 |
 | v0.3 | **Conduit** | 面向 Claude 桌面应用的 MCP 服务器：Claude 读取的日志已经压缩好 | 🛠 计划中 |
 
@@ -120,7 +120,7 @@ FAILED test_inventory.py::test_missing_sku - KeyError: 'B7'
 [squeeze] 217 lines (15.8 KB) → 39 lines (1.9 KB). Full output: .squeeze/raw/20261103-044044-45b0e7.log (exit 1)
 ```
 
-v0.1 完整文档：[v0.1_squeeze-sentinel/README.zh-CN.md](../v0.1_squeeze-sentinel/README.zh-CN.md)。
+v0.1 完整文档：[v0.1_squeeze-sentinel/README.zh-CN.md](../v0.1_squeeze-sentinel/README/README.zh-CN.md)。
 
 ## 安装
 
@@ -168,7 +168,7 @@ squeeze report    # 查看挡在上下文之外的量
 | `squeeze bench <dir> [--markdown]` | 回放 `*.log` 文件并测量 |
 | `squeeze version` | 显示版本 |
 
-在命令前加 `SQUEEZE_SKIP=1` 可以让这一次拿到原始输出。配置在 `.squeeze/config.json`（[全部选项](../v0.1_squeeze-sentinel/README.zh-CN.md#配置)）。
+在命令前加 `SQUEEZE_SKIP=1` 可以让这一次拿到原始输出。配置在 `.squeeze/config.json`（[全部选项](../v0.1_squeeze-sentinel/README/README.zh-CN.md#配置)）。
 
 ## 工作原理
 
@@ -231,7 +231,7 @@ claude-squeeze/
 ├── README.md                    ← 项目概览（英文，默认）
 ├── readme/                      ← 译文：韩语、日语、中文、西班牙语、法语
 ├── v0.1_squeeze-sentinel/       ← v0.1：CLI + Claude Code 钩子（Rust，无依赖）
-│   ├── README.md                   v0.1 完整文档（6 种语言）
+│   ├── README/                     v0.1 完整文档（6 种语言）
 │   ├── src/
 │   ├── docs/                       基准测试方法、用户指南（韩语）
 │   └── testdata/fixtures/          测试和基准测试使用的日志
@@ -251,6 +251,9 @@ cargo run --release -- bench v0.1_squeeze-sentinel/testdata/fixtures
 欢迎提交新的测试日志：把真实的 `*.log`（去掉敏感信息和个人路径）放进 `v0.1_squeeze-sentinel/testdata/fixtures/`。只要丢失任何一条不同的错误或警告，测试就会失败。问题和想法：[GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues)。
 
 ## 社区
+
+**发现问题或有想法？请在 [Issues](https://github.com/jongwooish/claude-squeeze/issues/new/choose) 中留言。** 改进建议、v1.0 发布、版本更新、安装错误以及任何软件问题，每一条反馈都会帮助打磨下一个版本。
+
 
 | 我想要… | 去这里 |
 |---|---|

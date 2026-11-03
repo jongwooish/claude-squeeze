@@ -2,17 +2,17 @@
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | **Español** | [Français](README.fr.md)
 
-← [Volver a squeeze](../readme/README.es.md)
+← [Volver a squeeze](../../readme/README.es.md)
 
 Sentinel hace guardia entre Claude Code y tu shell. Cuando Claude va a ejecutar un comando que inunda el contexto (instalaciones, builds, tests, logs) o a leer de una vez un archivo enorme, Sentinel lo redirige a una versión corta. Claude sigue recibiendo cada error y advertencia.
 
 Un solo binario, escrito en Rust, **cero dependencias**. Funciona en macOS, Linux y Windows.
 
-**Requisitos:** ninguno. Este es el programa base `squeeze`. Las versiones posteriores se construyen sobre él: v0.3 Conduit añade un comando a este mismo programa (actualiza para tenerlo), mientras que v0.2 Interceptor es una extensión de navegador aparte que funciona con o sin él. Consulta [cómo encajan las versiones](../readme/README.es.md#cómo-encajan-las-versiones).
+**Requisitos:** ninguno. Este es el programa base `squeeze`. Las versiones posteriores se construyen sobre él: v0.3 Conduit añade un comando a este mismo programa (actualiza para tenerlo), mientras que v0.2 Interceptor es una extensión de navegador aparte que funciona con o sin él. Consulta [cómo encajan las versiones](../../readme/README.es.md#cómo-encajan-las-versiones).
 
 ## Efecto
 
-Reproducción de 7 logs de prueba, de 83,325 a 5,128 tokens estimados (**−93.8%**), con cada error y advertencia distinto conservado. Detalles y método: [docs/bench.md](docs/bench.md) (inglés).
+Reproducción de 7 logs de prueba, de 83,325 a 5,128 tokens estimados (**−93.8%**), con cada error y advertencia distinto conservado. Detalles y método: [docs/bench.md](../docs/bench.md) (inglés).
 
 Lo que Claude ve tras `squeeze run -- pytest -v` (217 líneas → 39). Es la salida real del log `pytest-fail.log`:
 
@@ -155,7 +155,7 @@ salida corta ─────▶ Claude (errores, advertencias, inicio, final y l
 
 ¿Por qué "denegar con una pista" y no reescribir el comando en silencio? Un hook que reescribe un comando también tiene que aprobarlo, y eso se saltaría tus confirmaciones de permisos. squeeze nunca lo hace.
 
-Más: [docs/guide/how-it-works.md](docs/guide/how-it-works.md) (coreano).
+Más: [docs/guide/how-it-works.md](../docs/guide/how-it-works.md) (coreano).
 
 ## Dónde se aplica
 
@@ -179,6 +179,10 @@ R. La pista le dice a Claude que vuelva a llamar a Read con `limit=<líneas>`, y
 
 **P. ¿Ahorra tokens en los chats normales de claude.ai?**
 R. Solo cuando pegas texto largo tras ejecutar `squeeze clip`.
+
+## Comentarios
+
+Deja mejoras y problemas en [Issues](https://github.com/jongwooish/claude-squeeze/issues/new/choose): ideas para la v1.0, errores de actualización o del instalador, compresión que perdió algo o cualquier otro fallo. Elige un formulario (error, problema de compresión, problema de instalación/actualización/versión, idea). Preguntas y hoja de ruta en [Discussions](https://github.com/jongwooish/claude-squeeze/discussions). Cualquiera de los seis idiomas sirve.
 
 ## Contribuir
 

@@ -47,7 +47,7 @@ Cada versión tiene su propia carpeta y README. Las versiones publicadas son eti
 
 | Versión | Nombre | Qué añade | Estado |
 |---|---|---|---|
-| [v0.1](../v0.1_squeeze-sentinel/README.es.md) | **Sentinel** | Hooks de Claude Code que atrapan comandos ruidosos y lecturas completas de archivos, `squeeze run`, `compress`, `clip`, `report` | ✅ v0.1.0 |
+| [v0.1](../v0.1_squeeze-sentinel/README/README.es.md) | **Sentinel** | Hooks de Claude Code que atrapan comandos ruidosos y lecturas completas de archivos, `squeeze run`, `compress`, `clip`, `report` | ✅ v0.1.0 |
 | v0.2 | **Interceptor** | Extensión de navegador que ofrece reducir el texto largo al pegarlo en claude.ai | 🛠 Planeada |
 | v0.3 | **Conduit** | Servidor MCP para la app de escritorio de Claude: Claude lee tus logs ya reducidos | 🛠 Planeada |
 
@@ -120,7 +120,7 @@ FAILED test_inventory.py::test_missing_sku - KeyError: 'B7'
 [squeeze] 217 lines (15.8 KB) → 39 lines (1.9 KB). Full output: .squeeze/raw/20261103-044044-45b0e7.log (exit 1)
 ```
 
-Documentación completa de la v0.1: [v0.1_squeeze-sentinel/README.es.md](../v0.1_squeeze-sentinel/README.es.md).
+Documentación completa de la v0.1: [v0.1_squeeze-sentinel/README.es.md](../v0.1_squeeze-sentinel/README/README.es.md).
 
 ## Instalación
 
@@ -168,7 +168,7 @@ squeeze report    # mira lo que se quedó fuera del contexto
 | `squeeze bench <dir> [--markdown]` | Reproducir archivos `*.log` y medir |
 | `squeeze version` | Mostrar la versión |
 
-Antepón `SQUEEZE_SKIP=1` a un comando para obtener su salida original una vez. La configuración está en `.squeeze/config.json` ([todas las claves](../v0.1_squeeze-sentinel/README.es.md#configuración)).
+Antepón `SQUEEZE_SKIP=1` a un comando para obtener su salida original una vez. La configuración está en `.squeeze/config.json` ([todas las claves](../v0.1_squeeze-sentinel/README/README.es.md#configuración)).
 
 ## Cómo funciona
 
@@ -231,7 +231,7 @@ claude-squeeze/
 ├── README.md                    ← resumen del proyecto (inglés, por defecto)
 ├── readme/                      ← traducciones: coreano, japonés, chino, español, francés
 ├── v0.1_squeeze-sentinel/       ← v0.1: CLI + hooks de Claude Code (Rust, sin dependencias)
-│   ├── README.md                   documentación completa de la v0.1 (6 idiomas)
+│   ├── README/                     documentación completa de la v0.1 (6 idiomas)
 │   ├── src/
 │   ├── docs/                       método del benchmark, guía de usuario (coreano)
 │   └── testdata/fixtures/          logs usados por los tests y el benchmark
@@ -251,6 +251,9 @@ cargo run --release -- bench v0.1_squeeze-sentinel/testdata/fixtures
 Se agradecen nuevos logs de prueba: añade un `*.log` real (sin secretos ni rutas personales) a `v0.1_squeeze-sentinel/testdata/fixtures/`. Los tests fallan si se pierde cualquier error o advertencia distinto. Errores e ideas: [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues).
 
 ## Comunidad
+
+**¿Encontraste un problema o tienes una idea? Abre un [issue](https://github.com/jongwooish/claude-squeeze/issues/new/choose).** Mejoras, el lanzamiento de la v1.0, actualizaciones de versión, errores del instalador o cualquier otro problema del software: cada aporte ayuda a dar forma a la próxima versión.
+
 
 | Quiero… | Ir a |
 |---|---|

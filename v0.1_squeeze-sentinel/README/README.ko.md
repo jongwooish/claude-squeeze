@@ -2,17 +2,17 @@
 
 [English](README.md) | **한국어** | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
 
-← [squeeze로 돌아가기](../readme/README.ko.md)
+← [squeeze로 돌아가기](../../readme/README.ko.md)
 
 Sentinel은 Claude Code와 셸 사이를 지키는 보초입니다. Claude가 컨텍스트를 가득 채울 명령(설치, 빌드, 테스트, 로그)을 실행하거나 거대한 파일을 통째로 읽으려 하면, Sentinel이 짧은 버전으로 돌려보냅니다. Claude는 에러와 경고를 빠짐없이 받습니다.
 
 단일 실행 파일, Rust로 작성, **의존성 0개**. macOS, Linux, Windows에서 동작합니다.
 
-**필요한 것:** 없음. 이것이 기본 `squeeze` 프로그램입니다. 이후 버전은 이 위에 쌓입니다: v0.3 Conduit은 같은 프로그램에 명령을 추가하고(업데이트하면 생김), v0.2 Interceptor는 이 프로그램이 있든 없든 동작하는 별도의 브라우저 확장입니다. [버전끼리의 관계](../readme/README.ko.md#버전끼리의-관계) 참고.
+**필요한 것:** 없음. 이것이 기본 `squeeze` 프로그램입니다. 이후 버전은 이 위에 쌓입니다: v0.3 Conduit은 같은 프로그램에 명령을 추가하고(업데이트하면 생김), v0.2 Interceptor는 이 프로그램이 있든 없든 동작하는 별도의 브라우저 확장입니다. [버전끼리의 관계](../../readme/README.ko.md#버전끼리의-관계) 참고.
 
 ## 효과
 
-테스트 로그 7개 재생, 추정 토큰 83,325 → 5,128 (**−93.8%**), 서로 다른 에러·경고 전부 보존. 자세한 내용과 방법: [docs/bench.md](docs/bench.md) (영어).
+테스트 로그 7개 재생, 추정 토큰 83,325 → 5,128 (**−93.8%**), 서로 다른 에러·경고 전부 보존. 자세한 내용과 방법: [docs/bench.md](../docs/bench.md) (영어).
 
 `squeeze run -- pytest -v` 후 Claude가 보는 것 (217줄 → 39줄). `pytest-fail.log` 테스트 로그의 실제 출력입니다:
 
@@ -155,7 +155,7 @@ Claude가 실행: squeeze run -- 'npm test'   (평소 권한 규칙 그대로 �
 
 왜 명령을 몰래 바꾸지 않고 "거부 + 힌트"일까요? 명령을 바꿔치기하는 훅은 그 명령을 승인까지 해야 해서, 사용자의 권한 확인을 건너뛰게 됩니다. squeeze는 절대 그러지 않습니다.
 
-더 보기: [docs/guide/how-it-works.md](docs/guide/how-it-works.md), [docs/guide/cli.md](docs/guide/cli.md).
+더 보기: [docs/guide/how-it-works.md](../docs/guide/how-it-works.md), [docs/guide/cli.md](../docs/guide/cli.md).
 
 ## 어디에 적용되나
 
@@ -179,6 +179,10 @@ A. 힌트에 `limit=<줄 수>`로 다시 읽으라고 나와 있고, 그렇게 �
 
 **Q. 평범한 claude.ai 채팅에서도 토큰이 줄어드나요?**
 A. `squeeze clip`을 거쳐 긴 텍스트를 붙여넣을 때만 줄어듭니다.
+
+## 피드백
+
+개선사항과 문제점은 [Issues](https://github.com/jongwooish/claude-squeeze/issues/new/choose)에 남겨주세요: v1.0에 바라는 점, 버전 업데이트나 설치 오류, 압축하면서 뭔가 빠진 경우, 그 밖의 소프트웨어 문제 모두 환영합니다. 양식(버그, 압축 문제, 설치·업데이트·버전 문제, 기능 제안) 중 하나를 고르면 됩니다. 질문과 로드맵 이야기는 [Discussions](https://github.com/jongwooish/claude-squeeze/discussions)로. 6개 언어 중 아무 언어로나 써도 됩니다.
 
 ## 기여하기
 

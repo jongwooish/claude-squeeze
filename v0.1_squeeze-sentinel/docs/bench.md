@@ -1,6 +1,6 @@
 # Benchmark: fixture replay
 
-← [v0.1 Sentinel](../README.md)
+← [v0.1 Sentinel](../README/README.md)
 
 ## What is measured
 

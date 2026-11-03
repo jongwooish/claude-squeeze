@@ -2,17 +2,17 @@
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | **Français**
 
-← [Retour à squeeze](../readme/README.fr.md)
+← [Retour à squeeze](../../readme/README.fr.md)
 
 Sentinel monte la garde entre Claude Code et votre shell. Quand Claude s'apprête à lancer une commande qui inonde le contexte (installations, builds, tests, logs) ou à lire d'un coup un énorme fichier, Sentinel le redirige vers une version courte. Claude reçoit toujours chaque erreur et chaque avertissement.
 
 Un seul binaire, écrit en Rust, **zéro dépendance**. Fonctionne sous macOS, Linux et Windows.
 
-**Prérequis :** aucun. C'est le programme `squeeze` de base. Les versions suivantes s'appuient dessus : v0.3 Conduit ajoute une commande à ce même programme (mettez-le à jour pour l'obtenir), tandis que v0.2 Interceptor est une extension de navigateur séparée qui fonctionne avec ou sans lui. Voir [comment les versions s'articulent](../readme/README.fr.md#comment-les-versions-sarticulent).
+**Prérequis :** aucun. C'est le programme `squeeze` de base. Les versions suivantes s'appuient dessus : v0.3 Conduit ajoute une commande à ce même programme (mettez-le à jour pour l'obtenir), tandis que v0.2 Interceptor est une extension de navigateur séparée qui fonctionne avec ou sans lui. Voir [comment les versions s'articulent](../../readme/README.fr.md#comment-les-versions-sarticulent).
 
 ## Effet
 
-Rejeu de 7 logs de test : de 83 325 à 5 128 tokens estimés (**−93,8 %**), chaque erreur et avertissement distinct conservé. Détails et méthode : [docs/bench.md](docs/bench.md) (anglais).
+Rejeu de 7 logs de test : de 83 325 à 5 128 tokens estimés (**−93,8 %**), chaque erreur et avertissement distinct conservé. Détails et méthode : [docs/bench.md](../docs/bench.md) (anglais).
 
 Ce que Claude voit après `squeeze run -- pytest -v` (217 lignes → 39). C'est la sortie réelle du log `pytest-fail.log` :
 
@@ -155,7 +155,7 @@ sortie courte ────▶ Claude (erreurs, avertissements, début, fin et li
 
 Pourquoi « refuser avec un indice » plutôt que réécrire la commande en silence ? Un hook qui réécrit une commande doit aussi l'approuver, ce qui contournerait vos demandes de permission. squeeze ne le fait jamais.
 
-Plus de détails : [docs/guide/how-it-works.md](docs/guide/how-it-works.md) (coréen).
+Plus de détails : [docs/guide/how-it-works.md](../docs/guide/how-it-works.md) (coréen).
 
 ## Où ça s'applique
 
@@ -179,6 +179,10 @@ R. L'indice dit à Claude de rappeler Read avec `limit=<lignes>`, ce qui passe. 
 
 **Q. Est-ce que ça économise des tokens dans les conversations claude.ai normales ?**
 R. Seulement quand vous collez un long texte après avoir lancé `squeeze clip`.
+
+## Retours
+
+Laissez améliorations et problèmes dans les [Issues](https://github.com/jongwooish/claude-squeeze/issues/new/choose) : idées pour la v1.0, erreurs de mise à jour ou d'installation, compression qui a perdu quelque chose, ou tout autre souci. Choisissez un formulaire (bug, problème de compression, problème d'installation/mise à jour/version, idée). Questions et feuille de route dans les [Discussions](https://github.com/jongwooish/claude-squeeze/discussions). N'importe laquelle des six langues convient.
 
 ## Contribuer
 

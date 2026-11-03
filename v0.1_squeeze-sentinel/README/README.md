@@ -2,17 +2,17 @@
 
 **English** | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
 
-← [Back to squeeze](../README.md)
+← [Back to squeeze](../../README.md)
 
 Sentinel stands guard between Claude Code and your shell. When Claude is about to run a command that floods the context (installs, builds, tests, logs) or read a huge file in one go, Sentinel redirects it to a short version. Claude still gets every error and warning.
 
 Single binary, written in Rust, **zero dependencies**. Works on macOS, Linux and Windows.
 
-**Requires:** nothing. This is the base `squeeze` program. Later versions build on it: v0.3 Conduit adds a command to this same program (update to get it), while v0.2 Interceptor is a separate browser extension that works with or without it. See [how the versions fit together](../README.md#how-the-versions-fit-together).
+**Requires:** nothing. This is the base `squeeze` program. Later versions build on it: v0.3 Conduit adds a command to this same program (update to get it), while v0.2 Interceptor is a separate browser extension that works with or without it. See [how the versions fit together](../../README.md#how-the-versions-fit-together).
 
 ## Effect
 
-Fixture replay, 7 logs, 83,325 → 5,128 estimated tokens (**−93.8%**), every distinct error and warning kept. Details and method: [docs/bench.md](docs/bench.md).
+Fixture replay, 7 logs, 83,325 → 5,128 estimated tokens (**−93.8%**), every distinct error and warning kept. Details and method: [docs/bench.md](../docs/bench.md).
 
 What Claude sees after `squeeze run -- pytest -v` (217 lines in, 39 out). This is the real output for the `pytest-fail.log` fixture:
 
@@ -155,7 +155,7 @@ short output ──▶ Claude  (errors, warnings, head, tail, footer with log pa
 
 Why "deny with a hint" instead of rewriting the command silently? A hook that rewrites a command also has to approve it, which would skip your permission prompts. squeeze never does that.
 
-More: [docs/guide/how-it-works.md](docs/guide/how-it-works.md) (Korean).
+More: [docs/guide/how-it-works.md](../docs/guide/how-it-works.md) (Korean).
 
 ## Where it applies
 
@@ -179,6 +179,10 @@ A. The hint tells Claude to call Read again with `limit=<lines>`, which passes. 
 
 **Q. Does it save tokens in regular claude.ai chats?**
 A. Only when you paste long text after running `squeeze clip`.
+
+## Feedback
+
+Please leave improvements and problems in [Issues](https://github.com/jongwooish/claude-squeeze/issues/new/choose): ideas for v1.0, version update or installer errors, compression that dropped something, or anything else that went wrong. Pick a form (bug report, compression problem, install/update/version problem, feature idea). Questions and roadmap talk go to [Discussions](https://github.com/jongwooish/claude-squeeze/discussions). Any of the six languages is fine.
 
 ## Contributing
 

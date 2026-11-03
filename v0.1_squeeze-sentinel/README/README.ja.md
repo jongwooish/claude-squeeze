@@ -2,17 +2,17 @@
 
 [English](README.md) | [한국어](README.ko.md) | **日本語** | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Français](README.fr.md)
 
-← [squeeze に戻る](../readme/README.ja.md)
+← [squeeze に戻る](../../readme/README.ja.md)
 
 Sentinel は Claude Code とシェルの間に立つ見張り番です。Claude がコンテキストをあふれさせるコマンド（インストール、ビルド、テスト、ログ）を実行しようとしたり、巨大なファイルを丸ごと読もうとしたりすると、Sentinel が短い版へ誘導します。Claude はエラーと警告をすべて受け取ります。
 
 単一バイナリ、Rust 製、**依存関係ゼロ**。macOS、Linux、Windows で動作します。
 
-**必要なもの:** なし。これが基本の `squeeze` プログラムです。以降のバージョンはこの上に積み上がります。v0.3 Conduit は同じプログラムにコマンドを追加し（更新すれば使えます）、v0.2 Interceptor はこのプログラムの有無にかかわらず動く別のブラウザ拡張です。[バージョン同士の関係](../readme/README.ja.md#バージョン同士の関係)を参照。
+**必要なもの:** なし。これが基本の `squeeze` プログラムです。以降のバージョンはこの上に積み上がります。v0.3 Conduit は同じプログラムにコマンドを追加し（更新すれば使えます）、v0.2 Interceptor はこのプログラムの有無にかかわらず動く別のブラウザ拡張です。[バージョン同士の関係](../../readme/README.ja.md#バージョン同士の関係)を参照。
 
 ## 効果
 
-テストログ 7 件の再生で、推定トークン 83,325 → 5,128（**−93.8%**）、異なるエラー・警告はすべて保持。詳細と方法: [docs/bench.md](docs/bench.md)（英語）。
+テストログ 7 件の再生で、推定トークン 83,325 → 5,128（**−93.8%**）、異なるエラー・警告はすべて保持。詳細と方法: [docs/bench.md](../docs/bench.md)（英語）。
 
 `squeeze run -- pytest -v` の後に Claude が見るもの（217 行 → 39 行）。`pytest-fail.log` の実際の出力です:
 
@@ -155,7 +155,7 @@ Claude が実行: squeeze run -- 'npm test'   （通常の権限ルールがそ�
 
 なぜこっそり書き換えずに「拒否 + ヒント」なのか? コマンドを書き換えるフックはそれを承認もしなければならず、ユーザーの権限確認を飛ばしてしまいます。squeeze は決してそうしません。
 
-詳しくは: [docs/guide/how-it-works.md](docs/guide/how-it-works.md)（韓国語）。
+詳しくは: [docs/guide/how-it-works.md](../docs/guide/how-it-works.md)（韓国語）。
 
 ## どこで効くか
 
@@ -179,6 +179,10 @@ A. ヒントに `limit=<行数>` で読み直すよう書かれており、そ�
 
 **Q. 普通の claude.ai チャットでもトークンは減りますか?**
 A. `squeeze clip` を通して長いテキストを貼るときだけです。
+
+## フィードバック
+
+改善点や問題は [Issues](https://github.com/jongwooish/claude-squeeze/issues/new/choose) に残してください: v1.0 への要望、バージョン更新やインストールのエラー、圧縮で何かが消えた場合、その他のソフトウェアの問題すべて歓迎します。フォーム（バグ、圧縮の問題、インストール・更新・バージョンの問題、機能の提案）から選んでください。質問やロードマップの話は [Discussions](https://github.com/jongwooish/claude-squeeze/discussions) へ。6 言語のどれでも構いません。
 
 ## コントリビュート
 

@@ -120,7 +120,7 @@ FAILED test_inventory.py::test_missing_sku - KeyError: 'B7'
 [squeeze] 217 lines (15.8 KB) → 39 lines (1.9 KB). Full output: .squeeze/raw/20261103-044044-45b0e7.log (exit 1)
 ```
 
-Full v0.1 documentation: [v0.1_squeeze-sentinel/README.md](v0.1_squeeze-sentinel/README.md).
+Full v0.1 documentation: [v0.1_squeeze-sentinel/README.md](v0.1_squeeze-sentinel/README/README.md).
 
 ## Install
 
@@ -168,7 +168,7 @@ squeeze report    # see what was kept out of context
 | `squeeze bench <dir> [--markdown]` | Replay `*.log` files and measure |
 | `squeeze version` | Print the version |
 
-Prefix a command with `SQUEEZE_SKIP=1` to get its raw output once. Settings live in `.squeeze/config.json` ([all keys](v0.1_squeeze-sentinel/README.md#configuration)).
+Prefix a command with `SQUEEZE_SKIP=1` to get its raw output once. Settings live in `.squeeze/config.json` ([all keys](v0.1_squeeze-sentinel/README/README.md#configuration)).
 
 ## How it works
 
@@ -231,7 +231,7 @@ claude-squeeze/
 ├── README.md                    ← project overview (English)
 ├── readme/                      ← translations: ko, ja, zh-CN, es, fr
 ├── v0.1_squeeze-sentinel/       ← v0.1: CLI + Claude Code hooks (Rust, no dependencies)
-│   ├── README.md                   full v0.1 docs (6 languages)
+│   ├── README/                     full v0.1 docs (6 languages)
 │   ├── src/
 │   ├── docs/                       benchmark method, user guide (Korean)
 │   └── testdata/fixtures/          logs used by tests and the benchmark
@@ -251,6 +251,9 @@ cargo run --release -- bench v0.1_squeeze-sentinel/testdata/fixtures
 New fixtures are welcome: add a real `*.log` (secrets and personal paths removed) to `v0.1_squeeze-sentinel/testdata/fixtures/`. Tests fail if any distinct error or warning is lost. Bugs and ideas: [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues).
 
 ## Community
+
+**Found a problem or have an idea? Please open an [issue](https://github.com/jongwooish/claude-squeeze/issues/new/choose).** Improvements, the v1.0 release, version updates, installer errors and any other software trouble: every report helps shape the next version.
+
 
 | I want to… | Go to |
 |---|---|

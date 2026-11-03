@@ -47,7 +47,7 @@ squeeze はその出力がコンテキストに入る**前に**止めます。
 
 | バージョン | 名前 | 追加されるもの | 状態 |
 |---|---|---|---|
-| [v0.1](../v0.1_squeeze-sentinel/README.ja.md) | **Sentinel** | 出力の多いコマンドと大きなファイルの丸読みを捕まえる Claude Code フック、`squeeze run`、`compress`、`clip`、`report` | ✅ v0.1.0 |
+| [v0.1](../v0.1_squeeze-sentinel/README/README.ja.md) | **Sentinel** | 出力の多いコマンドと大きなファイルの丸読みを捕まえる Claude Code フック、`squeeze run`、`compress`、`clip`、`report` | ✅ v0.1.0 |
 | v0.2 | **Interceptor** | claude.ai に長いテキストを貼り付けたとき縮めるか尋ねるブラウザ拡張 | 🛠 予定 |
 | v0.3 | **Conduit** | Claude デスクトップアプリ用 MCP サーバー: Claude がログを縮めた状態で読む | 🛠 予定 |
 
@@ -120,7 +120,7 @@ FAILED test_inventory.py::test_missing_sku - KeyError: 'B7'
 [squeeze] 217 lines (15.8 KB) → 39 lines (1.9 KB). Full output: .squeeze/raw/20261103-044044-45b0e7.log (exit 1)
 ```
 
-v0.1 の詳しいドキュメント: [v0.1_squeeze-sentinel/README.ja.md](../v0.1_squeeze-sentinel/README.ja.md)。
+v0.1 の詳しいドキュメント: [v0.1_squeeze-sentinel/README.ja.md](../v0.1_squeeze-sentinel/README/README.ja.md)。
 
 ## インストール
 
@@ -168,7 +168,7 @@ squeeze report    # コンテキストから締め出した量を確認
 | `squeeze bench <dir> [--markdown]` | `*.log` を再生して測定 |
 | `squeeze version` | バージョンを表示 |
 
-コマンドの前に `SQUEEZE_SKIP=1` を付けると、そのコマンドだけ生の出力を得られます。設定は `.squeeze/config.json`（[全キー](../v0.1_squeeze-sentinel/README.ja.md#設定)）。
+コマンドの前に `SQUEEZE_SKIP=1` を付けると、そのコマンドだけ生の出力を得られます。設定は `.squeeze/config.json`（[全キー](../v0.1_squeeze-sentinel/README/README.ja.md#設定)）。
 
 ## 仕組み
 
@@ -231,7 +231,7 @@ claude-squeeze/
 ├── README.md                    ← プロジェクト概要（英語、既定）
 ├── readme/                      ← 翻訳: 韓国語、日本語、中国語、スペイン語、フランス語
 ├── v0.1_squeeze-sentinel/       ← v0.1: CLI + Claude Code フック（Rust、依存なし）
-│   ├── README.md                   v0.1 の詳しいドキュメント（6 言語）
+│   ├── README/                     v0.1 の詳しいドキュメント（6 言語）
 │   ├── src/
 │   ├── docs/                       ベンチマーク方法、ユーザーガイド（韓国語）
 │   └── testdata/fixtures/          テストとベンチマークで使うログ
@@ -251,6 +251,9 @@ cargo run --release -- bench v0.1_squeeze-sentinel/testdata/fixtures
 新しいテストログを歓迎します: 実際の `*.log`（秘密情報と個人的なパスは削除）を `v0.1_squeeze-sentinel/testdata/fixtures/` に追加してください。エラー・警告が一つでも失われるとテストが失敗します。バグとアイデア: [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues)。
 
 ## コミュニティ
+
+**問題を見つけたり、アイデアがあれば [Issues](https://github.com/jongwooish/claude-squeeze/issues/new/choose) に書いてください。** 改善点、v1.0 のリリース、バージョン更新、インストールエラーなど、どんなソフトウェアの問題でも次のバージョンづくりに役立ちます。
+
 
 | こんなとき | 行き先 |
 |---|---|

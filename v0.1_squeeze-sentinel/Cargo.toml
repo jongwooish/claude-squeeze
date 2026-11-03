@@ -6,7 +6,7 @@ rust-version = "1.80"
 description = "Keep long command output and large file reads out of Claude Code's context"
 license = "MIT"
 repository = "https://github.com/jongwooish/claude-squeeze"
-readme = "README.md"
+readme = "README/README.md"
 keywords = ["claude", "claude-code", "tokens", "cli", "hooks"]
 categories = ["command-line-utilities", "development-tools"]
 

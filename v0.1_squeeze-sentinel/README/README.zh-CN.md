@@ -2,17 +2,17 @@
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | **简体中文** | [Español](README.es.md) | [Français](README.fr.md)
 
-← [返回 squeeze](../readme/README.zh-CN.md)
+← [返回 squeeze](../../readme/README.zh-CN.md)
 
 Sentinel 是守在 Claude Code 和 shell 之间的哨兵。当 Claude 准备运行会塞满上下文的命令（安装、构建、测试、日志），或一次性读取巨大的文件时，Sentinel 会把它引导到简短的版本。Claude 依然能拿到每一条错误和警告。
 
 单个可执行文件，Rust 编写，**零依赖**，支持 macOS、Linux 和 Windows。
 
-**需要什么：** 无。这就是基础的 `squeeze` 程序。后续版本都建立在它之上：v0.3 Conduit 在同一个程序里新增命令（更新即可获得），v0.2 Interceptor 是一个独立的浏览器扩展，有没有它都能用。参见[各版本之间的关系](../readme/README.zh-CN.md#各版本之间的关系)。
+**需要什么：** 无。这就是基础的 `squeeze` 程序。后续版本都建立在它之上：v0.3 Conduit 在同一个程序里新增命令（更新即可获得），v0.2 Interceptor 是一个独立的浏览器扩展，有没有它都能用。参见[各版本之间的关系](../../readme/README.zh-CN.md#各版本之间的关系)。
 
 ## 效果
 
-回放 7 份测试日志，估算 token 从 83,325 降到 5,128（**−93.8%**），每一条不同的错误和警告都被保留。详情和方法：[docs/bench.md](docs/bench.md)（英文）。
+回放 7 份测试日志，估算 token 从 83,325 降到 5,128（**−93.8%**），每一条不同的错误和警告都被保留。详情和方法：[docs/bench.md](../docs/bench.md)（英文）。
 
 运行 `squeeze run -- pytest -v` 后 Claude 看到的内容（217 行 → 39 行），这是 `pytest-fail.log` 的真实输出：
 
@@ -155,7 +155,7 @@ Claude 运行: squeeze run -- 'npm test'   （照常应用你的权限规则）
 
 为什么是“拒绝 + 提示”而不是悄悄改写命令？改写命令的钩子还必须批准该命令，这会跳过你的权限确认。squeeze 从不这样做。
 
-更多：[docs/guide/how-it-works.md](docs/guide/how-it-works.md)（韩语）。
+更多：[docs/guide/how-it-works.md](../docs/guide/how-it-works.md)（韩语）。
 
 ## 适用范围
 
@@ -179,6 +179,10 @@ Claude 运行: squeeze run -- 'npm test'   （照常应用你的权限规则）
 
 **问：普通的 claude.ai 聊天也能省 token 吗？**
 答：只有在先运行 `squeeze clip` 再粘贴长文本时才行。
+
+## 反馈
+
+请把改进建议和问题留在 [Issues](https://github.com/jongwooish/claude-squeeze/issues/new/choose)：对 v1.0 的期望、版本更新或安装错误、压缩时丢失了内容，以及其他任何软件问题都欢迎。选择一个表单（bug、压缩问题、安装/更新/版本问题、功能建议）即可。提问和路线图讨论请到 [Discussions](https://github.com/jongwooish/claude-squeeze/discussions)。六种语言任选。
 
 ## 参与贡献
 

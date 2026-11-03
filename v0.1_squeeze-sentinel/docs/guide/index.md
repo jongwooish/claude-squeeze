@@ -1,6 +1,6 @@
 # squeeze 사용자 가이드 (v0.1 Sentinel)
 
-← [v0.1 Sentinel README](../../README.ko.md)
+← [v0.1 Sentinel README](../../README/README.ko.md)
 
 - [동작 원리](how-it-works.md): 훅이 언제 끼어드는지, 압축 규칙, 왜 "거부 + 힌트" 방식인지
 - [CLI](cli.md): 모든 명령, 옵션, 설정 파일, 환경 변수

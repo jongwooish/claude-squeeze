@@ -1,23 +1,25 @@
-title: "[roadmap] "
+title: '[roadmap] '
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Feedback on the roadmap: v0.2 Interceptor (browser extension), v0.3 Conduit (MCP server), and what v1.0 should include before commands and config are frozen.
-  - type: dropdown
-    id: topic
-    attributes:
-      label: Topic
-      options:
-        - v0.2 Interceptor
-        - v0.3 Conduit
-        - What v1.0 should include
-        - A new idea not on the roadmap
-    validations:
-      required: true
-  - type: textarea
-    id: idea
-    attributes:
-      label: Your thoughts
-    validations:
-      required: true
+- type: markdown
+  attributes:
+    value: 'You can write in any of the six languages. / 6개 언어 중 아무 언어로나 쓰세요. / 6 言語のどれでも書けます。 / 六种语言任选。 / Puedes escribir en cualquiera de los seis idiomas. / Écrivez dans l''une des six langues.
+
+
+      '
+- type: dropdown
+  id: topic
+  attributes:
+    label: Topic / 주제 / トピック / 主题 / Tema / Sujet
+    options:
+    - v0.2 Interceptor
+    - v0.3 Conduit
+    - What v1.0 should include / v1.0에 들어갈 것 / v1.0 に含めるべきもの / v1.0 应包含什么 / Qué debe incluir la v1.0 / Ce que la v1.0 doit inclure
+    - A new idea / 새 아이디어 / 新しいアイデア / 新想法 / Una idea nueva / Une nouvelle idée
+  validations:
+    required: true
+- type: textarea
+  id: idea
+  attributes:
+    label: Your thoughts / 의견 / ご意見 / 你的想法 / Tu opinión / Votre avis
+  validations:
+    required: true
