@@ -1,0 +1,370 @@
+cc -Wall -Wextra -O2 -fPIC -c src/unit1.c -o src/unit1.o
+src/unit1.c: In function 'helper1':
+src/unit1.c:3:59: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper1(int a, int b) { int unused1; char buf[8]; if (a = b) { strcpy(buf, "overflowing1"); } return a; }
+      |                                                           ^
+src/unit1.c:3:33: warning: unused variable 'unused1' [-Wunused-variable]
+    3 | int helper1(int a, int b) { int unused1; char buf[8]; if (a = b) { strcpy(buf, "overflowing1"); } return a; }
+      |                                 ^~~~~~~
+src/unit1.c: In function 'compare1':
+src/unit1.c:4:48: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare1(unsigned int x, int y) { return x < y; }
+      |                                                ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit10.c -o src/unit10.o
+src/unit10.c: In function 'helper10':
+src/unit10.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper10(int a, int b) { int unused10; char buf[8]; if (a = b) { strcpy(buf, "overflowing10"); } return a; }
+      |                                                             ^
+src/unit10.c:3:34: warning: unused variable 'unused10' [-Wunused-variable]
+    3 | int helper10(int a, int b) { int unused10; char buf[8]; if (a = b) { strcpy(buf, "overflowing10"); } return a; }
+      |                                  ^~~~~~~~
+src/unit10.c: In function 'compare10':
+src/unit10.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare10(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit11.c -o src/unit11.o
+src/unit11.c: In function 'helper11':
+src/unit11.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper11(int a, int b) { int unused11; char buf[8]; if (a = b) { strcpy(buf, "overflowing11"); } return a; }
+      |                                                             ^
+src/unit11.c:3:34: warning: unused variable 'unused11' [-Wunused-variable]
+    3 | int helper11(int a, int b) { int unused11; char buf[8]; if (a = b) { strcpy(buf, "overflowing11"); } return a; }
+      |                                  ^~~~~~~~
+src/unit11.c: In function 'compare11':
+src/unit11.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare11(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit12.c -o src/unit12.o
+src/unit12.c: In function 'helper12':
+src/unit12.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper12(int a, int b) { int unused12; char buf[8]; if (a = b) { strcpy(buf, "overflowing12"); } return a; }
+      |                                                             ^
+src/unit12.c:3:34: warning: unused variable 'unused12' [-Wunused-variable]
+    3 | int helper12(int a, int b) { int unused12; char buf[8]; if (a = b) { strcpy(buf, "overflowing12"); } return a; }
+      |                                  ^~~~~~~~
+src/unit12.c: In function 'compare12':
+src/unit12.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare12(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit13.c -o src/unit13.o
+src/unit13.c: In function 'helper13':
+src/unit13.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper13(int a, int b) { int unused13; char buf[8]; if (a = b) { strcpy(buf, "overflowing13"); } return a; }
+      |                                                             ^
+src/unit13.c:3:34: warning: unused variable 'unused13' [-Wunused-variable]
+    3 | int helper13(int a, int b) { int unused13; char buf[8]; if (a = b) { strcpy(buf, "overflowing13"); } return a; }
+      |                                  ^~~~~~~~
+src/unit13.c: In function 'compare13':
+src/unit13.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare13(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit14.c -o src/unit14.o
+src/unit14.c: In function 'helper14':
+src/unit14.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper14(int a, int b) { int unused14; char buf[8]; if (a = b) { strcpy(buf, "overflowing14"); } return a; }
+      |                                                             ^
+src/unit14.c:3:34: warning: unused variable 'unused14' [-Wunused-variable]
+    3 | int helper14(int a, int b) { int unused14; char buf[8]; if (a = b) { strcpy(buf, "overflowing14"); } return a; }
+      |                                  ^~~~~~~~
+src/unit14.c: In function 'compare14':
+src/unit14.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare14(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit15.c -o src/unit15.o
+src/unit15.c: In function 'helper15':
+src/unit15.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper15(int a, int b) { int unused15; char buf[8]; if (a = b) { strcpy(buf, "overflowing15"); } return a; }
+      |                                                             ^
+src/unit15.c:3:34: warning: unused variable 'unused15' [-Wunused-variable]
+    3 | int helper15(int a, int b) { int unused15; char buf[8]; if (a = b) { strcpy(buf, "overflowing15"); } return a; }
+      |                                  ^~~~~~~~
+src/unit15.c: In function 'compare15':
+src/unit15.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare15(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit16.c -o src/unit16.o
+src/unit16.c: In function 'helper16':
+src/unit16.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper16(int a, int b) { int unused16; char buf[8]; if (a = b) { strcpy(buf, "overflowing16"); } return a; }
+      |                                                             ^
+src/unit16.c:3:34: warning: unused variable 'unused16' [-Wunused-variable]
+    3 | int helper16(int a, int b) { int unused16; char buf[8]; if (a = b) { strcpy(buf, "overflowing16"); } return a; }
+      |                                  ^~~~~~~~
+src/unit16.c: In function 'compare16':
+src/unit16.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare16(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit17.c -o src/unit17.o
+src/unit17.c: In function 'helper17':
+src/unit17.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper17(int a, int b) { int unused17; char buf[8]; if (a = b) { strcpy(buf, "overflowing17"); } return a; }
+      |                                                             ^
+src/unit17.c:3:34: warning: unused variable 'unused17' [-Wunused-variable]
+    3 | int helper17(int a, int b) { int unused17; char buf[8]; if (a = b) { strcpy(buf, "overflowing17"); } return a; }
+      |                                  ^~~~~~~~
+src/unit17.c: In function 'compare17':
+src/unit17.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare17(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit18.c -o src/unit18.o
+src/unit18.c: In function 'helper18':
+src/unit18.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper18(int a, int b) { int unused18; char buf[8]; if (a = b) { strcpy(buf, "overflowing18"); } return a; }
+      |                                                             ^
+src/unit18.c:3:34: warning: unused variable 'unused18' [-Wunused-variable]
+    3 | int helper18(int a, int b) { int unused18; char buf[8]; if (a = b) { strcpy(buf, "overflowing18"); } return a; }
+      |                                  ^~~~~~~~
+src/unit18.c: In function 'compare18':
+src/unit18.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare18(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+src/unit18.c: In function 'broken':
+src/unit18.c:5:27: error: 'undefined_symbol' undeclared (first use in this function)
+    5 | int broken(void) { return undefined_symbol + 1; }
+      |                           ^~~~~~~~~~~~~~~~
+src/unit18.c:5:27: note: each undeclared identifier is reported only once for each function it appears in
+src/unit18.c:5:49: warning: control reaches end of non-void function [-Wreturn-type]
+    5 | int broken(void) { return undefined_symbol + 1; }
+      |                                                 ^
+make: *** [Makefile:8: src/unit18.o] Error 1
+cc -Wall -Wextra -O2 -fPIC -c src/unit19.c -o src/unit19.o
+src/unit19.c: In function 'helper19':
+src/unit19.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper19(int a, int b) { int unused19; char buf[8]; if (a = b) { strcpy(buf, "overflowing19"); } return a; }
+      |                                                             ^
+src/unit19.c:3:34: warning: unused variable 'unused19' [-Wunused-variable]
+    3 | int helper19(int a, int b) { int unused19; char buf[8]; if (a = b) { strcpy(buf, "overflowing19"); } return a; }
+      |                                  ^~~~~~~~
+src/unit19.c: In function 'compare19':
+src/unit19.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare19(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit2.c -o src/unit2.o
+src/unit2.c: In function 'helper2':
+src/unit2.c:3:59: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper2(int a, int b) { int unused2; char buf[8]; if (a = b) { strcpy(buf, "overflowing2"); } return a; }
+      |                                                           ^
+src/unit2.c:3:33: warning: unused variable 'unused2' [-Wunused-variable]
+    3 | int helper2(int a, int b) { int unused2; char buf[8]; if (a = b) { strcpy(buf, "overflowing2"); } return a; }
+      |                                 ^~~~~~~
+src/unit2.c: In function 'compare2':
+src/unit2.c:4:48: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare2(unsigned int x, int y) { return x < y; }
+      |                                                ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit20.c -o src/unit20.o
+src/unit20.c: In function 'helper20':
+src/unit20.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper20(int a, int b) { int unused20; char buf[8]; if (a = b) { strcpy(buf, "overflowing20"); } return a; }
+      |                                                             ^
+src/unit20.c:3:34: warning: unused variable 'unused20' [-Wunused-variable]
+    3 | int helper20(int a, int b) { int unused20; char buf[8]; if (a = b) { strcpy(buf, "overflowing20"); } return a; }
+      |                                  ^~~~~~~~
+src/unit20.c: In function 'compare20':
+src/unit20.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare20(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit21.c -o src/unit21.o
+src/unit21.c: In function 'helper21':
+src/unit21.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper21(int a, int b) { int unused21; char buf[8]; if (a = b) { strcpy(buf, "overflowing21"); } return a; }
+      |                                                             ^
+src/unit21.c:3:34: warning: unused variable 'unused21' [-Wunused-variable]
+    3 | int helper21(int a, int b) { int unused21; char buf[8]; if (a = b) { strcpy(buf, "overflowing21"); } return a; }
+      |                                  ^~~~~~~~
+src/unit21.c: In function 'compare21':
+src/unit21.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare21(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit22.c -o src/unit22.o
+src/unit22.c: In function 'helper22':
+src/unit22.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper22(int a, int b) { int unused22; char buf[8]; if (a = b) { strcpy(buf, "overflowing22"); } return a; }
+      |                                                             ^
+src/unit22.c:3:34: warning: unused variable 'unused22' [-Wunused-variable]
+    3 | int helper22(int a, int b) { int unused22; char buf[8]; if (a = b) { strcpy(buf, "overflowing22"); } return a; }
+      |                                  ^~~~~~~~
+src/unit22.c: In function 'compare22':
+src/unit22.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare22(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit23.c -o src/unit23.o
+src/unit23.c: In function 'helper23':
+src/unit23.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper23(int a, int b) { int unused23; char buf[8]; if (a = b) { strcpy(buf, "overflowing23"); } return a; }
+      |                                                             ^
+src/unit23.c:3:34: warning: unused variable 'unused23' [-Wunused-variable]
+    3 | int helper23(int a, int b) { int unused23; char buf[8]; if (a = b) { strcpy(buf, "overflowing23"); } return a; }
+      |                                  ^~~~~~~~
+src/unit23.c: In function 'compare23':
+src/unit23.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare23(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit24.c -o src/unit24.o
+src/unit24.c: In function 'helper24':
+src/unit24.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper24(int a, int b) { int unused24; char buf[8]; if (a = b) { strcpy(buf, "overflowing24"); } return a; }
+      |                                                             ^
+src/unit24.c:3:34: warning: unused variable 'unused24' [-Wunused-variable]
+    3 | int helper24(int a, int b) { int unused24; char buf[8]; if (a = b) { strcpy(buf, "overflowing24"); } return a; }
+      |                                  ^~~~~~~~
+src/unit24.c: In function 'compare24':
+src/unit24.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare24(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit25.c -o src/unit25.o
+src/unit25.c: In function 'helper25':
+src/unit25.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper25(int a, int b) { int unused25; char buf[8]; if (a = b) { strcpy(buf, "overflowing25"); } return a; }
+      |                                                             ^
+src/unit25.c:3:34: warning: unused variable 'unused25' [-Wunused-variable]
+    3 | int helper25(int a, int b) { int unused25; char buf[8]; if (a = b) { strcpy(buf, "overflowing25"); } return a; }
+      |                                  ^~~~~~~~
+src/unit25.c: In function 'compare25':
+src/unit25.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare25(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit26.c -o src/unit26.o
+src/unit26.c: In function 'helper26':
+src/unit26.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper26(int a, int b) { int unused26; char buf[8]; if (a = b) { strcpy(buf, "overflowing26"); } return a; }
+      |                                                             ^
+src/unit26.c:3:34: warning: unused variable 'unused26' [-Wunused-variable]
+    3 | int helper26(int a, int b) { int unused26; char buf[8]; if (a = b) { strcpy(buf, "overflowing26"); } return a; }
+      |                                  ^~~~~~~~
+src/unit26.c: In function 'compare26':
+src/unit26.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare26(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit27.c -o src/unit27.o
+src/unit27.c: In function 'helper27':
+src/unit27.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper27(int a, int b) { int unused27; char buf[8]; if (a = b) { strcpy(buf, "overflowing27"); } return a; }
+      |                                                             ^
+src/unit27.c:3:34: warning: unused variable 'unused27' [-Wunused-variable]
+    3 | int helper27(int a, int b) { int unused27; char buf[8]; if (a = b) { strcpy(buf, "overflowing27"); } return a; }
+      |                                  ^~~~~~~~
+src/unit27.c: In function 'compare27':
+src/unit27.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare27(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit28.c -o src/unit28.o
+src/unit28.c: In function 'helper28':
+src/unit28.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper28(int a, int b) { int unused28; char buf[8]; if (a = b) { strcpy(buf, "overflowing28"); } return a; }
+      |                                                             ^
+src/unit28.c:3:34: warning: unused variable 'unused28' [-Wunused-variable]
+    3 | int helper28(int a, int b) { int unused28; char buf[8]; if (a = b) { strcpy(buf, "overflowing28"); } return a; }
+      |                                  ^~~~~~~~
+src/unit28.c: In function 'compare28':
+src/unit28.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare28(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit29.c -o src/unit29.o
+src/unit29.c: In function 'helper29':
+src/unit29.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper29(int a, int b) { int unused29; char buf[8]; if (a = b) { strcpy(buf, "overflowing29"); } return a; }
+      |                                                             ^
+src/unit29.c:3:34: warning: unused variable 'unused29' [-Wunused-variable]
+    3 | int helper29(int a, int b) { int unused29; char buf[8]; if (a = b) { strcpy(buf, "overflowing29"); } return a; }
+      |                                  ^~~~~~~~
+src/unit29.c: In function 'compare29':
+src/unit29.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare29(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit3.c -o src/unit3.o
+src/unit3.c: In function 'helper3':
+src/unit3.c:3:59: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper3(int a, int b) { int unused3; char buf[8]; if (a = b) { strcpy(buf, "overflowing3"); } return a; }
+      |                                                           ^
+src/unit3.c:3:33: warning: unused variable 'unused3' [-Wunused-variable]
+    3 | int helper3(int a, int b) { int unused3; char buf[8]; if (a = b) { strcpy(buf, "overflowing3"); } return a; }
+      |                                 ^~~~~~~
+src/unit3.c: In function 'compare3':
+src/unit3.c:4:48: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare3(unsigned int x, int y) { return x < y; }
+      |                                                ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit30.c -o src/unit30.o
+src/unit30.c: In function 'helper30':
+src/unit30.c:3:61: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper30(int a, int b) { int unused30; char buf[8]; if (a = b) { strcpy(buf, "overflowing30"); } return a; }
+      |                                                             ^
+src/unit30.c:3:34: warning: unused variable 'unused30' [-Wunused-variable]
+    3 | int helper30(int a, int b) { int unused30; char buf[8]; if (a = b) { strcpy(buf, "overflowing30"); } return a; }
+      |                                  ^~~~~~~~
+src/unit30.c: In function 'compare30':
+src/unit30.c:4:49: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare30(unsigned int x, int y) { return x < y; }
+      |                                                 ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit4.c -o src/unit4.o
+src/unit4.c: In function 'helper4':
+src/unit4.c:3:59: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper4(int a, int b) { int unused4; char buf[8]; if (a = b) { strcpy(buf, "overflowing4"); } return a; }
+      |                                                           ^
+src/unit4.c:3:33: warning: unused variable 'unused4' [-Wunused-variable]
+    3 | int helper4(int a, int b) { int unused4; char buf[8]; if (a = b) { strcpy(buf, "overflowing4"); } return a; }
+      |                                 ^~~~~~~
+src/unit4.c: In function 'compare4':
+src/unit4.c:4:48: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare4(unsigned int x, int y) { return x < y; }
+      |                                                ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit5.c -o src/unit5.o
+src/unit5.c: In function 'helper5':
+src/unit5.c:3:59: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper5(int a, int b) { int unused5; char buf[8]; if (a = b) { strcpy(buf, "overflowing5"); } return a; }
+      |                                                           ^
+src/unit5.c:3:33: warning: unused variable 'unused5' [-Wunused-variable]
+    3 | int helper5(int a, int b) { int unused5; char buf[8]; if (a = b) { strcpy(buf, "overflowing5"); } return a; }
+      |                                 ^~~~~~~
+src/unit5.c: In function 'compare5':
+src/unit5.c:4:48: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare5(unsigned int x, int y) { return x < y; }
+      |                                                ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit6.c -o src/unit6.o
+src/unit6.c: In function 'helper6':
+src/unit6.c:3:59: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper6(int a, int b) { int unused6; char buf[8]; if (a = b) { strcpy(buf, "overflowing6"); } return a; }
+      |                                                           ^
+src/unit6.c:3:33: warning: unused variable 'unused6' [-Wunused-variable]
+    3 | int helper6(int a, int b) { int unused6; char buf[8]; if (a = b) { strcpy(buf, "overflowing6"); } return a; }
+      |                                 ^~~~~~~
+src/unit6.c: In function 'compare6':
+src/unit6.c:4:48: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare6(unsigned int x, int y) { return x < y; }
+      |                                                ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit7.c -o src/unit7.o
+src/unit7.c: In function 'helper7':
+src/unit7.c:3:59: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper7(int a, int b) { int unused7; char buf[8]; if (a = b) { strcpy(buf, "overflowing7"); } return a; }
+      |                                                           ^
+src/unit7.c:3:33: warning: unused variable 'unused7' [-Wunused-variable]
+    3 | int helper7(int a, int b) { int unused7; char buf[8]; if (a = b) { strcpy(buf, "overflowing7"); } return a; }
+      |                                 ^~~~~~~
+src/unit7.c: In function 'compare7':
+src/unit7.c:4:48: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare7(unsigned int x, int y) { return x < y; }
+      |                                                ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit8.c -o src/unit8.o
+src/unit8.c: In function 'helper8':
+src/unit8.c:3:59: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper8(int a, int b) { int unused8; char buf[8]; if (a = b) { strcpy(buf, "overflowing8"); } return a; }
+      |                                                           ^
+src/unit8.c:3:33: warning: unused variable 'unused8' [-Wunused-variable]
+    3 | int helper8(int a, int b) { int unused8; char buf[8]; if (a = b) { strcpy(buf, "overflowing8"); } return a; }
+      |                                 ^~~~~~~
+src/unit8.c: In function 'compare8':
+src/unit8.c:4:48: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare8(unsigned int x, int y) { return x < y; }
+      |                                                ^
+cc -Wall -Wextra -O2 -fPIC -c src/unit9.c -o src/unit9.o
+src/unit9.c: In function 'helper9':
+src/unit9.c:3:59: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    3 | int helper9(int a, int b) { int unused9; char buf[8]; if (a = b) { strcpy(buf, "overflowing9"); } return a; }
+      |                                                           ^
+src/unit9.c:3:33: warning: unused variable 'unused9' [-Wunused-variable]
+    3 | int helper9(int a, int b) { int unused9; char buf[8]; if (a = b) { strcpy(buf, "overflowing9"); } return a; }
+      |                                 ^~~~~~~
+src/unit9.c: In function 'compare9':
+src/unit9.c:4:48: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+    4 | int compare9(unsigned int x, int y) { return x < y; }
+      |                                                ^
+make: Target 'all' not remade because of errors.
