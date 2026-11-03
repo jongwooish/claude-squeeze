@@ -1,7 +1,7 @@
 blank_issues_enabled: true
 contact_links:
 - name: '📌 Read first: Issue guide / 먼저 읽기: 이슈 작성 가이드'
-  url: https://github.com/jongwooish/claude-squeeze/blob/main/.github/ISSUE_GUIDE.md
+  url: https://github.com/jongwooish/claude-squeeze/blob/main/.github/issue-guide/ISSUE_GUIDE.md
   about: How to write a report that gets fixed fast (6 languages) / 빨리 해결되는 이슈 쓰는 법 (6개 언어)
 - name: Questions and troubleshooting / 질문·문제 해결
   url: https://github.com/jongwooish/claude-squeeze/discussions/categories/q-a
