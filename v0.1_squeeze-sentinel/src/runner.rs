@@ -23,23 +23,74 @@ pub fn run(command: &str, dir: &Path, cfg: &Config) -> i32 {
     )
 }
 
+/// The shell used to run commands.
+#[derive(Debug, Clone, PartialEq)]
+pub enum Shell {
+    /// A POSIX shell (bash or sh) at this path.
+    Posix(PathBuf),
+    /// Windows PowerShell, when no POSIX shell exists.
+    PowerShell,
+}
+
+/// Pick the shell. Order: `SQUEEZE_SHELL`, then bash (on Windows: Git Bash,
+/// never the `System32\bash.exe` WSL launcher), then sh, then PowerShell.
+pub fn find_shell() -> Shell {
+    if let Some(s) = std::env::var_os("SQUEEZE_SHELL").filter(|s| !s.is_empty()) {
+        return Shell::Posix(PathBuf::from(s));
+    }
+    if cfg!(windows) {
+        // Claude Code on Windows records its Git Bash here when it is not on PATH.
+        if let Some(p) = std::env::var_os("CLAUDE_CODE_GIT_BASH_PATH").map(PathBuf::from) {
+            if p.is_file() {
+                return Shell::Posix(p);
+            }
+        }
+        if let Some(p) = which("bash.exe").filter(|p| !is_wsl_launcher(p)) {
+            return Shell::Posix(p);
+        }
+        for base in ["ProgramFiles", "ProgramW6432", "LOCALAPPDATA"] {
+            if let Some(b) = std::env::var_os(base) {
+                for sub in ["Git\\bin\\bash.exe", "Programs\\Git\\bin\\bash.exe"] {
+                    let p = PathBuf::from(&b).join(sub);
+                    if p.is_file() {
+                        return Shell::Posix(p);
+                    }
+                }
+            }
+        }
+        return Shell::PowerShell;
+    }
+    which("bash")
+        .or_else(|| which("sh"))
+        .map(Shell::Posix)
+        .unwrap_or_else(|| Shell::Posix(PathBuf::from("/bin/sh")))
+}
+
+/// `C:\Windows\System32\bash.exe` and the WindowsApps stub start WSL,
+/// not a shell for this machine.
+fn is_wsl_launcher(p: &Path) -> bool {
+    let s = p.to_string_lossy().to_lowercase().replace('/', "\\");
+    s.contains("\\windows\\system32\\") || s.contains("\\windowsapps\\")
+}
+
 /// Execute through the shell with stderr merged into stdout in order.
 pub fn capture(command: &str, dir: &Path) -> (String, i32) {
-    let has_bash = which("bash");
-    let mut cmd = if has_bash || !cfg!(windows) {
-        let sh = if has_bash { "bash" } else { "sh" };
-        let mut c = Command::new(sh);
-        // the group redirect keeps stdout and stderr in arrival order
-        c.arg("-c").arg(format!("{{ {}\n}} 2>&1", command));
-        c
-    } else {
-        let mut c = Command::new("powershell");
-        c.args([
-            "-NoProfile",
-            "-Command",
-            &format!("& {{ {} }} 2>&1", command),
-        ]);
-        c
+    let mut cmd = match find_shell() {
+        Shell::Posix(sh) => {
+            let mut c = Command::new(sh);
+            // the group redirect keeps stdout and stderr in arrival order
+            c.arg("-c").arg(format!("{{ {}\n}} 2>&1", command));
+            c
+        }
+        Shell::PowerShell => {
+            let mut c = Command::new("powershell");
+            c.args([
+                "-NoProfile",
+                "-Command",
+                &format!("& {{ {} }} 2>&1", command),
+            ]);
+            c
+        }
     };
     cmd.current_dir(dir)
         .stdin(Stdio::inherit())
@@ -55,12 +106,12 @@ pub fn capture(command: &str, dir: &Path) -> (String, i32) {
     }
 }
 
-fn which(prog: &str) -> bool {
-    let Some(path) = std::env::var_os("PATH") else {
-        return false;
-    };
+/// First match for `prog` on PATH, skipping WSL launchers.
+fn which(prog: &str) -> Option<PathBuf> {
+    let path = std::env::var_os("PATH")?;
     std::env::split_paths(&path)
-        .any(|d| d.join(prog).is_file() || d.join(format!("{}.exe", prog)).is_file())
+        .map(|d| d.join(prog))
+        .find(|p| p.is_file() && !is_wsl_launcher(p))
 }
 
 /// Compress `raw`, save the full log when compressed, write the result to
@@ -209,6 +260,18 @@ mod tests {
         let _ = std::fs::remove_dir_all(&d);
         std::fs::create_dir_all(d.join(config::DIR)).unwrap();
         d
+    }
+
+    #[test]
+    fn skips_wsl_launcher() {
+        assert!(is_wsl_launcher(Path::new(r"C:\Windows\System32\bash.exe")));
+        assert!(is_wsl_launcher(Path::new(
+            r"C:\Users\me\AppData\Local\Microsoft\WindowsApps\bash.exe"
+        )));
+        assert!(!is_wsl_launcher(Path::new(
+            r"C:\Program Files\Git\bin\bash.exe"
+        )));
+        assert!(!is_wsl_launcher(Path::new("/usr/bin/bash")));
     }
 
     #[test]

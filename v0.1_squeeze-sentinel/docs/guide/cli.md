@@ -17,6 +17,7 @@
 | `SQUEEZE_VERSION` | 특정 버전 설치 (예: `v0.1.0`). 기본은 최신 |
 | `SQUEEZE_INSTALL_DIR` | 설치 폴더. 기본은 `/usr/local/bin`, Windows는 `%LOCALAPPDATA%\Programs\squeeze` |
 | `SQUEEZE_SKIP=1` | 명령 앞에 붙이면 Bash 가드가 그 명령을 건드리지 않음 |
+| `SQUEEZE_SHELL` | `squeeze run`이 쓸 셸 경로를 직접 지정 (기본: bash → sh, Windows는 Git Bash → PowerShell) |
 
 ## 명령
 
@@ -44,7 +45,7 @@ squeeze가 넣은 훅과 `CLAUDE.md` 안내만 지웁니다. 다른 훅은 그�
 squeeze run -- <명령>
 ```
 
-셸(`bash`, 없으면 `sh`, Windows에서 bash가 없으면 PowerShell)로 명령을 실행하고 stdout과 stderr를 순서대로 합칩니다. 출력이 길면 압축해서 보여주고 전체는 `.squeeze/raw/`에 저장합니다. **종료 코드는 원래 명령의 것을 그대로** 돌려줍니다.
+셸(`bash`, 없으면 `sh`. Windows는 Git Bash를 찾고, WSL 실행기인 `System32\bash.exe`는 건너뜀. 없으면 PowerShell)로 명령을 실행하고 stdout과 stderr를 순서대로 합칩니다. 출력이 길면 압축해서 보여주고 전체는 `.squeeze/raw/`에 저장합니다. **종료 코드는 원래 명령의 것을 그대로** 돌려줍니다.
 
 ### `squeeze compress`
 
