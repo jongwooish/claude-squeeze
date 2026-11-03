@@ -1,0 +1,60 @@
+name: Install, update or version problem
+description: squeeze will not install, an update broke something, or two versions behave differently.
+title: "[version] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for installer errors, `squeeze update` style problems, a release asset that is missing or fails its checksum, or behaviour that changed between versions. You can write in any language.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem?
+      options:
+        - The installer failed (install.sh / install.ps1)
+        - A release file is missing or its checksum does not match
+        - Something broke after updating to a new version
+        - Settings or hooks from an older version stopped working
+        - cargo install from source failed
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: from
+    attributes:
+      label: Version before (if you updated)
+      placeholder: squeeze 0.1.0
+  - type: input
+    id: to
+    attributes:
+      label: Version now (or the one you tried to install)
+      placeholder: squeeze 0.2.0
+    validations:
+      required: true
+  - type: dropdown
+    id: method
+    attributes:
+      label: How did you install it?
+      options:
+        - install.sh (macOS / Linux)
+        - install.ps1 (Windows)
+        - cargo install --git
+        - Downloaded a release file by hand
+        - Built from a clone
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system and CPU
+      placeholder: Windows 11 x64
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: The full error or output
+      render: text
+    validations:
+      required: true

@@ -250,6 +250,20 @@ cargo run --release -- bench v0.1_squeeze-sentinel/testdata/fixtures
 
 Se agradecen nuevos logs de prueba: añade un `*.log` real (sin secretos ni rutas personales) a `v0.1_squeeze-sentinel/testdata/fixtures/`. Los tests fallan si se pierde cualquier error o advertencia distinto. Errores e ideas: [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues).
 
+## Comunidad
+
+| Quiero… | Ir a |
+|---|---|
+| Informar de un error o de una sesión rota | [Issues → Bug report](https://github.com/jongwooish/claude-squeeze/issues/new?template=bug_report.yml) |
+| Informar de una línea perdida, poco ahorro o un comando (no) detectado | [Issues → Compression problem](https://github.com/jongwooish/claude-squeeze/issues/new?template=compression.yml) |
+| Informar de un problema de instalación, actualización o versión | [Issues → Install, update or version problem](https://github.com/jongwooish/claude-squeeze/issues/new?template=version_problem.yml) |
+| Proponer una función | [Issues → Feature idea](https://github.com/jongwooish/claude-squeeze/issues/new?template=feature_request.yml) |
+| Hacer una pregunta o pedir ayuda | [Discussions → Q&A](https://github.com/jongwooish/claude-squeeze/discussions/categories/q-a) |
+| Hablar de la hoja de ruta y de lo que debe incluir la v1.0 | [Discussions → Ideas](https://github.com/jongwooish/claude-squeeze/discussions/categories/ideas) |
+| Enterarte de las nuevas versiones | [Discussions → Announcements](https://github.com/jongwooish/claude-squeeze/discussions/categories/announcements) y [Releases](https://github.com/jongwooish/claude-squeeze/releases) (pulsa **Watch → Custom → Releases** para recibir avisos) |
+
+Puedes escribir en cualquiera de los seis idiomas. Problemas de seguridad: [SECURITY.md](../.github/SECURITY.md). Cómo contribuir: [CONTRIBUTING.md](../.github/CONTRIBUTING.md).
+
 ## Licencia
 
 MIT. Consulta [LICENSE](../LICENSE). squeeze es una herramienta comunitaria no oficial y no está afiliada a Anthropic.

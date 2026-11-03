@@ -1,0 +1,32 @@
+name: Feature idea
+description: Suggest a new feature or a change to how squeeze works.
+title: "[idea] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are welcome in any language. Check the [roadmap](https://github.com/jongwooish/claude-squeeze#roadmap) first; v0.2 (browser extension) and v0.3 (MCP server) are already planned.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the situation where squeeze falls short today.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like squeeze to do?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Workarounds or alternatives you have tried
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Contributing
+      options:
+        - label: I would like to help build this

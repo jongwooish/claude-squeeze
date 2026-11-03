@@ -250,6 +250,20 @@ cargo run --release -- bench v0.1_squeeze-sentinel/testdata/fixtures
 
 欢迎提交新的测试日志：把真实的 `*.log`（去掉敏感信息和个人路径）放进 `v0.1_squeeze-sentinel/testdata/fixtures/`。只要丢失任何一条不同的错误或警告，测试就会失败。问题和想法：[GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues)。
 
+## 社区
+
+| 我想要… | 去这里 |
+|---|---|
+| 报告 bug 或会话被破坏 | [Issues → Bug report](https://github.com/jongwooish/claude-squeeze/issues/new?template=bug_report.yml) |
+| 报告重要行丢失、节省太少、命令误拦或漏拦 | [Issues → Compression problem](https://github.com/jongwooish/claude-squeeze/issues/new?template=compression.yml) |
+| 报告安装、更新或版本问题 | [Issues → Install, update or version problem](https://github.com/jongwooish/claude-squeeze/issues/new?template=version_problem.yml) |
+| 提出功能建议 | [Issues → Feature idea](https://github.com/jongwooish/claude-squeeze/issues/new?template=feature_request.yml) |
+| 提问或寻求排障帮助 | [Discussions → Q&A](https://github.com/jongwooish/claude-squeeze/discussions/categories/q-a) |
+| 讨论路线图以及 v1.0 应包含什么 | [Discussions → Ideas](https://github.com/jongwooish/claude-squeeze/discussions/categories/ideas) |
+| 获取新版本消息 | [Discussions → Announcements](https://github.com/jongwooish/claude-squeeze/discussions/categories/announcements) 和 [Releases](https://github.com/jongwooish/claude-squeeze/releases)（点击 **Watch → Custom → Releases** 接收通知） |
+
+六种语言任选其一即可。安全问题见 [SECURITY.md](../.github/SECURITY.md)，贡献方式见 [CONTRIBUTING.md](../.github/CONTRIBUTING.md)。
+
 ## 许可证
 
 MIT，见 [LICENSE](../LICENSE)。squeeze 是非官方的社区工具，与 Anthropic 无关。

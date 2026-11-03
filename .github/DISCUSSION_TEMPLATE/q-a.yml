@@ -1,0 +1,20 @@
+title: "[help] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask anything about installing, configuring or using squeeze. Any language is fine. If it turns out to be a bug, it will be moved to an issue.
+  - type: input
+    id: version
+    attributes:
+      label: squeeze version and OS
+      placeholder: squeeze 0.1.0, macOS 15
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What you tried and what you saw. Remove secrets from any output.
+    validations:
+      required: true

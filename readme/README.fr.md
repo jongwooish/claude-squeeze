@@ -250,6 +250,20 @@ cargo run --release -- bench v0.1_squeeze-sentinel/testdata/fixtures
 
 Les nouveaux logs de test sont bienvenus : ajoutez un vrai `*.log` (sans secrets ni chemins personnels) dans `v0.1_squeeze-sentinel/testdata/fixtures/`. Les tests échouent si une erreur ou un avertissement distinct est perdu. Bugs et idées : [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues).
 
+## Communauté
+
+| Je veux… | Aller à |
+|---|---|
+| Signaler un bug ou une session cassée | [Issues → Bug report](https://github.com/jongwooish/claude-squeeze/issues/new?template=bug_report.yml) |
+| Signaler une ligne perdue, trop peu d'économie, ou une commande (non) interceptée | [Issues → Compression problem](https://github.com/jongwooish/claude-squeeze/issues/new?template=compression.yml) |
+| Signaler un problème d'installation, de mise à jour ou de version | [Issues → Install, update or version problem](https://github.com/jongwooish/claude-squeeze/issues/new?template=version_problem.yml) |
+| Proposer une fonctionnalité | [Issues → Feature idea](https://github.com/jongwooish/claude-squeeze/issues/new?template=feature_request.yml) |
+| Poser une question ou obtenir de l'aide | [Discussions → Q&A](https://github.com/jongwooish/claude-squeeze/discussions/categories/q-a) |
+| Parler de la feuille de route et de ce que doit contenir la v1.0 | [Discussions → Ideas](https://github.com/jongwooish/claude-squeeze/discussions/categories/ideas) |
+| Être informé des nouvelles versions | [Discussions → Announcements](https://github.com/jongwooish/claude-squeeze/discussions/categories/announcements) et [Releases](https://github.com/jongwooish/claude-squeeze/releases) (cliquez **Watch → Custom → Releases** pour être notifié) |
+
+Écrivez dans n'importe laquelle des six langues. Problèmes de sécurité : [SECURITY.md](../.github/SECURITY.md). Comment contribuer : [CONTRIBUTING.md](../.github/CONTRIBUTING.md).
+
 ## Licence
 
 MIT. Voir [LICENSE](../LICENSE). squeeze est un outil communautaire non officiel, sans lien avec Anthropic.

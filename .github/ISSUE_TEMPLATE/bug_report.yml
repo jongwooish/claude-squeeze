@@ -1,0 +1,82 @@
+name: Bug report
+description: squeeze crashed, printed something wrong, or broke a Claude Code session.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. You can write in English, 한국어, 日本語, 中文, Español or Français.
+
+        **Before pasting any log, remove secrets** (tokens, passwords, internal hostnames, personal paths). Raw logs in `.squeeze/raw/` can contain them.
+  - type: input
+    id: version
+    attributes:
+      label: squeeze version
+      description: Output of `squeeze version`
+      placeholder: squeeze 0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Linux (x86_64)
+        - Linux (ARM64)
+        - Windows (x86_64)
+        - Windows (ARM64)
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: shell
+    attributes:
+      label: Shell and Claude Code version
+      description: For example `bash 5.2, Claude Code 2.x`. On Windows, say whether you use Git Bash, WSL or PowerShell.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part?
+      options:
+        - squeeze run / compress
+        - Bash guard (hook pre-bash)
+        - Read guard (hook pre-read)
+        - squeeze init / uninstall
+        - squeeze clip
+        - squeeze report
+        - Installer (install.sh / install.ps1)
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. cd my-project && squeeze init
+        2. Ask Claude to run `npm test`
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead
+      description: Error messages or output. Paste text, not screenshots, when you can.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: .squeeze/config.json (if you changed it)
+      render: json

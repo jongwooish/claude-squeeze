@@ -1,0 +1,23 @@
+title: "[roadmap] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feedback on the roadmap: v0.2 Interceptor (browser extension), v0.3 Conduit (MCP server), and what v1.0 should include before commands and config are frozen.
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - v0.2 Interceptor
+        - v0.3 Conduit
+        - What v1.0 should include
+        - A new idea not on the roadmap
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your thoughts
+    validations:
+      required: true

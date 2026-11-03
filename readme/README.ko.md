@@ -250,6 +250,20 @@ cargo run --release -- bench v0.1_squeeze-sentinel/testdata/fixtures
 
 새 테스트 로그를 환영합니다: 실제 `*.log`(비밀 정보와 개인 경로 제거)를 `v0.1_squeeze-sentinel/testdata/fixtures/`에 추가하세요. 에러·경고가 하나라도 사라지면 테스트가 실패합니다. 버그와 아이디어: [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues).
 
+## 커뮤니티
+
+| 이럴 때 | 여기로 |
+|---|---|
+| 버그나 세션이 망가지는 문제 | [Issues → Bug report](https://github.com/jongwooish/claude-squeeze/issues/new?template=bug_report.yml) |
+| 중요한 줄이 빠짐, 절약이 적음, 명령이 잘못 잡히거나 안 잡힘 | [Issues → Compression problem](https://github.com/jongwooish/claude-squeeze/issues/new?template=compression.yml) |
+| 설치·업데이트·버전 문제 | [Issues → Install, update or version problem](https://github.com/jongwooish/claude-squeeze/issues/new?template=version_problem.yml) |
+| 기능 제안 | [Issues → Feature idea](https://github.com/jongwooish/claude-squeeze/issues/new?template=feature_request.yml) |
+| 질문, 문제 해결 도움 | [Discussions → Q&A](https://github.com/jongwooish/claude-squeeze/discussions/categories/q-a) |
+| 로드맵, v1.0에 들어갈 것에 대한 의견 | [Discussions → Ideas](https://github.com/jongwooish/claude-squeeze/discussions/categories/ideas) |
+| 새 버전 소식 받기 | [Discussions → Announcements](https://github.com/jongwooish/claude-squeeze/discussions/categories/announcements)와 [Releases](https://github.com/jongwooish/claude-squeeze/releases) (**Watch → Custom → Releases**를 누르면 알림이 옵니다) |
+
+6개 언어 중 아무 언어로나 써도 됩니다. 보안 문제는 [SECURITY.md](../.github/SECURITY.md), 기여 방법은 [CONTRIBUTING.md](../.github/CONTRIBUTING.md)를 보세요.
+
 ## 라이선스
 
 MIT. [LICENSE](../LICENSE) 참고. squeeze는 비공식 커뮤니티 도구이며 Anthropic과 관련이 없습니다.

@@ -250,6 +250,20 @@ cargo run --release -- bench v0.1_squeeze-sentinel/testdata/fixtures
 
 新しいテストログを歓迎します: 実際の `*.log`（秘密情報と個人的なパスは削除）を `v0.1_squeeze-sentinel/testdata/fixtures/` に追加してください。エラー・警告が一つでも失われるとテストが失敗します。バグとアイデア: [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues)。
 
+## コミュニティ
+
+| こんなとき | 行き先 |
+|---|---|
+| バグやセッションが壊れる問題 | [Issues → Bug report](https://github.com/jongwooish/claude-squeeze/issues/new?template=bug_report.yml) |
+| 重要な行が消えた、節約が少ない、コマンドの誤検出・見逃し | [Issues → Compression problem](https://github.com/jongwooish/claude-squeeze/issues/new?template=compression.yml) |
+| インストール・更新・バージョンの問題 | [Issues → Install, update or version problem](https://github.com/jongwooish/claude-squeeze/issues/new?template=version_problem.yml) |
+| 機能の提案 | [Issues → Feature idea](https://github.com/jongwooish/claude-squeeze/issues/new?template=feature_request.yml) |
+| 質問、トラブルシューティング | [Discussions → Q&A](https://github.com/jongwooish/claude-squeeze/discussions/categories/q-a) |
+| ロードマップ、v1.0 に入れるべきことへの意見 | [Discussions → Ideas](https://github.com/jongwooish/claude-squeeze/discussions/categories/ideas) |
+| 新バージョンのお知らせ | [Discussions → Announcements](https://github.com/jongwooish/claude-squeeze/discussions/categories/announcements) と [Releases](https://github.com/jongwooish/claude-squeeze/releases)（**Watch → Custom → Releases** で通知を受け取れます） |
+
+6 言語のどれで書いても構いません。セキュリティ問題は [SECURITY.md](../.github/SECURITY.md)、貢献方法は [CONTRIBUTING.md](../.github/CONTRIBUTING.md) を参照してください。
+
 ## ライセンス
 
 MIT。[LICENSE](../LICENSE) を参照。squeeze は非公式のコミュニティツールであり、Anthropic とは関係ありません。

@@ -1,0 +1,48 @@
+name: Compression problem
+description: An important line was dropped, too much was kept, or a noisy command was not caught (or a quiet one was).
+title: "[compression] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        These reports make squeeze better for everyone. A short sample log is the most useful thing you can share.
+
+        **Remove secrets and personal paths from the log first.**
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What went wrong?
+      options:
+        - An important line was dropped from the summary
+        - The summary kept too much (not enough saving)
+        - A noisy command was NOT redirected by the Bash guard
+        - A command was redirected but should not have been
+        - The Read guard blocked a file it should not have (or missed one)
+    validations:
+      required: true
+  - type: input
+    id: command
+    attributes:
+      label: The command
+      placeholder: npm run build -- --verbose
+    validations:
+      required: true
+  - type: textarea
+    id: missing
+    attributes:
+      label: The line(s) that should have been kept, if any
+      render: text
+  - type: textarea
+    id: log
+    attributes:
+      label: Sample of the original output
+      description: Attach the full log as a file if it is long. A file here may later become a test fixture (with credit), so only share what you are happy to publish.
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: squeeze version and OS
+      placeholder: squeeze 0.1.0, Ubuntu 24.04
+    validations:
+      required: true

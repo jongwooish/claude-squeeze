@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Questions and troubleshooting
+    url: https://github.com/jongwooish/claude-squeeze/discussions/categories/q-a
+    about: Not sure it is a bug? Ask in Discussions first.
+  - name: Roadmap and v1.0 feedback
+    url: https://github.com/jongwooish/claude-squeeze/discussions/categories/ideas
+    about: Talk about upcoming versions, what v1.0 should include, and bigger ideas.
+  - name: Security problem
+    url: https://github.com/jongwooish/claude-squeeze/blob/main/.github/SECURITY.md
+    about: Please do not open a public issue for security problems. Read how to report them privately.
