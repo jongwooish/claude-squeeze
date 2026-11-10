@@ -1,6 +1,6 @@
 # claude-squeeze
 
-[![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](../v0.1-Sentinel/v0.1.0_squeeze-sentinel/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](../v0.1-Sentinel/v0.1.0_squeeze-sentinel/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#instalación) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
+[![CI](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/jongwooish/claude-squeeze/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/jongwooish/claude-squeeze)](https://github.com/jongwooish/claude-squeeze/releases/latest) [![Rust](https://img.shields.io/badge/Rust-1.80%2B-orange?logo=rust)](../v0.2-Auditor/v0.2.0_squeeze-auditor/Cargo.toml) [![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)](../v0.2-Auditor/v0.2.0_squeeze-auditor/Cargo.toml) [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](#instalación) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | **Español** | [Français](README.fr.md)
 
@@ -8,9 +8,9 @@
 
 **Gasta tus tokens de Claude en pensar, no en logs interminables.**
 
-squeeze evita que la salida larga de los comandos y la lectura completa de archivos grandes entren en el contexto de Claude. Claude sigue viendo cada error y advertencia, además de las primeras y últimas líneas. El log completo se guarda en tu disco por si hace falta.
+squeeze evita que la salida larga de los comandos, las lecturas de archivos grandes o repetidas, las sesiones demasiado grandes y los servidores MCP sin uso entren en el contexto de Claude. Claude sigue viendo cada error y advertencia. **squeeze-Auditor**, la app instalable, muestra en qué se gastaron tus tokens y te deja elegir cuánto ahorra squeeze.
 
-- [Efecto](#efecto) · [Versiones](#versiones) · [Dónde funciona](#dónde-funciona) · [v0.1 Sentinel](#v01-sentinel) · [Instalación](#instalación) · [Uso](#uso) · [Cómo funciona](#cómo-funciona) · [Hoja de ruta](#hoja-de-ruta) · [FAQ](#faq)
+- [Efecto](#efecto) · [Versiones](#versiones) · [Dónde funciona](#dónde-funciona) · [v0.2 squeeze-Auditor](#v02-squeeze-auditor) · [v0.1 Sentinel](#v01-sentinel) · [Instalación](#instalación) · [Uso](#uso) · [Cómo funciona](#cómo-funciona) · [Hoja de ruta](#hoja-de-ruta) · [FAQ](#faq)
 
 ## Por qué
 
@@ -43,6 +43,8 @@ Siete logs reales procesados con squeeze ([método](../v0.1-Sentinel/v0.1.0_sque
 
 **Límites, con honestidad:** los tokens son estimaciones (bytes ÷ 4) y estos números salen de reproducir logs guardados, no de una prueba A/B en vivo con Claude Code (está planeada). Ejecuta `squeeze report` en tu proyecto para ver tus números reales.
 
+**v0.2 añade cuatro bloqueos** que impiden que los mismos tokens se envíen una y otra vez: releer un archivo sin cambios, una sesión que superó tu presupuesto, una sesión larga que debería empezar de nuevo desde una nota de traspaso breve, y costes fijos como servidores MCP sin uso. Su efecto depende de cómo trabajes, así que el [README de v0.2](../v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.es.md#efecto) muestra la aritmética y el panel de squeeze-Auditor muestra tus propios números.
+
 ## Versiones
 
 Cada versión tiene su propia carpeta y README. Las versiones publicadas son etiquetas sobre todo el repositorio.
@@ -50,39 +52,54 @@ Cada versión tiene su propia carpeta y README. Las versiones publicadas son eti
 | Versión | Nombre | Qué añade | Estado |
 |---|---|---|---|
 | [v0.1](../v0.1-Sentinel/v0.1.0_squeeze-sentinel/README/README.es.md) | **Sentinel** | Hooks de Claude Code que atrapan comandos ruidosos y lecturas completas de archivos, `squeeze run`, `compress`, `clip`, `report` | ✅ v0.1.0 |
-| v0.2 | **Interceptor** | Extensión de navegador que ofrece reducir el texto largo al pegarlo en claude.ai | 🛠 Planeada |
-| v0.3 | **Conduit** | Servidor MCP para la app de escritorio de Claude: Claude lee tus logs ya reducidos | 🛠 Planeada |
+| [v0.2](../v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.es.md) | **squeeze-Auditor** | Cuatro bloqueos de sesión (lectura repetida, pausa por presupuesto, traspaso, coste fijo), la app instalable squeeze-Auditor con panel de uso y modos de ahorro, soporte para la app de escritorio de Claude | ✅ v0.2.0 |
+| v0.3 | *(nombre por decidir)* | claude.ai en el navegador y las apps móviles, con un enfoque nuevo para las quejas sobre tokens | 🛠 Planeada |
 
 ### Cómo encajan las versiones
 
-Hay dos cosas que puedes instalar: el **programa `squeeze`** (CLI) y, desde la v0.2, una **extensión de navegador**.
-
-| Versión | Qué instalas | ¿Necesita la v0.1? |
+| Versión | Qué instalas | ¿Necesita la versión anterior? |
 |---|---|---|
 | v0.1 Sentinel | El programa `squeeze` | — |
-| v0.2 Interceptor | Una extensión de navegador | **No.** Lleva su propia copia del compresor y funciona sola. Instala también la v0.1 si usas Claude Code. |
-| v0.3 Conduit | Nada nuevo: es un comando dentro del programa `squeeze` (`squeeze mcp`) | **Sí.** Actualiza `squeeze` a la v0.3 o posterior; no hay descarga aparte. |
+| v0.2 squeeze-Auditor | El mismo programa `squeeze`, ahora con instalador, una app en el menú Inicio (`squeeze-auditor`) y hooks nuevos | **No, incluye v0.1.** Instálala encima de v0.1 o sola. |
+| v0.3 | Planeada | Se anunciará |
 
-- **El programa es acumulativo.** Un `squeeze` más nuevo incluye todas las funciones anteriores. Nunca instalas la v0.1 y la v0.3 a la vez.
+- **El programa es acumulativo.** Un `squeeze` más nuevo incluye todas las funciones anteriores. Nunca instalas v0.1 y v0.2 a la vez.
 - **Las carpetas describen lo que añadió cada versión.** No se instala una carpeta.
-- **Tu configuración se conserva.** `.squeeze/config.json` y los hooks de `squeeze init` siguen funcionando tras actualizar. Si una versión los cambia, su entrada en el CHANGELOG lo dice y `squeeze init` los actualiza.
+- **Tu configuración se conserva.** `.squeeze/config.json` y los hooks de `squeeze init` de v0.1 siguen funcionando tras actualizar. v0.2 añade un `~/.squeeze/config.json` global y se conecta a Claude Code una sola vez para todos los proyectos.
 
 | Usas… | Instala |
 |---|---|
-| Solo Claude Code | `squeeze` (ahora la v0.1) |
-| Solo claude.ai | `squeeze clip` ahora, la extensión v0.2 cuando salga |
-| La app de escritorio de Claude y quieres que Claude lea los logs por sí mismo | `squeeze` v0.3 cuando salga |
-| Todo lo anterior | `squeeze` (última) + la extensión v0.2 |
+| Claude Code | squeeze-Auditor (v0.2) y luego **Conectar Claude Code** |
+| La app de escritorio de Claude | squeeze-Auditor (v0.2) y luego **Conectar app de escritorio** |
+| claude.ai en el navegador o las apps móviles | `squeeze clip` para pegar textos largos ahora; v0.3 cuando salga |
 
 ## Dónde funciona
 
 | Dónde | Efecto | Cómo |
 |---|---|---|
-| **Claude Code** | Automático | `squeeze init` instala los hooks. Los comandos ruidosos y las lecturas de archivos grandes se redirigen. |
-| **claude.ai (web, escritorio, móvil)** | Manual, al pegar texto largo | Copia un log, ejecuta `squeeze clip`, pega. Los mensajes normales no cambian; squeeze no puede ver tus chats. |
+| **Claude Code** | Automático, todos los proyectos | squeeze-Auditor (o `squeeze setup`) añade hooks a `~/.claude/settings.json`. Funcionan los cuatro bloqueos de v0.2 y las dos guardas de v0.1. |
+| **App de escritorio de Claude** (Windows, macOS) | Cuando Claude lee archivos o guarda un traspaso | Al conectar se añaden las herramientas de `squeeze mcp`: Claude lee tus registros ya comprimidos, solo de las carpetas que permitas, y puede guardar y cargar notas de traspaso. squeeze no puede ver ni cambiar las conversaciones. |
+| **claude.ai (web, móvil)** | Manual, al pegar texto largo | Copia un log, ejecuta `squeeze clip` y pega. Previsto para v0.3. |
 | **Cualquier otra herramienta de terminal** | Manual | `<comando> 2>&1 \| squeeze compress` |
 
 En el plan Pro, Claude Code y claude.ai comparten un mismo límite de uso, así que los tokens que ahorras en Claude Code quedan también para tus chats.
+
+## v0.2 squeeze-Auditor
+
+v0.1 miraba una salida cada vez. **v0.2 mira la sesión completa**: lo que Claude ya leyó, cuánto ha crecido la conversación y lo que acompaña a cada mensaje. Bloquea cuatro tipos de desperdicio:
+
+| Bloqueo | Qué detecta | Cómo bloquea |
+|---|---|---|
+| **Lectura repetida** | Releer entero un archivo que no ha cambiado | Rechaza el `Read`: «ya lo tienes». Se permite de nuevo cuando el archivo cambia o tras compactar. |
+| **Pausa por presupuesto** | Enviar más mensajes a una sesión enorme (150K tokens por defecto) | Retiene tu mensaje una vez y sugiere `/compact` o `/clear`. Envíalo otra vez y pasa. |
+| **Traspaso** | Una sesión larga que relee todo su historial (120K por defecto) | Claude escribe una nota breve; tras `/clear`, la nueva sesión empieza desde la nota y no desde toda la conversación. |
+| **Coste fijo** | Archivos `CLAUDE.md`, skills, agentes y listas de herramientas MCP enviados con cada mensaje | Mide cada uno; apaga con un clic los servidores MCP sin uso (el interruptor de Claude Code), o automáticamente tras 14 días sin uso. |
+
+**squeeze-Auditor** es la app que abres desde el menú Inicio o Aplicaciones: un panel con el uso real de Claude Code junto a lo que squeeze dejó fuera, modos de ahorro (Fuerte, Equilibrado, Ligero), todos los ajustes, el diagnóstico de coste fijo, tus notas de traspaso y las conexiones con Claude Code y la app de escritorio.
+
+![Panel de squeeze-Auditor](../v0.2-Auditor/v0.2.0_squeeze-auditor/docs/images/auditor-en-dashboard.png)
+
+Documentación completa de v0.2: [v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.es.md](../v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.es.md).
 
 ## v0.1 Sentinel
 
@@ -126,6 +143,18 @@ Documentación completa de la v0.1: [v0.1-Sentinel/v0.1.0_squeeze-sentinel/READM
 
 ## Instalación
 
+**Instalador (recomendado).** Desde la [última versión](https://github.com/jongwooish/claude-squeeze/releases/latest):
+
+| Sistema | Archivo |
+|---|---|
+| Windows 10/11 | `squeeze-Auditor-0.2.0-setup-x64.exe` (ARM: `-setup-arm64.exe`) |
+| macOS | `squeeze-Auditor-0.2.0-macos-arm64.pkg` (Intel: `-macos-x86_64.pkg`) |
+| Linux (Debian, Ubuntu) | `squeeze-auditor_0.2.0_amd64.deb` (ARM: `_arm64.deb`) |
+
+Los instaladores aún no están firmados. Windows SmartScreen: **Más información → Ejecutar de todas formas**. macOS: clic derecho → **Abrir**. Detalles: [instalación de v0.2](../v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.es.md#instalación).
+
+**Terminal:**
+
 ```bash
 # macOS / Linux
 curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.sh | bash
@@ -133,44 +162,47 @@ curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INST
 # Windows (PowerShell)
 irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.ps1 | iex
 
-# Desde el código fuente (cualquier sistema con Rust 1.80+)
+# Desde el código (cualquier sistema con Rust 1.80+)
 cargo install --git https://github.com/jongwooish/claude-squeeze squeeze
 ```
 
-Los instaladores verifican el `checksums.txt` de la versión (SHA-256). `SQUEEZE_VERSION=v0.1.0` fija una versión; `SQUEEZE_INSTALL_DIR` cambia la carpeta.
+Cada archivo de la versión aparece en `checksums.txt` (SHA-256) y los scripts de instalación lo comprueban. `SQUEEZE_VERSION=v0.1.0` fija una versión; `SQUEEZE_INSTALL_DIR` cambia la carpeta.
 
 ## Inicio rápido
 
+1. Abre **squeeze-Auditor** y pulsa **Conectar Claude Code** (todos los proyectos). ¿Usas la app de escritorio? Conéctala en **Conexiones** y reiníciala.
+2. Usa Claude Code como siempre.
+3. Vuelve al panel para ver qué se dejó fuera. Cambia cuánto ahorra squeeze en **Modos de ahorro** o **Ajustes**.
+
+Desde una terminal:
+
 ```bash
-cd ~/my-project
-squeeze init      # hooks, configuración, entrada en .gitignore, nota en CLAUDE.md
-claude            # usa Claude Code como siempre
-squeeze report    # mira lo que se quedó fuera del contexto
+squeeze setup      # conectar Claude Code (y la app de escritorio, si está instalada)
+claude             # usa Claude Code como siempre
+squeeze auditor    # abrir la ventana
+squeeze setup --remove
 ```
 
-`squeeze init` cambia cuatro archivos y `squeeze uninstall` lo deshace:
-
-| Archivo | Cambio |
-|---|---|
-| `.claude/settings.json` | Añade dos hooks `PreToolUse` (`Bash`, `Read`). Se conservan tus otros ajustes y hooks; antes se escribe una copia de seguridad. |
-| `.squeeze/config.json` | Configuración por defecto. |
-| `.gitignore` | Añade `.squeeze/` (los logs pueden contener secretos). |
-| `CLAUDE.md` | Añade una nota de 4 líneas entre marcadores `<!-- squeeze:start -->`. |
+Conectar solo cambia `~/.claude/settings.json` (y `claude_desktop_config.json` para la app de escritorio). Los demás ajustes y hooks se conservan, y antes se copia el original en `~/.squeeze/backups/`. El `squeeze init` por proyecto de v0.1 sigue funcionando.
 
 ## Uso
 
 | Comando | Qué hace |
 |---|---|
-| `squeeze init [--dir D] [--bin PATH] [--dry-run]` | Instalar en un proyecto |
-| `squeeze uninstall [--dir D] [--purge] [--dry-run]` | Quitar hooks y nota; `--purge` también borra `.squeeze/` |
-| `squeeze run -- <comando>` | Ejecutar un comando; resumen corto si la salida es larga |
-| `<comando> 2>&1 \| squeeze compress` | Comprimir salida por tubería |
-| `squeeze clip [--print]` | Comprimir el portapapeles (para claude.ai) |
-| `squeeze report [--since 7d] [--global] [--json]` | Ver el ahorro |
-| `squeeze bench <dir> [--markdown]` | Reproducir archivos `*.log` y medir |
-| `squeeze version` | Mostrar la versión |
+| `squeeze auditor` | Abre la ventana de squeeze-Auditor |
+| `squeeze setup [--claude-code] [--desktop] [--remove]` | Conecta o desconecta Claude Code (todos los proyectos) y la app de escritorio |
+| `squeeze doctor [--dir D] [--desktop] [--json]` | Lo que se envía con cada mensaje (coste fijo) |
+| `squeeze init [--dir D] [--bin PATH] [--dry-run]` | Instala hooks solo en un proyecto (como en v0.1) |
+| `squeeze uninstall [--dir D] [--purge] [--dry-run]` | Quita los hooks y la nota de un proyecto; `--purge` borra también `.squeeze/` |
+| `squeeze run -- <comando>` | Ejecuta un comando; resumen corto si la salida es larga |
+| `<comando> 2>&1 \| squeeze compress` | Comprime la salida recibida por tubería |
+| `squeeze clip [--print]` | Comprime el portapapeles (para claude.ai) |
+| `squeeze report [--since 7d] [--global] [--json]` | Muestra el ahorro |
+| `squeeze bench <dir> [--markdown]` | Reproduce archivos `*.log` y mide |
+| `squeeze mcp` | El servidor MCP que ejecuta la app de escritorio |
+| `squeeze version` | Muestra la versión |
 
-Antepón `SQUEEZE_SKIP=1` a un comando para obtener su salida original una vez. La configuración está en `.squeeze/config.json` ([todas las claves](../v0.1-Sentinel/v0.1.0_squeeze-sentinel/README/README.es.md#configuración)).
+Antepón `SQUEEZE_SKIP=1` a un comando para obtener su salida original una vez, o pon `SQUEEZE_SKIP` en un mensaje para pasar la pausa por presupuesto. Ajustes: [configuración de v0.2](../v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.es.md#configuración).
 
 ## Cómo funciona
 
@@ -204,45 +236,54 @@ Herramientas como [chaude](https://github.com/int-ttt/chaude) envuelven la CLI d
 ## Hoja de ruta
 
 - [x] **v0.1 Sentinel**: hooks de Claude Code, `run`, `compress`, `clip`, `report`, `bench`
-- [ ] **v0.2 Interceptor**: extensión de navegador para pegar en claude.ai, el mismo motor compilado a WebAssembly
-- [ ] **v0.3 Conduit**: `squeeze mcp`, servidor MCP de solo lectura para la app de escritorio de Claude
-- [ ] Benchmark A/B en vivo con Claude Code (mismas tareas, squeeze activado y desactivado)
+- [x] **v0.2 squeeze-Auditor**: bloqueos de lectura repetida, presupuesto, traspaso y coste fijo; app instalable con panel y modos de ahorro; herramientas para la app de escritorio de Claude
+- [ ] **v0.3**: claude.ai en el navegador y las apps móviles, con un enfoque nuevo para los problemas de tokens que más se mencionan
+- [ ] Instaladores firmados
+- [ ] Benchmark A/B real con Claude Code (mismas tareas, squeeze activado y desactivado)
 - [ ] v1.0: comandos y configuración estables
 
 ## FAQ
 
 **P. ¿Puede Claude perderse algo importante?**
-R. En todos los logs de prueba se conservaron todos los mensajes de error y advertencia distintos. Si el resumen no basta, la última línea da la ruta del log completo y Claude puede leerlo por rangos.
+R. En todos los registros de prueba se conservaron todos los mensajes de error y advertencia distintos. Si el resumen no basta, la última línea da la ruta del log completo. Al bloquear una relectura, squeeze también le dice a Claude cómo volver a leer el archivo si de verdad lo necesita.
 
 **P. ¿squeeze envía mis datos a algún sitio?**
-R. No. No tiene código de red. Los logs se quedan en `.squeeze/` en tu máquina.
+R. No. No tiene código de red; la ventana de squeeze-Auditor es una página en `127.0.0.1` que solo tu ordenador puede abrir.
 
 **P. ¿Puede romper mi sesión de Claude Code?**
-R. Los hooks se apartan ante fallos (fail open): una entrada extraña, un archivo inexistente o un error interno no producen salida y Claude Code sigue con normalidad.
+R. Los hooks fallan en abierto: una entrada rara, un archivo inexistente o un fallo interno no producen salida y Claude Code sigue con normalidad. squeeze nunca aprueba una herramienta por ti.
 
 **P. ¿Ahorra tokens en los chats normales de claude.ai?**
-R. Solo cuando pegas texto largo tras ejecutar `squeeze clip`. La v0.2 lo hará automático en el navegador.
+R. Solo cuando pegas texto largo después de ejecutar `squeeze clip`. El navegador y las apps móviles son el foco de v0.3.
+
+**P. ¿El panel muestra el límite de mi plan?**
+R. No. Lee los propios registros de Claude Code en este ordenador. No hay una forma oficial de que otros programas lean el uso del plan.
 
 **P. ¿Por qué la versión 0.x?**
-R. Mientras la versión mayor sea 0, los nombres de comandos y la configuración pueden cambiar. La v1.0 significará que son estables.
+R. Mientras la versión principal sea 0, los nombres de comandos y la configuración pueden cambiar. La v1.0 significará que son estables.
 
 ## Estructura del repositorio
 
 ```
 claude-squeeze/
-├── README/                      ← resumen del proyecto en 6 idiomas (README.md = inglés)
+├── README/                      ← resumen en 6 idiomas (README.md = inglés)
 ├── CHANGELOG/                   ← CHANGELOG en 6 idiomas
 ├── v0.1-Sentinel/               ← v0.1 Sentinel
 │   ├── README.md                   resumen de la versión
-│   └── v0.1.0_squeeze-sentinel/   ← v0.1: CLI + hooks de Claude Code (Rust, sin dependencias)
-│       ├── README.md               documentación completa de la v0.1 (inglés)
+│   └── v0.1.0_squeeze-sentinel/   ← v0.1.0 tal como se publicó (congelada)
+├── v0.2-Auditor/                ← v0.2 squeeze-Auditor
+│   ├── README.md                   resumen de la versión
+│   └── v0.2.0_squeeze-auditor/    ← v0.2: el programa squeeze actual (Rust, sin dependencias)
+│       ├── README.md               documentación completa de v0.2 (inglés)
 │       ├── README/                 traducciones (5 idiomas)
-│       ├── src/
-│       ├── docs/                   método del benchmark, guía de usuario (coreano)
+│       ├── src/                    motor, hooks, bloqueos, servidor de squeeze-Auditor
+│       ├── ui/                     la ventana de squeeze-Auditor (un archivo HTML)
+│       ├── packaging/              instaladores para Windows, macOS y Linux, icono
+│       ├── docs/                   benchmark, guía de usuario (coreano), capturas
 │       └── testdata/fixtures/      logs usados por los tests y el benchmark
 ├── INSTALL/                     ← install.sh / install.ps1
 ├── CARGO/                       ← Cargo.toml / Cargo.lock (workspace de Rust)
-├── .github/                     ← formularios de issues, CI, release, README de portada
+├── .github/                     ← formularios de issues, CI, publicación, README de portada
 ├── CLAUDE.md
 └── LICENSE
 ```
@@ -252,10 +293,10 @@ claude-squeeze/
 ```bash
 cargo test --manifest-path CARGO/Cargo.toml
 cargo clippy --manifest-path CARGO/Cargo.toml --all-targets -- -D warnings
-cargo run --manifest-path CARGO/Cargo.toml --release -- bench v0.1-Sentinel/v0.1.0_squeeze-sentinel/testdata/fixtures
+cargo run --manifest-path CARGO/Cargo.toml --release -- bench v0.2-Auditor/v0.2.0_squeeze-auditor/testdata/fixtures
 ```
 
-Se agradecen nuevos logs de prueba: añade un `*.log` real (sin secretos ni rutas personales) a `v0.1-Sentinel/v0.1.0_squeeze-sentinel/testdata/fixtures/`. Los tests fallan si se pierde cualquier error o advertencia distinto. Errores e ideas: [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues).
+Se agradecen nuevos logs de prueba: añade un `*.log` real (sin secretos ni rutas personales) a `v0.2-Auditor/v0.2.0_squeeze-auditor/testdata/fixtures/`. Los tests fallan si se pierde cualquier error o advertencia distinto. Errores e ideas: [GitHub Issues](https://github.com/jongwooish/claude-squeeze/issues).
 
 ## Comunidad
 

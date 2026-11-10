@@ -14,8 +14,8 @@ body:
   attributes:
     label: Topic / 주제
     options:
-    - v0.2 Interceptor
-    - v0.3 Conduit
+    - v0.2 squeeze-Auditor
+    - "v0.3: browser and mobile / 브라우저와 모바일"
     - What v1.0 should include / v1.0에 들어갈 것
     - A new idea / 새 아이디어
   validations:

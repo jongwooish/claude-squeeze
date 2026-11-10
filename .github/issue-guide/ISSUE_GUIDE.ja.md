@@ -45,6 +45,7 @@ claude-squeeze は、皆さんが教えてくれる問題点や要望のおか�
 ```bash
 squeeze version            # バージョン
 squeeze report --json      # 最近 squeeze がコンテキストから締め出したもの
+squeeze doctor --json      # メッセージごとに送られるもの（v0.2）
 SQUEEZE_SKIP=1 <command>   # 元の出力（要約と比べるとき）
 ```
 

@@ -19,6 +19,8 @@ body:
     label: What kind of problem? / 어떤 문제인가요?
     options:
     - Installer failed / 설치 스크립트 실패
+    - "Windows/macOS security warning / 보안 경고 (SmartScreen, Gatekeeper)"
+    - "squeeze-Auditor does not open / squeeze-Auditor가 안 열림"
     - Release file missing or checksum mismatch / 릴리스 파일 없음 또는 체크섬 불일치
     - Broke after updating / 업데이트 후 고장
     - Old settings or hooks stopped working / 이전 설정·훅이 동작 안 함
@@ -43,6 +45,7 @@ body:
   attributes:
     label: How did you install it? / 설치 방법
     options:
+    - "Setup installer (.exe / .pkg / .deb) / 설치 파일"
     - install.sh (macOS / Linux)
     - install.ps1 (Windows)
     - cargo install --git

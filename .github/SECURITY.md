@@ -7,6 +7,9 @@ squeeze runs inside your Claude Code sessions and writes logs to your disk, so s
 - A hook that approves a tool call, or that can be made to run a command it should not
 - Raw logs or the ledger written somewhere other than `.squeeze/`, or with loose permissions
 - `squeeze init` / `uninstall` damaging `.claude/settings.json`, `CLAUDE.md` or `.gitignore`
+- `squeeze setup` or squeeze-Auditor damaging `~/.claude/settings.json`, `~/.claude.json` or `claude_desktop_config.json`
+- The squeeze-Auditor window reachable from anything other than `127.0.0.1`, or without its per-launch key
+- The desktop app tools (`squeeze mcp`) reading outside the allowed folders
 - The installers skipping or bypassing the checksum check
 
 ## How to report

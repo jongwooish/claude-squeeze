@@ -45,6 +45,7 @@ claude-squeeze는 여러분이 알려주는 문제점과 바라는 점 덕분에
 ```bash
 squeeze version            # 내 버전
 squeeze report --json      # 최근에 squeeze가 컨텍스트에서 막아낸 것
+squeeze doctor --json      # 메시지마다 보내지는 것 (v0.2)
 SQUEEZE_SKIP=1 <명령>       # 원본 출력 (요약과 비교할 때)
 ```
 

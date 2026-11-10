@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=squeeze-Auditor
+Comment=See and control what squeeze saves in Claude Code
+Exec=squeeze-auditor
+Icon=squeeze-auditor
+Terminal=false
+Categories=Development;Utility;

@@ -45,6 +45,7 @@ Comandos útiles para reunir información:
 ```bash
 squeeze version            # tu versión
 squeeze report --json      # lo que squeeze dejó fuera del contexto recientemente
+squeeze doctor --json      # lo que se envía con cada mensaje (v0.2)
 SQUEEZE_SKIP=1 <comando>   # la salida original, para compararla con el resumen
 ```
 

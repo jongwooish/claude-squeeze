@@ -4,6 +4,34 @@
 
 主な変更をここに記録します。バージョンは [セマンティック バージョニング](https://semver.org/lang/ja/) に従います。メジャーバージョンが 0 の間は、コマンドや設定が変わる可能性があります。
 
+## [0.2.0] - 2026-11-04 — squeeze-Auditor
+
+v0.2 は出力 1 つではなくセッション全体を見ます。コードは [`v0.2-Auditor/v0.2.0_squeeze-auditor/`](../v0.2-Auditor/v0.2.0_squeeze-auditor/)。0.1.0 の機能をすべて含みます。
+
+### 追加
+
+- セッションの 4 つのブロック（Claude Code）:
+  - **重複読み込み**: このセッションですでに読み、変わっていないファイルを丸ごと `Read` すると拒否。ファイルが変わるかコンテキストが圧縮されると再び許可。
+  - **予算で一時停止**（`UserPromptSubmit`）: セッションが予算（既定 150K トークン）を超えると、メッセージを一度止めて `/compact` か `/clear` を勧める。もう一度送るとそのまま送信。
+  - **引き継ぎ**（`Stop` + `SessionStart`）: セッションが引き継ぎサイズ（既定 120K）を超えると Claude が `.squeeze/handoff/` にメモを書き、`/clear` 後の新しいセッションはメモから始まる。`remind` モードは `/compact` を勧めるだけ。
+  - **固定費**: メッセージごとに送られる `CLAUDE.md` とインポート、スキル、エージェント、MCP ツール一覧を測定。Claude Code 自身のスイッチでプロジェクトごとに MCP サーバーをオフ、または N 日使われなければ自動でオフ（既定は無効）。
+- **squeeze-Auditor** アプリ（`squeeze-auditor`、`squeeze auditor`）: Claude Code のセッションログから読んだ実際の使用量と squeeze が防いだ量のダッシュボード、現在の 5 時間枠、節約モード（強め・バランス・軽め・カスタム）、すべての設定、計測とオン・オフ付きの固定費診断、引き継ぎメモ、接続。このコンピューター内のみ（`127.0.0.1`、使い捨てキー）。英語と韓国語。
+- **Claude デスクトップアプリ**対応: `squeeze mcp`。許可したフォルダに限定した `read_log`、`tail_log`、`search_log`、`list_logs`、`save_handoff`、`load_handoff` を持つ MCP サーバー。
+- `squeeze setup [--claude-code] [--desktop] [--remove]`: 全プロジェクト（`~/.claude/settings.json`）とデスクトップアプリに一度で接続。バックアップは `~/.squeeze/backups/`。
+- `squeeze doctor`: メッセージあたりの固定費をターミナルで。
+- インストーラー: Windows Setup（x64、ARM64、ユーザー単位、スタートメニューのアイコン、接続も解除するアンインストーラー）、`squeeze-Auditor.app` 入りの macOS `.pkg`、メニュー項目付きの Linux `.deb`。まだコード署名なし。
+- 全体設定 `~/.squeeze/config.json`（プロジェクトの `.squeeze/config.json` が引き続き優先）と全体の記録 `~/.squeeze/ledger.jsonl`。
+
+### 変更
+
+- インストールスクリプトが `squeeze-auditor` もインストール。
+- リリースのタイトルを CHANGELOG の見出しから取得。CI はインストーラーも作り、凍結した v0.1.0 スナップショットもテスト。
+- 凍結した v0.1.0 のクレート名を `squeeze-sentinel` に変更（プログラム名は `squeeze` のまま）。`cargo install --git … squeeze` は v0.2 をビルド。
+
+### 予定
+
+- v0.3: ブラウザの claude.ai とモバイルアプリ、新しいアプローチ。
+
 ## [0.1.0] - 2026-11-03 — Sentinel
 
 最初のリリース。コードは [`v0.1-Sentinel/v0.1.0_squeeze-sentinel/`](../v0.1-Sentinel/v0.1.0_squeeze-sentinel/) にあります。

@@ -1,0 +1,488 @@
+=== RUN   TestTotal
+=== RUN   TestTotal/case_000
+=== RUN   TestTotal/case_001
+=== RUN   TestTotal/case_002
+=== RUN   TestTotal/case_003
+=== RUN   TestTotal/case_004
+=== RUN   TestTotal/case_005
+=== RUN   TestTotal/case_006
+=== RUN   TestTotal/case_007
+=== RUN   TestTotal/case_008
+=== RUN   TestTotal/case_009
+=== RUN   TestTotal/case_010
+=== RUN   TestTotal/case_011
+=== RUN   TestTotal/case_012
+=== RUN   TestTotal/case_013
+=== RUN   TestTotal/case_014
+=== RUN   TestTotal/case_015
+=== RUN   TestTotal/case_016
+=== RUN   TestTotal/case_017
+=== RUN   TestTotal/case_018
+=== RUN   TestTotal/case_019
+=== RUN   TestTotal/case_020
+=== RUN   TestTotal/case_021
+=== RUN   TestTotal/case_022
+=== RUN   TestTotal/case_023
+=== RUN   TestTotal/case_024
+=== RUN   TestTotal/case_025
+=== RUN   TestTotal/case_026
+=== RUN   TestTotal/case_027
+=== RUN   TestTotal/case_028
+=== RUN   TestTotal/case_029
+=== RUN   TestTotal/case_030
+=== RUN   TestTotal/case_031
+=== RUN   TestTotal/case_032
+=== RUN   TestTotal/case_033
+=== RUN   TestTotal/case_034
+=== RUN   TestTotal/case_035
+=== RUN   TestTotal/case_036
+=== RUN   TestTotal/case_037
+=== RUN   TestTotal/case_038
+=== RUN   TestTotal/case_039
+=== RUN   TestTotal/case_040
+=== RUN   TestTotal/case_041
+=== RUN   TestTotal/case_042
+=== RUN   TestTotal/case_043
+=== RUN   TestTotal/case_044
+=== RUN   TestTotal/case_045
+=== RUN   TestTotal/case_046
+=== RUN   TestTotal/case_047
+=== RUN   TestTotal/case_048
+=== RUN   TestTotal/case_049
+=== RUN   TestTotal/case_050
+=== RUN   TestTotal/case_051
+=== RUN   TestTotal/case_052
+=== RUN   TestTotal/case_053
+=== RUN   TestTotal/case_054
+=== RUN   TestTotal/case_055
+=== RUN   TestTotal/case_056
+=== RUN   TestTotal/case_057
+=== RUN   TestTotal/case_058
+=== RUN   TestTotal/case_059
+=== RUN   TestTotal/case_060
+=== RUN   TestTotal/case_061
+=== RUN   TestTotal/case_062
+=== RUN   TestTotal/case_063
+=== RUN   TestTotal/case_064
+=== RUN   TestTotal/case_065
+=== RUN   TestTotal/case_066
+=== RUN   TestTotal/case_067
+=== RUN   TestTotal/case_068
+=== RUN   TestTotal/case_069
+=== RUN   TestTotal/case_070
+=== RUN   TestTotal/case_071
+=== RUN   TestTotal/case_072
+=== RUN   TestTotal/case_073
+=== RUN   TestTotal/case_074
+=== RUN   TestTotal/case_075
+=== RUN   TestTotal/case_076
+=== RUN   TestTotal/case_077
+=== RUN   TestTotal/case_078
+=== RUN   TestTotal/case_079
+=== RUN   TestTotal/case_080
+=== RUN   TestTotal/case_081
+=== RUN   TestTotal/case_082
+=== RUN   TestTotal/case_083
+=== RUN   TestTotal/case_084
+=== RUN   TestTotal/case_085
+=== RUN   TestTotal/case_086
+=== RUN   TestTotal/case_087
+=== RUN   TestTotal/case_088
+=== RUN   TestTotal/case_089
+=== RUN   TestTotal/case_090
+=== RUN   TestTotal/case_091
+=== RUN   TestTotal/case_092
+=== RUN   TestTotal/case_093
+=== RUN   TestTotal/case_094
+=== RUN   TestTotal/case_095
+=== RUN   TestTotal/case_096
+=== RUN   TestTotal/case_097
+=== RUN   TestTotal/case_098
+=== RUN   TestTotal/case_099
+=== RUN   TestTotal/case_100
+=== RUN   TestTotal/case_101
+=== RUN   TestTotal/case_102
+=== RUN   TestTotal/case_103
+=== RUN   TestTotal/case_104
+=== RUN   TestTotal/case_105
+=== RUN   TestTotal/case_106
+=== RUN   TestTotal/case_107
+=== RUN   TestTotal/case_108
+=== RUN   TestTotal/case_109
+=== RUN   TestTotal/case_110
+=== RUN   TestTotal/case_111
+=== RUN   TestTotal/case_112
+=== RUN   TestTotal/case_113
+=== RUN   TestTotal/case_114
+=== RUN   TestTotal/case_115
+=== RUN   TestTotal/case_116
+=== RUN   TestTotal/case_117
+=== RUN   TestTotal/case_118
+=== RUN   TestTotal/case_119
+=== RUN   TestTotal/case_120
+=== RUN   TestTotal/case_121
+=== RUN   TestTotal/case_122
+=== RUN   TestTotal/case_123
+=== RUN   TestTotal/case_124
+=== RUN   TestTotal/case_125
+=== RUN   TestTotal/case_126
+=== RUN   TestTotal/case_127
+=== RUN   TestTotal/case_128
+=== RUN   TestTotal/case_129
+=== RUN   TestTotal/case_130
+=== RUN   TestTotal/case_131
+=== RUN   TestTotal/case_132
+=== RUN   TestTotal/case_133
+=== RUN   TestTotal/case_134
+=== RUN   TestTotal/case_135
+=== RUN   TestTotal/case_136
+=== RUN   TestTotal/case_137
+=== RUN   TestTotal/case_138
+=== RUN   TestTotal/case_139
+=== RUN   TestTotal/case_140
+=== RUN   TestTotal/case_141
+=== RUN   TestTotal/case_142
+=== RUN   TestTotal/case_143
+=== RUN   TestTotal/case_144
+=== RUN   TestTotal/case_145
+=== RUN   TestTotal/case_146
+=== RUN   TestTotal/case_147
+=== RUN   TestTotal/case_148
+=== RUN   TestTotal/case_149
+=== RUN   TestTotal/case_150
+=== RUN   TestTotal/case_151
+=== RUN   TestTotal/case_152
+=== RUN   TestTotal/case_153
+=== RUN   TestTotal/case_154
+=== RUN   TestTotal/case_155
+=== RUN   TestTotal/case_156
+=== RUN   TestTotal/case_157
+=== RUN   TestTotal/case_158
+=== RUN   TestTotal/case_159
+=== RUN   TestTotal/case_160
+=== RUN   TestTotal/case_161
+=== RUN   TestTotal/case_162
+=== RUN   TestTotal/case_163
+=== RUN   TestTotal/case_164
+=== RUN   TestTotal/case_165
+=== RUN   TestTotal/case_166
+=== RUN   TestTotal/case_167
+=== RUN   TestTotal/case_168
+=== RUN   TestTotal/case_169
+=== RUN   TestTotal/case_170
+=== RUN   TestTotal/case_171
+=== RUN   TestTotal/case_172
+=== RUN   TestTotal/case_173
+    cart_test.go:11: Total(173,10) = 178, want 999
+=== RUN   TestTotal/case_174
+=== RUN   TestTotal/case_175
+=== RUN   TestTotal/case_176
+=== RUN   TestTotal/case_177
+=== RUN   TestTotal/case_178
+=== RUN   TestTotal/case_179
+=== RUN   TestTotal/case_180
+=== RUN   TestTotal/case_181
+=== RUN   TestTotal/case_182
+=== RUN   TestTotal/case_183
+=== RUN   TestTotal/case_184
+=== RUN   TestTotal/case_185
+=== RUN   TestTotal/case_186
+=== RUN   TestTotal/case_187
+=== RUN   TestTotal/case_188
+=== RUN   TestTotal/case_189
+=== RUN   TestTotal/case_190
+=== RUN   TestTotal/case_191
+=== RUN   TestTotal/case_192
+=== RUN   TestTotal/case_193
+=== RUN   TestTotal/case_194
+=== RUN   TestTotal/case_195
+=== RUN   TestTotal/case_196
+=== RUN   TestTotal/case_197
+=== RUN   TestTotal/case_198
+=== RUN   TestTotal/case_199
+=== RUN   TestTotal/case_200
+=== RUN   TestTotal/case_201
+=== RUN   TestTotal/case_202
+=== RUN   TestTotal/case_203
+=== RUN   TestTotal/case_204
+=== RUN   TestTotal/case_205
+=== RUN   TestTotal/case_206
+=== RUN   TestTotal/case_207
+=== RUN   TestTotal/case_208
+=== RUN   TestTotal/case_209
+=== RUN   TestTotal/case_210
+=== RUN   TestTotal/case_211
+=== RUN   TestTotal/case_212
+=== RUN   TestTotal/case_213
+=== RUN   TestTotal/case_214
+=== RUN   TestTotal/case_215
+=== RUN   TestTotal/case_216
+=== RUN   TestTotal/case_217
+=== RUN   TestTotal/case_218
+=== RUN   TestTotal/case_219
+=== RUN   TestTotal/case_220
+=== RUN   TestTotal/case_221
+=== RUN   TestTotal/case_222
+=== RUN   TestTotal/case_223
+=== RUN   TestTotal/case_224
+=== RUN   TestTotal/case_225
+=== RUN   TestTotal/case_226
+=== RUN   TestTotal/case_227
+=== RUN   TestTotal/case_228
+=== RUN   TestTotal/case_229
+=== RUN   TestTotal/case_230
+=== RUN   TestTotal/case_231
+=== RUN   TestTotal/case_232
+=== RUN   TestTotal/case_233
+=== RUN   TestTotal/case_234
+=== RUN   TestTotal/case_235
+=== RUN   TestTotal/case_236
+=== RUN   TestTotal/case_237
+=== RUN   TestTotal/case_238
+=== RUN   TestTotal/case_239
+--- FAIL: TestTotal (0.01s)
+    --- PASS: TestTotal/case_000 (0.00s)
+    --- PASS: TestTotal/case_001 (0.00s)
+    --- PASS: TestTotal/case_002 (0.00s)
+    --- PASS: TestTotal/case_003 (0.00s)
+    --- PASS: TestTotal/case_004 (0.00s)
+    --- PASS: TestTotal/case_005 (0.00s)
+    --- PASS: TestTotal/case_006 (0.00s)
+    --- PASS: TestTotal/case_007 (0.00s)
+    --- PASS: TestTotal/case_008 (0.00s)
+    --- PASS: TestTotal/case_009 (0.00s)
+    --- PASS: TestTotal/case_010 (0.00s)
+    --- PASS: TestTotal/case_011 (0.00s)
+    --- PASS: TestTotal/case_012 (0.00s)
+    --- PASS: TestTotal/case_013 (0.00s)
+    --- PASS: TestTotal/case_014 (0.00s)
+    --- PASS: TestTotal/case_015 (0.00s)
+    --- PASS: TestTotal/case_016 (0.00s)
+    --- PASS: TestTotal/case_017 (0.00s)
+    --- PASS: TestTotal/case_018 (0.00s)
+    --- PASS: TestTotal/case_019 (0.00s)
+    --- PASS: TestTotal/case_020 (0.00s)
+    --- PASS: TestTotal/case_021 (0.00s)
+    --- PASS: TestTotal/case_022 (0.00s)
+    --- PASS: TestTotal/case_023 (0.00s)
+    --- PASS: TestTotal/case_024 (0.00s)
+    --- PASS: TestTotal/case_025 (0.00s)
+    --- PASS: TestTotal/case_026 (0.00s)
+    --- PASS: TestTotal/case_027 (0.00s)
+    --- PASS: TestTotal/case_028 (0.00s)
+    --- PASS: TestTotal/case_029 (0.00s)
+    --- PASS: TestTotal/case_030 (0.00s)
+    --- PASS: TestTotal/case_031 (0.00s)
+    --- PASS: TestTotal/case_032 (0.00s)
+    --- PASS: TestTotal/case_033 (0.00s)
+    --- PASS: TestTotal/case_034 (0.00s)
+    --- PASS: TestTotal/case_035 (0.00s)
+    --- PASS: TestTotal/case_036 (0.00s)
+    --- PASS: TestTotal/case_037 (0.00s)
+    --- PASS: TestTotal/case_038 (0.00s)
+    --- PASS: TestTotal/case_039 (0.00s)
+    --- PASS: TestTotal/case_040 (0.00s)
+    --- PASS: TestTotal/case_041 (0.00s)
+    --- PASS: TestTotal/case_042 (0.00s)
+    --- PASS: TestTotal/case_043 (0.00s)
+    --- PASS: TestTotal/case_044 (0.00s)
+    --- PASS: TestTotal/case_045 (0.00s)
+    --- PASS: TestTotal/case_046 (0.00s)
+    --- PASS: TestTotal/case_047 (0.00s)
+    --- PASS: TestTotal/case_048 (0.00s)
+    --- PASS: TestTotal/case_049 (0.00s)
+    --- PASS: TestTotal/case_050 (0.00s)
+    --- PASS: TestTotal/case_051 (0.00s)
+    --- PASS: TestTotal/case_052 (0.00s)
+    --- PASS: TestTotal/case_053 (0.00s)
+    --- PASS: TestTotal/case_054 (0.00s)
+    --- PASS: TestTotal/case_055 (0.00s)
+    --- PASS: TestTotal/case_056 (0.00s)
+    --- PASS: TestTotal/case_057 (0.00s)
+    --- PASS: TestTotal/case_058 (0.00s)
+    --- PASS: TestTotal/case_059 (0.00s)
+    --- PASS: TestTotal/case_060 (0.00s)
+    --- PASS: TestTotal/case_061 (0.00s)
+    --- PASS: TestTotal/case_062 (0.00s)
+    --- PASS: TestTotal/case_063 (0.00s)
+    --- PASS: TestTotal/case_064 (0.00s)
+    --- PASS: TestTotal/case_065 (0.00s)
+    --- PASS: TestTotal/case_066 (0.00s)
+    --- PASS: TestTotal/case_067 (0.00s)
+    --- PASS: TestTotal/case_068 (0.00s)
+    --- PASS: TestTotal/case_069 (0.00s)
+    --- PASS: TestTotal/case_070 (0.00s)
+    --- PASS: TestTotal/case_071 (0.00s)
+    --- PASS: TestTotal/case_072 (0.00s)
+    --- PASS: TestTotal/case_073 (0.00s)
+    --- PASS: TestTotal/case_074 (0.00s)
+    --- PASS: TestTotal/case_075 (0.00s)
+    --- PASS: TestTotal/case_076 (0.00s)
+    --- PASS: TestTotal/case_077 (0.00s)
+    --- PASS: TestTotal/case_078 (0.00s)
+    --- PASS: TestTotal/case_079 (0.00s)
+    --- PASS: TestTotal/case_080 (0.00s)
+    --- PASS: TestTotal/case_081 (0.00s)
+    --- PASS: TestTotal/case_082 (0.00s)
+    --- PASS: TestTotal/case_083 (0.00s)
+    --- PASS: TestTotal/case_084 (0.00s)
+    --- PASS: TestTotal/case_085 (0.00s)
+    --- PASS: TestTotal/case_086 (0.00s)
+    --- PASS: TestTotal/case_087 (0.00s)
+    --- PASS: TestTotal/case_088 (0.00s)
+    --- PASS: TestTotal/case_089 (0.00s)
+    --- PASS: TestTotal/case_090 (0.00s)
+    --- PASS: TestTotal/case_091 (0.00s)
+    --- PASS: TestTotal/case_092 (0.00s)
+    --- PASS: TestTotal/case_093 (0.00s)
+    --- PASS: TestTotal/case_094 (0.00s)
+    --- PASS: TestTotal/case_095 (0.00s)
+    --- PASS: TestTotal/case_096 (0.00s)
+    --- PASS: TestTotal/case_097 (0.00s)
+    --- PASS: TestTotal/case_098 (0.00s)
+    --- PASS: TestTotal/case_099 (0.00s)
+    --- PASS: TestTotal/case_100 (0.00s)
+    --- PASS: TestTotal/case_101 (0.00s)
+    --- PASS: TestTotal/case_102 (0.00s)
+    --- PASS: TestTotal/case_103 (0.00s)
+    --- PASS: TestTotal/case_104 (0.00s)
+    --- PASS: TestTotal/case_105 (0.00s)
+    --- PASS: TestTotal/case_106 (0.00s)
+    --- PASS: TestTotal/case_107 (0.00s)
+    --- PASS: TestTotal/case_108 (0.00s)
+    --- PASS: TestTotal/case_109 (0.00s)
+    --- PASS: TestTotal/case_110 (0.00s)
+    --- PASS: TestTotal/case_111 (0.00s)
+    --- PASS: TestTotal/case_112 (0.00s)
+    --- PASS: TestTotal/case_113 (0.00s)
+    --- PASS: TestTotal/case_114 (0.00s)
+    --- PASS: TestTotal/case_115 (0.00s)
+    --- PASS: TestTotal/case_116 (0.00s)
+    --- PASS: TestTotal/case_117 (0.00s)
+    --- PASS: TestTotal/case_118 (0.00s)
+    --- PASS: TestTotal/case_119 (0.00s)
+    --- PASS: TestTotal/case_120 (0.00s)
+    --- PASS: TestTotal/case_121 (0.00s)
+    --- PASS: TestTotal/case_122 (0.00s)
+    --- PASS: TestTotal/case_123 (0.00s)
+    --- PASS: TestTotal/case_124 (0.00s)
+    --- PASS: TestTotal/case_125 (0.00s)
+    --- PASS: TestTotal/case_126 (0.00s)
+    --- PASS: TestTotal/case_127 (0.00s)
+    --- PASS: TestTotal/case_128 (0.00s)
+    --- PASS: TestTotal/case_129 (0.00s)
+    --- PASS: TestTotal/case_130 (0.00s)
+    --- PASS: TestTotal/case_131 (0.00s)
+    --- PASS: TestTotal/case_132 (0.00s)
+    --- PASS: TestTotal/case_133 (0.00s)
+    --- PASS: TestTotal/case_134 (0.00s)
+    --- PASS: TestTotal/case_135 (0.00s)
+    --- PASS: TestTotal/case_136 (0.00s)
+    --- PASS: TestTotal/case_137 (0.00s)
+    --- PASS: TestTotal/case_138 (0.00s)
+    --- PASS: TestTotal/case_139 (0.00s)
+    --- PASS: TestTotal/case_140 (0.00s)
+    --- PASS: TestTotal/case_141 (0.00s)
+    --- PASS: TestTotal/case_142 (0.00s)
+    --- PASS: TestTotal/case_143 (0.00s)
+    --- PASS: TestTotal/case_144 (0.00s)
+    --- PASS: TestTotal/case_145 (0.00s)
+    --- PASS: TestTotal/case_146 (0.00s)
+    --- PASS: TestTotal/case_147 (0.00s)
+    --- PASS: TestTotal/case_148 (0.00s)
+    --- PASS: TestTotal/case_149 (0.00s)
+    --- PASS: TestTotal/case_150 (0.00s)
+    --- PASS: TestTotal/case_151 (0.00s)
+    --- PASS: TestTotal/case_152 (0.00s)
+    --- PASS: TestTotal/case_153 (0.00s)
+    --- PASS: TestTotal/case_154 (0.00s)
+    --- PASS: TestTotal/case_155 (0.00s)
+    --- PASS: TestTotal/case_156 (0.00s)
+    --- PASS: TestTotal/case_157 (0.00s)
+    --- PASS: TestTotal/case_158 (0.00s)
+    --- PASS: TestTotal/case_159 (0.00s)
+    --- PASS: TestTotal/case_160 (0.00s)
+    --- PASS: TestTotal/case_161 (0.00s)
+    --- PASS: TestTotal/case_162 (0.00s)
+    --- PASS: TestTotal/case_163 (0.00s)
+    --- PASS: TestTotal/case_164 (0.00s)
+    --- PASS: TestTotal/case_165 (0.00s)
+    --- PASS: TestTotal/case_166 (0.00s)
+    --- PASS: TestTotal/case_167 (0.00s)
+    --- PASS: TestTotal/case_168 (0.00s)
+    --- PASS: TestTotal/case_169 (0.00s)
+    --- PASS: TestTotal/case_170 (0.00s)
+    --- PASS: TestTotal/case_171 (0.00s)
+    --- PASS: TestTotal/case_172 (0.00s)
+    --- FAIL: TestTotal/case_173 (0.00s)
+    --- PASS: TestTotal/case_174 (0.00s)
+    --- PASS: TestTotal/case_175 (0.00s)
+    --- PASS: TestTotal/case_176 (0.00s)
+    --- PASS: TestTotal/case_177 (0.00s)
+    --- PASS: TestTotal/case_178 (0.00s)
+    --- PASS: TestTotal/case_179 (0.00s)
+    --- PASS: TestTotal/case_180 (0.00s)
+    --- PASS: TestTotal/case_181 (0.00s)
+    --- PASS: TestTotal/case_182 (0.00s)
+    --- PASS: TestTotal/case_183 (0.00s)
+    --- PASS: TestTotal/case_184 (0.00s)
+    --- PASS: TestTotal/case_185 (0.00s)
+    --- PASS: TestTotal/case_186 (0.00s)
+    --- PASS: TestTotal/case_187 (0.00s)
+    --- PASS: TestTotal/case_188 (0.00s)
+    --- PASS: TestTotal/case_189 (0.00s)
+    --- PASS: TestTotal/case_190 (0.00s)
+    --- PASS: TestTotal/case_191 (0.00s)
+    --- PASS: TestTotal/case_192 (0.00s)
+    --- PASS: TestTotal/case_193 (0.00s)
+    --- PASS: TestTotal/case_194 (0.00s)
+    --- PASS: TestTotal/case_195 (0.00s)
+    --- PASS: TestTotal/case_196 (0.00s)
+    --- PASS: TestTotal/case_197 (0.00s)
+    --- PASS: TestTotal/case_198 (0.00s)
+    --- PASS: TestTotal/case_199 (0.00s)
+    --- PASS: TestTotal/case_200 (0.00s)
+    --- PASS: TestTotal/case_201 (0.00s)
+    --- PASS: TestTotal/case_202 (0.00s)
+    --- PASS: TestTotal/case_203 (0.00s)
+    --- PASS: TestTotal/case_204 (0.00s)
+    --- PASS: TestTotal/case_205 (0.00s)
+    --- PASS: TestTotal/case_206 (0.00s)
+    --- PASS: TestTotal/case_207 (0.00s)
+    --- PASS: TestTotal/case_208 (0.00s)
+    --- PASS: TestTotal/case_209 (0.00s)
+    --- PASS: TestTotal/case_210 (0.00s)
+    --- PASS: TestTotal/case_211 (0.00s)
+    --- PASS: TestTotal/case_212 (0.00s)
+    --- PASS: TestTotal/case_213 (0.00s)
+    --- PASS: TestTotal/case_214 (0.00s)
+    --- PASS: TestTotal/case_215 (0.00s)
+    --- PASS: TestTotal/case_216 (0.00s)
+    --- PASS: TestTotal/case_217 (0.00s)
+    --- PASS: TestTotal/case_218 (0.00s)
+    --- PASS: TestTotal/case_219 (0.00s)
+    --- PASS: TestTotal/case_220 (0.00s)
+    --- PASS: TestTotal/case_221 (0.00s)
+    --- PASS: TestTotal/case_222 (0.00s)
+    --- PASS: TestTotal/case_223 (0.00s)
+    --- PASS: TestTotal/case_224 (0.00s)
+    --- PASS: TestTotal/case_225 (0.00s)
+    --- PASS: TestTotal/case_226 (0.00s)
+    --- PASS: TestTotal/case_227 (0.00s)
+    --- PASS: TestTotal/case_228 (0.00s)
+    --- PASS: TestTotal/case_229 (0.00s)
+    --- PASS: TestTotal/case_230 (0.00s)
+    --- PASS: TestTotal/case_231 (0.00s)
+    --- PASS: TestTotal/case_232 (0.00s)
+    --- PASS: TestTotal/case_233 (0.00s)
+    --- PASS: TestTotal/case_234 (0.00s)
+    --- PASS: TestTotal/case_235 (0.00s)
+    --- PASS: TestTotal/case_236 (0.00s)
+    --- PASS: TestTotal/case_237 (0.00s)
+    --- PASS: TestTotal/case_238 (0.00s)
+    --- PASS: TestTotal/case_239 (0.00s)
+=== RUN   TestEmpty
+--- PASS: TestEmpty (0.00s)
+FAIL
+FAIL	example.com/shop	0.010s
+FAIL

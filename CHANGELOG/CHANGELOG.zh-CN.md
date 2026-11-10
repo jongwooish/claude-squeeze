@@ -4,6 +4,34 @@
 
 这里记录所有重要变更。版本号遵循[语义化版本](https://semver.org/lang/zh-CN/)。主版本号为 0 期间，命令和配置可能还会变化。
 
+## [0.2.0] - 2026-11-04 — squeeze-Auditor
+
+v0.2 关注整个会话，而不是一条输出。代码位于 [`v0.2-Auditor/v0.2.0_squeeze-auditor/`](../v0.2-Auditor/v0.2.0_squeeze-auditor/)。包含 0.1.0 的全部功能。
+
+### 新增
+
+- 四种会话拦截（Claude Code）：
+  - **重复读取**：对本会话中已读过且未变化的文件再次完整 `Read` 时拒绝。文件变化或上下文被压缩后重新允许。
+  - **预算暂停**（`UserPromptSubmit`）：会话超过预算（默认 150K token）时暂停一次消息，建议 `/compact` 或 `/clear`。再发一次即可照常发送。
+  - **交接**（`Stop` + `SessionStart`）：会话超过交接大小（默认 120K）时，Claude 在 `.squeeze/handoff/` 写下笔记；`/clear` 后新会话从笔记开始。`remind` 模式只建议 `/compact`。
+  - **固定开销**：测量每条消息都会发送的 `CLAUDE.md` 及其导入、技能、代理和 MCP 工具列表。用 Claude Code 自己的开关按项目关闭 MCP 服务器，或 N 天未用自动关闭（默认关闭）。
+- **squeeze-Auditor** 应用（`squeeze-auditor`、`squeeze auditor`）：仪表盘显示来自 Claude Code 会话日志的真实用量与 squeeze 拦下的量、当前 5 小时窗口、节省模式（强、均衡、轻、自定义）、全部设置、带测量与开关的固定开销诊断、交接笔记、连接管理。仅在本机（`127.0.0.1`，一次性密钥）。英语和韩语。
+- **Claude 桌面应用**支持：`squeeze mcp`，一个 MCP 服务器，提供 `read_log`、`tail_log`、`search_log`、`list_logs`、`save_handoff`、`load_handoff`，仅限你允许的文件夹。
+- `squeeze setup [--claude-code] [--desktop] [--remove]`：一次连接所有项目（`~/.claude/settings.json`）和桌面应用，备份在 `~/.squeeze/backups/`。
+- `squeeze doctor`：在终端查看每条消息的固定开销。
+- 安装程序：Windows Setup（x64、ARM64、按用户安装、开始菜单图标、卸载时断开连接）、包含 `squeeze-Auditor.app` 的 macOS `.pkg`、带菜单项的 Linux `.deb`。尚未代码签名。
+- 全局配置 `~/.squeeze/config.json`（项目的 `.squeeze/config.json` 仍可覆盖）和全局记录 `~/.squeeze/ledger.jsonl`。
+
+### 变更
+
+- 安装脚本也会安装 `squeeze-auditor`。
+- 发布标题改为取自 CHANGELOG 标题。CI 也会构建安装程序并测试冻结的 v0.1.0 快照。
+- 冻结的 v0.1.0 crate 改名为 `squeeze-sentinel`（程序名仍是 `squeeze`），因此 `cargo install --git … squeeze` 构建的是 v0.2。
+
+### 计划
+
+- v0.3：浏览器中的 claude.ai 和手机应用，采用新的方法。
+
 ## [0.1.0] - 2026-11-03 — Sentinel
 
 首个版本。代码位于 [`v0.1-Sentinel/v0.1.0_squeeze-sentinel/`](../v0.1-Sentinel/v0.1.0_squeeze-sentinel/)。

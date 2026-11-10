@@ -1,0 +1,1400 @@
+Nov 02 00:00:46 web01 sshd[5234]: Accepted publickey for deploy from 10.0.0.5 port 41582 ssh2
+Nov 02 00:01:00 web01 CRON[2771]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 00:01:51 web01 shop-api[1290]: INFO request_id=e8e25d94 GET /api/products 200 67ms
+Nov 02 00:02:23 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.2.js HTTP/1.1" 200 31844
+Nov 02 00:02:39 web01 shop-api[1290]: INFO request_id=0f21ddb6 GET /api/products 200 75ms
+Nov 02 00:02:59 web01 sshd[7166]: Accepted publickey for deploy from 10.0.0.5 port 59103 ssh2
+Nov 02 00:03:11 web01 shop-api[1290]: INFO request_id=658cda14 GET /api/products 200 9ms
+Nov 02 00:03:44 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.7.js HTTP/1.1" 200 19207
+Nov 02 00:04:04 web01 shop-api[1290]: INFO request_id=8f6d0558 GET /api/products 200 26ms
+Nov 02 00:04:22 web01 shop-api[1290]: INFO request_id=a38fd547 GET /api/products 200 27ms
+Nov 02 00:05:14 web01 nginx[812]: 10.0.1.55 - - "GET /static/app.1.js HTTP/1.1" 200 81434
+Nov 02 00:05:45 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.6.js HTTP/1.1" 200 61327
+Nov 02 00:06:48 web01 nginx[812]: 10.0.1.25 - - "GET /static/app.3.js HTTP/1.1" 304 32294
+Nov 02 00:07:03 web01 shop-api[1290]: INFO request_id=86734721 GET /api/products 200 66ms
+Nov 02 00:07:51 web01 shop-api[1290]: INFO request_id=49b64a08 GET /api/products 200 80ms
+Nov 02 00:08:05 web01 nginx[812]: 10.0.1.36 - - "GET /static/app.6.js HTTP/1.1" 200 20220
+Nov 02 00:09:12 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.9.js HTTP/1.1" 200 75407
+Nov 02 00:09:57 web01 nginx[812]: 10.0.1.32 - - "GET /static/app.8.js HTTP/1.1" 200 76308
+Nov 02 00:11:00 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.8.js HTTP/1.1" 200 87351
+Nov 02 00:11:13 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.8.js HTTP/1.1" 200 37602
+Nov 02 00:12:07 web01 CRON[4842]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 00:12:14 web01 sshd[4911]: Accepted publickey for deploy from 10.0.0.5 port 45506 ssh2
+Nov 02 00:12:33 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.5.js HTTP/1.1" 304 17252
+Nov 02 00:13:09 web01 nginx[812]: 10.0.1.41 - - "GET /static/app.3.js HTTP/1.1" 200 59175
+Nov 02 00:14:05 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.7.js HTTP/1.1" 301 72418
+Nov 02 00:14:45 web01 shop-api[1290]: INFO request_id=fc891b4a GET /api/products 200 48ms
+Nov 02 00:15:38 web01 sshd[3236]: Accepted publickey for deploy from 10.0.0.5 port 42719 ssh2
+Nov 02 00:16:05 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.1.js HTTP/1.1" 200 63865
+Nov 02 00:16:33 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.7.js HTTP/1.1" 200 70369
+Nov 02 00:17:25 web01 shop-api[1290]: INFO request_id=519088f5 GET /api/products 200 19ms
+Nov 02 00:18:35 web01 sshd[7365]: Accepted publickey for deploy from 10.0.0.5 port 41769 ssh2
+Nov 02 00:19:38 web01 CRON[8389]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 00:20:33 web01 nginx[812]: 10.0.1.35 - - "GET /static/app.8.js HTTP/1.1" 200 83437
+Nov 02 00:21:29 web01 nginx[812]: 10.0.1.14 - - "GET /static/app.8.js HTTP/1.1" 200 21573
+Nov 02 00:21:48 web01 nginx[812]: 10.0.1.13 - - "GET /static/app.1.js HTTP/1.1" 200 74589
+Nov 02 00:22:12 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.1.js HTTP/1.1" 200 9516
+Nov 02 00:22:43 web01 shop-api[1290]: INFO request_id=2607679d GET /api/products 200 35ms
+Nov 02 00:23:32 web01 shop-api[1290]: INFO request_id=7961fd92 GET /api/products 200 18ms
+Nov 02 00:23:51 web01 CRON[5817]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 00:24:57 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.2.js HTTP/1.1" 200 45209
+Nov 02 00:25:35 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.9.js HTTP/1.1" 200 3327
+Nov 02 00:26:06 web01 sshd[6327]: Accepted publickey for deploy from 10.0.0.5 port 51853 ssh2
+Nov 02 00:26:29 web01 shop-api[1290]: INFO request_id=ea057543 GET /api/products 200 6ms
+Nov 02 00:27:12 web01 sshd[2745]: Accepted publickey for deploy from 10.0.0.5 port 48556 ssh2
+Nov 02 00:28:03 web01 CRON[4913]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 00:28:36 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.6.js HTTP/1.1" 200 83719
+Nov 02 00:29:09 web01 shop-api[1290]: INFO request_id=c9d488b1 GET /api/products 200 27ms
+Nov 02 00:29:44 web01 CRON[8061]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 00:30:18 web01 nginx[812]: 10.0.1.41 - - "GET /static/app.1.js HTTP/1.1" 200 3961
+Nov 02 00:30:58 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.6.js HTTP/1.1" 200 58919
+Nov 02 00:31:47 web01 sshd[4987]: Accepted publickey for deploy from 10.0.0.5 port 42639 ssh2
+Nov 02 00:32:20 web01 nginx[812]: 10.0.1.40 - - "GET /static/app.6.js HTTP/1.1" 200 27087
+Nov 02 00:33:26 web01 shop-api[1290]: INFO request_id=e67a9b75 GET /api/products 200 3ms
+Nov 02 00:34:32 web01 CRON[4818]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 00:34:47 web01 CRON[2982]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 00:35:41 web01 shop-api[1290]: INFO request_id=c0093492 GET /api/products 200 28ms
+Nov 02 00:36:47 web01 CRON[5554]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 00:37:34 web01 nginx[812]: 10.0.1.56 - - "GET /static/app.8.js HTTP/1.1" 200 52910
+Nov 02 00:37:49 web01 shop-api[1290]: INFO request_id=2b855c1f GET /api/products 200 19ms
+Nov 02 00:37:57 web01 nginx[812]: 10.0.1.39 - - "GET /static/app.3.js HTTP/1.1" 304 80460
+Nov 02 00:39:02 web01 shop-api[1290]: INFO request_id=59b44e92 GET /api/products 200 22ms
+Nov 02 00:39:23 web01 nginx[812]: 10.0.1.56 - - "GET /static/app.2.js HTTP/1.1" 200 69320
+Nov 02 00:39:45 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.4.js HTTP/1.1" 301 3969
+Nov 02 00:40:22 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.6.js HTTP/1.1" 200 34295
+Nov 02 00:41:20 web01 CRON[2498]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 00:42:10 web01 CRON[7426]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 00:43:08 web01 CRON[6109]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 00:43:29 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.1.js HTTP/1.1" 200 57988
+Nov 02 00:43:57 web01 shop-api[1290]: INFO request_id=c6aa7d55 GET /api/products 200 22ms
+Nov 02 00:44:24 web01 nginx[812]: 10.0.1.49 - - "GET /static/app.2.js HTTP/1.1" 200 73238
+Nov 02 00:44:36 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.9.js HTTP/1.1" 200 63540
+Nov 02 00:44:54 web01 CRON[2465]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 00:45:30 web01 nginx[812]: 10.0.1.12 - - "GET /static/app.2.js HTTP/1.1" 304 66847
+Nov 02 00:46:32 web01 shop-api[1290]: INFO request_id=c28ee907 GET /api/products 200 11ms
+Nov 02 00:47:33 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.9.js HTTP/1.1" 200 26436
+Nov 02 00:48:13 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.8.js HTTP/1.1" 304 66852
+Nov 02 00:48:49 web01 shop-api[1290]: INFO request_id=e064a114 GET /api/products 200 36ms
+Nov 02 00:49:19 web01 CRON[3123]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 00:50:17 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.2.js HTTP/1.1" 200 88269
+Nov 02 00:50:52 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.5.js HTTP/1.1" 200 16336
+Nov 02 00:51:16 web01 sshd[7271]: Accepted publickey for deploy from 10.0.0.5 port 51999 ssh2
+Nov 02 00:51:39 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.4.js HTTP/1.1" 200 12637
+Nov 02 00:52:34 web01 CRON[3333]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 00:53:07 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.7.js HTTP/1.1" 200 44748
+Nov 02 00:54:05 web01 nginx[812]: 10.0.1.30 - - "GET /static/app.6.js HTTP/1.1" 200 2853
+Nov 02 00:54:53 web01 shop-api[1290]: INFO request_id=70c1dca1 GET /api/products 200 5ms
+Nov 02 00:55:47 web01 nginx[812]: 10.0.1.49 - - "GET /static/app.9.js HTTP/1.1" 200 8726
+Nov 02 00:56:06 web01 sshd[8458]: Accepted publickey for deploy from 10.0.0.5 port 47489 ssh2
+Nov 02 00:56:24 web01 nginx[812]: 10.0.1.27 - - "GET /static/app.3.js HTTP/1.1" 200 35747
+Nov 02 00:56:45 web01 CRON[8959]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 00:57:23 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.8.js HTTP/1.1" 200 43166
+Nov 02 00:57:39 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.7.js HTTP/1.1" 200 9791
+Nov 02 00:58:18 web01 sshd[7197]: Accepted publickey for deploy from 10.0.0.5 port 42902 ssh2
+Nov 02 00:58:56 web01 nginx[812]: 10.0.1.24 - - "GET /static/app.5.js HTTP/1.1" 200 16248
+Nov 02 00:59:59 web01 nginx[812]: 10.0.1.45 - - "GET /static/app.5.js HTTP/1.1" 200 81787
+Nov 02 01:00:20 web01 nginx[812]: 10.0.1.55 - - "GET /static/app.2.js HTTP/1.1" 200 21461
+Nov 02 01:00:58 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.5.js HTTP/1.1" 200 69910
+Nov 02 01:01:29 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.3.js HTTP/1.1" 200 35757
+Nov 02 01:02:18 web01 CRON[4051]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 01:02:27 web01 nginx[812]: 10.0.1.56 - - "GET /static/app.9.js HTTP/1.1" 200 25132
+Nov 02 01:03:37 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.7.js HTTP/1.1" 200 86350
+Nov 02 01:04:45 web01 nginx[812]: 10.0.1.35 - - "GET /static/app.5.js HTTP/1.1" 200 28504
+Nov 02 01:05:19 web01 nginx[812]: 10.0.1.55 - - "GET /static/app.3.js HTTP/1.1" 200 53344
+Nov 02 01:06:08 web01 sshd[8856]: Accepted publickey for deploy from 10.0.0.5 port 44253 ssh2
+Nov 02 01:06:14 web01 nginx[812]: 10.0.1.57 - - "GET /static/app.7.js HTTP/1.1" 200 21697
+Nov 02 01:06:26 web01 nginx[812]: 10.0.1.34 - - "GET /static/app.9.js HTTP/1.1" 301 88189
+Nov 02 01:07:07 web01 shop-api[1290]: INFO request_id=b153d69c GET /api/products 200 40ms
+Nov 02 01:07:17 web01 nginx[812]: 10.0.1.20 - - "GET /static/app.8.js HTTP/1.1" 200 774
+Nov 02 01:07:55 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.6.js HTTP/1.1" 200 32340
+Nov 02 01:08:04 web01 sshd[4535]: Accepted publickey for deploy from 10.0.0.5 port 47139 ssh2
+Nov 02 01:08:54 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.2.js HTTP/1.1" 200 62512
+Nov 02 01:09:34 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.9.js HTTP/1.1" 200 948
+Nov 02 01:09:50 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.7.js HTTP/1.1" 200 77213
+Nov 02 01:10:00 web01 nginx[812]: 10.0.1.29 - - "GET /static/app.4.js HTTP/1.1" 200 11373
+Nov 02 01:10:24 web01 shop-api[1290]: INFO request_id=b74b589b GET /api/products 200 79ms
+Nov 02 01:11:18 web01 shop-api[1290]: INFO request_id=b87e4e2b GET /api/products 200 66ms
+Nov 02 01:11:42 web01 nginx[812]: 10.0.1.49 - - "GET /static/app.3.js HTTP/1.1" 200 6039
+Nov 02 01:12:52 web01 shop-api[1290]: INFO request_id=bbddbb9b GET /api/products 200 67ms
+Nov 02 01:13:14 web01 CRON[8167]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 01:14:23 web01 shop-api[1290]: INFO request_id=d01a914c GET /api/products 200 5ms
+Nov 02 01:14:57 web01 nginx[812]: 10.0.1.12 - - "GET /static/app.6.js HTTP/1.1" 200 14051
+Nov 02 01:15:50 web01 CRON[6575]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 01:16:01 web01 shop-api[1290]: INFO request_id=a0506098 GET /api/products 200 71ms
+Nov 02 01:16:37 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.2.js HTTP/1.1" 200 66225
+Nov 02 01:16:53 web01 shop-api[1290]: INFO request_id=10e8ad01 GET /api/products 200 63ms
+Nov 02 01:17:30 web01 CRON[8931]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 01:18:08 web01 nginx[812]: 10.0.1.58 - - "GET /static/app.4.js HTTP/1.1" 200 85487
+Nov 02 01:19:11 web01 nginx[812]: 10.0.1.34 - - "GET /static/app.8.js HTTP/1.1" 200 89913
+Nov 02 01:19:52 web01 shop-api[1290]: INFO request_id=9df2025f GET /api/products 200 28ms
+Nov 02 01:20:06 web01 shop-api[1290]: INFO request_id=54ef125a GET /api/products 200 35ms
+Nov 02 01:20:49 web01 shop-api[1290]: INFO request_id=222930ae GET /api/products 200 4ms
+Nov 02 01:21:55 web01 nginx[812]: 10.0.1.27 - - "GET /static/app.2.js HTTP/1.1" 200 28833
+Nov 02 01:23:02 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.8.js HTTP/1.1" 200 61366
+Nov 02 01:24:06 web01 shop-api[1290]: INFO request_id=fe48ef63 GET /api/products 200 73ms
+Nov 02 01:24:36 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.1.js HTTP/1.1" 200 38256
+Nov 02 01:25:39 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.5.js HTTP/1.1" 200 51004
+Nov 02 01:26:10 web01 CRON[3726]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 01:26:24 web01 shop-api[1290]: INFO request_id=24491df6 GET /api/products 200 70ms
+Nov 02 01:27:02 web01 sshd[3086]: Accepted publickey for deploy from 10.0.0.5 port 59771 ssh2
+Nov 02 01:28:12 web01 nginx[812]: 10.0.1.17 - - "GET /static/app.6.js HTTP/1.1" 200 30627
+Nov 02 01:29:20 web01 CRON[5982]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 01:30:15 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.8.js HTTP/1.1" 200 53439
+Nov 02 01:30:58 web01 shop-api[1290]: INFO request_id=6a8ad9cb GET /api/products 200 47ms
+Nov 02 01:31:51 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.6.js HTTP/1.1" 200 44638
+Nov 02 01:32:46 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.1.js HTTP/1.1" 200 38288
+Nov 02 01:33:23 web01 nginx[812]: 10.0.1.35 - - "GET /static/app.2.js HTTP/1.1" 200 47578
+Nov 02 01:34:22 web01 shop-api[1290]: INFO request_id=dab07929 GET /api/products 200 9ms
+Nov 02 01:35:02 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.3.js HTTP/1.1" 200 32979
+Nov 02 01:35:41 web01 nginx[812]: 10.0.1.30 - - "GET /static/app.6.js HTTP/1.1" 200 56365
+Nov 02 01:35:49 web01 CRON[7168]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 01:36:45 web01 CRON[6539]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 01:37:16 web01 shop-api[1290]: INFO request_id=0caa7612 GET /api/products 200 55ms
+Nov 02 01:38:18 web01 shop-api[1290]: INFO request_id=23797d45 GET /api/products 200 39ms
+Nov 02 01:39:25 web01 nginx[812]: 10.0.1.45 - - "GET /static/app.3.js HTTP/1.1" 200 62190
+Nov 02 01:40:23 web01 nginx[812]: 10.0.1.29 - - "GET /static/app.5.js HTTP/1.1" 200 53542
+Nov 02 01:40:58 web01 nginx[812]: 10.0.1.45 - - "GET /static/app.7.js HTTP/1.1" 200 15994
+Nov 02 01:41:24 web01 shop-api[1290]: INFO request_id=133e6153 GET /api/products 200 29ms
+Nov 02 01:42:33 web01 CRON[6072]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 01:43:06 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.8.js HTTP/1.1" 304 56323
+Nov 02 01:43:28 web01 nginx[812]: 10.0.1.25 - - "GET /static/app.3.js HTTP/1.1" 200 45120
+Nov 02 01:43:44 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.4.js HTTP/1.1" 200 2932
+Nov 02 01:44:41 web01 nginx[812]: 10.0.1.57 - - "GET /static/app.4.js HTTP/1.1" 200 49696
+Nov 02 01:45:20 web01 nginx[812]: 10.0.1.13 - - "GET /static/app.5.js HTTP/1.1" 200 75572
+Nov 02 01:46:11 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.4.js HTTP/1.1" 200 12437
+Nov 02 01:46:50 web01 CRON[5150]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 01:47:46 web01 shop-api[1290]: INFO request_id=6e8cd94e GET /api/products 200 42ms
+Nov 02 01:47:53 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.8.js HTTP/1.1" 200 77262
+Nov 02 01:49:00 web01 nginx[812]: 10.0.1.35 - - "GET /static/app.9.js HTTP/1.1" 301 61661
+Nov 02 01:50:02 web01 nginx[812]: 10.0.1.16 - - "GET /static/app.3.js HTTP/1.1" 200 20231
+Nov 02 01:50:20 web01 sshd[7912]: Accepted publickey for deploy from 10.0.0.5 port 54985 ssh2
+Nov 02 01:50:35 web01 shop-api[1290]: INFO request_id=0a1fb43b GET /api/products 200 3ms
+Nov 02 01:50:56 web01 nginx[812]: 10.0.1.12 - - "GET /static/app.5.js HTTP/1.1" 200 17072
+Nov 02 01:51:33 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.2.js HTTP/1.1" 200 13334
+Nov 02 01:51:47 web01 nginx[812]: 10.0.1.47 - - "GET /static/app.7.js HTTP/1.1" 200 34494
+Nov 02 01:52:20 web01 shop-api[1290]: INFO request_id=004b7fd0 GET /api/products 200 4ms
+Nov 02 01:53:03 web01 sshd[4282]: Accepted publickey for deploy from 10.0.0.5 port 50366 ssh2
+Nov 02 01:53:39 web01 nginx[812]: 10.0.1.25 - - "GET /static/app.4.js HTTP/1.1" 200 4137
+Nov 02 01:54:36 web01 shop-api[1290]: INFO request_id=4eb19fca GET /api/products 200 10ms
+Nov 02 01:54:43 web01 nginx[812]: 10.0.1.53 - - "GET /static/app.7.js HTTP/1.1" 200 10928
+Nov 02 01:55:20 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.4.js HTTP/1.1" 200 64911
+Nov 02 01:55:29 web01 shop-api[1290]: INFO request_id=b7e49f36 GET /api/products 200 56ms
+Nov 02 01:56:20 web01 shop-api[1290]: INFO request_id=32b558fd GET /api/products 200 3ms
+Nov 02 01:57:02 web01 shop-api[1290]: INFO request_id=813fb5cd GET /api/products 200 11ms
+Nov 02 01:57:33 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.4.js HTTP/1.1" 200 30552
+Nov 02 01:58:37 web01 nginx[812]: 10.0.1.58 - - "GET /static/app.2.js HTTP/1.1" 200 82036
+Nov 02 01:59:45 web01 shop-api[1290]: INFO request_id=e57f7691 GET /api/products 200 31ms
+Nov 02 02:00:52 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.3.js HTTP/1.1" 200 51871
+Nov 02 02:01:03 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.7.js HTTP/1.1" 200 7094
+Nov 02 02:01:15 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.6.js HTTP/1.1" 200 15138
+Nov 02 02:01:30 web01 sshd[4697]: Accepted publickey for deploy from 10.0.0.5 port 46248 ssh2
+Nov 02 02:01:58 web01 shop-api[1290]: INFO request_id=86592243 GET /api/products 200 62ms
+Nov 02 02:02:07 web01 nginx[812]: 10.0.1.56 - - "GET /static/app.6.js HTTP/1.1" 200 43776
+Nov 02 02:03:08 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.5.js HTTP/1.1" 200 10885
+Nov 02 02:03:57 web01 nginx[812]: 10.0.1.17 - - "GET /static/app.4.js HTTP/1.1" 200 50124
+Nov 02 02:04:47 web01 shop-api[1290]: INFO request_id=4f06e95a GET /api/products 200 58ms
+Nov 02 02:05:03 web01 nginx[812]: 10.0.1.40 - - "GET /static/app.6.js HTTP/1.1" 200 71279
+Nov 02 02:06:05 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.8.js HTTP/1.1" 200 4269
+Nov 02 02:07:02 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.7.js HTTP/1.1" 304 5628
+Nov 02 02:07:55 web01 nginx[812]: 10.0.1.14 - - "GET /static/app.1.js HTTP/1.1" 304 33987
+Nov 02 02:08:24 web01 shop-api[1290]: INFO request_id=e6077d79 GET /api/products 200 80ms
+Nov 02 02:09:12 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.1.js HTTP/1.1" 200 34663
+Nov 02 02:09:57 web01 sshd[4436]: Accepted publickey for deploy from 10.0.0.5 port 40123 ssh2
+Nov 02 02:10:10 web01 nginx[812]: 10.0.1.24 - - "GET /static/app.8.js HTTP/1.1" 200 61345
+Nov 02 02:11:04 web01 shop-api[1290]: INFO request_id=e9de0479 GET /api/products 200 58ms
+Nov 02 02:12:12 web01 nginx[812]: 10.0.1.41 - - "GET /static/app.1.js HTTP/1.1" 200 40056
+Nov 02 02:12:36 web01 shop-api[1290]: INFO request_id=53eab031 GET /api/products 200 43ms
+Nov 02 02:13:39 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.9.js HTTP/1.1" 200 26162
+Nov 02 02:14:34 web01 shop-api[1290]: INFO request_id=3f4f8b9d GET /api/products 200 55ms
+Nov 02 02:14:47 web01 shop-api[1290]: INFO request_id=7b50079e GET /api/products 200 73ms
+Nov 02 02:15:33 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.2.js HTTP/1.1" 200 35019
+Nov 02 02:15:48 web01 nginx[812]: 10.0.1.36 - - "GET /static/app.8.js HTTP/1.1" 200 23000
+Nov 02 02:16:22 web01 nginx[812]: 10.0.1.39 - - "GET /static/app.4.js HTTP/1.1" 200 70890
+Nov 02 02:16:42 web01 shop-api[1290]: INFO request_id=4b3e90b7 GET /api/products 200 40ms
+Nov 02 02:17:22 web01 shop-api[1290]: INFO request_id=5f7b07b8 GET /api/products 200 35ms
+Nov 02 02:18:00 web01 nginx[812]: 10.0.1.25 - - "GET /static/app.4.js HTTP/1.1" 200 31167
+Nov 02 02:18:24 web01 nginx[812]: 10.0.1.47 - - "GET /static/app.6.js HTTP/1.1" 200 8794
+Nov 02 02:19:19 web01 nginx[812]: 10.0.1.25 - - "GET /static/app.9.js HTTP/1.1" 200 30627
+Nov 02 02:19:36 web01 shop-api[1290]: INFO request_id=fdaf4513 GET /api/products 200 7ms
+Nov 02 02:19:54 web01 nginx[812]: 10.0.1.24 - - "GET /static/app.8.js HTTP/1.1" 301 49304
+Nov 02 02:20:04 web01 CRON[3907]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 02:20:24 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.4.js HTTP/1.1" 301 10145
+Nov 02 02:21:16 web01 nginx[812]: 10.0.1.21 - - "GET /static/app.5.js HTTP/1.1" 200 87430
+Nov 02 02:21:21 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.6.js HTTP/1.1" 200 28827
+Nov 02 02:21:30 web01 nginx[812]: 10.0.1.19 - - "GET /static/app.4.js HTTP/1.1" 200 33712
+Nov 02 02:21:39 web01 shop-api[1290]: INFO request_id=a6d21040 GET /api/products 200 29ms
+Nov 02 02:21:45 web01 CRON[5350]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 02:22:37 web01 nginx[812]: 10.0.1.29 - - "GET /static/app.4.js HTTP/1.1" 200 4424
+Nov 02 02:23:45 web01 nginx[812]: 10.0.1.14 - - "GET /static/app.2.js HTTP/1.1" 200 52112
+Nov 02 02:24:09 web01 shop-api[1290]: INFO request_id=1755c6de GET /api/products 200 23ms
+Nov 02 02:25:04 web01 shop-api[1290]: INFO request_id=68e7ed23 GET /api/products 200 39ms
+Nov 02 02:25:48 web01 nginx[812]: 10.0.1.13 - - "GET /static/app.6.js HTTP/1.1" 200 54574
+Nov 02 02:26:46 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.6.js HTTP/1.1" 304 84773
+Nov 02 02:27:16 web01 nginx[812]: 10.0.1.35 - - "GET /static/app.1.js HTTP/1.1" 200 57206
+Nov 02 02:27:41 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.6.js HTTP/1.1" 200 60711
+Nov 02 02:28:06 web01 nginx[812]: 10.0.1.13 - - "GET /static/app.3.js HTTP/1.1" 200 84273
+Nov 02 02:29:01 web01 nginx[812]: 10.0.1.49 - - "GET /static/app.9.js HTTP/1.1" 200 22803
+Nov 02 02:29:24 web01 nginx[812]: 10.0.1.20 - - "GET /static/app.3.js HTTP/1.1" 200 9094
+Nov 02 02:29:42 web01 nginx[812]: 10.0.1.58 - - "GET /static/app.4.js HTTP/1.1" 304 39833
+Nov 02 02:30:03 web01 CRON[2356]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 02:31:09 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.7.js HTTP/1.1" 200 11610
+Nov 02 02:31:34 web01 shop-api[1290]: INFO request_id=db495244 GET /api/products 200 31ms
+Nov 02 02:32:30 web01 shop-api[1290]: INFO request_id=3234752b GET /api/products 200 63ms
+Nov 02 02:32:58 web01 shop-api[1290]: INFO request_id=0aadacf0 GET /api/products 200 54ms
+Nov 02 02:33:23 web01 nginx[812]: 10.0.1.17 - - "GET /static/app.4.js HTTP/1.1" 200 25543
+Nov 02 02:33:33 web01 CRON[8901]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 02:33:42 web01 shop-api[1290]: INFO request_id=52fef478 GET /api/products 200 18ms
+Nov 02 02:34:36 web01 shop-api[1290]: INFO request_id=8cd03260 GET /api/products 200 42ms
+Nov 02 02:35:34 web01 nginx[812]: 10.0.1.25 - - "GET /static/app.7.js HTTP/1.1" 200 86655
+Nov 02 02:36:26 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.1.js HTTP/1.1" 200 759
+Nov 02 02:37:33 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.8.js HTTP/1.1" 304 23836
+Nov 02 02:38:38 web01 nginx[812]: 10.0.1.14 - - "GET /static/app.6.js HTTP/1.1" 200 56739
+Nov 02 02:39:29 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.9.js HTTP/1.1" 200 86426
+Nov 02 02:39:39 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.6.js HTTP/1.1" 200 67340
+Nov 02 02:39:54 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.3.js HTTP/1.1" 200 3689
+Nov 02 02:40:07 web01 sshd[7997]: Accepted publickey for deploy from 10.0.0.5 port 43590 ssh2
+Nov 02 02:40:36 web01 nginx[812]: 10.0.1.41 - - "GET /static/app.3.js HTTP/1.1" 200 29283
+Nov 02 02:40:49 web01 CRON[7000]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 02:41:26 web01 nginx[812]: 10.0.1.49 - - "GET /static/app.8.js HTTP/1.1" 200 19118
+Nov 02 02:42:03 web01 nginx[812]: 10.0.1.40 - - "GET /static/app.5.js HTTP/1.1" 200 81022
+Nov 02 02:43:12 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.4.js HTTP/1.1" 200 24167
+Nov 02 02:44:08 web01 nginx[812]: 10.0.1.27 - - "GET /static/app.6.js HTTP/1.1" 200 49693
+Nov 02 02:44:34 web01 shop-api[1290]: INFO request_id=43abd7ad GET /api/products 200 17ms
+Nov 02 02:44:45 web01 shop-api[1290]: INFO request_id=5c1a7c01 GET /api/products 200 60ms
+Nov 02 02:45:03 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.7.js HTTP/1.1" 200 48988
+Nov 02 02:45:41 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.3.js HTTP/1.1" 200 47518
+Nov 02 02:46:28 web01 shop-api[1290]: INFO request_id=71395e71 GET /api/products 200 32ms
+Nov 02 02:46:55 web01 shop-api[1290]: INFO request_id=f53e2c38 GET /api/products 200 9ms
+Nov 02 02:47:37 web01 CRON[4077]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 02:48:21 web01 shop-api[1290]: INFO request_id=fbeb0a98 GET /api/products 200 77ms
+Nov 02 02:49:06 web01 shop-api[1290]: INFO request_id=bf433e03 GET /api/products 200 7ms
+Nov 02 02:49:39 web01 nginx[812]: 10.0.1.49 - - "GET /static/app.7.js HTTP/1.1" 200 55047
+Nov 02 02:50:49 web01 nginx[812]: 10.0.1.13 - - "GET /static/app.8.js HTTP/1.1" 200 30087
+Nov 02 02:50:59 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.6.js HTTP/1.1" 200 40111
+Nov 02 02:51:17 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.7.js HTTP/1.1" 200 76792
+Nov 02 02:52:00 web01 shop-api[1290]: INFO request_id=34456d5b GET /api/products 200 49ms
+Nov 02 02:53:05 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.4.js HTTP/1.1" 304 19870
+Nov 02 02:54:07 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.5.js HTTP/1.1" 200 52984
+Nov 02 02:54:45 web01 sshd[2459]: Accepted publickey for deploy from 10.0.0.5 port 58426 ssh2
+Nov 02 02:55:34 web01 shop-api[1290]: INFO request_id=9416c610 GET /api/products 200 59ms
+Nov 02 02:56:42 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.1.js HTTP/1.1" 200 69968
+Nov 02 02:56:50 web01 nginx[812]: 10.0.1.25 - - "GET /static/app.1.js HTTP/1.1" 200 14051
+Nov 02 02:56:56 web01 shop-api[1290]: INFO request_id=a82409f1 GET /api/products 200 28ms
+Nov 02 02:57:19 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.9.js HTTP/1.1" 200 85181
+Nov 02 02:58:17 web01 CRON[3430]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 02:59:27 web01 nginx[812]: 10.0.1.29 - - "GET /static/app.1.js HTTP/1.1" 200 62942
+Nov 02 02:59:32 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.8.js HTTP/1.1" 200 10848
+Nov 02 03:00:34 web01 nginx[812]: 10.0.1.16 - - "GET /static/app.4.js HTTP/1.1" 200 84712
+Nov 02 03:00:43 web01 nginx[812]: 10.0.1.57 - - "GET /static/app.5.js HTTP/1.1" 200 7185
+Nov 02 03:01:22 web01 shop-api[1290]: INFO request_id=ade25655 GET /api/products 200 58ms
+Nov 02 03:02:00 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.9.js HTTP/1.1" 200 2295
+Nov 02 03:02:26 web01 nginx[812]: 10.0.1.25 - - "GET /static/app.4.js HTTP/1.1" 301 21164
+Nov 02 03:03:12 web01 nginx[812]: 10.0.1.34 - - "GET /static/app.4.js HTTP/1.1" 200 50035
+Nov 02 03:04:17 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.1.js HTTP/1.1" 200 3775
+Nov 02 03:05:17 web01 sshd[3915]: Accepted publickey for deploy from 10.0.0.5 port 58688 ssh2
+Nov 02 03:06:01 web01 shop-api[1290]: INFO request_id=643d79f1 GET /api/products 200 77ms
+Nov 02 03:06:15 web01 shop-api[1290]: INFO request_id=2bea714d GET /api/products 200 21ms
+Nov 02 03:06:24 web01 nginx[812]: 10.0.1.16 - - "GET /static/app.3.js HTTP/1.1" 200 45501
+Nov 02 03:06:47 web01 shop-api[1290]: INFO request_id=07e7166b GET /api/products 200 8ms
+Nov 02 03:07:09 web01 shop-api[1290]: INFO request_id=a245d658 GET /api/products 200 8ms
+Nov 02 03:07:22 web01 shop-api[1290]: INFO request_id=10d5fe14 GET /api/products 200 78ms
+Nov 02 03:08:13 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.2.js HTTP/1.1" 200 50611
+Nov 02 03:08:31 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.1.js HTTP/1.1" 200 4812
+Nov 02 03:08:47 web01 CRON[7173]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 03:09:28 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.4.js HTTP/1.1" 200 38895
+Nov 02 03:10:13 web01 nginx[812]: 10.0.1.26 - - "GET /static/app.6.js HTTP/1.1" 200 33946
+Nov 02 03:10:54 web01 nginx[812]: 10.0.1.58 - - "GET /static/app.6.js HTTP/1.1" 200 79206
+Nov 02 03:12:03 web01 nginx[812]: 10.0.1.28 - - "GET /static/app.1.js HTTP/1.1" 200 54422
+Nov 02 03:12:11 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.6.js HTTP/1.1" 200 61765
+Nov 02 03:12:22 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.2.js HTTP/1.1" 200 75606
+Nov 02 03:13:03 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.4.js HTTP/1.1" 200 38092
+Nov 02 03:13:14 web01 nginx[812]: 10.0.1.41 - - "GET /static/app.8.js HTTP/1.1" 200 24485
+Nov 02 03:14:22 web01 shop-api[1290]: INFO request_id=f50b7e1d GET /api/products 200 68ms
+Nov 02 03:15:00 web01 shop-api[1290]: INFO request_id=28ad5dc9 GET /api/products 200 39ms
+Nov 02 03:15:32 web01 sshd[3896]: Accepted publickey for deploy from 10.0.0.5 port 56328 ssh2
+Nov 02 03:15:58 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.2.js HTTP/1.1" 304 64563
+Nov 02 03:16:16 web01 shop-api[1290]: INFO request_id=5b09b845 GET /api/products 200 15ms
+Nov 02 03:17:12 web01 sshd[8104]: Accepted publickey for deploy from 10.0.0.5 port 42823 ssh2
+Nov 02 03:18:11 web01 CRON[2206]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 03:19:03 web01 nginx[812]: 10.0.1.26 - - "GET /static/app.9.js HTTP/1.1" 200 65991
+Nov 02 03:19:29 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.8.js HTTP/1.1" 200 16930
+Nov 02 03:19:38 web01 nginx[812]: 10.0.1.30 - - "GET /static/app.3.js HTTP/1.1" 200 59322
+Nov 02 03:20:24 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.5.js HTTP/1.1" 200 76212
+Nov 02 03:20:58 web01 nginx[812]: 10.0.1.39 - - "GET /static/app.4.js HTTP/1.1" 200 66845
+Nov 02 03:21:27 web01 nginx[812]: 10.0.1.58 - - "GET /static/app.3.js HTTP/1.1" 200 20745
+Nov 02 03:22:03 web01 shop-api[1290]: INFO request_id=9a575555 GET /api/products 200 69ms
+Nov 02 03:22:52 web01 nginx[812]: 10.0.1.30 - - "GET /static/app.5.js HTTP/1.1" 200 13643
+Nov 02 03:23:18 web01 sshd[2832]: Accepted publickey for deploy from 10.0.0.5 port 46403 ssh2
+Nov 02 03:24:12 web01 nginx[812]: 10.0.1.19 - - "GET /static/app.5.js HTTP/1.1" 304 39281
+Nov 02 03:25:12 web01 nginx[812]: 10.0.1.16 - - "GET /static/app.2.js HTTP/1.1" 200 37105
+Nov 02 03:25:43 web01 CRON[5800]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 03:25:52 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.4.js HTTP/1.1" 200 65899
+Nov 02 03:26:34 web01 nginx[812]: 10.0.1.19 - - "GET /static/app.7.js HTTP/1.1" 200 1023
+Nov 02 03:27:10 web01 CRON[5522]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 03:28:08 web01 CRON[7471]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 03:28:42 web01 shop-api[1290]: INFO request_id=a43be368 GET /api/products 200 18ms
+Nov 02 03:29:45 web01 nginx[812]: 10.0.1.26 - - "GET /static/app.2.js HTTP/1.1" 200 55295
+Nov 02 03:30:21 web01 shop-api[1290]: INFO request_id=b6910780 GET /api/products 200 23ms
+Nov 02 03:30:58 web01 CRON[5954]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 03:32:01 web01 nginx[812]: 10.0.1.36 - - "GET /static/app.3.js HTTP/1.1" 200 86085
+Nov 02 03:32:47 web01 shop-api[1290]: INFO request_id=63826536 GET /api/products 200 65ms
+Nov 02 03:33:05 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.3.js HTTP/1.1" 200 26489
+Nov 02 03:33:54 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.9.js HTTP/1.1" 200 27167
+Nov 02 03:34:59 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.6.js HTTP/1.1" 304 68678
+Nov 02 03:35:47 web01 nginx[812]: 10.0.1.39 - - "GET /static/app.3.js HTTP/1.1" 200 51744
+Nov 02 03:36:57 web01 shop-api[1290]: INFO request_id=1f55411e GET /api/products 200 48ms
+Nov 02 03:37:09 web01 nginx[812]: 10.0.1.34 - - "GET /static/app.1.js HTTP/1.1" 200 2044
+Nov 02 03:37:23 web01 nginx[812]: 10.0.1.36 - - "GET /static/app.6.js HTTP/1.1" 200 76344
+Nov 02 03:38:01 web01 nginx[812]: 10.0.1.29 - - "GET /static/app.7.js HTTP/1.1" 200 69384
+Nov 02 03:38:34 web01 sshd[5210]: Accepted publickey for deploy from 10.0.0.5 port 55142 ssh2
+Nov 02 03:39:06 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.4.js HTTP/1.1" 200 61793
+Nov 02 03:39:39 web01 CRON[3198]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 03:40:29 web01 shop-api[1290]: INFO request_id=d4a8b1a7 GET /api/products 200 55ms
+Nov 02 03:41:33 web01 sshd[8225]: Accepted publickey for deploy from 10.0.0.5 port 57965 ssh2
+Nov 02 03:41:54 web01 shop-api[1290]: INFO request_id=782ab465 GET /api/products 200 48ms
+Nov 02 03:42:28 web01 nginx[812]: 10.0.1.34 - - "GET /static/app.5.js HTTP/1.1" 200 56150
+Nov 02 03:42:56 web01 nginx[812]: 10.0.1.56 - - "GET /static/app.5.js HTTP/1.1" 304 47220
+Nov 02 03:43:32 web01 shop-api[1290]: INFO request_id=5200866c GET /api/products 200 64ms
+Nov 02 03:44:39 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.6.js HTTP/1.1" 200 20321
+Nov 02 03:45:22 web01 CRON[2467]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 03:45:37 web01 CRON[4659]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 03:45:59 web01 nginx[812]: 10.0.1.32 - - "GET /static/app.1.js HTTP/1.1" 200 86454
+Nov 02 03:46:05 web01 nginx[812]: 10.0.1.14 - - "GET /static/app.5.js HTTP/1.1" 200 33071
+Nov 02 03:46:22 web01 shop-api[1290]: INFO request_id=daab2302 GET /api/products 200 32ms
+Nov 02 03:46:50 web01 shop-api[1290]: INFO request_id=58b08f1f GET /api/products 200 22ms
+Nov 02 03:47:21 web01 CRON[8485]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 03:47:47 web01 shop-api[1290]: INFO request_id=b0227a15 GET /api/products 200 80ms
+Nov 02 03:48:03 web01 shop-api[1290]: INFO request_id=e4d7738a GET /api/products 200 73ms
+Nov 02 03:48:46 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.9.js HTTP/1.1" 200 10604
+Nov 02 03:49:47 web01 shop-api[1290]: INFO request_id=1df2712d GET /api/products 200 74ms
+Nov 02 03:50:07 web01 nginx[812]: 10.0.1.24 - - "GET /static/app.3.js HTTP/1.1" 301 62328
+Nov 02 03:51:15 web01 shop-api[1290]: INFO request_id=7bffb6a4 GET /api/products 200 62ms
+Nov 02 03:51:38 web01 shop-api[1290]: INFO request_id=3f1efd5b GET /api/products 200 66ms
+Nov 02 03:52:04 web01 nginx[812]: 10.0.1.57 - - "GET /static/app.3.js HTTP/1.1" 200 42332
+Nov 02 03:53:08 web01 shop-api[1290]: INFO request_id=7f6323a3 GET /api/products 200 40ms
+Nov 02 03:54:12 web01 nginx[812]: 10.0.1.36 - - "GET /static/app.2.js HTTP/1.1" 200 23960
+Nov 02 03:55:03 web01 shop-api[1290]: INFO request_id=074db5fe GET /api/products 200 5ms
+Nov 02 03:55:13 web01 shop-api[1290]: INFO request_id=ee7653c9 GET /api/products 200 45ms
+Nov 02 03:55:30 web01 nginx[812]: 10.0.1.41 - - "GET /static/app.3.js HTTP/1.1" 304 4742
+Nov 02 03:56:02 web01 shop-api[1290]: INFO request_id=a01235b8 GET /api/products 200 19ms
+Nov 02 03:56:50 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.6.js HTTP/1.1" 200 62498
+Nov 02 03:57:21 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.5.js HTTP/1.1" 200 72917
+Nov 02 03:57:32 web01 CRON[4399]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 03:58:22 web01 CRON[5307]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 03:59:09 web01 nginx[812]: 10.0.1.27 - - "GET /static/app.9.js HTTP/1.1" 301 45494
+Nov 02 03:59:40 web01 shop-api[1290]: INFO request_id=cabd4f53 GET /api/products 200 18ms
+Nov 02 04:00:27 web01 nginx[812]: 10.0.1.55 - - "GET /static/app.3.js HTTP/1.1" 200 77167
+Nov 02 04:00:43 web01 shop-api[1290]: INFO request_id=0a40c9e8 GET /api/products 200 54ms
+Nov 02 04:01:39 web01 nginx[812]: 10.0.1.13 - - "GET /static/app.5.js HTTP/1.1" 200 14521
+Nov 02 04:01:44 web01 nginx[812]: 10.0.1.40 - - "GET /static/app.1.js HTTP/1.1" 200 65946
+Nov 02 04:02:37 web01 shop-api[1290]: INFO request_id=a076e64b GET /api/products 200 79ms
+Nov 02 04:02:52 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.8.js HTTP/1.1" 200 82256
+Nov 02 04:03:19 web01 nginx[812]: 10.0.1.21 - - "GET /static/app.1.js HTTP/1.1" 301 55556
+Nov 02 04:03:36 web01 CRON[7371]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 04:03:42 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.5.js HTTP/1.1" 304 73975
+Nov 02 04:04:20 web01 CRON[3513]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 04:05:18 web01 nginx[812]: 10.0.1.11 - - "GET /static/app.1.js HTTP/1.1" 200 65543
+Nov 02 04:05:28 web01 CRON[8338]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 04:06:26 web01 shop-api[1290]: INFO request_id=eb2b50b5 GET /api/products 200 54ms
+Nov 02 04:07:28 web01 nginx[812]: 10.0.1.53 - - "GET /static/app.3.js HTTP/1.1" 200 62617
+Nov 02 04:08:25 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.8.js HTTP/1.1" 200 28123
+Nov 02 04:08:49 web01 shop-api[1290]: INFO request_id=6d4fdbf8 GET /api/products 200 3ms
+Nov 02 04:08:55 web01 shop-api[1290]: INFO request_id=1f25d23d GET /api/products 200 14ms
+Nov 02 04:09:27 web01 CRON[3056]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 04:10:32 web01 nginx[812]: 10.0.1.56 - - "GET /static/app.4.js HTTP/1.1" 200 59384
+Nov 02 04:11:00 web01 sshd[4997]: Accepted publickey for deploy from 10.0.0.5 port 44744 ssh2
+Nov 02 04:11:15 web01 nginx[812]: 10.0.1.45 - - "GET /static/app.8.js HTTP/1.1" 200 60669
+Nov 02 04:11:52 web01 CRON[2431]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 04:12:01 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.2.js HTTP/1.1" 200 51280
+Nov 02 04:12:45 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.8.js HTTP/1.1" 200 80116
+Nov 02 04:12:57 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.8.js HTTP/1.1" 200 61877
+Nov 02 04:13:23 web01 nginx[812]: 10.0.1.17 - - "GET /static/app.3.js HTTP/1.1" 200 82836
+Nov 02 04:14:21 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.8.js HTTP/1.1" 304 35949
+Nov 02 04:15:08 web01 nginx[812]: 10.0.1.13 - - "GET /static/app.6.js HTTP/1.1" 200 79706
+Nov 02 04:15:14 web01 CRON[6924]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 04:15:58 web01 shop-api[1290]: INFO request_id=f9f4886c GET /api/products 200 34ms
+Nov 02 04:16:51 web01 nginx[812]: 10.0.1.34 - - "GET /static/app.4.js HTTP/1.1" 200 59448
+Nov 02 04:17:32 web01 shop-api[1290]: INFO request_id=524f853f GET /api/products 200 36ms
+Nov 02 04:18:11 web01 nginx[812]: 10.0.1.47 - - "GET /static/app.1.js HTTP/1.1" 301 38117
+Nov 02 04:18:34 web01 CRON[6685]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 04:18:57 web01 nginx[812]: 10.0.1.45 - - "GET /static/app.8.js HTTP/1.1" 200 45762
+Nov 02 04:19:12 web01 nginx[812]: 10.0.1.41 - - "GET /static/app.7.js HTTP/1.1" 304 26570
+Nov 02 04:19:46 web01 nginx[812]: 10.0.1.13 - - "GET /static/app.7.js HTTP/1.1" 200 61290
+Nov 02 04:20:17 web01 sshd[6803]: Accepted publickey for deploy from 10.0.0.5 port 40307 ssh2
+Nov 02 04:21:11 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.6.js HTTP/1.1" 200 8509
+Nov 02 04:21:45 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.9.js HTTP/1.1" 200 42373
+Nov 02 04:22:51 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.4.js HTTP/1.1" 200 25506
+Nov 02 04:23:07 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.6.js HTTP/1.1" 200 76042
+Nov 02 04:23:57 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.3.js HTTP/1.1" 301 32583
+Nov 02 04:24:07 web01 sshd[6040]: Accepted publickey for deploy from 10.0.0.5 port 52256 ssh2
+Nov 02 04:24:25 web01 nginx[812]: 10.0.1.39 - - "GET /static/app.2.js HTTP/1.1" 304 20767
+Nov 02 04:25:10 web01 shop-api[1290]: INFO request_id=584cc92f GET /api/products 200 38ms
+Nov 02 04:25:17 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.8.js HTTP/1.1" 301 77201
+Nov 02 04:25:49 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.7.js HTTP/1.1" 200 13028
+Nov 02 04:26:51 web01 shop-api[1290]: INFO request_id=d19ee43f GET /api/products 200 80ms
+Nov 02 04:27:12 web01 nginx[812]: 10.0.1.12 - - "GET /static/app.4.js HTTP/1.1" 200 23989
+Nov 02 04:28:05 web01 nginx[812]: 10.0.1.13 - - "GET /static/app.9.js HTTP/1.1" 200 48748
+Nov 02 04:29:08 web01 nginx[812]: 10.0.1.14 - - "GET /static/app.7.js HTTP/1.1" 301 16017
+Nov 02 04:29:24 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.2.js HTTP/1.1" 200 88081
+Nov 02 04:30:33 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.3.js HTTP/1.1" 301 48916
+Nov 02 04:31:08 web01 sshd[3816]: Accepted publickey for deploy from 10.0.0.5 port 45640 ssh2
+Nov 02 04:31:17 web01 sshd[4883]: Accepted publickey for deploy from 10.0.0.5 port 41942 ssh2
+Nov 02 04:31:25 web01 CRON[2385]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 04:32:03 web01 shop-api[1290]: INFO request_id=b5a8e33b GET /api/products 200 64ms
+Nov 02 04:32:15 web01 nginx[812]: 10.0.1.30 - - "GET /static/app.1.js HTTP/1.1" 304 26376
+Nov 02 04:32:58 web01 shop-api[1290]: INFO request_id=70f7bc6f GET /api/products 200 16ms
+Nov 02 04:34:03 web01 nginx[812]: 10.0.1.26 - - "GET /static/app.2.js HTTP/1.1" 200 49449
+Nov 02 04:35:09 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.3.js HTTP/1.1" 200 89119
+Nov 02 04:35:15 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.1.js HTTP/1.1" 304 20872
+Nov 02 04:35:48 web01 nginx[812]: 10.0.1.49 - - "GET /static/app.6.js HTTP/1.1" 301 18618
+Nov 02 04:36:50 web01 sshd[5154]: Accepted publickey for deploy from 10.0.0.5 port 40712 ssh2
+Nov 02 04:37:04 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.4.js HTTP/1.1" 200 62891
+Nov 02 04:37:23 web01 shop-api[1290]: INFO request_id=248c6fa6 GET /api/products 200 45ms
+Nov 02 04:37:56 web01 shop-api[1290]: INFO request_id=2e242fc8 GET /api/products 200 60ms
+Nov 02 04:38:19 web01 nginx[812]: 10.0.1.19 - - "GET /static/app.7.js HTTP/1.1" 200 54273
+Nov 02 04:38:55 web01 nginx[812]: 10.0.1.27 - - "GET /static/app.5.js HTTP/1.1" 200 44144
+Nov 02 04:39:21 web01 nginx[812]: 10.0.1.16 - - "GET /static/app.8.js HTTP/1.1" 200 63533
+Nov 02 04:39:40 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.4.js HTTP/1.1" 200 73692
+Nov 02 04:40:46 web01 CRON[2976]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 04:41:23 web01 shop-api[1290]: INFO request_id=f87fcf8e GET /api/products 200 49ms
+Nov 02 04:42:23 web01 sshd[3955]: Accepted publickey for deploy from 10.0.0.5 port 47803 ssh2
+Nov 02 04:42:40 web01 nginx[812]: 10.0.1.36 - - "GET /static/app.1.js HTTP/1.1" 200 38772
+Nov 02 04:43:03 web01 sshd[2131]: Accepted publickey for deploy from 10.0.0.5 port 54487 ssh2
+Nov 02 04:44:12 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.1.js HTTP/1.1" 200 69320
+Nov 02 04:44:53 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.7.js HTTP/1.1" 200 28908
+Nov 02 04:45:33 web01 shop-api[1290]: INFO request_id=2358d99f GET /api/products 200 26ms
+Nov 02 04:46:07 web01 shop-api[1290]: INFO request_id=325baf8e GET /api/products 200 79ms
+Nov 02 04:46:22 web01 CRON[6985]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 04:47:30 web01 shop-api[1290]: INFO request_id=2ce1a325 GET /api/products 200 29ms
+Nov 02 04:47:52 web01 shop-api[1290]: INFO request_id=b52f9a2a GET /api/products 200 27ms
+Nov 02 04:48:36 web01 nginx[812]: 10.0.1.14 - - "GET /static/app.9.js HTTP/1.1" 200 53793
+Nov 02 04:48:48 web01 nginx[812]: 10.0.1.32 - - "GET /static/app.5.js HTTP/1.1" 200 84078
+Nov 02 04:49:56 web01 nginx[812]: 10.0.1.36 - - "GET /static/app.8.js HTTP/1.1" 304 17769
+Nov 02 04:50:35 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.6.js HTTP/1.1" 301 5106
+Nov 02 04:51:00 web01 shop-api[1290]: INFO request_id=932df074 GET /api/products 200 79ms
+Nov 02 04:51:05 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.2.js HTTP/1.1" 200 16129
+Nov 02 04:51:55 web01 shop-api[1290]: INFO request_id=d10878d0 GET /api/products 200 44ms
+Nov 02 04:52:48 web01 shop-api[1290]: INFO request_id=e5e61cd7 GET /api/products 200 10ms
+Nov 02 04:53:30 web01 CRON[7987]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 04:54:38 web01 nginx[812]: 10.0.1.11 - - "GET /static/app.9.js HTTP/1.1" 200 17912
+Nov 02 04:54:45 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.3.js HTTP/1.1" 200 22304
+Nov 02 04:55:03 web01 nginx[812]: 10.0.1.45 - - "GET /static/app.1.js HTTP/1.1" 301 2849
+Nov 02 04:55:20 web01 sshd[8051]: Accepted publickey for deploy from 10.0.0.5 port 46392 ssh2
+Nov 02 04:55:58 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.8.js HTTP/1.1" 200 68839
+Nov 02 04:56:33 web01 shop-api[1290]: INFO request_id=1a555522 GET /api/products 200 47ms
+Nov 02 04:56:50 web01 shop-api[1290]: INFO request_id=0b904d54 GET /api/products 200 37ms
+Nov 02 04:57:10 web01 nginx[812]: 10.0.1.47 - - "GET /static/app.5.js HTTP/1.1" 200 14723
+Nov 02 04:57:30 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.4.js HTTP/1.1" 200 30057
+Nov 02 04:57:53 web01 shop-api[1290]: INFO request_id=764937d8 GET /api/products 200 53ms
+Nov 02 04:58:19 web01 sshd[2151]: Accepted publickey for deploy from 10.0.0.5 port 52738 ssh2
+Nov 02 04:59:17 web01 shop-api[1290]: INFO request_id=9a5075c3 GET /api/products 200 70ms
+Nov 02 04:59:26 web01 nginx[812]: 10.0.1.13 - - "GET /static/app.6.js HTTP/1.1" 304 44674
+Nov 02 05:00:22 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.7.js HTTP/1.1" 200 74280
+Nov 02 05:01:08 web01 CRON[8943]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 05:01:19 web01 nginx[812]: 10.0.1.19 - - "GET /static/app.6.js HTTP/1.1" 200 32974
+Nov 02 05:02:18 web01 shop-api[1290]: INFO request_id=02f53c3b GET /api/products 200 49ms
+Nov 02 05:02:36 web01 nginx[812]: 10.0.1.14 - - "GET /static/app.7.js HTTP/1.1" 200 26617
+Nov 02 05:03:45 web01 shop-api[1290]: INFO request_id=39b8f4a7 GET /api/products 200 20ms
+Nov 02 05:04:43 web01 sshd[8361]: Accepted publickey for deploy from 10.0.0.5 port 54867 ssh2
+Nov 02 05:04:53 web01 CRON[2329]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 05:05:02 web01 CRON[7086]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 05:05:41 web01 CRON[7107]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 05:06:20 web01 shop-api[1290]: INFO request_id=ce6ba18b GET /api/products 200 7ms
+Nov 02 05:06:37 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.7.js HTTP/1.1" 200 31318
+Nov 02 05:06:47 web01 nginx[812]: 10.0.1.29 - - "GET /static/app.3.js HTTP/1.1" 200 16078
+Nov 02 05:06:59 web01 shop-api[1290]: INFO request_id=f4c1f93e GET /api/products 200 68ms
+Nov 02 05:07:38 web01 nginx[812]: 10.0.1.47 - - "GET /static/app.3.js HTTP/1.1" 200 57968
+Nov 02 05:07:58 web01 nginx[812]: 10.0.1.28 - - "GET /static/app.5.js HTTP/1.1" 200 36228
+Nov 02 05:08:34 web01 shop-api[1290]: INFO request_id=bd8b16d7 GET /api/products 200 72ms
+Nov 02 05:09:15 web01 CRON[6996]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 05:09:48 web01 shop-api[1290]: INFO request_id=33814f57 GET /api/products 200 73ms
+Nov 02 05:10:39 web01 nginx[812]: 10.0.1.45 - - "GET /static/app.8.js HTTP/1.1" 200 61768
+Nov 02 05:11:23 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.4.js HTTP/1.1" 200 67467
+Nov 02 05:12:17 web01 sshd[5247]: Accepted publickey for deploy from 10.0.0.5 port 40389 ssh2
+Nov 02 05:13:07 web01 nginx[812]: 10.0.1.25 - - "GET /static/app.9.js HTTP/1.1" 200 42961
+Nov 02 05:14:14 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.1.js HTTP/1.1" 200 3155
+Nov 02 05:14:39 web01 shop-api[1290]: INFO request_id=9b1dda1b GET /api/products 200 47ms
+Nov 02 05:15:40 web01 shop-api[1290]: INFO request_id=8459d2f4 GET /api/products 200 52ms
+Nov 02 05:16:41 web01 nginx[812]: 10.0.1.58 - - "GET /static/app.9.js HTTP/1.1" 200 29813
+Nov 02 05:17:05 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.3.js HTTP/1.1" 200 88818
+Nov 02 05:17:35 web01 shop-api[1290]: INFO request_id=d9991d0c GET /api/products 200 38ms
+Nov 02 05:17:52 web01 shop-api[1290]: INFO request_id=be47874d GET /api/products 200 63ms
+Nov 02 05:18:31 web01 shop-api[1290]: INFO request_id=b563aa56 GET /api/products 200 19ms
+Nov 02 05:19:28 web01 CRON[2035]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 05:20:25 web01 shop-api[1290]: INFO request_id=95f940ff GET /api/products 200 18ms
+Nov 02 05:21:33 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.7.js HTTP/1.1" 200 36909
+Nov 02 05:21:52 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.8.js HTTP/1.1" 200 38056
+Nov 02 05:22:42 web01 nginx[812]: 10.0.1.35 - - "GET /static/app.9.js HTTP/1.1" 200 78342
+Nov 02 05:23:36 web01 shop-api[1290]: INFO request_id=01bb277e GET /api/products 200 66ms
+Nov 02 05:24:29 web01 nginx[812]: 10.0.1.21 - - "GET /static/app.5.js HTTP/1.1" 200 19304
+Nov 02 05:25:29 web01 shop-api[1290]: INFO request_id=94e29546 GET /api/products 200 32ms
+Nov 02 05:25:45 web01 CRON[4704]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 05:26:31 web01 sshd[6981]: Accepted publickey for deploy from 10.0.0.5 port 47951 ssh2
+Nov 02 05:27:17 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.1.js HTTP/1.1" 200 6518
+Nov 02 05:27:54 web01 shop-api[1290]: INFO request_id=7f51800b GET /api/products 200 41ms
+Nov 02 05:28:38 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.9.js HTTP/1.1" 200 56668
+Nov 02 05:29:32 web01 nginx[812]: 10.0.1.12 - - "GET /static/app.6.js HTTP/1.1" 200 59684
+Nov 02 05:29:38 web01 shop-api[1290]: INFO request_id=8676ab61 GET /api/products 200 32ms
+Nov 02 05:29:55 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.9.js HTTP/1.1" 200 75542
+Nov 02 05:30:19 web01 CRON[5450]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 05:31:26 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.6.js HTTP/1.1" 200 69786
+Nov 02 05:31:42 web01 nginx[812]: 10.0.1.30 - - "GET /static/app.2.js HTTP/1.1" 200 41014
+Nov 02 05:32:52 web01 nginx[812]: 10.0.1.51 - - "GET /static/app.6.js HTTP/1.1" 200 66999
+Nov 02 05:33:50 web01 shop-api[1290]: INFO request_id=86289b36 GET /api/products 200 40ms
+Nov 02 05:35:00 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.3.js HTTP/1.1" 200 8186
+Nov 02 05:35:18 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.1.js HTTP/1.1" 200 54225
+Nov 02 05:35:24 web01 shop-api[1290]: INFO request_id=4e868ac3 GET /api/products 200 73ms
+Nov 02 05:35:29 web01 CRON[5256]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 05:35:46 web01 shop-api[1290]: INFO request_id=ab090579 GET /api/products 200 6ms
+Nov 02 05:36:16 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.5.js HTTP/1.1" 200 85078
+Nov 02 05:37:26 web01 sshd[6706]: Accepted publickey for deploy from 10.0.0.5 port 46505 ssh2
+Nov 02 05:38:23 web01 shop-api[1290]: INFO request_id=2535ea0c GET /api/products 200 23ms
+Nov 02 05:39:33 web01 nginx[812]: 10.0.1.16 - - "GET /static/app.3.js HTTP/1.1" 200 68784
+Nov 02 05:40:40 web01 CRON[7021]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 05:41:40 web01 CRON[2508]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 05:41:46 web01 shop-api[1290]: INFO request_id=942f0c8a GET /api/products 200 44ms
+Nov 02 05:42:09 web01 shop-api[1290]: INFO request_id=5a9592b1 GET /api/products 200 38ms
+Nov 02 05:42:35 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.2.js HTTP/1.1" 200 46030
+Nov 02 05:43:04 web01 nginx[812]: 10.0.1.34 - - "GET /static/app.1.js HTTP/1.1" 200 29142
+Nov 02 05:43:59 web01 shop-api[1290]: INFO request_id=f5a92f83 GET /api/products 200 8ms
+Nov 02 05:45:00 web01 nginx[812]: 10.0.1.25 - - "GET /static/app.4.js HTTP/1.1" 200 6064
+Nov 02 05:45:25 web01 sshd[3421]: Accepted publickey for deploy from 10.0.0.5 port 50315 ssh2
+Nov 02 05:45:30 web01 CRON[8683]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 05:46:33 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.8.js HTTP/1.1" 200 9150
+Nov 02 05:47:09 web01 shop-api[1290]: INFO request_id=acc6e787 GET /api/products 200 77ms
+Nov 02 05:47:42 web01 nginx[812]: 10.0.1.35 - - "GET /static/app.8.js HTTP/1.1" 200 3239
+Nov 02 05:48:18 web01 nginx[812]: 10.0.1.20 - - "GET /static/app.7.js HTTP/1.1" 200 24751
+Nov 02 05:48:23 web01 sshd[4381]: Accepted publickey for deploy from 10.0.0.5 port 52977 ssh2
+Nov 02 05:49:14 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.7.js HTTP/1.1" 301 44324
+Nov 02 05:50:10 web01 shop-api[1290]: INFO request_id=f61313f3 GET /api/products 200 18ms
+Nov 02 05:51:09 web01 CRON[4877]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 05:51:45 web01 nginx[812]: 10.0.1.39 - - "GET /static/app.6.js HTTP/1.1" 200 31386
+Nov 02 05:52:45 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.6.js HTTP/1.1" 200 20733
+Nov 02 05:53:20 web01 shop-api[1290]: INFO request_id=17b6af7d GET /api/products 200 28ms
+Nov 02 05:53:59 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.8.js HTTP/1.1" 200 61517
+Nov 02 05:54:34 web01 nginx[812]: 10.0.1.32 - - "GET /static/app.7.js HTTP/1.1" 200 49700
+Nov 02 05:55:05 web01 nginx[812]: 10.0.1.40 - - "GET /static/app.4.js HTTP/1.1" 200 30089
+Nov 02 05:56:07 web01 shop-api[1290]: INFO request_id=f12ca00d GET /api/products 200 36ms
+Nov 02 05:57:08 web01 shop-api[1290]: INFO request_id=5e34f81d GET /api/products 200 71ms
+Nov 02 05:57:44 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.3.js HTTP/1.1" 200 16394
+Nov 02 05:58:54 web01 nginx[812]: 10.0.1.27 - - "GET /static/app.7.js HTTP/1.1" 200 4063
+Nov 02 05:59:17 web01 nginx[812]: 10.0.1.34 - - "GET /static/app.2.js HTTP/1.1" 200 23505
+Nov 02 05:59:51 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.2.js HTTP/1.1" 200 73961
+Nov 02 06:00:42 web01 CRON[8213]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 06:01:25 web01 nginx[812]: 10.0.1.55 - - "GET /static/app.2.js HTTP/1.1" 200 29977
+Nov 02 06:02:06 web01 nginx[812]: 10.0.1.55 - - "GET /static/app.5.js HTTP/1.1" 200 46948
+Nov 02 06:03:02 web01 CRON[5804]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 06:03:23 web01 sshd[3445]: Accepted publickey for deploy from 10.0.0.5 port 40969 ssh2
+Nov 02 06:04:14 web01 shop-api[1290]: INFO request_id=a9e2612e GET /api/products 200 47ms
+Nov 02 06:05:11 web01 nginx[812]: 10.0.1.55 - - "GET /static/app.8.js HTTP/1.1" 200 32861
+Nov 02 06:06:07 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.3.js HTTP/1.1" 200 38504
+Nov 02 06:06:26 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.4.js HTTP/1.1" 200 89090
+Nov 02 06:06:36 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.7.js HTTP/1.1" 200 26263
+Nov 02 06:07:19 web01 nginx[812]: 10.0.1.57 - - "GET /static/app.9.js HTTP/1.1" 200 41052
+Nov 02 06:07:46 web01 shop-api[1290]: INFO request_id=3a479870 GET /api/products 200 75ms
+Nov 02 06:08:54 web01 shop-api[1290]: INFO request_id=41349d66 GET /api/products 200 58ms
+Nov 02 06:09:43 web01 sshd[2916]: Accepted publickey for deploy from 10.0.0.5 port 49382 ssh2
+Nov 02 06:09:53 web01 CRON[6793]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 06:10:04 web01 sshd[7579]: Accepted publickey for deploy from 10.0.0.5 port 43643 ssh2
+Nov 02 06:10:13 web01 shop-api[1290]: INFO request_id=35cbae1f GET /api/products 200 47ms
+Nov 02 06:10:29 web01 nginx[812]: 10.0.1.57 - - "GET /static/app.4.js HTTP/1.1" 200 37152
+Nov 02 06:10:45 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.6.js HTTP/1.1" 200 66239
+Nov 02 06:11:47 web01 nginx[812]: 10.0.1.53 - - "GET /static/app.4.js HTTP/1.1" 200 56444
+Nov 02 06:12:57 web01 CRON[8375]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 06:13:18 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.9.js HTTP/1.1" 200 34535
+Nov 02 06:13:45 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.4.js HTTP/1.1" 200 71594
+Nov 02 06:14:23 web01 nginx[812]: 10.0.1.13 - - "GET /static/app.6.js HTTP/1.1" 200 45812
+Nov 02 06:15:20 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.3.js HTTP/1.1" 200 18198
+Nov 02 06:16:27 web01 shop-api[1290]: INFO request_id=3ce53892 GET /api/products 200 33ms
+Nov 02 06:16:32 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.6.js HTTP/1.1" 200 39539
+Nov 02 06:16:54 web01 CRON[3162]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 06:17:29 web01 nginx[812]: 10.0.1.17 - - "GET /static/app.7.js HTTP/1.1" 200 22478
+Nov 02 06:17:53 web01 shop-api[1290]: INFO request_id=760fd085 GET /api/products 200 54ms
+Nov 02 06:18:24 web01 nginx[812]: 2026/11/02 06:18:24 [error] 812#812: *48211 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 10.0.1.23, server: shop.example.com, request: "POST /api/checkout HTTP/1.1", upstream: "http://127.0.0.1:8080/api/checkout"
+Nov 02 06:19:06 web01 shop-api[1290]: ERROR db pool exhausted (max=20, waiting=37) — query SELECT * FROM orders WHERE user_id=$1 took 30012ms
+Nov 02 06:20:13 web01 shop-api[1290]: ERROR db pool exhausted (max=20, waiting=37) — query SELECT * FROM orders WHERE user_id=$1 took 30012ms
+Nov 02 06:20:25 web01 shop-api[1290]: ERROR db pool exhausted (max=20, waiting=37) — query SELECT * FROM orders WHERE user_id=$1 took 30012ms
+Nov 02 06:21:08 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.8.js HTTP/1.1" 200 15109
+Nov 02 06:21:33 web01 nginx[812]: 10.0.1.39 - - "GET /static/app.6.js HTTP/1.1" 200 38246
+Nov 02 06:21:59 web01 shop-api[1290]: INFO request_id=0bab2482 GET /api/products 200 4ms
+Nov 02 06:23:03 web01 sshd[8147]: Accepted publickey for deploy from 10.0.0.5 port 55909 ssh2
+Nov 02 06:23:18 web01 shop-api[1290]: INFO request_id=54ebef65 GET /api/products 200 75ms
+Nov 02 06:23:56 web01 nginx[812]: 10.0.1.41 - - "GET /static/app.8.js HTTP/1.1" 200 25178
+Nov 02 06:24:42 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.5.js HTTP/1.1" 200 82579
+Nov 02 06:25:19 web01 shop-api[1290]: INFO request_id=14014c5a GET /api/products 200 20ms
+Nov 02 06:25:27 web01 nginx[812]: 10.0.1.35 - - "GET /static/app.3.js HTTP/1.1" 301 39138
+Nov 02 06:26:19 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.3.js HTTP/1.1" 200 13692
+Nov 02 06:27:03 web01 shop-api[1290]: INFO request_id=53a0df34 GET /api/products 200 51ms
+Nov 02 06:27:31 web01 shop-api[1290]: INFO request_id=5b32fd97 GET /api/products 200 43ms
+Nov 02 06:28:05 web01 nginx[812]: 10.0.1.45 - - "GET /static/app.5.js HTTP/1.1" 200 31675
+Nov 02 06:28:17 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.7.js HTTP/1.1" 304 6925
+Nov 02 06:28:49 web01 nginx[812]: 10.0.1.41 - - "GET /static/app.3.js HTTP/1.1" 200 39565
+Nov 02 06:29:04 web01 nginx[812]: 10.0.1.24 - - "GET /static/app.3.js HTTP/1.1" 200 58389
+Nov 02 06:30:00 web01 nginx[812]: 10.0.1.12 - - "GET /static/app.8.js HTTP/1.1" 301 63136
+Nov 02 06:30:29 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.1.js HTTP/1.1" 200 80350
+Nov 02 06:31:39 web01 nginx[812]: 10.0.1.28 - - "GET /static/app.1.js HTTP/1.1" 200 67752
+Nov 02 06:32:37 web01 CRON[2513]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 06:33:38 web01 nginx[812]: 10.0.1.21 - - "GET /static/app.3.js HTTP/1.1" 200 49953
+Nov 02 06:34:20 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.6.js HTTP/1.1" 200 74685
+Nov 02 06:34:50 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.9.js HTTP/1.1" 200 60655
+Nov 02 06:35:49 web01 sshd[7125]: Accepted publickey for deploy from 10.0.0.5 port 45058 ssh2
+Nov 02 06:36:45 web01 sshd[7077]: Accepted publickey for deploy from 10.0.0.5 port 42668 ssh2
+Nov 02 06:36:57 web01 shop-api[1290]: INFO request_id=54dfec11 GET /api/products 200 80ms
+Nov 02 06:37:40 web01 shop-api[1290]: INFO request_id=6bcffbab GET /api/products 200 50ms
+Nov 02 06:38:46 web01 shop-api[1290]: INFO request_id=2308be55 GET /api/products 200 41ms
+Nov 02 06:39:34 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.4.js HTTP/1.1" 200 29461
+Nov 02 06:40:36 web01 shop-api[1290]: INFO request_id=259c6be5 GET /api/products 200 77ms
+Nov 02 06:41:28 web01 shop-api[1290]: INFO request_id=f1741ae5 GET /api/products 200 56ms
+Nov 02 06:42:19 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.7.js HTTP/1.1" 200 34520
+Nov 02 06:42:38 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.2.js HTTP/1.1" 200 29300
+Nov 02 06:43:15 web01 shop-api[1290]: INFO request_id=3002a032 GET /api/products 200 70ms
+Nov 02 06:43:52 web01 shop-api[1290]: INFO request_id=3a1c07c9 GET /api/products 200 73ms
+Nov 02 06:44:55 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.2.js HTTP/1.1" 200 67564
+Nov 02 06:45:10 web01 CRON[7566]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 06:45:24 web01 CRON[3100]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 06:46:33 web01 shop-api[1290]: INFO request_id=b6f05dd4 GET /api/products 200 17ms
+Nov 02 06:47:43 web01 nginx[812]: 10.0.1.53 - - "GET /static/app.9.js HTTP/1.1" 200 22746
+Nov 02 06:48:12 web01 shop-api[1290]: INFO request_id=c66516e3 GET /api/products 200 14ms
+Nov 02 06:48:34 web01 nginx[812]: 10.0.1.49 - - "GET /static/app.7.js HTTP/1.1" 200 31351
+Nov 02 06:48:45 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.4.js HTTP/1.1" 200 60554
+Nov 02 06:49:28 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.2.js HTTP/1.1" 200 81718
+Nov 02 06:49:58 web01 shop-api[1290]: INFO request_id=eae199b6 GET /api/products 200 48ms
+Nov 02 06:50:24 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.1.js HTTP/1.1" 304 33804
+Nov 02 06:50:44 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.9.js HTTP/1.1" 200 47087
+Nov 02 06:51:51 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.2.js HTTP/1.1" 200 46927
+Nov 02 06:52:37 web01 CRON[2925]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 06:52:46 web01 sshd[7531]: Accepted publickey for deploy from 10.0.0.5 port 47944 ssh2
+Nov 02 06:53:23 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.1.js HTTP/1.1" 200 76501
+Nov 02 06:54:24 web01 nginx[812]: 10.0.1.11 - - "GET /static/app.2.js HTTP/1.1" 200 9967
+Nov 02 06:55:02 web01 nginx[812]: 10.0.1.45 - - "GET /static/app.7.js HTTP/1.1" 200 19206
+Nov 02 06:55:39 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.5.js HTTP/1.1" 304 58507
+Nov 02 06:55:45 web01 nginx[812]: 10.0.1.19 - - "GET /static/app.9.js HTTP/1.1" 200 63734
+Nov 02 06:55:54 web01 CRON[2290]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 06:56:08 web01 nginx[812]: 10.0.1.51 - - "GET /static/app.7.js HTTP/1.1" 200 62658
+Nov 02 06:56:33 web01 shop-api[1290]: INFO request_id=72d69b79 GET /api/products 200 53ms
+Nov 02 06:57:07 web01 CRON[7004]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 06:57:21 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.5.js HTTP/1.1" 200 17460
+Nov 02 06:57:31 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.8.js HTTP/1.1" 200 43733
+Nov 02 06:58:35 web01 nginx[812]: 10.0.1.32 - - "GET /static/app.1.js HTTP/1.1" 200 44275
+Nov 02 06:59:41 web01 nginx[812]: 10.0.1.11 - - "GET /static/app.8.js HTTP/1.1" 200 80078
+Nov 02 06:59:51 web01 shop-api[1290]: INFO request_id=ba1a40ee GET /api/products 200 21ms
+Nov 02 07:00:30 web01 nginx[812]: 10.0.1.14 - - "GET /static/app.5.js HTTP/1.1" 200 47070
+Nov 02 07:00:52 web01 sshd[2279]: Accepted publickey for deploy from 10.0.0.5 port 58370 ssh2
+Nov 02 07:01:09 web01 CRON[8343]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 07:02:08 web01 shop-api[1290]: INFO request_id=a276ac02 GET /api/products 200 15ms
+Nov 02 07:02:59 web01 shop-api[1290]: INFO request_id=cb04ce6d GET /api/products 200 33ms
+Nov 02 07:03:22 web01 shop-api[1290]: INFO request_id=4dd2acd1 GET /api/products 200 46ms
+Nov 02 07:04:13 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.6.js HTTP/1.1" 200 72486
+Nov 02 07:05:09 web01 nginx[812]: 10.0.1.55 - - "GET /static/app.6.js HTTP/1.1" 200 63406
+Nov 02 07:06:18 web01 nginx[812]: 10.0.1.25 - - "GET /static/app.4.js HTTP/1.1" 304 46075
+Nov 02 07:06:42 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.8.js HTTP/1.1" 301 53381
+Nov 02 07:07:44 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.3.js HTTP/1.1" 200 77212
+Nov 02 07:07:57 web01 nginx[812]: 10.0.1.56 - - "GET /static/app.5.js HTTP/1.1" 200 75259
+Nov 02 07:08:45 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.2.js HTTP/1.1" 200 76967
+Nov 02 07:09:12 web01 nginx[812]: 10.0.1.32 - - "GET /static/app.6.js HTTP/1.1" 200 56434
+Nov 02 07:09:25 web01 CRON[4615]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 07:09:52 web01 nginx[812]: 10.0.1.26 - - "GET /static/app.1.js HTTP/1.1" 200 21869
+Nov 02 07:10:31 web01 nginx[812]: 10.0.1.11 - - "GET /static/app.1.js HTTP/1.1" 200 52672
+Nov 02 07:11:33 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.9.js HTTP/1.1" 200 85246
+Nov 02 07:11:50 web01 nginx[812]: 10.0.1.56 - - "GET /static/app.3.js HTTP/1.1" 200 79077
+Nov 02 07:12:01 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.3.js HTTP/1.1" 200 961
+Nov 02 07:12:30 web01 nginx[812]: 10.0.1.51 - - "GET /static/app.6.js HTTP/1.1" 200 3914
+Nov 02 07:13:02 web01 nginx[812]: 10.0.1.57 - - "GET /static/app.8.js HTTP/1.1" 200 53425
+Nov 02 07:13:50 web01 nginx[812]: 10.0.1.36 - - "GET /static/app.1.js HTTP/1.1" 304 11729
+Nov 02 07:14:37 web01 shop-api[1290]: INFO request_id=fce21845 GET /api/products 200 79ms
+Nov 02 07:15:33 web01 nginx[812]: 10.0.1.39 - - "GET /static/app.1.js HTTP/1.1" 301 3673
+Nov 02 07:16:18 web01 shop-api[1290]: INFO request_id=fcce6b2e GET /api/products 200 43ms
+Nov 02 07:16:30 web01 nginx[812]: 10.0.1.55 - - "GET /static/app.6.js HTTP/1.1" 200 20836
+Nov 02 07:16:46 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.9.js HTTP/1.1" 200 12079
+Nov 02 07:17:36 web01 CRON[5467]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 07:18:25 web01 nginx[812]: 10.0.1.47 - - "GET /static/app.9.js HTTP/1.1" 301 20407
+Nov 02 07:19:12 web01 nginx[812]: 10.0.1.49 - - "GET /static/app.8.js HTTP/1.1" 200 4446
+Nov 02 07:19:56 web01 shop-api[1290]: INFO request_id=8cab933e GET /api/products 200 61ms
+Nov 02 07:20:36 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.3.js HTTP/1.1" 200 33450
+Nov 02 07:20:42 web01 shop-api[1290]: INFO request_id=198be250 GET /api/products 200 49ms
+Nov 02 07:21:06 web01 sshd[3869]: Accepted publickey for deploy from 10.0.0.5 port 53134 ssh2
+Nov 02 07:21:22 web01 sshd[7116]: Accepted publickey for deploy from 10.0.0.5 port 44395 ssh2
+Nov 02 07:21:42 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.9.js HTTP/1.1" 200 24131
+Nov 02 07:22:20 web01 sshd[4995]: Accepted publickey for deploy from 10.0.0.5 port 44892 ssh2
+Nov 02 07:22:47 web01 CRON[8382]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 07:23:12 web01 nginx[812]: 10.0.1.32 - - "GET /static/app.4.js HTTP/1.1" 304 58175
+Nov 02 07:24:20 web01 nginx[812]: 10.0.1.32 - - "GET /static/app.7.js HTTP/1.1" 304 60606
+Nov 02 07:24:52 web01 nginx[812]: 10.0.1.11 - - "GET /static/app.1.js HTTP/1.1" 200 8877
+Nov 02 07:25:48 web01 shop-api[1290]: INFO request_id=59c6715f GET /api/products 200 10ms
+Nov 02 07:26:22 web01 shop-api[1290]: INFO request_id=68f1004c GET /api/products 200 51ms
+Nov 02 07:26:55 web01 nginx[812]: 10.0.1.11 - - "GET /static/app.7.js HTTP/1.1" 200 31997
+Nov 02 07:27:29 web01 nginx[812]: 10.0.1.30 - - "GET /static/app.7.js HTTP/1.1" 304 84541
+Nov 02 07:28:09 web01 nginx[812]: 10.0.1.41 - - "GET /static/app.3.js HTTP/1.1" 200 62869
+Nov 02 07:28:48 web01 sshd[3118]: Accepted publickey for deploy from 10.0.0.5 port 49833 ssh2
+Nov 02 07:29:29 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.4.js HTTP/1.1" 200 21480
+Nov 02 07:30:14 web01 shop-api[1290]: INFO request_id=98fbcb7e GET /api/products 200 60ms
+Nov 02 07:30:46 web01 shop-api[1290]: INFO request_id=e202fbed GET /api/products 200 29ms
+Nov 02 07:31:37 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.8.js HTTP/1.1" 301 24194
+Nov 02 07:32:37 web01 CRON[4437]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 07:32:45 web01 CRON[3244]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 07:32:51 web01 nginx[812]: 10.0.1.29 - - "GET /static/app.9.js HTTP/1.1" 200 46394
+Nov 02 07:33:08 web01 shop-api[1290]: INFO request_id=76e81aba GET /api/products 200 53ms
+Nov 02 07:33:24 web01 nginx[812]: 10.0.1.51 - - "GET /static/app.7.js HTTP/1.1" 200 44296
+Nov 02 07:33:33 web01 shop-api[1290]: INFO request_id=338d81b5 GET /api/products 200 4ms
+Nov 02 07:33:42 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.7.js HTTP/1.1" 200 14045
+Nov 02 07:33:49 web01 nginx[812]: 10.0.1.30 - - "GET /static/app.2.js HTTP/1.1" 200 16089
+Nov 02 07:34:56 web01 sshd[6304]: Accepted publickey for deploy from 10.0.0.5 port 54040 ssh2
+Nov 02 07:35:01 web01 nginx[812]: 10.0.1.53 - - "GET /static/app.3.js HTTP/1.1" 200 83294
+Nov 02 07:36:10 web01 sshd[6341]: Accepted publickey for deploy from 10.0.0.5 port 51585 ssh2
+Nov 02 07:37:18 web01 sshd[2633]: Accepted publickey for deploy from 10.0.0.5 port 51450 ssh2
+Nov 02 07:37:50 web01 CRON[3834]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 07:38:04 web01 nginx[812]: 10.0.1.21 - - "GET /static/app.5.js HTTP/1.1" 200 35558
+Nov 02 07:38:17 web01 sshd[3609]: Accepted publickey for deploy from 10.0.0.5 port 56670 ssh2
+Nov 02 07:38:28 web01 nginx[812]: 10.0.1.45 - - "GET /static/app.5.js HTTP/1.1" 200 1688
+Nov 02 07:39:14 web01 shop-api[1290]: INFO request_id=a73282be GET /api/products 200 61ms
+Nov 02 07:39:55 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.5.js HTTP/1.1" 200 52634
+Nov 02 07:40:54 web01 nginx[812]: 10.0.1.36 - - "GET /static/app.3.js HTTP/1.1" 200 51035
+Nov 02 07:41:48 web01 CRON[8584]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 07:42:11 web01 CRON[7201]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 07:42:16 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.7.js HTTP/1.1" 200 31857
+Nov 02 07:42:46 web01 shop-api[1290]: INFO request_id=16396351 GET /api/products 200 7ms
+Nov 02 07:42:57 web01 nginx[812]: 10.0.1.45 - - "GET /static/app.8.js HTTP/1.1" 200 72251
+Nov 02 07:43:42 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.8.js HTTP/1.1" 200 85146
+Nov 02 07:44:47 web01 nginx[812]: 10.0.1.47 - - "GET /static/app.7.js HTTP/1.1" 200 31027
+Nov 02 07:45:40 web01 nginx[812]: 10.0.1.14 - - "GET /static/app.9.js HTTP/1.1" 200 35218
+Nov 02 07:46:26 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.4.js HTTP/1.1" 200 80583
+Nov 02 07:47:04 web01 nginx[812]: 10.0.1.40 - - "GET /static/app.6.js HTTP/1.1" 301 68725
+Nov 02 07:48:10 web01 shop-api[1290]: INFO request_id=ffd96a52 GET /api/products 200 21ms
+Nov 02 07:48:23 web01 sshd[6331]: Accepted publickey for deploy from 10.0.0.5 port 51930 ssh2
+Nov 02 07:48:54 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.3.js HTTP/1.1" 200 20282
+Nov 02 07:49:57 web01 nginx[812]: 10.0.1.51 - - "GET /static/app.1.js HTTP/1.1" 301 42500
+Nov 02 07:50:50 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.7.js HTTP/1.1" 200 20464
+Nov 02 07:51:27 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.9.js HTTP/1.1" 200 68634
+Nov 02 07:52:10 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.7.js HTTP/1.1" 200 38376
+Nov 02 07:53:12 web01 shop-api[1290]: INFO request_id=730647d5 GET /api/products 200 64ms
+Nov 02 07:53:39 web01 shop-api[1290]: INFO request_id=265e91f4 GET /api/products 200 3ms
+Nov 02 07:54:00 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.4.js HTTP/1.1" 200 81924
+Nov 02 07:54:52 web01 nginx[812]: 10.0.1.34 - - "GET /static/app.1.js HTTP/1.1" 200 73202
+Nov 02 07:55:22 web01 nginx[812]: 10.0.1.26 - - "GET /static/app.3.js HTTP/1.1" 200 40478
+Nov 02 07:56:02 web01 CRON[4094]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 07:56:37 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.9.js HTTP/1.1" 200 83680
+Nov 02 07:57:45 web01 CRON[3652]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 07:58:06 web01 nginx[812]: 10.0.1.28 - - "GET /static/app.6.js HTTP/1.1" 200 6054
+Nov 02 07:59:07 web01 nginx[812]: 10.0.1.12 - - "GET /static/app.5.js HTTP/1.1" 200 53767
+Nov 02 08:00:07 web01 shop-api[1290]: INFO request_id=cf9251e1 GET /api/products 200 35ms
+Nov 02 08:00:57 web01 nginx[812]: 10.0.1.47 - - "GET /static/app.4.js HTTP/1.1" 200 76349
+Nov 02 08:01:49 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.2.js HTTP/1.1" 200 10777
+Nov 02 08:02:51 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.8.js HTTP/1.1" 200 84578
+Nov 02 08:02:59 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.8.js HTTP/1.1" 200 57463
+Nov 02 08:03:57 web01 sshd[3443]: Accepted publickey for deploy from 10.0.0.5 port 42133 ssh2
+Nov 02 08:04:58 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.1.js HTTP/1.1" 200 88168
+Nov 02 08:05:32 web01 shop-api[1290]: INFO request_id=66d45788 GET /api/products 200 72ms
+Nov 02 08:05:42 web01 sshd[4408]: Accepted publickey for deploy from 10.0.0.5 port 58148 ssh2
+Nov 02 08:06:29 web01 shop-api[1290]: INFO request_id=c516bde4 GET /api/products 200 61ms
+Nov 02 08:06:49 web01 nginx[812]: 10.0.1.14 - - "GET /static/app.1.js HTTP/1.1" 200 13630
+Nov 02 08:07:57 web01 nginx[812]: 10.0.1.58 - - "GET /static/app.8.js HTTP/1.1" 200 7509
+Nov 02 08:08:27 web01 shop-api[1290]: INFO request_id=7b983896 GET /api/products 200 10ms
+Nov 02 08:09:25 web01 CRON[3148]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 08:10:22 web01 CRON[7132]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 08:10:45 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.1.js HTTP/1.1" 200 24698
+Nov 02 08:11:25 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.7.js HTTP/1.1" 200 33726
+Nov 02 08:12:08 web01 shop-api[1290]: INFO request_id=82cfa57e GET /api/products 200 56ms
+Nov 02 08:12:19 web01 nginx[812]: 10.0.1.25 - - "GET /static/app.7.js HTTP/1.1" 301 57461
+Nov 02 08:12:56 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.4.js HTTP/1.1" 200 70665
+Nov 02 08:13:48 web01 sshd[7376]: Accepted publickey for deploy from 10.0.0.5 port 56023 ssh2
+Nov 02 08:14:11 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.8.js HTTP/1.1" 200 73192
+Nov 02 08:14:22 web01 shop-api[1290]: INFO request_id=022db43d GET /api/products 200 71ms
+Nov 02 08:14:35 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.6.js HTTP/1.1" 301 4928
+Nov 02 08:15:15 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.4.js HTTP/1.1" 200 27741
+Nov 02 08:16:18 web01 nginx[812]: 10.0.1.56 - - "GET /static/app.4.js HTTP/1.1" 200 26935
+Nov 02 08:16:30 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.1.js HTTP/1.1" 200 18256
+Nov 02 08:16:44 web01 CRON[6072]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 08:17:12 web01 nginx[812]: 10.0.1.56 - - "GET /static/app.3.js HTTP/1.1" 200 65602
+Nov 02 08:17:45 web01 shop-api[1290]: INFO request_id=acca1434 GET /api/products 200 40ms
+Nov 02 08:18:17 web01 nginx[812]: 10.0.1.20 - - "GET /static/app.4.js HTTP/1.1" 200 67963
+Nov 02 08:18:34 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.2.js HTTP/1.1" 304 6894
+Nov 02 08:19:32 web01 nginx[812]: 10.0.1.26 - - "GET /static/app.8.js HTTP/1.1" 200 55950
+Nov 02 08:19:56 web01 CRON[7699]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 08:20:18 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.4.js HTTP/1.1" 200 76591
+Nov 02 08:21:03 web01 shop-api[1290]: INFO request_id=b827d293 GET /api/products 200 22ms
+Nov 02 08:21:47 web01 CRON[4657]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 08:22:19 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.7.js HTTP/1.1" 200 4617
+Nov 02 08:23:05 web01 nginx[812]: 10.0.1.51 - - "GET /static/app.4.js HTTP/1.1" 200 86129
+Nov 02 08:23:21 web01 nginx[812]: 10.0.1.19 - - "GET /static/app.3.js HTTP/1.1" 200 56642
+Nov 02 08:24:08 web01 shop-api[1290]: INFO request_id=1d4788c8 GET /api/products 200 7ms
+Nov 02 08:24:58 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.9.js HTTP/1.1" 200 69287
+Nov 02 08:25:12 web01 nginx[812]: 10.0.1.32 - - "GET /static/app.8.js HTTP/1.1" 200 12488
+Nov 02 08:25:42 web01 nginx[812]: 10.0.1.29 - - "GET /static/app.9.js HTTP/1.1" 200 11891
+Nov 02 08:26:12 web01 nginx[812]: 10.0.1.27 - - "GET /static/app.4.js HTTP/1.1" 304 76162
+Nov 02 08:26:55 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.1.js HTTP/1.1" 200 45427
+Nov 02 08:27:24 web01 sshd[7378]: Accepted publickey for deploy from 10.0.0.5 port 49831 ssh2
+Nov 02 08:27:35 web01 nginx[812]: 10.0.1.32 - - "GET /static/app.8.js HTTP/1.1" 200 32726
+Nov 02 08:28:22 web01 shop-api[1290]: INFO request_id=2dc99857 GET /api/products 200 17ms
+Nov 02 08:29:05 web01 CRON[7928]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 08:30:08 web01 nginx[812]: 10.0.1.45 - - "GET /static/app.3.js HTTP/1.1" 200 78365
+Nov 02 08:31:03 web01 nginx[812]: 10.0.1.12 - - "GET /static/app.9.js HTTP/1.1" 200 76221
+Nov 02 08:31:20 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.7.js HTTP/1.1" 200 76058
+Nov 02 08:32:10 web01 nginx[812]: 10.0.1.56 - - "GET /static/app.3.js HTTP/1.1" 200 47412
+Nov 02 08:32:36 web01 shop-api[1290]: INFO request_id=170c9613 GET /api/products 200 45ms
+Nov 02 08:32:41 web01 CRON[8854]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 08:33:47 web01 nginx[812]: 10.0.1.26 - - "GET /static/app.2.js HTTP/1.1" 200 31589
+Nov 02 08:34:06 web01 nginx[812]: 10.0.1.27 - - "GET /static/app.9.js HTTP/1.1" 200 15711
+Nov 02 08:34:52 web01 nginx[812]: 10.0.1.20 - - "GET /static/app.9.js HTTP/1.1" 200 5813
+Nov 02 08:36:01 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.7.js HTTP/1.1" 200 73083
+Nov 02 08:36:32 web01 sshd[3965]: Accepted publickey for deploy from 10.0.0.5 port 57524 ssh2
+Nov 02 08:37:41 web01 nginx[812]: 10.0.1.16 - - "GET /static/app.2.js HTTP/1.1" 200 7333
+Nov 02 08:38:48 web01 shop-api[1290]: INFO request_id=b38f84ad GET /api/products 200 76ms
+Nov 02 08:39:19 web01 shop-api[1290]: INFO request_id=3ab0e96c GET /api/products 200 14ms
+Nov 02 08:39:45 web01 nginx[812]: 10.0.1.26 - - "GET /static/app.7.js HTTP/1.1" 200 51846
+Nov 02 08:40:04 web01 nginx[812]: 10.0.1.17 - - "GET /static/app.4.js HTTP/1.1" 200 30960
+Nov 02 08:40:40 web01 shop-api[1290]: INFO request_id=c8b510c1 GET /api/products 200 68ms
+Nov 02 08:40:52 web01 CRON[2598]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 08:41:40 web01 sshd[2337]: Accepted publickey for deploy from 10.0.0.5 port 47041 ssh2
+Nov 02 08:42:07 web01 CRON[4802]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 08:42:22 web01 CRON[5782]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 08:42:50 web01 nginx[812]: 10.0.1.36 - - "GET /static/app.7.js HTTP/1.1" 304 4525
+Nov 02 08:43:06 web01 shop-api[1290]: INFO request_id=25e793b7 GET /api/products 200 68ms
+Nov 02 08:43:32 web01 nginx[812]: 10.0.1.32 - - "GET /static/app.3.js HTTP/1.1" 304 27004
+Nov 02 08:44:02 web01 sshd[7620]: Accepted publickey for deploy from 10.0.0.5 port 50848 ssh2
+Nov 02 08:44:15 web01 sshd[8484]: Accepted publickey for deploy from 10.0.0.5 port 55719 ssh2
+Nov 02 08:44:24 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.2.js HTTP/1.1" 200 79402
+Nov 02 08:44:37 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.6.js HTTP/1.1" 200 54216
+Nov 02 08:44:53 web01 shop-api[1290]: INFO request_id=f8aa927c GET /api/products 200 47ms
+Nov 02 08:45:18 web01 CRON[6035]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 08:46:26 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.1.js HTTP/1.1" 200 61399
+Nov 02 08:46:52 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.9.js HTTP/1.1" 304 39486
+Nov 02 08:47:11 web01 nginx[812]: 10.0.1.26 - - "GET /static/app.4.js HTTP/1.1" 304 31771
+Nov 02 08:47:41 web01 shop-api[1290]: INFO request_id=8fc5654a GET /api/products 200 33ms
+Nov 02 08:48:49 web01 shop-api[1290]: INFO request_id=eee9b19c GET /api/products 200 9ms
+Nov 02 08:49:44 web01 shop-api[1290]: INFO request_id=65129183 GET /api/products 200 46ms
+Nov 02 08:50:37 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.6.js HTTP/1.1" 200 87237
+Nov 02 08:51:36 web01 shop-api[1290]: INFO request_id=01269b7b GET /api/products 200 41ms
+Nov 02 08:52:43 web01 shop-api[1290]: INFO request_id=f3742b88 GET /api/products 200 17ms
+Nov 02 08:53:48 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.8.js HTTP/1.1" 200 19414
+Nov 02 08:54:35 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.7.js HTTP/1.1" 200 61371
+Nov 02 08:54:44 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.3.js HTTP/1.1" 200 58237
+Nov 02 08:55:41 web01 shop-api[1290]: INFO request_id=cea02c20 GET /api/products 200 33ms
+Nov 02 08:56:01 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.7.js HTTP/1.1" 200 24431
+Nov 02 08:56:55 web01 nginx[812]: 10.0.1.19 - - "GET /static/app.3.js HTTP/1.1" 200 29686
+Nov 02 08:57:44 web01 CRON[6999]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 08:58:39 web01 nginx[812]: 10.0.1.30 - - "GET /static/app.4.js HTTP/1.1" 200 21561
+Nov 02 08:59:34 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.3.js HTTP/1.1" 301 13897
+Nov 02 09:00:10 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.6.js HTTP/1.1" 200 88936
+Nov 02 09:00:27 web01 sshd[8017]: Accepted publickey for deploy from 10.0.0.5 port 56838 ssh2
+Nov 02 09:01:20 web01 nginx[812]: 10.0.1.58 - - "GET /static/app.7.js HTTP/1.1" 200 10248
+Nov 02 09:02:30 web01 shop-api[1290]: INFO request_id=71b058b1 GET /api/products 200 37ms
+Nov 02 09:03:12 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.7.js HTTP/1.1" 200 68743
+Nov 02 09:03:24 web01 CRON[6080]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 09:04:32 web01 nginx[812]: 10.0.1.11 - - "GET /static/app.2.js HTTP/1.1" 200 73361
+Nov 02 09:05:25 web01 nginx[812]: 10.0.1.58 - - "GET /static/app.3.js HTTP/1.1" 200 79870
+Nov 02 09:06:28 web01 nginx[812]: 10.0.1.30 - - "GET /static/app.3.js HTTP/1.1" 200 1226
+Nov 02 09:07:07 web01 nginx[812]: 10.0.1.47 - - "GET /static/app.9.js HTTP/1.1" 200 6417
+Nov 02 09:08:02 web01 nginx[812]: 10.0.1.47 - - "GET /static/app.5.js HTTP/1.1" 200 82520
+Nov 02 09:08:37 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.7.js HTTP/1.1" 200 72154
+Nov 02 09:09:34 web01 shop-api[1290]: INFO request_id=ce0e2a76 GET /api/products 200 51ms
+Nov 02 09:10:42 web01 sshd[7813]: Accepted publickey for deploy from 10.0.0.5 port 51804 ssh2
+Nov 02 09:11:22 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.1.js HTTP/1.1" 200 70081
+Nov 02 09:12:11 web01 CRON[3644]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 09:12:23 web01 nginx[812]: 10.0.1.57 - - "GET /static/app.3.js HTTP/1.1" 200 89613
+Nov 02 09:13:07 web01 CRON[6810]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 09:13:50 web01 sshd[8365]: Accepted publickey for deploy from 10.0.0.5 port 51800 ssh2
+Nov 02 09:14:18 web01 nginx[812]: 10.0.1.40 - - "GET /static/app.6.js HTTP/1.1" 200 57748
+Nov 02 09:15:14 web01 nginx[812]: 10.0.1.26 - - "GET /static/app.7.js HTTP/1.1" 200 42194
+Nov 02 09:16:08 web01 shop-api[1290]: INFO request_id=78f9721a GET /api/products 200 37ms
+Nov 02 09:16:27 web01 nginx[812]: 10.0.1.49 - - "GET /static/app.9.js HTTP/1.1" 200 53810
+Nov 02 09:16:52 web01 shop-api[1290]: INFO request_id=5093dfef GET /api/products 200 8ms
+Nov 02 09:17:16 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.9.js HTTP/1.1" 200 88197
+Nov 02 09:18:13 web01 shop-api[1290]: INFO request_id=467feb29 GET /api/products 200 53ms
+Nov 02 09:19:04 web01 shop-api[1290]: INFO request_id=65421edb GET /api/products 200 70ms
+Nov 02 09:19:45 web01 CRON[2992]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 09:20:23 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.9.js HTTP/1.1" 200 74548
+Nov 02 09:21:07 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.4.js HTTP/1.1" 200 9457
+Nov 02 09:21:24 web01 shop-api[1290]: INFO request_id=ad95cae8 GET /api/products 200 55ms
+Nov 02 09:21:43 web01 sshd[3359]: Accepted publickey for deploy from 10.0.0.5 port 45780 ssh2
+Nov 02 09:22:03 web01 shop-api[1290]: INFO request_id=64fdce15 GET /api/products 200 46ms
+Nov 02 09:22:59 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.3.js HTTP/1.1" 200 19098
+Nov 02 09:23:56 web01 shop-api[1290]: INFO request_id=e6c9911a GET /api/products 200 39ms
+Nov 02 09:24:18 web01 nginx[812]: 10.0.1.53 - - "GET /static/app.7.js HTTP/1.1" 200 9054
+Nov 02 09:25:27 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.4.js HTTP/1.1" 200 76036
+Nov 02 09:26:27 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.5.js HTTP/1.1" 200 89368
+Nov 02 09:26:48 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.4.js HTTP/1.1" 301 65910
+Nov 02 09:27:08 web01 CRON[2274]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 09:28:01 web01 CRON[3075]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 09:28:55 web01 shop-api[1290]: INFO request_id=466b7856 GET /api/products 200 11ms
+Nov 02 09:30:05 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.5.js HTTP/1.1" 200 12599
+Nov 02 09:30:56 web01 shop-api[1290]: INFO request_id=f98e1bc5 GET /api/products 200 13ms
+Nov 02 09:31:47 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.2.js HTTP/1.1" 200 42917
+Nov 02 09:32:19 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.3.js HTTP/1.1" 304 58872
+Nov 02 09:32:59 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.9.js HTTP/1.1" 200 78375
+Nov 02 09:33:08 web01 nginx[812]: 10.0.1.39 - - "GET /static/app.8.js HTTP/1.1" 200 29721
+Nov 02 09:33:50 web01 shop-api[1290]: INFO request_id=5710dec5 GET /api/products 200 45ms
+Nov 02 09:34:24 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.9.js HTTP/1.1" 200 4296
+Nov 02 09:34:57 web01 shop-api[1290]: INFO request_id=07436b53 GET /api/products 200 67ms
+Nov 02 09:35:36 web01 nginx[812]: 10.0.1.14 - - "GET /static/app.5.js HTTP/1.1" 200 12033
+Nov 02 09:35:55 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.7.js HTTP/1.1" 200 29959
+Nov 02 09:36:07 web01 CRON[6354]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 09:36:54 web01 shop-api[1290]: INFO request_id=4072fb73 GET /api/products 200 12ms
+Nov 02 09:38:00 web01 shop-api[1290]: INFO request_id=6e6b8fe6 GET /api/products 200 61ms
+Nov 02 09:39:03 web01 nginx[812]: 10.0.1.49 - - "GET /static/app.2.js HTTP/1.1" 200 53105
+Nov 02 09:39:29 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.9.js HTTP/1.1" 200 2466
+Nov 02 09:40:30 web01 shop-api[1290]: INFO request_id=ca4d0546 GET /api/products 200 28ms
+Nov 02 09:41:08 web01 nginx[812]: 10.0.1.58 - - "GET /static/app.5.js HTTP/1.1" 200 3303
+Nov 02 09:41:15 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.1.js HTTP/1.1" 200 84392
+Nov 02 09:41:53 web01 shop-api[1290]: INFO request_id=a0a8d0f3 GET /api/products 200 23ms
+Nov 02 09:42:38 web01 sshd[4504]: Accepted publickey for deploy from 10.0.0.5 port 43449 ssh2
+Nov 02 09:42:48 web01 shop-api[1290]: INFO request_id=b0fa6616 GET /api/products 200 48ms
+Nov 02 09:43:46 web01 CRON[8590]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 09:44:49 web01 shop-api[1290]: INFO request_id=57cac47b GET /api/products 200 16ms
+Nov 02 09:45:13 web01 nginx[812]: 10.0.1.40 - - "GET /static/app.2.js HTTP/1.1" 200 44554
+Nov 02 09:45:58 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.2.js HTTP/1.1" 301 69545
+Nov 02 09:46:35 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.5.js HTTP/1.1" 200 86326
+Nov 02 09:46:42 web01 sshd[3581]: Accepted publickey for deploy from 10.0.0.5 port 49119 ssh2
+Nov 02 09:47:42 web01 shop-api[1290]: INFO request_id=b9c9855e GET /api/products 200 52ms
+Nov 02 09:48:07 web01 CRON[8892]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 09:49:07 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.4.js HTTP/1.1" 200 77022
+Nov 02 09:50:00 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.1.js HTTP/1.1" 200 27033
+Nov 02 09:50:14 web01 CRON[4772]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 09:51:18 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.1.js HTTP/1.1" 200 32204
+Nov 02 09:51:49 web01 CRON[5134]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 09:52:07 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.8.js HTTP/1.1" 200 60122
+Nov 02 09:53:08 web01 shop-api[1290]: INFO request_id=91f60569 GET /api/products 200 9ms
+Nov 02 09:54:13 web01 nginx[812]: 10.0.1.51 - - "GET /static/app.4.js HTTP/1.1" 200 85436
+Nov 02 09:55:18 web01 shop-api[1290]: INFO request_id=78c23e3c GET /api/products 200 80ms
+Nov 02 09:55:41 web01 nginx[812]: 10.0.1.41 - - "GET /static/app.7.js HTTP/1.1" 200 8523
+Nov 02 09:56:16 web01 shop-api[1290]: INFO request_id=e3a31413 GET /api/products 200 32ms
+Nov 02 09:56:21 web01 nginx[812]: 10.0.1.57 - - "GET /static/app.4.js HTTP/1.1" 301 83386
+Nov 02 09:56:30 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.1.js HTTP/1.1" 304 5289
+Nov 02 09:57:34 web01 nginx[812]: 10.0.1.25 - - "GET /static/app.1.js HTTP/1.1" 200 73200
+Nov 02 09:58:31 web01 nginx[812]: 10.0.1.19 - - "GET /static/app.1.js HTTP/1.1" 200 63063
+Nov 02 09:58:49 web01 shop-api[1290]: INFO request_id=e1e0762a GET /api/products 200 15ms
+Nov 02 09:59:17 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.9.js HTTP/1.1" 200 42672
+Nov 02 09:59:35 web01 nginx[812]: 10.0.1.34 - - "GET /static/app.2.js HTTP/1.1" 200 4194
+Nov 02 09:59:50 web01 nginx[812]: 10.0.1.49 - - "GET /static/app.9.js HTTP/1.1" 200 10474
+Nov 02 10:00:01 web01 shop-api[1290]: INFO request_id=9d76244e GET /api/products 200 40ms
+Nov 02 10:01:04 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.4.js HTTP/1.1" 200 3455
+Nov 02 10:01:32 web01 CRON[8648]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 10:02:35 web01 nginx[812]: 10.0.1.55 - - "GET /static/app.4.js HTTP/1.1" 200 88344
+Nov 02 10:03:34 web01 sshd[7019]: Accepted publickey for deploy from 10.0.0.5 port 42829 ssh2
+Nov 02 10:04:24 web01 shop-api[1290]: INFO request_id=167ccabc GET /api/products 200 33ms
+Nov 02 10:04:41 web01 nginx[812]: 10.0.1.27 - - "GET /static/app.5.js HTTP/1.1" 200 39060
+Nov 02 10:05:04 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.4.js HTTP/1.1" 200 1210
+Nov 02 10:05:19 web01 nginx[812]: 10.0.1.17 - - "GET /static/app.4.js HTTP/1.1" 200 68473
+Nov 02 10:06:13 web01 nginx[812]: 10.0.1.36 - - "GET /static/app.4.js HTTP/1.1" 200 10760
+Nov 02 10:06:20 web01 CRON[7870]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 10:06:28 web01 shop-api[1290]: INFO request_id=2291ed70 GET /api/products 200 58ms
+Nov 02 10:06:40 web01 nginx[812]: 10.0.1.28 - - "GET /static/app.5.js HTTP/1.1" 200 17881
+Nov 02 10:07:17 web01 kernel: [987403.456] Out of memory: Killed process 1290 (shop-api) total-vm:2849320kB, anon-rss:1910244kB
+Nov 02 10:07:25 web01 systemd[1]: shop-api.service: Main process exited, code=killed, status=9/KILL
+Nov 02 10:07:42 web01 systemd[1]: shop-api.service: Failed with result 'signal'.
+Nov 02 10:08:07 web01 systemd[1]: shop-api.service: Scheduled restart job, restart counter is at 1.
+Nov 02 10:09:12 web01 shop-api[1290]: INFO request_id=d63a13f0 GET /api/products 200 44ms
+Nov 02 10:09:52 web01 CRON[2107]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 10:10:49 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.9.js HTTP/1.1" 200 47065
+Nov 02 10:11:36 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.4.js HTTP/1.1" 304 45208
+Nov 02 10:11:51 web01 nginx[812]: 10.0.1.16 - - "GET /static/app.6.js HTTP/1.1" 200 56005
+Nov 02 10:12:39 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.8.js HTTP/1.1" 200 21417
+Nov 02 10:13:11 web01 nginx[812]: 10.0.1.51 - - "GET /static/app.9.js HTTP/1.1" 200 32406
+Nov 02 10:14:08 web01 sshd[6250]: Accepted publickey for deploy from 10.0.0.5 port 42937 ssh2
+Nov 02 10:14:40 web01 nginx[812]: 10.0.1.58 - - "GET /static/app.5.js HTTP/1.1" 200 56842
+Nov 02 10:15:00 web01 sshd[3444]: Accepted publickey for deploy from 10.0.0.5 port 54352 ssh2
+Nov 02 10:15:26 web01 shop-api[1290]: INFO request_id=befb88fe GET /api/products 200 39ms
+Nov 02 10:16:21 web01 nginx[812]: 10.0.1.26 - - "GET /static/app.2.js HTTP/1.1" 200 27722
+Nov 02 10:16:59 web01 shop-api[1290]: INFO request_id=a7ecfe30 GET /api/products 200 78ms
+Nov 02 10:17:22 web01 shop-api[1290]: INFO request_id=990d406c GET /api/products 200 11ms
+Nov 02 10:18:17 web01 nginx[812]: 10.0.1.14 - - "GET /static/app.2.js HTTP/1.1" 200 70512
+Nov 02 10:18:23 web01 nginx[812]: 10.0.1.14 - - "GET /static/app.9.js HTTP/1.1" 200 15093
+Nov 02 10:19:31 web01 shop-api[1290]: INFO request_id=82a159ad GET /api/products 200 38ms
+Nov 02 10:20:33 web01 nginx[812]: 10.0.1.16 - - "GET /static/app.5.js HTTP/1.1" 200 52044
+Nov 02 10:21:30 web01 shop-api[1290]: INFO request_id=2c5808cc GET /api/products 200 59ms
+Nov 02 10:21:47 web01 CRON[5773]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 10:22:35 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.7.js HTTP/1.1" 200 29955
+Nov 02 10:22:53 web01 CRON[8577]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 10:23:42 web01 shop-api[1290]: INFO request_id=47140298 GET /api/products 200 4ms
+Nov 02 10:24:11 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.5.js HTTP/1.1" 200 86967
+Nov 02 10:24:49 web01 nginx[812]: 10.0.1.19 - - "GET /static/app.2.js HTTP/1.1" 200 7802
+Nov 02 10:25:43 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.4.js HTTP/1.1" 200 8433
+Nov 02 10:25:56 web01 nginx[812]: 10.0.1.27 - - "GET /static/app.3.js HTTP/1.1" 301 46879
+Nov 02 10:26:47 web01 nginx[812]: 10.0.1.21 - - "GET /static/app.6.js HTTP/1.1" 200 33283
+Nov 02 10:27:39 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.2.js HTTP/1.1" 200 32844
+Nov 02 10:28:05 web01 nginx[812]: 10.0.1.34 - - "GET /static/app.1.js HTTP/1.1" 304 29657
+Nov 02 10:28:34 web01 CRON[8247]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 10:29:28 web01 CRON[3973]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 10:30:33 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.2.js HTTP/1.1" 200 87284
+Nov 02 10:31:26 web01 CRON[3923]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 10:32:07 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.2.js HTTP/1.1" 200 14702
+Nov 02 10:33:10 web01 shop-api[1290]: INFO request_id=7dfdfe0e GET /api/products 200 14ms
+Nov 02 10:34:06 web01 nginx[812]: 10.0.1.40 - - "GET /static/app.4.js HTTP/1.1" 200 56114
+Nov 02 10:35:07 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.5.js HTTP/1.1" 200 47635
+Nov 02 10:36:08 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.1.js HTTP/1.1" 200 9673
+Nov 02 10:37:18 web01 nginx[812]: 10.0.1.57 - - "GET /static/app.7.js HTTP/1.1" 200 14724
+Nov 02 10:37:30 web01 sshd[6299]: Accepted publickey for deploy from 10.0.0.5 port 41834 ssh2
+Nov 02 10:38:05 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.6.js HTTP/1.1" 301 28137
+Nov 02 10:38:22 web01 nginx[812]: 10.0.1.26 - - "GET /static/app.8.js HTTP/1.1" 200 17566
+Nov 02 10:38:36 web01 CRON[7169]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 10:39:21 web01 nginx[812]: 10.0.1.27 - - "GET /static/app.6.js HTTP/1.1" 200 9232
+Nov 02 10:39:41 web01 shop-api[1290]: INFO request_id=7997f8de GET /api/products 200 64ms
+Nov 02 10:40:18 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.9.js HTTP/1.1" 200 3507
+Nov 02 10:41:23 web01 shop-api[1290]: INFO request_id=083f7546 GET /api/products 200 71ms
+Nov 02 10:41:57 web01 shop-api[1290]: INFO request_id=aa197f03 GET /api/products 200 80ms
+Nov 02 10:42:19 web01 shop-api[1290]: INFO request_id=252113bd GET /api/products 200 52ms
+Nov 02 10:43:05 web01 shop-api[1290]: INFO request_id=db791bcd GET /api/products 200 50ms
+Nov 02 10:43:33 web01 shop-api[1290]: INFO request_id=0401df01 GET /api/products 200 79ms
+Nov 02 10:44:36 web01 CRON[2671]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 10:45:38 web01 nginx[812]: 10.0.1.12 - - "GET /static/app.8.js HTTP/1.1" 200 18713
+Nov 02 10:46:07 web01 nginx[812]: 10.0.1.30 - - "GET /static/app.4.js HTTP/1.1" 200 8981
+Nov 02 10:47:03 web01 nginx[812]: 10.0.1.20 - - "GET /static/app.6.js HTTP/1.1" 200 63766
+Nov 02 10:47:37 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.8.js HTTP/1.1" 200 88457
+Nov 02 10:48:09 web01 shop-api[1290]: INFO request_id=3764b7d9 GET /api/products 200 27ms
+Nov 02 10:49:14 web01 nginx[812]: 10.0.1.39 - - "GET /static/app.4.js HTTP/1.1" 200 42476
+Nov 02 10:49:23 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.1.js HTTP/1.1" 200 74825
+Nov 02 10:50:15 web01 shop-api[1290]: INFO request_id=3d09f26a GET /api/products 200 3ms
+Nov 02 10:50:39 web01 shop-api[1290]: INFO request_id=420246a0 GET /api/products 200 80ms
+Nov 02 10:51:42 web01 nginx[812]: 10.0.1.45 - - "GET /static/app.7.js HTTP/1.1" 200 18347
+Nov 02 10:52:20 web01 nginx[812]: 10.0.1.17 - - "GET /static/app.7.js HTTP/1.1" 200 19849
+Nov 02 10:52:42 web01 sshd[3108]: Accepted publickey for deploy from 10.0.0.5 port 59051 ssh2
+Nov 02 10:53:28 web01 CRON[2466]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 10:53:54 web01 nginx[812]: 10.0.1.20 - - "GET /static/app.8.js HTTP/1.1" 200 53899
+Nov 02 10:54:31 web01 CRON[7420]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 10:55:04 web01 CRON[8098]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 10:55:43 web01 sshd[7833]: Accepted publickey for deploy from 10.0.0.5 port 53361 ssh2
+Nov 02 10:56:00 web01 nginx[812]: 10.0.1.16 - - "GET /static/app.5.js HTTP/1.1" 200 9545
+Nov 02 10:56:41 web01 shop-api[1290]: INFO request_id=2cd83f8c GET /api/products 200 20ms
+Nov 02 10:57:39 web01 nginx[812]: 10.0.1.34 - - "GET /static/app.5.js HTTP/1.1" 301 87218
+Nov 02 10:58:49 web01 shop-api[1290]: INFO request_id=723f16a4 GET /api/products 200 34ms
+Nov 02 10:59:57 web01 shop-api[1290]: INFO request_id=9617402a GET /api/products 200 50ms
+Nov 02 11:00:26 web01 nginx[812]: 10.0.1.47 - - "GET /static/app.7.js HTTP/1.1" 200 24092
+Nov 02 11:01:03 web01 shop-api[1290]: INFO request_id=697b88c2 GET /api/products 200 49ms
+Nov 02 11:01:40 web01 shop-api[1290]: INFO request_id=12cbfe46 GET /api/products 200 10ms
+Nov 02 11:02:45 web01 nginx[812]: 10.0.1.30 - - "GET /static/app.1.js HTTP/1.1" 304 58613
+Nov 02 11:03:50 web01 nginx[812]: 10.0.1.58 - - "GET /static/app.3.js HTTP/1.1" 200 61314
+Nov 02 11:04:36 web01 shop-api[1290]: INFO request_id=3b9fc35a GET /api/products 200 58ms
+Nov 02 11:04:52 web01 sshd[3696]: Accepted publickey for deploy from 10.0.0.5 port 57778 ssh2
+Nov 02 11:05:49 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.4.js HTTP/1.1" 200 48902
+Nov 02 11:06:40 web01 nginx[812]: 10.0.1.41 - - "GET /static/app.6.js HTTP/1.1" 304 17020
+Nov 02 11:07:13 web01 shop-api[1290]: INFO request_id=e1009550 GET /api/products 200 37ms
+Nov 02 11:07:32 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.7.js HTTP/1.1" 200 85020
+Nov 02 11:07:46 web01 nginx[812]: 10.0.1.39 - - "GET /static/app.9.js HTTP/1.1" 200 46919
+Nov 02 11:08:35 web01 shop-api[1290]: INFO request_id=6fed9708 GET /api/products 200 43ms
+Nov 02 11:09:02 web01 CRON[7678]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 11:09:09 web01 shop-api[1290]: INFO request_id=c7f213a4 GET /api/products 200 23ms
+Nov 02 11:10:04 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.5.js HTTP/1.1" 304 72420
+Nov 02 11:10:35 web01 shop-api[1290]: INFO request_id=b473fc48 GET /api/products 200 78ms
+Nov 02 11:11:05 web01 nginx[812]: 10.0.1.29 - - "GET /static/app.5.js HTTP/1.1" 200 21718
+Nov 02 11:11:18 web01 shop-api[1290]: INFO request_id=d982e22a GET /api/products 200 78ms
+Nov 02 11:11:28 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.9.js HTTP/1.1" 200 54335
+Nov 02 11:12:07 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.3.js HTTP/1.1" 301 11543
+Nov 02 11:12:43 web01 nginx[812]: 10.0.1.24 - - "GET /static/app.5.js HTTP/1.1" 200 31280
+Nov 02 11:12:50 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.4.js HTTP/1.1" 200 19779
+Nov 02 11:13:55 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.6.js HTTP/1.1" 200 38542
+Nov 02 11:14:53 web01 shop-api[1290]: INFO request_id=dff05617 GET /api/products 200 36ms
+Nov 02 11:15:40 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.3.js HTTP/1.1" 200 35107
+Nov 02 11:15:56 web01 nginx[812]: 10.0.1.13 - - "GET /static/app.5.js HTTP/1.1" 200 17570
+Nov 02 11:16:43 web01 nginx[812]: 10.0.1.41 - - "GET /static/app.4.js HTTP/1.1" 200 79621
+Nov 02 11:16:54 web01 shop-api[1290]: INFO request_id=d6c47259 GET /api/products 200 57ms
+Nov 02 11:17:48 web01 nginx[812]: 10.0.1.11 - - "GET /static/app.5.js HTTP/1.1" 200 9757
+Nov 02 11:18:53 web01 nginx[812]: 10.0.1.47 - - "GET /static/app.4.js HTTP/1.1" 200 59565
+Nov 02 11:19:57 web01 shop-api[1290]: INFO request_id=3b32c319 GET /api/products 200 14ms
+Nov 02 11:21:02 web01 shop-api[1290]: INFO request_id=23619de4 GET /api/products 200 4ms
+Nov 02 11:21:31 web01 sshd[3767]: Accepted publickey for deploy from 10.0.0.5 port 43535 ssh2
+Nov 02 11:22:34 web01 nginx[812]: 10.0.1.26 - - "GET /static/app.7.js HTTP/1.1" 200 68699
+Nov 02 11:23:21 web01 shop-api[1290]: INFO request_id=07e95f59 GET /api/products 200 32ms
+Nov 02 11:23:29 web01 nginx[812]: 10.0.1.28 - - "GET /static/app.8.js HTTP/1.1" 200 80872
+Nov 02 11:23:58 web01 CRON[3676]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 11:24:42 web01 sshd[4136]: Accepted publickey for deploy from 10.0.0.5 port 44300 ssh2
+Nov 02 11:25:07 web01 nginx[812]: 10.0.1.39 - - "GET /static/app.6.js HTTP/1.1" 304 89586
+Nov 02 11:25:51 web01 nginx[812]: 10.0.1.43 - - "GET /static/app.5.js HTTP/1.1" 200 7595
+Nov 02 11:26:36 web01 nginx[812]: 10.0.1.13 - - "GET /static/app.9.js HTTP/1.1" 200 31278
+Nov 02 11:27:00 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.8.js HTTP/1.1" 200 4261
+Nov 02 11:27:30 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.9.js HTTP/1.1" 200 47857
+Nov 02 11:28:35 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.2.js HTTP/1.1" 200 86670
+Nov 02 11:28:48 web01 shop-api[1290]: INFO request_id=6ff2fca9 GET /api/products 200 64ms
+Nov 02 11:29:01 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.4.js HTTP/1.1" 200 59233
+Nov 02 11:29:46 web01 CRON[7835]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 11:30:44 web01 shop-api[1290]: INFO request_id=5f25c395 GET /api/products 200 71ms
+Nov 02 11:31:46 web01 shop-api[1290]: INFO request_id=b9860453 GET /api/products 200 43ms
+Nov 02 11:31:57 web01 nginx[812]: 10.0.1.39 - - "GET /static/app.5.js HTTP/1.1" 200 17739
+Nov 02 11:32:06 web01 CRON[6567]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 11:32:27 web01 nginx[812]: 10.0.1.53 - - "GET /static/app.1.js HTTP/1.1" 200 39618
+Nov 02 11:32:40 web01 CRON[7411]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 11:33:28 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.7.js HTTP/1.1" 200 12626
+Nov 02 11:33:39 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.3.js HTTP/1.1" 200 69771
+Nov 02 11:33:57 web01 shop-api[1290]: INFO request_id=50e5d997 GET /api/products 200 23ms
+Nov 02 11:34:54 web01 nginx[812]: 10.0.1.21 - - "GET /static/app.7.js HTTP/1.1" 200 44606
+Nov 02 11:35:45 web01 nginx[812]: 10.0.1.25 - - "GET /static/app.9.js HTTP/1.1" 200 15632
+Nov 02 11:36:01 web01 nginx[812]: 10.0.1.57 - - "GET /static/app.7.js HTTP/1.1" 200 62266
+Nov 02 11:36:34 web01 sshd[6948]: Accepted publickey for deploy from 10.0.0.5 port 49460 ssh2
+Nov 02 11:37:38 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.3.js HTTP/1.1" 200 25683
+Nov 02 11:38:45 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.4.js HTTP/1.1" 200 3925
+Nov 02 11:39:22 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.6.js HTTP/1.1" 200 41383
+Nov 02 11:39:49 web01 shop-api[1290]: INFO request_id=d942170f GET /api/products 200 46ms
+Nov 02 11:40:18 web01 shop-api[1290]: INFO request_id=0e6f0abd GET /api/products 200 3ms
+Nov 02 11:40:52 web01 shop-api[1290]: INFO request_id=02aa93ce GET /api/products 200 35ms
+Nov 02 11:41:02 web01 CRON[4679]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 11:41:36 web01 CRON[8708]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 11:42:15 web01 sshd[4470]: Accepted publickey for deploy from 10.0.0.5 port 52276 ssh2
+Nov 02 11:43:05 web01 nginx[812]: 10.0.1.28 - - "GET /static/app.4.js HTTP/1.1" 200 1950
+Nov 02 11:44:02 web01 shop-api[1290]: INFO request_id=c50d583d GET /api/products 200 75ms
+Nov 02 11:44:38 web01 CRON[7277]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 11:44:49 web01 sshd[7964]: Accepted publickey for deploy from 10.0.0.5 port 45617 ssh2
+Nov 02 11:45:13 web01 CRON[4074]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 11:46:22 web01 shop-api[1290]: INFO request_id=6173a49f GET /api/products 200 58ms
+Nov 02 11:47:06 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.6.js HTTP/1.1" 200 88232
+Nov 02 11:47:18 web01 nginx[812]: 10.0.1.21 - - "GET /static/app.6.js HTTP/1.1" 301 18530
+Nov 02 11:47:29 web01 shop-api[1290]: INFO request_id=d7b73cea GET /api/products 200 73ms
+Nov 02 11:48:32 web01 sshd[5852]: Accepted publickey for deploy from 10.0.0.5 port 55131 ssh2
+Nov 02 11:49:04 web01 shop-api[1290]: INFO request_id=5c64146c GET /api/products 200 34ms
+Nov 02 11:49:17 web01 nginx[812]: 10.0.1.30 - - "GET /static/app.1.js HTTP/1.1" 200 30065
+Nov 02 11:50:09 web01 nginx[812]: 10.0.1.14 - - "GET /static/app.1.js HTTP/1.1" 200 26309
+Nov 02 11:51:13 web01 shop-api[1290]: INFO request_id=4fa6f43e GET /api/products 200 64ms
+Nov 02 11:52:06 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.8.js HTTP/1.1" 200 42049
+Nov 02 11:52:55 web01 shop-api[1290]: INFO request_id=4fc00bf8 GET /api/products 200 48ms
+Nov 02 11:53:13 web01 shop-api[1290]: INFO request_id=ff6e109d GET /api/products 200 69ms
+Nov 02 11:53:26 web01 nginx[812]: 10.0.1.36 - - "GET /static/app.4.js HTTP/1.1" 200 27554
+Nov 02 11:53:57 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.2.js HTTP/1.1" 200 86124
+Nov 02 11:54:06 web01 nginx[812]: 10.0.1.46 - - "GET /static/app.1.js HTTP/1.1" 200 17469
+Nov 02 11:55:05 web01 sshd[3505]: Accepted publickey for deploy from 10.0.0.5 port 57159 ssh2
+Nov 02 11:55:47 web01 CRON[8462]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 11:56:37 web01 nginx[812]: 10.0.1.57 - - "GET /static/app.1.js HTTP/1.1" 200 29005
+Nov 02 11:57:28 web01 CRON[8042]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 11:58:28 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.2.js HTTP/1.1" 200 54932
+Nov 02 11:58:58 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.3.js HTTP/1.1" 200 64692
+Nov 02 12:00:07 web01 nginx[812]: 10.0.1.19 - - "GET /static/app.7.js HTTP/1.1" 200 73844
+Nov 02 12:00:33 web01 nginx[812]: 10.0.1.51 - - "GET /static/app.2.js HTTP/1.1" 200 74893
+Nov 02 12:01:24 web01 nginx[812]: 10.0.1.13 - - "GET /static/app.9.js HTTP/1.1" 200 3370
+Nov 02 12:02:33 web01 CRON[7852]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 12:03:05 web01 nginx[812]: 10.0.1.19 - - "GET /static/app.4.js HTTP/1.1" 200 19132
+Nov 02 12:03:29 web01 shop-api[1290]: INFO request_id=cdabfbce GET /api/products 200 6ms
+Nov 02 12:04:28 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.5.js HTTP/1.1" 200 30942
+Nov 02 12:05:26 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.1.js HTTP/1.1" 200 12405
+Nov 02 12:05:31 web01 CRON[7872]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 12:05:57 web01 shop-api[1290]: INFO request_id=3caf88ca GET /api/products 200 71ms
+Nov 02 12:06:34 web01 nginx[812]: 10.0.1.21 - - "GET /static/app.3.js HTTP/1.1" 200 26776
+Nov 02 12:06:53 web01 shop-api[1290]: INFO request_id=b64b4795 GET /api/products 200 79ms
+Nov 02 12:07:25 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.1.js HTTP/1.1" 200 64315
+Nov 02 12:07:30 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.2.js HTTP/1.1" 301 73611
+Nov 02 12:08:28 web01 nginx[812]: 10.0.1.39 - - "GET /static/app.4.js HTTP/1.1" 200 71474
+Nov 02 12:09:16 web01 nginx[812]: 10.0.1.56 - - "GET /static/app.4.js HTTP/1.1" 200 30142
+Nov 02 12:09:41 web01 CRON[4920]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 12:10:41 web01 nginx[812]: 10.0.1.20 - - "GET /static/app.4.js HTTP/1.1" 200 58697
+Nov 02 12:10:56 web01 nginx[812]: 10.0.1.47 - - "GET /static/app.2.js HTTP/1.1" 200 66433
+Nov 02 12:11:38 web01 nginx[812]: 10.0.1.40 - - "GET /static/app.8.js HTTP/1.1" 301 77901
+Nov 02 12:12:45 web01 nginx[812]: 10.0.1.27 - - "GET /static/app.9.js HTTP/1.1" 200 26246
+Nov 02 12:13:50 web01 shop-api[1290]: INFO request_id=2507ef58 GET /api/products 200 67ms
+Nov 02 12:14:16 web01 nginx[812]: 10.0.1.32 - - "GET /static/app.7.js HTTP/1.1" 200 9425
+Nov 02 12:15:12 web01 nginx[812]: 10.0.1.56 - - "GET /static/app.6.js HTTP/1.1" 200 46436
+Nov 02 12:16:07 web01 shop-api[1290]: INFO request_id=771d51f3 GET /api/products 200 76ms
+Nov 02 12:16:12 web01 nginx[812]: 10.0.1.56 - - "GET /static/app.6.js HTTP/1.1" 200 67003
+Nov 02 12:17:08 web01 sshd[7077]: Accepted publickey for deploy from 10.0.0.5 port 49772 ssh2
+Nov 02 12:17:33 web01 shop-api[1290]: INFO request_id=a9a92464 GET /api/products 200 3ms
+Nov 02 12:17:56 web01 shop-api[1290]: INFO request_id=ad87b09e GET /api/products 200 54ms
+Nov 02 12:18:42 web01 shop-api[1290]: INFO request_id=ad601e34 GET /api/products 200 31ms
+Nov 02 12:19:30 web01 CRON[3281]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 12:20:26 web01 shop-api[1290]: INFO request_id=4920c0e1 GET /api/products 200 17ms
+Nov 02 12:20:48 web01 CRON[8557]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 12:20:56 web01 shop-api[1290]: INFO request_id=ce7a49fb GET /api/products 200 64ms
+Nov 02 12:21:57 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.1.js HTTP/1.1" 200 46154
+Nov 02 12:22:43 web01 shop-api[1290]: INFO request_id=7a170a58 GET /api/products 200 17ms
+Nov 02 12:23:30 web01 nginx[812]: 10.0.1.49 - - "GET /static/app.5.js HTTP/1.1" 200 2496
+Nov 02 12:24:22 web01 CRON[2550]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 12:25:13 web01 CRON[7147]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 12:25:19 web01 nginx[812]: 10.0.1.31 - - "GET /static/app.8.js HTTP/1.1" 200 21300
+Nov 02 12:26:12 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.1.js HTTP/1.1" 200 18726
+Nov 02 12:26:35 web01 nginx[812]: 10.0.1.24 - - "GET /static/app.7.js HTTP/1.1" 200 34881
+Nov 02 12:26:55 web01 shop-api[1290]: INFO request_id=b85aeae1 GET /api/products 200 16ms
+Nov 02 12:27:18 web01 shop-api[1290]: INFO request_id=ec04da26 GET /api/products 200 14ms
+Nov 02 12:27:42 web01 nginx[812]: 10.0.1.22 - - "GET /static/app.8.js HTTP/1.1" 200 50862
+Nov 02 12:28:41 web01 nginx[812]: 10.0.1.55 - - "GET /static/app.3.js HTTP/1.1" 304 78548
+Nov 02 12:29:02 web01 sshd[2312]: Accepted publickey for deploy from 10.0.0.5 port 42755 ssh2
+Nov 02 12:29:14 web01 nginx[812]: 10.0.1.12 - - "GET /static/app.6.js HTTP/1.1" 200 82888
+Nov 02 12:29:40 web01 nginx[812]: 10.0.1.20 - - "GET /static/app.3.js HTTP/1.1" 200 26180
+Nov 02 12:30:30 web01 shop-api[1290]: INFO request_id=f834e815 GET /api/products 200 28ms
+Nov 02 12:31:21 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.7.js HTTP/1.1" 200 53910
+Nov 02 12:31:58 web01 nginx[812]: 10.0.1.40 - - "GET /static/app.3.js HTTP/1.1" 200 22000
+Nov 02 12:32:26 web01 CRON[8501]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 12:33:15 web01 shop-api[1290]: INFO request_id=a7bd4828 GET /api/products 200 10ms
+Nov 02 12:34:17 web01 nginx[812]: 10.0.1.53 - - "GET /static/app.8.js HTTP/1.1" 200 72039
+Nov 02 12:34:23 web01 nginx[812]: 10.0.1.11 - - "GET /static/app.6.js HTTP/1.1" 200 86832
+Nov 02 12:35:18 web01 nginx[812]: 10.0.1.19 - - "GET /static/app.1.js HTTP/1.1" 301 73807
+Nov 02 12:35:41 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.3.js HTTP/1.1" 200 84990
+Nov 02 12:35:46 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.1.js HTTP/1.1" 200 47742
+Nov 02 12:36:44 web01 shop-api[1290]: INFO request_id=3065bc1f GET /api/products 200 75ms
+Nov 02 12:37:37 web01 shop-api[1290]: INFO request_id=68a6277b GET /api/products 200 45ms
+Nov 02 12:38:43 web01 sshd[7039]: Accepted publickey for deploy from 10.0.0.5 port 45284 ssh2
+Nov 02 12:39:28 web01 CRON[3563]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 12:40:07 web01 sshd[3728]: Accepted publickey for deploy from 10.0.0.5 port 40140 ssh2
+Nov 02 12:40:53 web01 nginx[812]: 10.0.1.58 - - "GET /static/app.5.js HTTP/1.1" 200 80369
+Nov 02 12:41:41 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.5.js HTTP/1.1" 200 11175
+Nov 02 12:42:48 web01 sshd[8200]: Accepted publickey for deploy from 10.0.0.5 port 41521 ssh2
+Nov 02 12:43:12 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.7.js HTTP/1.1" 200 38846
+Nov 02 12:44:21 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.3.js HTTP/1.1" 200 13787
+Nov 02 12:45:14 web01 nginx[812]: 10.0.1.17 - - "GET /static/app.7.js HTTP/1.1" 200 58207
+Nov 02 12:45:51 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.6.js HTTP/1.1" 200 13089
+Nov 02 12:46:00 web01 nginx[812]: 10.0.1.56 - - "GET /static/app.4.js HTTP/1.1" 200 8824
+Nov 02 12:46:38 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.9.js HTTP/1.1" 200 65943
+Nov 02 12:47:37 web01 shop-api[1290]: INFO request_id=b151eb52 GET /api/products 200 38ms
+Nov 02 12:48:40 web01 shop-api[1290]: INFO request_id=51548f11 GET /api/products 200 54ms
+Nov 02 12:49:45 web01 sshd[2379]: Accepted publickey for deploy from 10.0.0.5 port 44747 ssh2
+Nov 02 12:50:27 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.3.js HTTP/1.1" 200 46387
+Nov 02 12:51:20 web01 CRON[4127]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 12:52:29 web01 nginx[812]: 10.0.1.40 - - "GET /static/app.2.js HTTP/1.1" 200 11020
+Nov 02 12:52:38 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.2.js HTTP/1.1" 200 38441
+Nov 02 12:53:26 web01 CRON[6986]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 12:53:54 web01 sshd[7285]: Accepted publickey for deploy from 10.0.0.5 port 43935 ssh2
+Nov 02 12:54:22 web01 CRON[4132]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 12:55:10 web01 nginx[812]: 10.0.1.24 - - "GET /static/app.4.js HTTP/1.1" 200 33092
+Nov 02 12:55:48 web01 CRON[3811]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 12:56:13 web01 CRON[7020]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 12:56:56 web01 sshd[8317]: Accepted publickey for deploy from 10.0.0.5 port 42067 ssh2
+Nov 02 12:57:50 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.2.js HTTP/1.1" 200 54868
+Nov 02 12:58:55 web01 CRON[7586]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 12:59:07 web01 shop-api[1290]: INFO request_id=3b668598 GET /api/products 200 62ms
+Nov 02 13:00:13 web01 CRON[3605]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 13:00:51 web01 nginx[812]: 10.0.1.53 - - "GET /static/app.9.js HTTP/1.1" 200 42014
+Nov 02 13:01:47 web01 CRON[3123]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 13:02:52 web01 nginx[812]: 10.0.1.27 - - "GET /static/app.6.js HTTP/1.1" 200 13264
+Nov 02 13:04:00 web01 shop-api[1290]: INFO request_id=96e19e32 GET /api/products 200 45ms
+Nov 02 13:04:25 web01 nginx[812]: 10.0.1.16 - - "GET /static/app.7.js HTTP/1.1" 200 15011
+Nov 02 13:04:47 web01 nginx[812]: 10.0.1.28 - - "GET /static/app.7.js HTTP/1.1" 200 76027
+Nov 02 13:05:14 web01 nginx[812]: 10.0.1.11 - - "GET /static/app.4.js HTTP/1.1" 200 60370
+Nov 02 13:05:34 web01 sshd[5729]: Accepted publickey for deploy from 10.0.0.5 port 52106 ssh2
+Nov 02 13:06:25 web01 nginx[812]: 10.0.1.50 - - "GET /static/app.9.js HTTP/1.1" 200 87449
+Nov 02 13:06:52 web01 nginx[812]: 10.0.1.48 - - "GET /static/app.5.js HTTP/1.1" 200 38713
+Nov 02 13:07:28 web01 shop-api[1290]: INFO request_id=9628ee8d GET /api/products 200 11ms
+Nov 02 13:08:26 web01 nginx[812]: 10.0.1.45 - - "GET /static/app.4.js HTTP/1.1" 200 67791
+Nov 02 13:09:35 web01 shop-api[1290]: INFO request_id=c0d22256 GET /api/products 200 33ms
+Nov 02 13:09:54 web01 shop-api[1290]: INFO request_id=ed3a520d GET /api/products 200 15ms
+Nov 02 13:10:23 web01 shop-api[1290]: INFO request_id=b693e729 GET /api/products 200 3ms
+Nov 02 13:11:02 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.5.js HTTP/1.1" 200 41325
+Nov 02 13:11:08 web01 nginx[812]: 10.0.1.32 - - "GET /static/app.9.js HTTP/1.1" 200 23989
+Nov 02 13:11:14 web01 shop-api[1290]: INFO request_id=fcf94d4b GET /api/products 200 25ms
+Nov 02 13:11:47 web01 nginx[812]: 10.0.1.17 - - "GET /static/app.9.js HTTP/1.1" 200 42700
+Nov 02 13:12:41 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.2.js HTTP/1.1" 200 78492
+Nov 02 13:13:40 web01 nginx[812]: 10.0.1.57 - - "GET /static/app.9.js HTTP/1.1" 200 19688
+Nov 02 13:14:39 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.1.js HTTP/1.1" 200 7436
+Nov 02 13:15:38 web01 shop-api[1290]: INFO request_id=a747a5dd GET /api/products 200 52ms
+Nov 02 13:16:03 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.3.js HTTP/1.1" 200 47354
+Nov 02 13:16:55 web01 nginx[812]: 10.0.1.19 - - "GET /static/app.3.js HTTP/1.1" 200 20179
+Nov 02 13:17:19 web01 nginx[812]: 10.0.1.17 - - "GET /static/app.5.js HTTP/1.1" 200 66203
+Nov 02 13:17:36 web01 shop-api[1290]: INFO request_id=69a69707 GET /api/products 200 62ms
+Nov 02 13:17:42 web01 shop-api[1290]: INFO request_id=3c762822 GET /api/products 200 57ms
+Nov 02 13:18:04 web01 nginx[812]: 10.0.1.58 - - "GET /static/app.4.js HTTP/1.1" 200 47146
+Nov 02 13:18:39 web01 shop-api[1290]: INFO request_id=d5b78d10 GET /api/products 200 64ms
+Nov 02 13:19:33 web01 nginx[812]: 10.0.1.40 - - "GET /static/app.1.js HTTP/1.1" 304 29439
+Nov 02 13:19:44 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.1.js HTTP/1.1" 200 79472
+Nov 02 13:20:12 web01 nginx[812]: 10.0.1.26 - - "GET /static/app.6.js HTTP/1.1" 200 11945
+Nov 02 13:21:00 web01 shop-api[1290]: INFO request_id=6c707441 GET /api/products 200 42ms
+Nov 02 13:21:14 web01 nginx[812]: 10.0.1.38 - - "GET /static/app.3.js HTTP/1.1" 200 22854
+Nov 02 13:21:58 web01 nginx[812]: 10.0.1.16 - - "GET /static/app.9.js HTTP/1.1" 200 56509
+Nov 02 13:22:24 web01 shop-api[1290]: INFO request_id=7f6d5dd6 GET /api/products 200 18ms
+Nov 02 13:22:49 web01 CRON[8473]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 13:23:01 web01 nginx[812]: 10.0.1.12 - - "GET /static/app.1.js HTTP/1.1" 200 13729
+Nov 02 13:23:30 web01 nginx[812]: 10.0.1.20 - - "GET /static/app.4.js HTTP/1.1" 200 57093
+Nov 02 13:24:08 web01 shop-api[1290]: INFO request_id=1769cf5b GET /api/products 200 33ms
+Nov 02 13:25:12 web01 nginx[812]: 10.0.1.24 - - "GET /static/app.7.js HTTP/1.1" 200 13534
+Nov 02 13:25:42 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.5.js HTTP/1.1" 200 48053
+Nov 02 13:26:29 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.6.js HTTP/1.1" 200 29475
+Nov 02 13:26:38 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.7.js HTTP/1.1" 301 9357
+Nov 02 13:27:02 web01 nginx[812]: 10.0.1.13 - - "GET /static/app.4.js HTTP/1.1" 200 34789
+Nov 02 13:27:19 web01 nginx[812]: 10.0.1.53 - - "GET /static/app.5.js HTTP/1.1" 200 25730
+Nov 02 13:27:36 web01 shop-api[1290]: INFO request_id=7ee0497e GET /api/products 200 75ms
+Nov 02 13:28:38 web01 nginx[812]: 10.0.1.47 - - "GET /static/app.8.js HTTP/1.1" 301 16935
+Nov 02 13:29:01 web01 nginx[812]: 10.0.1.37 - - "GET /static/app.1.js HTTP/1.1" 200 24527
+Nov 02 13:29:11 web01 shop-api[1290]: INFO request_id=ca588673 GET /api/products 200 12ms
+Nov 02 13:29:30 web01 CRON[3966]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 13:29:41 web01 nginx[812]: 10.0.1.56 - - "GET /static/app.6.js HTTP/1.1" 200 22653
+Nov 02 13:30:32 web01 nginx[812]: 10.0.1.27 - - "GET /static/app.8.js HTTP/1.1" 200 57701
+Nov 02 13:30:59 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.7.js HTTP/1.1" 200 31127
+Nov 02 13:31:23 web01 shop-api[1290]: INFO request_id=42bbdc2f GET /api/products 200 17ms
+Nov 02 13:31:42 web01 CRON[2753]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 13:32:15 web01 nginx[812]: 10.0.1.12 - - "GET /static/app.6.js HTTP/1.1" 301 11337
+Nov 02 13:32:59 web01 sshd[4607]: Accepted publickey for deploy from 10.0.0.5 port 58318 ssh2
+Nov 02 13:34:00 web01 sshd[7276]: Accepted publickey for deploy from 10.0.0.5 port 58541 ssh2
+Nov 02 13:34:30 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.6.js HTTP/1.1" 200 16863
+Nov 02 13:35:22 web01 nginx[812]: 10.0.1.45 - - "GET /static/app.4.js HTTP/1.1" 200 81502
+Nov 02 13:36:02 web01 shop-api[1290]: INFO request_id=20f1a168 GET /api/products 200 67ms
+Nov 02 13:36:09 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.3.js HTTP/1.1" 200 6015
+Nov 02 13:36:51 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.8.js HTTP/1.1" 200 49451
+Nov 02 13:37:56 web01 nginx[812]: 10.0.1.42 - - "GET /static/app.7.js HTTP/1.1" 200 71608
+Nov 02 13:38:38 web01 nginx[812]: 10.0.1.55 - - "GET /static/app.5.js HTTP/1.1" 200 63552
+Nov 02 13:39:24 web01 shop-api[1290]: INFO request_id=3681c45d GET /api/products 200 60ms
+Nov 02 13:40:14 web01 shop-api[1290]: INFO request_id=747bc082 GET /api/products 200 49ms
+Nov 02 13:40:30 web01 shop-api[1290]: INFO request_id=bbbdf843 GET /api/products 200 29ms
+Nov 02 13:41:04 web01 sshd[5540]: Accepted publickey for deploy from 10.0.0.5 port 48382 ssh2
+Nov 02 13:41:55 web01 shop-api[1290]: INFO request_id=45d5bb88 GET /api/products 200 73ms
+Nov 02 13:42:07 web01 nginx[812]: 10.0.1.36 - - "GET /static/app.7.js HTTP/1.1" 200 80036
+Nov 02 13:42:51 web01 CRON[3878]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 13:43:39 web01 nginx[812]: 10.0.1.16 - - "GET /static/app.3.js HTTP/1.1" 200 64218
+Nov 02 13:43:57 web01 nginx[812]: 10.0.1.27 - - "GET /static/app.1.js HTTP/1.1" 200 17488
+Nov 02 13:44:45 web01 CRON[5598]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 13:45:26 web01 nginx[812]: 10.0.1.30 - - "GET /static/app.3.js HTTP/1.1" 200 20982
+Nov 02 13:46:16 web01 nginx[812]: 10.0.1.53 - - "GET /static/app.4.js HTTP/1.1" 301 43750
+Nov 02 13:46:25 web01 CRON[2441]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 13:47:24 web01 nginx[812]: 10.0.1.19 - - "GET /static/app.6.js HTTP/1.1" 304 67046
+Nov 02 13:47:44 web01 nginx[812]: 10.0.1.27 - - "GET /static/app.9.js HTTP/1.1" 200 52398
+Nov 02 13:48:21 web01 sshd[5210]: Accepted publickey for deploy from 10.0.0.5 port 52781 ssh2
+Nov 02 13:48:49 web01 nginx[812]: 10.0.1.10 - - "GET /static/app.6.js HTTP/1.1" 200 15251
+Nov 02 13:49:35 web01 nginx[812]: 10.0.1.53 - - "GET /static/app.4.js HTTP/1.1" 200 27412
+Nov 02 13:49:42 web01 shop-api[1290]: INFO request_id=929d41bb GET /api/products 200 32ms
+Nov 02 13:50:24 web01 nginx[812]: 10.0.1.55 - - "GET /static/app.4.js HTTP/1.1" 301 30884
+Nov 02 13:51:29 web01 shop-api[1290]: INFO request_id=931c0807 GET /api/products 200 44ms
+Nov 02 13:51:49 web01 nginx[812]: 10.0.1.30 - - "GET /static/app.2.js HTTP/1.1" 200 67150
+Nov 02 13:52:52 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.5.js HTTP/1.1" 200 54884
+Nov 02 13:53:43 web01 nginx[812]: 10.0.1.24 - - "GET /static/app.6.js HTTP/1.1" 200 52655
+Nov 02 13:54:18 web01 shop-api[1290]: INFO request_id=6c212283 GET /api/products 200 34ms
+Nov 02 13:55:05 web01 shop-api[1290]: INFO request_id=6090a458 GET /api/products 200 7ms
+Nov 02 13:55:48 web01 nginx[812]: 10.0.1.59 - - "GET /static/app.8.js HTTP/1.1" 200 61615
+Nov 02 13:55:54 web01 nginx[812]: 10.0.1.34 - - "GET /static/app.4.js HTTP/1.1" 200 78815
+Nov 02 13:56:21 web01 shop-api[1290]: INFO request_id=d797f4e2 GET /api/products 200 63ms
+Nov 02 13:57:15 web01 nginx[812]: 10.0.1.16 - - "GET /static/app.8.js HTTP/1.1" 200 12220
+Nov 02 13:57:59 web01 nginx[812]: 10.0.1.23 - - "GET /static/app.1.js HTTP/1.1" 200 9144
+Nov 02 13:58:15 web01 CRON[3505]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 13:59:07 web01 nginx[812]: 10.0.1.36 - - "GET /static/app.8.js HTTP/1.1" 200 38217
+Nov 02 13:59:56 web01 nginx[812]: 10.0.1.55 - - "GET /static/app.2.js HTTP/1.1" 200 67225
+Nov 02 14:01:04 web01 nginx[812]: 10.0.1.28 - - "GET /static/app.9.js HTTP/1.1" 301 27761
+Nov 02 14:01:37 web01 CRON[4930]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 14:02:24 web01 shop-api[1290]: INFO request_id=8f2bc1f8 GET /api/products 200 75ms
+Nov 02 14:03:04 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.6.js HTTP/1.1" 200 15293
+Nov 02 14:03:55 web01 shop-api[1290]: INFO request_id=883111b8 GET /api/products 200 44ms
+Nov 02 14:04:17 web01 nginx[812]: 10.0.1.17 - - "GET /static/app.3.js HTTP/1.1" 200 55010
+Nov 02 14:04:24 web01 sshd[4956]: Accepted publickey for deploy from 10.0.0.5 port 47282 ssh2
+Nov 02 14:05:20 web01 nginx[812]: 10.0.1.52 - - "GET /static/app.9.js HTTP/1.1" 200 58801
+Nov 02 14:06:11 web01 nginx[812]: 10.0.1.24 - - "GET /static/app.8.js HTTP/1.1" 200 21873
+Nov 02 14:07:03 web01 CRON[2477]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 14:07:11 web01 nginx[812]: 10.0.1.30 - - "GET /static/app.7.js HTTP/1.1" 200 88865
+Nov 02 14:07:21 web01 nginx[812]: 10.0.1.40 - - "GET /static/app.4.js HTTP/1.1" 304 71285
+Nov 02 14:07:48 web01 nginx[812]: 10.0.1.21 - - "GET /static/app.3.js HTTP/1.1" 200 34210
+Nov 02 14:08:57 web01 nginx[812]: 10.0.1.49 - - "GET /static/app.3.js HTTP/1.1" 304 86631
+Nov 02 14:10:07 web01 CRON[4379]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 14:10:29 web01 shop-api[1290]: INFO request_id=bb931097 GET /api/products 200 17ms
+Nov 02 14:10:51 web01 nginx[812]: 10.0.1.29 - - "GET /static/app.4.js HTTP/1.1" 200 71889
+Nov 02 14:11:24 web01 shop-api[1290]: INFO request_id=be342ce0 GET /api/products 200 43ms
+Nov 02 14:11:45 web01 shop-api[1290]: INFO request_id=5d301d11 GET /api/products 200 66ms
+Nov 02 14:12:47 web01 nginx[812]: 10.0.1.20 - - "GET /static/app.1.js HTTP/1.1" 301 85866
+Nov 02 14:13:05 web01 nginx[812]: 10.0.1.49 - - "GET /static/app.9.js HTTP/1.1" 200 19646
+Nov 02 14:13:44 web01 CRON[2575]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 14:14:11 web01 CRON[6265]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 14:14:18 web01 nginx[812]: 10.0.1.24 - - "GET /static/app.2.js HTTP/1.1" 200 59796
+Nov 02 14:14:53 web01 CRON[3663]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 14:15:38 web01 CRON[4775]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 14:15:46 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.2.js HTTP/1.1" 200 3244
+Nov 02 14:16:06 web01 nginx[812]: 10.0.1.54 - - "GET /static/app.5.js HTTP/1.1" 200 39714
+Nov 02 14:16:22 web01 CRON[5606]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 14:17:02 web01 shop-api[1290]: INFO request_id=016882c9 GET /api/products 200 10ms
+Nov 02 14:17:43 web01 nginx[812]: 10.0.1.15 - - "GET /static/app.9.js HTTP/1.1" 200 63740
+Nov 02 14:18:06 web01 nginx[812]: 10.0.1.44 - - "GET /static/app.7.js HTTP/1.1" 200 60060
+Nov 02 14:18:36 web01 sshd[3805]: Accepted publickey for deploy from 10.0.0.5 port 49213 ssh2
+Nov 02 14:19:15 web01 shop-api[1290]: INFO request_id=d4cbd76d GET /api/products 200 68ms
+Nov 02 14:19:51 web01 nginx[812]: 10.0.1.29 - - "GET /static/app.1.js HTTP/1.1" 200 29670
+Nov 02 14:20:08 web01 nginx[812]: 10.0.1.33 - - "GET /static/app.9.js HTTP/1.1" 200 45905
+Nov 02 14:21:17 web01 nginx[812]: 10.0.1.49 - - "GET /static/app.6.js HTTP/1.1" 304 52886
+Nov 02 14:21:48 web01 nginx[812]: 10.0.1.41 - - "GET /static/app.7.js HTTP/1.1" 200 20787
+Nov 02 14:22:12 web01 nginx[812]: 10.0.1.21 - - "GET /static/app.9.js HTTP/1.1" 200 27774
+Nov 02 14:22:42 web01 shop-api[1290]: INFO request_id=3fad229d GET /api/products 200 48ms
+Nov 02 14:22:59 web01 nginx[812]: 10.0.1.32 - - "GET /static/app.2.js HTTP/1.1" 200 63529
+Nov 02 14:23:40 web01 nginx[812]: 10.0.1.47 - - "GET /static/app.4.js HTTP/1.1" 301 41681
+Nov 02 14:24:40 web01 CRON[8542]: (root) CMD (/usr/local/bin/backup-check.sh)
+Nov 02 14:25:23 web01 nginx[812]: 10.0.1.18 - - "GET /static/app.9.js HTTP/1.1" 200 79141
+Nov 02 14:25:44 web01 shop-api[1290]: INFO request_id=2b804391 GET /api/products 200 40ms
+Nov 02 14:26:01 web01 shop-api[1290]: INFO request_id=ad9b7d03 GET /api/products 200 58ms
+Nov 02 14:27:05 web01 nginx[812]: 10.0.1.53 - - "GET /static/app.7.js HTTP/1.1" 200 25085
+Nov 02 14:27:22 web01 nginx[812]: 10.0.1.21 - - "GET /static/app.3.js HTTP/1.1" 200 41949
+Nov 02 14:27:55 web01 shop-api[1290]: INFO request_id=6f1b0a58 GET /api/products 200 52ms
+Nov 02 14:28:35 web01 nginx[812]: 10.0.1.21 - - "GET /static/app.4.js HTTP/1.1" 200 21435
+Nov 02 14:29:40 web01 shop-api[1290]: INFO request_id=3170a904 GET /api/products 200 59ms
+Nov 02 14:30:49 web01 nginx[812]: 10.0.1.16 - - "GET /static/app.4.js HTTP/1.1" 200 58536
+Nov 02 14:30:58 web01 CRON[7292]: (root) CMD (/usr/local/bin/backup-check.sh)

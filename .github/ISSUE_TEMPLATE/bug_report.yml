@@ -17,7 +17,7 @@ body:
   id: version
   attributes:
     label: squeeze version / squeeze 버전
-    placeholder: squeeze 0.1.0
+    placeholder: squeeze 0.2.0
     description: '`squeeze version`'
   validations:
     required: true
@@ -51,7 +51,14 @@ body:
     - squeeze init / uninstall
     - squeeze clip
     - squeeze report
-    - Installer (install.sh / install.ps1)
+    - "v0.2: Repeated-read block / 중복 읽기 차단"
+    - "v0.2: Budget pause / 예산 일시 정지"
+    - "v0.2: Handoff / 이어가기"
+    - "v0.2: Fixed cost, MCP on/off / 고정비, MCP 켜기·끄기"
+    - "v0.2: squeeze-Auditor window / squeeze-Auditor 창"
+    - "v0.2: Claude desktop app (squeeze mcp) / 데스크톱 앱"
+    - squeeze setup
+    - Installer (Setup .exe / .pkg / .deb / install.sh / install.ps1)
     - Other / 기타
   validations:
     required: true

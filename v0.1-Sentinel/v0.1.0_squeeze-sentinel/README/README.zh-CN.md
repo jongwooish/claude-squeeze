@@ -10,7 +10,7 @@ Sentinel 是守在 Claude Code 和 shell 之间的哨兵。当 Claude 准备运�
 
 单个可执行文件，Rust 编写，**零依赖**，支持 macOS、Linux 和 Windows。
 
-**需要什么：** 无。这就是基础的 `squeeze` 程序。后续版本都建立在它之上：v0.3 Conduit 在同一个程序里新增命令（更新即可获得），v0.2 Interceptor 是一个独立的浏览器扩展，有没有它都能用。参见[各版本之间的关系](../../../README/README.zh-CN.md#各版本之间的关系)。
+**需要什么：** 无。这就是基础的 `squeeze` 程序。之后的版本是同一个程序加上更多功能：[v0.2 squeeze-Auditor](../../../v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.zh-CN.md) 增加了四种会话拦截，以及面向 Claude Code 和 Claude 桌面应用的可安装控制面板；v0.3（计划中）覆盖浏览器和手机应用。参见[各版本之间的关系](../../../README/README.zh-CN.md#各版本之间的关系)。
 
 ## 效果
 

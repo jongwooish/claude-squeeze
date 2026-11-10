@@ -23,6 +23,7 @@ body:
     - A noisy command was NOT redirected / 시끄러운 명령이 안 잡힘
     - A command was redirected but should not be / 잡히면 안 되는 명령이 잡힘
     - Read guard problem / Read 가드 문제
+    - "A repeated-read block was wrong / 중복 읽기 차단이 잘못됨"
   validations:
     required: true
 - type: input

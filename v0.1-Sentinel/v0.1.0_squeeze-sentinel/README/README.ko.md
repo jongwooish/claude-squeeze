@@ -10,7 +10,7 @@ Sentinel은 Claude Code와 셸 사이를 지키는 보초입니다. Claude가 �
 
 단일 실행 파일, Rust로 작성, **의존성 0개**. macOS, Linux, Windows에서 동작합니다.
 
-**필요한 것:** 없음. 이것이 기본 `squeeze` 프로그램입니다. 이후 버전은 이 위에 쌓입니다: v0.3 Conduit은 같은 프로그램에 명령을 추가하고(업데이트하면 생김), v0.2 Interceptor는 이 프로그램이 있든 없든 동작하는 별도의 브라우저 확장입니다. [버전끼리의 관계](../../../README/README.ko.md#버전끼리의-관계) 참고.
+**필요한 것:** 없음. 이것이 기본 `squeeze` 프로그램입니다. 이후 버전은 같은 프로그램에 기능이 더해집니다: [v0.2 squeeze-Auditor](../../../v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.ko.md)는 세션 차단 4가지와 Claude Code·Claude 데스크톱 앱용 설치형 제어판을 더하고, v0.3(계획)은 브라우저와 모바일 앱을 다룹니다. [버전끼리의 관계](../../../README/README.ko.md#버전끼리의-관계) 참고.
 
 ## 효과
 

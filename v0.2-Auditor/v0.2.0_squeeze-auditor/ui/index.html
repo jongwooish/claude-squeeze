@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>squeeze-Auditor</title>
+<style>
+:root {
+  --paper: #EEF3EC; --sheet: #F7FAF5; --rule: #C9D8C5; --rule-strong: #9FB69A;
+  --ink: #1D2B3A; --ink-soft: #5A6B7A; --stamp: #B8322C; --action: #2F5D8A;
+  --action-ink: #FFFFFF; --ok: #2E6B3F; --warn-bg: #FBEFD9; --warn-ink: #7A4B05;
+  --serif: "Charter", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #141A17; --sheet: #1A221E; --rule: #2B3631; --rule-strong: #43544B;
+    --ink: #E3EBE4; --ink-soft: #9AAAA0; --stamp: #E0675F; --action: #7FB0DD;
+    --action-ink: #0F1A24; --ok: #7CC492; --warn-bg: #3A2E16; --warn-ink: #F2CF8B;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--paper); color: var(--ink); }
+body { font: 15px/1.5 var(--sans); font-variant-numeric: tabular-nums; }
+button, input, select, textarea { font: inherit; color: inherit; }
+a { color: var(--action); }
+:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; }
+
+.app { display: grid; grid-template-columns: 220px 1fr; min-height: 100vh; }
+nav.rail { border-right: 1px solid var(--rule); padding: 20px 14px; display: flex; flex-direction: column; gap: 2px; background: var(--sheet); }
+.brand { font: 600 19px/1.2 var(--serif); padding: 0 10px 18px; }
+.brand small { display: block; font: 12px/1.4 var(--sans); color: var(--ink-soft); margin-top: 4px; }
+.rail button { text-align: left; background: none; border: 0; padding: 9px 10px; border-radius: 6px; cursor: pointer; color: var(--ink-soft); }
+.rail button[aria-selected="true"] { background: var(--paper); color: var(--ink); box-shadow: inset 3px 0 0 var(--action); font-weight: 600; }
+.rail button:hover { color: var(--ink); }
+.rail .spacer { flex: 1; }
+.rail .foot { font-size: 12px; color: var(--ink-soft); padding: 10px; display: flex; flex-direction: column; gap: 6px; }
+.rail .foot select { padding: 4px 6px; border: 1px solid var(--rule); border-radius: 5px; background: var(--paper); }
+
+main { padding: 28px clamp(16px, 4vw, 48px) 60px; max-width: 1100px; width: 100%; }
+h1 { font: 600 28px/1.15 var(--serif); margin: 0 0 6px; letter-spacing: -0.01em; }
+h2 { font: 600 19px/1.3 var(--serif); margin: 34px 0 10px; }
+.lead { color: var(--ink-soft); margin: 0 0 22px; max-width: 70ch; }
+.muted { color: var(--ink-soft); }
+.small { font-size: 13px; }
+
+/* the audit statement */
+.statement { border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule-strong); margin: 8px 0 6px; }
+.statement .line { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 16px; padding: 14px 2px; border-bottom: 1px solid var(--rule); }
+.statement .line:last-child { border-bottom: 0; }
+.statement .what { max-width: 60ch; }
+.statement .what b { display: block; font-weight: 600; }
+.statement .what span { color: var(--ink-soft); font-size: 13px; }
+.statement .fig { font: 600 34px/1 var(--serif); white-space: nowrap; }
+.statement .fig small { font: 14px var(--sans); color: var(--ink-soft); margin-left: 6px; }
+.statement .kept .fig { color: var(--stamp); }
+.stamp { display: inline-block; border: 2px solid var(--stamp); color: var(--stamp); border-radius: 4px; padding: 0 7px; font: 700 12px/1.6 var(--sans); transform: rotate(-3deg); margin-left: 10px; vertical-align: middle; }
+
+.range { display: inline-flex; border: 1px solid var(--rule-strong); border-radius: 6px; overflow: hidden; }
+.range button { background: none; border: 0; padding: 5px 12px; cursor: pointer; color: var(--ink-soft); }
+.range button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+
+.chart { width: 100%; height: auto; aspect-ratio: 900 / 220; min-height: 150px; display: block; }
+.chart .bar { fill: var(--action); opacity: .75; }
+.chart .bar:hover { opacity: 1; }
+.chart .saved { fill: var(--stamp); }
+.chart .axis { stroke: var(--rule-strong); }
+.chart text { fill: var(--ink-soft); font: 11px var(--sans); }
+.legend { display: flex; gap: 18px; font-size: 13px; color: var(--ink-soft); margin: 4px 0 0; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-weight: 600; font-size: 13px; color: var(--ink-soft); border-bottom: 1px solid var(--rule-strong); }
+td.num, th.num { text-align: right; white-space: nowrap; }
+tr.off td { color: var(--ink-soft); }
+td.kind { white-space: nowrap; }
+.path { word-break: break-all; }
+.meter { height: 6px; background: var(--rule); border-radius: 3px; overflow: hidden; min-width: 90px; }
+.meter b { display: block; height: 100%; background: var(--action); }
+.meter b.over { background: var(--stamp); }
+
+.btn { border: 1px solid var(--rule-strong); background: var(--sheet); padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+.btn:hover { border-color: var(--ink-soft); }
+.btn.primary { background: var(--action); border-color: var(--action); color: var(--action-ink); }
+.btn.danger { color: var(--stamp); }
+.btn[disabled] { opacity: .55; cursor: default; }
+
+.notice { background: var(--warn-bg); color: var(--warn-ink); border-radius: 8px; padding: 14px 16px; margin: 0 0 20px; }
+.notice .actions { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+.ok { color: var(--ok); font-weight: 600; }
+.badge-off { color: var(--ink-soft); }
+.tips { padding-left: 18px; margin: 6px 0; }
+.tips li { margin: 6px 0; max-width: 80ch; }
+
+/* profiles */
+.profiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0; border-top: 2px solid var(--ink); }
+.profile { padding: 16px 14px 18px; border-bottom: 1px solid var(--rule); border-right: 1px solid var(--rule); }
+.profile:last-child { border-right: 0; }
+.profile h3 { font: 600 18px/1.2 var(--serif); margin: 0 0 6px; }
+.profile p { margin: 0 0 12px; color: var(--ink-soft); font-size: 14px; min-height: 3em; }
+.profile dl { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; font-size: 13px; margin: 0 0 14px; }
+.profile dt { color: var(--ink-soft); }
+.profile dd { margin: 0; text-align: right; }
+.profile.current { background: var(--sheet); box-shadow: inset 0 3px 0 var(--action); }
+
+/* settings form */
+fieldset { border: 0; border-top: 1px solid var(--rule-strong); padding: 14px 0 6px; margin: 0 0 10px; }
+legend { font: 600 17px/1.3 var(--serif); padding: 0 8px 0 0; }
+.field { display: grid; grid-template-columns: minmax(180px, 280px) 1fr; gap: 6px 18px; align-items: center; padding: 8px 0; }
+.field label { font-weight: 500; }
+.field .help { grid-column: 2; color: var(--ink-soft); font-size: 13px; margin-top: -2px; }
+.field input[type=number] { width: 140px; padding: 6px 8px; border: 1px solid var(--rule-strong); border-radius: 6px; background: var(--sheet); }
+.field select, textarea { padding: 6px 8px; border: 1px solid var(--rule-strong); border-radius: 6px; background: var(--sheet); }
+textarea { width: 100%; min-height: 72px; resize: vertical; }
+.switch { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; }
+.switch input { width: 18px; height: 18px; accent-color: var(--action); }
+.savebar { position: sticky; bottom: 0; background: var(--paper); border-top: 1px solid var(--rule-strong); padding: 12px 0; display: flex; gap: 12px; align-items: center; }
+
+pre.note { white-space: pre-wrap; background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; padding: 16px; font: 13px/1.55 ui-monospace, "Cascadia Mono", Menlo, Consolas, monospace; max-height: 60vh; overflow: auto; }
+.cols { display: grid; grid-template-columns: minmax(240px, 1fr) 2fr; gap: 24px; }
+.list button { display: block; width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--rule); padding: 10px 4px; cursor: pointer; }
+.list button[aria-current="true"] { background: var(--sheet); box-shadow: inset 3px 0 0 var(--action); }
+.conn { border-top: 2px solid var(--ink); }
+.conn section { padding: 18px 2px; border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: 1fr auto; gap: 8px 20px; }
+.conn h3 { font: 600 18px var(--serif); margin: 0; }
+.conn p { margin: 4px 0 0; color: var(--ink-soft); max-width: 70ch; }
+.conn .full { grid-column: 1 / -1; }
+
+.toast { position: fixed; bottom: 18px; right: 18px; background: var(--ink); color: var(--paper); padding: 10px 14px; border-radius: 8px; max-width: 420px; opacity: 0; transform: translateY(8px); transition: opacity .18s, transform .18s; pointer-events: none; }
+.toast.show { opacity: 1; transform: none; }
+.toast.err { background: var(--stamp); color: #fff; }
+.empty { padding: 26px 4px; color: var(--ink-soft); border-bottom: 1px solid var(--rule); }
+
+@media (max-width: 760px) {
+  .app { grid-template-columns: 1fr; }
+  nav.rail { flex-direction: row; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--rule); padding: 10px; }
+  .brand, .rail .spacer, .rail .foot { display: none; }
+  .rail button { white-space: nowrap; }
+  .field { grid-template-columns: 1fr; }
+  .field .help { grid-column: 1; }
+  .cols { grid-template-columns: 1fr; }
+  .statement .fig { font-size: 26px; }
+}
+@media (prefers-reduced-motion: reduce) { .toast { transition: none; } }
+</style>
+</head>
+<body>
+<div class="app">
+  <nav class="rail" role="tablist" aria-label="Sections">
+    <div class="brand">squeeze-Auditor<small>claude-squeeze v__SQUEEZE_VERSION__</small></div>
+    <button role="tab" data-tab="dashboard" data-i18n="tab.dashboard"></button>
+    <button role="tab" data-tab="profiles" data-i18n="tab.profiles"></button>
+    <button role="tab" data-tab="settings" data-i18n="tab.settings"></button>
+    <button role="tab" data-tab="fixed" data-i18n="tab.fixed"></button>
+    <button role="tab" data-tab="handoffs" data-i18n="tab.handoffs"></button>
+    <button role="tab" data-tab="connections" data-i18n="tab.connections"></button>
+    <div class="spacer"></div>
+    <div class="foot">
+      <label><span data-i18n="lang"></span>
+        <select id="lang"><option value="en">English</option><option value="ko">한국어</option></select>
+      </label>
+      <span data-i18n="local"></span>
+    </div>
+  </nav>
+  <main id="main" tabindex="-1"></main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+"use strict";
+const TOKEN = "__SQUEEZE_TOKEN__";
+const I18N = {
+  en: {
+    "tab.dashboard": "Dashboard", "tab.profiles": "Saving modes", "tab.settings": "Settings",
+    "tab.fixed": "Fixed cost", "tab.handoffs": "Handoffs", "tab.connections": "Connections",
+    lang: "Language", local: "Runs only on this computer.",
+    "dash.title": "Where your Claude tokens went",
+    "dash.lead": "Real usage from Claude Code's own session logs, and what squeeze kept out of the context.",
+    "dash.used": "Claude Code used", "dash.used.sub": "Input, cache and output tokens across all projects.",
+    "dash.kept": "squeeze kept out", "dash.kept.sub": "Estimated (bytes ÷ 4). Blocked output also stays out of every later message.",
+    "dash.stamp": "audited", "range.1": "Today", "range.7": "7 days", "range.30": "30 days",
+    "dash.daily": "Tokens per day", "leg.used": "Used", "leg.saved": "Kept out by squeeze",
+    "dash.window": "Current 5-hour window", "dash.window.none": "No active window right now.",
+    "dash.window.line": "{t} tokens in {n} messages since {s}. Resets around {e}. Last hour: {r} tokens per minute.",
+    "dash.blocks": "What squeeze blocked", "dash.sessions": "Recent sessions", "dash.projects": "Projects",
+    "dash.top": "Biggest single savings",
+    "col.kind": "Type", "col.events": "Times", "col.tokens": "Tokens", "col.project": "Project", "col.sessions": "Sessions",
+    "col.last": "Last active", "col.context": "Size now", "col.what": "What", "col.when": "When",
+    "kind.output": "Long command output", "kind.big-file": "Whole read of a big file", "kind.duplicate": "Repeated read of an unchanged file",
+    "kind.budget": "Session over budget (paused)", "kind.handoff": "Handoff to a fresh session", "kind.fixed-cost": "Idle MCP server turned off",
+    "kind.desktop": "Desktop app file read, squeezed", "kind.other": "Other",
+    "empty.transcripts": "No Claude Code sessions found yet. Use Claude Code once, then come back.",
+    "empty.saved": "Nothing blocked yet. Once squeeze is connected, its work shows up here.",
+    "welcome.title": "squeeze is not connected yet",
+    "welcome.body": "Connect it to Claude Code (all projects) and, if you use it, the Claude desktop app. You can undo this any time in Connections.",
+    "welcome.cc": "Connect Claude Code", "welcome.desk": "Connect desktop app",
+    "prof.title": "Saving modes", "prof.lead": "Pick how hard squeeze works. A mode sets all the numbers at once; change single values in Settings.",
+    "prof.strong": "Strong", "prof.strong.d": "Keeps the least. For long sessions and tight usage limits.",
+    "prof.balanced": "Balanced", "prof.balanced.d": "The default. Saves a lot and rarely gets in the way.",
+    "prof.light": "Light", "prof.light.d": "Steps in only for very long output and very large sessions.",
+    "prof.custom": "Custom", "prof.custom.d": "Your own values from Settings.",
+    "prof.use": "Use this mode", "prof.current": "In use",
+    "p.out": "Output kept from", "p.lines": "lines", "p.file": "Big file from", "p.budget": "Budget pause at", "p.handoff": "Handoff at",
+    "set.title": "Settings", "set.lead": "Applies to every project. A project can override values in its own .squeeze/config.json.",
+    "set.output": "Long command output", "set.max_lines": "Leave output alone up to", "set.max_lines.h": "Lines. Shorter output is never changed.",
+    "set.max_bytes": "…and up to", "set.max_bytes.h": "Bytes.", "set.head": "Lines kept from the start", "set.tail": "Lines kept from the end",
+    "set.context": "Lines around each error", "set.guard_bash": "Redirect noisy commands", "set.guard_bash.h": "Installs, builds, tests and logs run through squeeze.",
+    "set.quiet": "Never touch these commands", "set.quiet.h": "One command prefix per line, e.g. make docs.",
+    "set.noisy": "Also treat as noisy", "set.noisy.h": "One command prefix per line, e.g. ./deploy.sh.",
+    "set.files": "Reading files", "set.guard_read": "Outline big files instead of reading them whole", "set.read_max": "Big file means more than", "set.read_max.h": "Lines.",
+    "set.dup": "Block repeated reads of unchanged files", "set.dup.h": "Allowed again when the file changes or the conversation is compacted.",
+    "set.session": "Long sessions", "set.budget_on": "Pause before sending when a session is too big", "set.budget": "Budget", "set.budget.h": "Tokens. Sending the same message again goes through.",
+    "set.handoff_on": "Hand off long sessions", "set.handoff_mode": "How", "set.mode.note": "Write a handoff note, load it after /clear", "set.mode.remind": "Only remind me to /compact",
+    "set.handoff": "Hand off at", "set.handoff.h": "Tokens of context.", "set.age": "Load notes newer than", "set.age.h": "Hours.",
+    "set.fixed": "Fixed cost", "set.prune": "Turn off MCP servers a project has not used", "set.prune.h": "Uses Claude Code's own on/off switch. Takes effect from the next session.",
+    "set.days": "Unused for", "set.days.h": "Days.",
+    "set.save": "Save settings", "set.saved": "Settings saved. New Claude Code messages use them right away.", "set.unsaved": "Unsaved changes",
+    "fix.title": "Fixed cost per message", "fix.lead": "Sent with every message before you type a word. Smaller is cheaper, every time.",
+    "fix.target": "Show for", "fix.desktop": "Claude desktop app", "fix.total": "Sent with every message", "fix.tips": "How to make it smaller",
+    "fix.measure": "Measure", "fix.measuring": "Measuring…", "fix.on": "Turn on", "fix.off": "Turn off",
+    "fix.restart.cc": "Done. Applies from the next Claude Code session.", "fix.restart.desk": "Done. Restart the Claude desktop app to apply.",
+    "fix.note.measure": "Measuring starts the server's own command for a few seconds to ask for its tool list.",
+    "k.memory": "Memory file", "k.import": "Imported file", "k.skill": "Skill (description)", "k.agent": "Agent (description)", "k.mcp": "MCP server",
+    "ho.title": "Handoffs", "ho.lead": "Notes written when a session got long. After /clear, Claude Code starts from the newest note instead of the whole conversation.",
+    "ho.empty": "No handoff notes yet. They appear when a session passes the handoff size, or when you ask Claude in the desktop app to save a handoff.",
+    "ho.pick": "Pick a note to read it.",
+    "con.title": "Connections", "con.lead": "Where squeeze works. Every change backs up the original file first and can be undone here.",
+    "con.cc": "Claude Code", "con.cc.d": "Hooks for all projects in {p}. Blocks long output, big and repeated reads, oversized sessions, and hands off long ones.",
+    "con.desk": "Claude desktop app", "con.desk.d": "Adds the squeeze tools to {p}: Claude can read your logs already squeezed and save or load handoffs. Restart the app after changing this.",
+    "con.desk.na": "The Claude desktop app is not available on this system (Windows and macOS only).",
+    "con.connected": "Connected", "con.partial": "Connected (older hooks: reconnect to add the v0.2 blockers)", "con.not": "Not connected",
+    "con.connect": "Connect", "con.disconnect": "Disconnect", "con.reconnect": "Reconnect",
+    "con.dirs": "Folders the desktop app may read", "con.dirs.h": "One folder per line. Nothing outside these folders can be read.",
+    "con.dirs.save": "Save folders", "con.dirs.saved": "Folders saved.",
+    "con.prog": "Program", "err": "Something went wrong: ",
+    "ago.m": "{n} min ago", "ago.h": "{n} h ago", "ago.d": "{n} d ago", "ago.now": "just now",
+  },
+  ko: {
+    "tab.dashboard": "대시보드", "tab.profiles": "절약 모드", "tab.settings": "사용자 설정",
+    "tab.fixed": "고정비 진단", "tab.handoffs": "이어가기", "tab.connections": "연결된 환경",
+    lang: "언어", local: "이 컴퓨터에서만 동작해요.",
+    "dash.title": "Claude 토큰이 어디에 쓰였나",
+    "dash.lead": "Claude Code가 남긴 실제 사용 기록과, squeeze가 컨텍스트에서 막아낸 양이에요.",
+    "dash.used": "Claude Code 사용량", "dash.used.sub": "모든 프로젝트의 입력·캐시·출력 토큰.",
+    "dash.kept": "squeeze가 막아낸 양", "dash.kept.sub": "추정치(바이트 ÷ 4). 막아낸 출력은 이후 모든 메시지에서도 빠져요.",
+    "dash.stamp": "감사 완료", "range.1": "오늘", "range.7": "7일", "range.30": "30일",
+    "dash.daily": "날짜별 토큰", "leg.used": "사용", "leg.saved": "squeeze가 막음",
+    "dash.window": "현재 5시간 사용 구간", "dash.window.none": "지금은 진행 중인 구간이 없어요.",
+    "dash.window.line": "{s}부터 메시지 {n}개, {t} 토큰. {e}쯤 초기화. 최근 1시간: 분당 {r} 토큰.",
+    "dash.blocks": "squeeze가 막은 것", "dash.sessions": "최근 세션", "dash.projects": "프로젝트",
+    "dash.top": "가장 많이 아낀 것",
+    "col.kind": "종류", "col.events": "횟수", "col.tokens": "토큰", "col.project": "프로젝트", "col.sessions": "세션",
+    "col.last": "마지막 사용", "col.context": "현재 크기", "col.what": "내용", "col.when": "시각",
+    "kind.output": "긴 명령 출력", "kind.big-file": "큰 파일 통째 읽기", "kind.duplicate": "안 바뀐 파일 다시 읽기",
+    "kind.budget": "예산 초과 세션 (일시 정지)", "kind.handoff": "새 세션으로 이어가기", "kind.fixed-cost": "안 쓰는 MCP 서버 끄기",
+    "kind.desktop": "데스크톱 앱 파일 읽기 (압축)", "kind.other": "기타",
+    "empty.transcripts": "아직 Claude Code 세션 기록이 없어요. Claude Code를 한 번 쓰고 다시 열어보세요.",
+    "empty.saved": "아직 막은 게 없어요. squeeze를 연결하면 여기에 쌓여요.",
+    "welcome.title": "squeeze가 아직 연결되지 않았어요",
+    "welcome.body": "Claude Code(모든 프로젝트)와, 쓰고 있다면 Claude 데스크톱 앱에 연결하세요. 연결된 환경 탭에서 언제든 되돌릴 수 있어요.",
+    "welcome.cc": "Claude Code 연결", "welcome.desk": "데스크톱 앱 연결",
+    "prof.title": "절약 모드", "prof.lead": "squeeze가 얼마나 세게 줄일지 고르세요. 모드는 숫자를 한 번에 바꾸고, 하나씩 바꾸려면 사용자 설정에서 하면 돼요.",
+    "prof.strong": "강하게", "prof.strong.d": "가장 적게 남겨요. 긴 세션, 빡빡한 사용량 한도에.",
+    "prof.balanced": "균형", "prof.balanced.d": "기본값. 많이 아끼면서 방해는 거의 안 해요.",
+    "prof.light": "가볍게", "prof.light.d": "아주 긴 출력과 아주 큰 세션에서만 나서요.",
+    "prof.custom": "직접 설정", "prof.custom.d": "사용자 설정 탭에서 정한 값.",
+    "prof.use": "이 모드 사용", "prof.current": "사용 중",
+    "p.out": "출력 압축 시작", "p.lines": "줄", "p.file": "큰 파일 기준", "p.budget": "예산 일시 정지", "p.handoff": "이어가기 시작",
+    "set.title": "사용자 설정", "set.lead": "모든 프로젝트에 적용돼요. 프로젝트마다 .squeeze/config.json으로 덮어쓸 수 있어요.",
+    "set.output": "긴 명령 출력", "set.max_lines": "이 줄 수까지는 그대로", "set.max_lines.h": "줄. 이보다 짧은 출력은 절대 안 바꿔요.",
+    "set.max_bytes": "…그리고 이 크기까지", "set.max_bytes.h": "바이트.", "set.head": "처음에서 남길 줄", "set.tail": "끝에서 남길 줄",
+    "set.context": "에러 앞뒤로 남길 줄", "set.guard_bash": "출력 많은 명령 우회", "set.guard_bash.h": "설치·빌드·테스트·로그 명령을 squeeze로 실행해요.",
+    "set.quiet": "절대 건드리지 않을 명령", "set.quiet.h": "한 줄에 명령 앞부분 하나. 예: make docs",
+    "set.noisy": "출력 많은 명령으로 추가", "set.noisy.h": "한 줄에 명령 앞부분 하나. 예: ./deploy.sh",
+    "set.files": "파일 읽기", "set.guard_read": "큰 파일은 통째로 읽지 말고 목차로", "set.read_max": "큰 파일 기준", "set.read_max.h": "줄.",
+    "set.dup": "안 바뀐 파일 다시 읽기 차단", "set.dup.h": "파일이 바뀌거나 대화가 압축되면 다시 읽을 수 있어요.",
+    "set.session": "긴 세션", "set.budget_on": "세션이 너무 크면 보내기 전에 일시 정지", "set.budget": "예산", "set.budget.h": "토큰. 같은 메시지를 한 번 더 보내면 그대로 보내져요.",
+    "set.handoff_on": "긴 세션 이어가기", "set.handoff_mode": "방식", "set.mode.note": "이어가기 메모를 쓰고, /clear 후 불러오기", "set.mode.remind": "/compact 하라고 알려주기만",
+    "set.handoff": "이어가기 시작 크기", "set.handoff.h": "컨텍스트 토큰.", "set.age": "이 시간 안의 메모만 불러오기", "set.age.h": "시간.",
+    "set.fixed": "고정비", "set.prune": "프로젝트에서 안 쓰는 MCP 서버 끄기", "set.prune.h": "Claude Code 자체의 켜기/끄기 스위치를 써요. 다음 세션부터 적용돼요.",
+    "set.days": "안 쓴 기간", "set.days.h": "일.",
+    "set.save": "설정 저장", "set.saved": "저장했어요. 다음 Claude Code 메시지부터 바로 적용돼요.", "set.unsaved": "저장 안 된 변경 있음",
+    "fix.title": "메시지당 고정비", "fix.lead": "글자를 치기도 전에 모든 메시지에 함께 보내지는 것들이에요. 줄일수록 매번 싸져요.",
+    "fix.target": "대상", "fix.desktop": "Claude 데스크톱 앱", "fix.total": "모든 메시지에 함께 보내짐", "fix.tips": "줄이는 방법",
+    "fix.measure": "측정", "fix.measuring": "측정 중…", "fix.on": "켜기", "fix.off": "끄기",
+    "fix.restart.cc": "완료. 다음 Claude Code 세션부터 적용돼요.", "fix.restart.desk": "완료. Claude 데스크톱 앱을 재시작하면 적용돼요.",
+    "fix.note.measure": "측정하면 그 서버의 명령을 몇 초 동안 실행해서 도구 목록을 물어봐요.",
+    "k.memory": "메모리 파일", "k.import": "불러온 파일", "k.skill": "스킬 (설명)", "k.agent": "에이전트 (설명)", "k.mcp": "MCP 서버",
+    "ho.title": "이어가기", "ho.lead": "세션이 길어졌을 때 쓴 메모예요. /clear 하면 Claude Code가 대화 전체 대신 가장 최근 메모로 시작해요.",
+    "ho.empty": "아직 메모가 없어요. 세션이 이어가기 크기를 넘거나, 데스크톱 앱에서 Claude에게 이어가기 저장을 부탁하면 생겨요.",
+    "ho.pick": "읽을 메모를 고르세요.",
+    "con.title": "연결된 환경", "con.lead": "squeeze가 동작하는 곳이에요. 바꿀 때마다 원래 파일을 먼저 백업하고, 여기서 되돌릴 수 있어요.",
+    "con.cc": "Claude Code", "con.cc.d": "{p}에 모든 프로젝트용 훅을 넣어요. 긴 출력, 큰 파일·중복 읽기, 너무 큰 세션을 막고 긴 세션을 이어가게 해요.",
+    "con.desk": "Claude 데스크톱 앱", "con.desk.d": "{p}에 squeeze 도구를 추가해요. Claude가 로그를 줄인 상태로 읽고, 이어가기를 저장·불러올 수 있어요. 바꾼 뒤엔 앱을 재시작하세요.",
+    "con.desk.na": "이 시스템에는 Claude 데스크톱 앱이 없어요 (Windows, macOS만).",
+    "con.connected": "연결됨", "con.partial": "연결됨 (이전 버전 훅: 다시 연결하면 v0.2 차단 기능이 추가돼요)", "con.not": "연결 안 됨",
+    "con.connect": "연결", "con.disconnect": "연결 해제", "con.reconnect": "다시 연결",
+    "con.dirs": "데스크톱 앱이 읽을 수 있는 폴더", "con.dirs.h": "한 줄에 폴더 하나. 이 폴더 밖은 읽을 수 없어요.",
+    "con.dirs.save": "폴더 저장", "con.dirs.saved": "폴더를 저장했어요.",
+    "con.prog": "프로그램", "err": "문제가 생겼어요: ",
+    "ago.m": "{n}분 전", "ago.h": "{n}시간 전", "ago.d": "{n}일 전", "ago.now": "방금",
+  },
+};
+let lang = "en";
+try { lang = localStorage.getItem("squeeze-lang") || (navigator.language || "").slice(0, 2); } catch (e) { lang = (navigator.language || "").slice(0, 2); }
+if (!I18N[lang]) lang = "en";
+const t = (k, vars) => { let s = (I18N[lang][k] ?? I18N.en[k] ?? k); for (const [a, b] of Object.entries(vars || {})) s = s.replaceAll("{" + a + "}", b); return s; };
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const fmt = (n) => Number(n || 0).toLocaleString(lang === "ko" ? "ko-KR" : "en-US");
+const short = (n) => { n = Number(n || 0); if (n >= 1e6) return (n / 1e6).toFixed(n >= 1e7 ? 0 : 1) + "M"; if (n >= 1e3) return (n / 1e3).toFixed(n >= 1e4 ? 0 : 1) + "K"; return String(n); };
+const ago = (ts) => { const s = Date.now() / 1000 - ts; if (s < 90) return t("ago.now"); if (s < 3600) return t("ago.m", { n: Math.round(s / 60) }); if (s < 86400) return t("ago.h", { n: Math.round(s / 3600) }); return t("ago.d", { n: Math.round(s / 86400) }); };
+const clock = (ts) => new Date(ts * 1000).toLocaleTimeString(lang === "ko" ? "ko-KR" : [], { hour: "2-digit", minute: "2-digit" });
+
+async function api(path, body) {
+  const opts = { headers: { "X-Squeeze-Token": TOKEN } };
+  if (body !== undefined) { opts.method = "POST"; opts.headers["Content-Type"] = "application/json"; opts.body = JSON.stringify(body); }
+  const r = await fetch(path, opts);
+  const j = await r.json().catch(() => ({ error: "bad response" }));
+  if (!r.ok || (j && j.error)) throw new Error((j && j.error) || r.statusText);
+  return j;
+}
+function toast(msg, err) {
+  const el = document.getElementById("toast");
+  el.textContent = msg; el.className = "toast show" + (err ? " err" : "");
+  clearTimeout(toast.h); toast.h = setTimeout(() => { el.className = "toast"; }, err ? 6000 : 3200);
+}
+const fail = (e) => toast(t("err") + e.message, true);
+
+const main = document.getElementById("main");
+let state = { tab: "dashboard", days: 7, root: "", note: "" };
+try { const s = JSON.parse(localStorage.getItem("squeeze-ui") || "{}"); Object.assign(state, s); } catch (e) {}
+function remember() { try { localStorage.setItem("squeeze-ui", JSON.stringify({ tab: state.tab, days: state.days, root: state.root })); } catch (e) {} }
+
+function applyI18n() {
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = t(el.dataset.i18n); });
+  document.getElementById("lang").value = lang;
+}
+document.getElementById("lang").addEventListener("change", (e) => {
+  lang = e.target.value; try { localStorage.setItem("squeeze-lang", lang); } catch (x) {}
+  applyI18n(); show(state.tab);
+});
+document.querySelectorAll(".rail button[data-tab]").forEach((b) => b.addEventListener("click", () => show(b.dataset.tab)));
+
+function show(tab) {
+  if (dirty && state.tab === "settings" && tab !== "settings" && !confirmLeave()) return;
+  state.tab = tab; remember();
+  document.querySelectorAll(".rail button[data-tab]").forEach((b) => b.setAttribute("aria-selected", b.dataset.tab === tab ? "true" : "false"));
+  main.innerHTML = "";
+  ({ dashboard, profiles, settings, fixed, handoffs, connections }[tab] || dashboard)().catch(fail);
+}
+let dirty = false;
+function confirmLeave() { dirty = false; return true; }
+
+/* ---------- dashboard ---------- */
+function dayKey(ts) { const d = new Date(ts * 1000); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+function chart(o, days) {
+  const now = Date.now() / 1000, buckets = [];
+  for (let i = days - 1; i >= 0; i--) buckets.push({ key: dayKey(now - i * 86400), used: 0, saved: 0 });
+  const idx = Object.fromEntries(buckets.map((b, i) => [b.key, i]));
+  for (const h of o.hourly) { const i = idx[dayKey(h.t)]; if (i !== undefined) buckets[i].used += h.total; }
+  for (const h of o.saved_hourly) { const i = idx[dayKey(h.t)]; if (i !== undefined) buckets[i].saved += h.saved; }
+  if (days === 1) { // hourly for today
+    buckets.length = 0;
+    const start = new Date(); start.setHours(0, 0, 0, 0); const s0 = start.getTime() / 1000;
+    for (let i = 0; i < 24; i++) buckets.push({ key: String(i).padStart(2, "0"), used: 0, saved: 0 });
+    for (const h of o.hourly) if (h.t >= s0) buckets[new Date(h.t * 1000).getHours()].used += h.total;
+    for (const h of o.saved_hourly) if (h.t >= s0) buckets[new Date(h.t * 1000).getHours()].saved += h.saved;
+  }
+  const W = 900, H = 220, P = 34, n = buckets.length, bw = (W - P - 6) / n;
+  const max = Math.max(1, ...buckets.map((b) => b.used + b.saved));
+  let s = `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(t("dash.daily"))}">`;
+  for (const f of [0, .5, 1]) { const y = H - 22 - f * (H - 40); s += `<line class="axis" x1="${P}" x2="${W}" y1="${y}" y2="${y}" stroke-dasharray="${f ? "2 4" : ""}"/><text x="0" y="${y + 4}">${short(max * f)}</text>`; }
+  buckets.forEach((b, i) => {
+    const x = P + 3 + i * bw, uh = (b.used / max) * (H - 40), sh = (b.saved / max) * (H - 40), y = H - 22 - uh;
+    s += `<rect class="bar" x="${x}" y="${y}" width="${Math.max(1, bw - 3)}" height="${uh}"><title>${esc(b.key)} · ${fmt(b.used)} ${esc(t("leg.used"))}</title></rect>`;
+    if (b.saved > 0) s += `<rect class="saved" x="${x}" y="${y - sh}" width="${Math.max(1, bw - 3)}" height="${Math.max(2, sh)}"><title>${esc(b.key)} · ${fmt(b.saved)} ${esc(t("leg.saved"))}</title></rect>`;
+    const every = Math.ceil(n / 10);
+    if (i % every === 0) s += `<text x="${x}" y="${H - 6}">${esc(days === 1 ? b.key + ":00" : b.key.slice(5))}</text>`;
+  });
+  return s + "</svg>" + `<div class="legend"><span><i style="background:var(--action);opacity:.75"></i>${esc(t("leg.used"))}</span><span><i style="background:var(--stamp)"></i>${esc(t("leg.saved"))}</span></div>`;
+}
+
+async function dashboard() {
+  main.innerHTML = `<h1>${esc(t("dash.title"))}</h1><p class="lead">${esc(t("dash.lead"))}</p><div id="welcome"></div><div id="dash" class="muted">…</div>`;
+  const [o, env] = await Promise.all([api("/api/overview?days=" + state.days), api("/api/env")]);
+  if (!env.claude_code_hooks && !env.desktop_connected) {
+    document.getElementById("welcome").innerHTML = `<div class="notice"><b>${esc(t("welcome.title"))}</b><div>${esc(t("welcome.body"))}</div><div class="actions"><button class="btn primary" id="w-cc">${esc(t("welcome.cc"))}</button>${env.desktop_available ? `<button class="btn" id="w-desk">${esc(t("welcome.desk"))}</button>` : ""}</div></div>`;
+    document.getElementById("w-cc").onclick = () => api("/api/env", { target: "claude_code", connect: true }).then(() => { toast(t("con.connected")); dashboard(); }).catch(fail);
+    const wd = document.getElementById("w-desk"); if (wd) wd.onclick = () => api("/api/env", { target: "desktop", connect: true }).then(() => { toast(t("fix.restart.desk")); dashboard(); }).catch(fail);
+  }
+  const range = [1, 7, 30].map((d) => `<button aria-pressed="${state.days === d}" data-days="${d}">${esc(t("range." + d))}</button>`).join("");
+  const kinds = Object.entries(o.saved.by_kind).sort((a, b) => b[1].tokens - a[1].tokens);
+  const blockRows = kinds.length ? kinds.map(([k, v]) => `<tr><td>${esc(t("kind." + k))}</td><td class="num">${fmt(v.events)}</td><td class="num">${fmt(v.tokens)}</td></tr>`).join("") : `<tr><td colspan="3" class="empty">${esc(t("empty.saved"))}</td></tr>`;
+  let budget = 150000; try { budget = (await api("/api/settings")).config.budget.tokens; } catch (e) {}
+  const sessRows = o.sessions.map((s) => { const pct = Math.min(100, (s.context / budget) * 100); return `<tr><td class="path">${esc(s.path)}<div class="small muted">${esc(s.id)}</div></td><td class="num">${esc(ago(s.last))}</td><td class="num">${fmt(s.context)}<div class="meter" title="${Math.round(pct)}% of budget"><b class="${s.context >= budget ? "over" : ""}" style="width:${pct}%"></b></div></td></tr>`; }).join("");
+  const projRows = o.projects.map((p) => `<tr><td class="path">${esc(p.path)}</td><td class="num">${fmt(p.sessions)}</td><td class="num">${esc(ago(p.last))}</td><td class="num">${fmt(p.total)}</td></tr>`).join("");
+  const topRows = o.saved.top.map((e) => `<tr><td>${esc(t("kind." + e.kind))}<div class="small muted path">${esc(e.subject)}</div></td><td class="num">${esc(ago(e.ts))}</td><td class="num">${fmt(e.tokens)}</td></tr>`).join("");
+  const b = o.block;
+  document.getElementById("dash").outerHTML = `
+    <div class="toolbar"><div class="range" role="group">${range}</div></div>
+    <div class="statement">
+      <div class="line"><div class="what"><b>${esc(t("dash.used"))}</b><span>${esc(t("dash.used.sub"))}</span></div><div class="fig">${fmt(o.usage.total)}<small>${esc(t("col.tokens"))}</small></div></div>
+      <div class="line kept"><div class="what"><b>${esc(t("dash.kept"))}<span class="stamp">${esc(t("dash.stamp"))}</span></b><span>${esc(t("dash.kept.sub"))}</span></div><div class="fig">${fmt(o.saved.tokens)}<small>${esc(t("col.tokens"))}</small></div></div>
+    </div>
+    ${o.transcripts_found ? "" : `<p class="empty">${esc(t("empty.transcripts"))}</p>`}
+    <h2>${esc(t("dash.daily"))}</h2>${chart(o, state.days)}
+    <h2>${esc(t("dash.window"))}</h2>
+    <p>${b ? esc(t("dash.window.line", { t: fmt(b.total), n: fmt(b.messages), s: clock(b.start), e: clock(b.end), r: fmt(b.per_minute_last_hour) })) : esc(t("dash.window.none"))}</p>
+    <h2>${esc(t("dash.blocks"))}</h2>
+    <table><thead><tr><th>${esc(t("col.kind"))}</th><th class="num">${esc(t("col.events"))}</th><th class="num">${esc(t("col.tokens"))}</th></tr></thead><tbody>${blockRows}</tbody></table>
+    ${sessRows ? `<h2>${esc(t("dash.sessions"))}</h2><table><thead><tr><th>${esc(t("col.project"))}</th><th class="num">${esc(t("col.last"))}</th><th class="num">${esc(t("col.context"))}</th></tr></thead><tbody>${sessRows}</tbody></table>` : ""}
+    ${topRows ? `<h2>${esc(t("dash.top"))}</h2><table><thead><tr><th>${esc(t("col.what"))}</th><th class="num">${esc(t("col.when"))}</th><th class="num">${esc(t("col.tokens"))}</th></tr></thead><tbody>${topRows}</tbody></table>` : ""}
+    ${projRows ? `<h2>${esc(t("dash.projects"))}</h2><table><thead><tr><th>${esc(t("col.project"))}</th><th class="num">${esc(t("col.sessions"))}</th><th class="num">${esc(t("col.last"))}</th><th class="num">${esc(t("col.tokens"))}</th></tr></thead><tbody>${projRows}</tbody></table>` : ""}`;
+  main.querySelectorAll("[data-days]").forEach((x) => x.onclick = () => { state.days = Number(x.dataset.days); remember(); dashboard().catch(fail); });
+}
+
+/* ---------- saving modes ---------- */
+async function profiles() {
+  const s = await api("/api/settings");
+  const cur = s.config.profile;
+  const card = (p) => { const c = p.config; return `<div class="profile ${p.name === cur ? "current" : ""}">
+      <h3>${esc(t("prof." + p.name))}</h3><p>${esc(t("prof." + p.name + ".d"))}</p>
+      <dl><dt>${esc(t("p.out"))}</dt><dd>${fmt(c.compress.max_lines)} ${esc(t("p.lines"))}</dd>
+          <dt>${esc(t("p.file"))}</dt><dd>${fmt(c.read_max_lines)} ${esc(t("p.lines"))}</dd>
+          <dt>${esc(t("p.budget"))}</dt><dd>${c.budget.enabled ? short(c.budget.tokens) : "—"}</dd>
+          <dt>${esc(t("p.handoff"))}</dt><dd>${c.handoff.enabled ? short(c.handoff.tokens) : "—"}</dd></dl>
+      ${p.name === cur ? `<span class="ok">${esc(t("prof.current"))}</span>` : `<button class="btn primary" data-use="${p.name}">${esc(t("prof.use"))}</button>`}
+    </div>`; };
+  main.innerHTML = `<h1>${esc(t("prof.title"))}</h1><p class="lead">${esc(t("prof.lead"))}</p><div class="profiles">${s.profiles.map(card).join("")}</div>`;
+  main.querySelectorAll("[data-use]").forEach((b) => b.onclick = () => api("/api/profile", { name: b.dataset.use }).then(() => { toast(t("set.saved")); profiles(); }).catch(fail));
+}
+
+/* ---------- settings ---------- */
+const F = (id, label, input, help) => `<div class="field"><label for="${id}">${esc(t(label))}</label><div>${input}</div>${help ? `<div class="help">${esc(t(help))}</div>` : ""}</div>`;
+const num = (id, v, min) => `<input type="number" id="${id}" min="${min || 1}" step="1" value="${esc(v)}">`;
+const sw = (id, v) => `<label class="switch"><input type="checkbox" id="${id}" ${v ? "checked" : ""}></label>`;
+async function settings() {
+  const s = await api("/api/settings"); const c = s.config;
+  main.innerHTML = `<h1>${esc(t("set.title"))}</h1><p class="lead">${esc(t("set.lead"))} <span class="small">(${esc(s.path)})</span></p>
+  <form id="f">
+    <fieldset><legend>${esc(t("set.output"))}</legend>
+      ${F("guard_bash", "set.guard_bash", sw("guard_bash", c.guard_bash), "set.guard_bash.h")}
+      ${F("max_lines", "set.max_lines", num("max_lines", c.compress.max_lines), "set.max_lines.h")}
+      ${F("max_bytes", "set.max_bytes", num("max_bytes", c.compress.max_bytes), "set.max_bytes.h")}
+      ${F("head_lines", "set.head", num("head_lines", c.compress.head_lines))}
+      ${F("tail_lines", "set.tail", num("tail_lines", c.compress.tail_lines))}
+      ${F("context", "set.context", num("context", c.compress.context))}
+      ${F("quiet", "set.quiet", `<textarea id="quiet">${esc(c.quiet.join("\n"))}</textarea>`, "set.quiet.h")}
+      ${F("extra_noisy", "set.noisy", `<textarea id="extra_noisy">${esc(c.extra_noisy.join("\n"))}</textarea>`, "set.noisy.h")}
+    </fieldset>
+    <fieldset><legend>${esc(t("set.files"))}</legend>
+      ${F("guard_read", "set.guard_read", sw("guard_read", c.guard_read))}
+      ${F("read_max_lines", "set.read_max", num("read_max_lines", c.read_max_lines), "set.read_max.h")}
+      ${F("dup_read", "set.dup", sw("dup_read", c.dup_read), "set.dup.h")}
+    </fieldset>
+    <fieldset><legend>${esc(t("set.session"))}</legend>
+      ${F("budget_on", "set.budget_on", sw("budget_on", c.budget.enabled))}
+      ${F("budget_tokens", "set.budget", num("budget_tokens", c.budget.tokens, 1000), "set.budget.h")}
+      ${F("handoff_on", "set.handoff_on", sw("handoff_on", c.handoff.enabled))}
+      ${F("handoff_mode", "set.handoff_mode", `<select id="handoff_mode"><option value="note" ${c.handoff.mode === "note" ? "selected" : ""}>${esc(t("set.mode.note"))}</option><option value="remind" ${c.handoff.mode === "remind" ? "selected" : ""}>${esc(t("set.mode.remind"))}</option></select>`)}
+      ${F("handoff_tokens", "set.handoff", num("handoff_tokens", c.handoff.tokens, 1000), "set.handoff.h")}
+      ${F("max_age", "set.age", num("max_age", c.handoff.max_age_hours), "set.age.h")}
+    </fieldset>
+    <fieldset><legend>${esc(t("set.fixed"))}</legend>
+      ${F("prune_on", "set.prune", sw("prune_on", c.mcp_prune.enabled), "set.prune.h")}
+      ${F("unused_days", "set.days", num("unused_days", c.mcp_prune.unused_days), "set.days.h")}
+    </fieldset>
+    <div class="savebar"><button class="btn primary" type="submit">${esc(t("set.save"))}</button><span id="dirty" class="small muted"></span></div>
+  </form>`;
+  const f = document.getElementById("f"); dirty = false;
+  f.addEventListener("input", () => { dirty = true; document.getElementById("dirty").textContent = t("set.unsaved"); });
+  f.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const v = (id) => document.getElementById(id), n = (id) => Math.max(1, parseInt(v(id).value, 10) || 1), lines = (id) => v(id).value.split("\n").map((x) => x.trim()).filter(Boolean);
+    const config = {
+      guard_bash: v("guard_bash").checked, guard_read: v("guard_read").checked, read_max_lines: n("read_max_lines"), dup_read: v("dup_read").checked,
+      quiet: lines("quiet"), extra_noisy: lines("extra_noisy"),
+      compress: { max_lines: n("max_lines"), max_bytes: n("max_bytes"), head_lines: n("head_lines"), tail_lines: n("tail_lines"), context: n("context") },
+      budget: { enabled: v("budget_on").checked, tokens: n("budget_tokens") },
+      handoff: { enabled: v("handoff_on").checked, mode: v("handoff_mode").value, tokens: n("handoff_tokens"), max_age_hours: n("max_age") },
+      mcp_prune: { enabled: v("prune_on").checked, unused_days: n("unused_days") },
+    };
+    api("/api/settings", { config, custom: true }).then(() => { dirty = false; document.getElementById("dirty").textContent = ""; toast(t("set.saved")); }).catch(fail);
+  });
+}
+
+/* ---------- fixed cost ---------- */
+async function fixed() {
+  const projects = await api("/api/projects");
+  if (!state.root && projects.length) state.root = projects[0].root;
+  const opts = projects.map((p) => `<option value="${esc(p.root)}" ${p.root === state.root ? "selected" : ""}>Claude Code · ${esc(p.path)}</option>`).join("") + `<option value="desktop" ${state.root === "desktop" ? "selected" : ""}>${esc(t("fix.desktop"))}</option>`;
+  main.innerHTML = `<h1>${esc(t("fix.title"))}</h1><p class="lead">${esc(t("fix.lead"))}</p>
+    <div class="toolbar"><label>${esc(t("fix.target"))} <select id="target" style="max-width:100%">${opts}</select></label></div><div id="report" class="muted">…</div>`;
+  document.getElementById("target").onchange = (e) => { state.root = e.target.value; remember(); fixed().catch(fail); };
+  const desk = state.root === "desktop";
+  const r = await api(desk ? "/api/doctor?target=desktop" : "/api/doctor?root=" + encodeURIComponent(state.root || ""));
+  const rows = r.items.map((i) => {
+    let act = "";
+    if (i.kind === "mcp") {
+      act = `<button class="btn" data-measure="${esc(i.id)}" ${i.enabled ? "" : "disabled"}>${esc(t("fix.measure"))}</button> ` +
+        `<button class="btn ${i.enabled ? "danger" : ""}" data-toggle="${esc(i.id)}" data-on="${i.enabled ? "0" : "1"}">${esc(t(i.enabled ? "fix.off" : "fix.on"))}</button>`;
+    }
+    return `<tr class="${i.enabled ? "" : "off"}"><td class="kind">${esc(t("k." + i.kind))}</td><td><b>${esc(i.name)}</b><div class="small muted path">${esc(i.path)}</div>${i.note ? `<div class="small muted">${esc(i.note)}</div>` : ""}</td><td class="num">${i.kind === "mcp" && !i.measured && i.enabled ? "?" : fmt(i.tokens)}</td><td class="num">${act}</td></tr>`;
+  }).join("");
+  document.getElementById("report").outerHTML = `
+    <div class="statement"><div class="line"><div class="what"><b>${esc(t("fix.total"))}</b><span>${esc(r.target)}</span></div><div class="fig">${fmt(r.total_tokens)}<small>${esc(t("col.tokens"))}</small></div></div></div>
+    <table><thead><tr><th>${esc(t("col.kind"))}</th><th>${esc(t("col.what"))}</th><th class="num">${esc(t("col.tokens"))}</th><th></th></tr></thead><tbody>${rows || `<tr><td colspan="4" class="empty">—</td></tr>`}</tbody></table>
+    <p class="small muted">${esc(t("fix.note.measure"))}</p>
+    ${r.tips.length ? `<h2>${esc(t("fix.tips"))}</h2><ul class="tips">${r.tips.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}`;
+  const root = desk ? "" : state.root;
+  main.querySelectorAll("[data-measure]").forEach((b) => b.onclick = () => { b.disabled = true; b.textContent = t("fix.measuring"); api("/api/mcp/measure", { id: b.dataset.measure, root }).then((m) => { if (m.error) toast(m.error, true); fixed().catch(fail); }).catch((e) => { fail(e); fixed(); }); });
+  main.querySelectorAll("[data-toggle]").forEach((b) => b.onclick = () => api("/api/mcp/toggle", { id: b.dataset.toggle, root, enabled: b.dataset.on === "1" }).then(() => { toast(t(desk ? "fix.restart.desk" : "fix.restart.cc")); fixed().catch(fail); }).catch(fail));
+}
+
+/* ---------- handoffs ---------- */
+async function handoffs() {
+  const list = await api("/api/handoffs");
+  main.innerHTML = `<h1>${esc(t("ho.title"))}</h1><p class="lead">${esc(t("ho.lead"))}</p>` + (list.length ? `<div class="cols"><div class="list" id="hl">${list.map((n) => `<button data-path="${esc(n.path)}" aria-current="${n.path === state.note}"><b>${esc(n.name)}</b><div class="small muted">${esc(n.where)} · ${fmt(Math.ceil(n.bytes / 4))} ${esc(t("col.tokens"))}</div></button>`).join("")}</div><div id="hv"><p class="muted">${esc(t("ho.pick"))}</p></div></div>` : `<p class="empty">${esc(t("ho.empty"))}</p>`);
+  const open = (p) => api("/api/handoff?path=" + encodeURIComponent(p)).then((r) => { state.note = p; main.querySelectorAll("#hl button").forEach((b) => b.setAttribute("aria-current", b.dataset.path === p)); document.getElementById("hv").innerHTML = `<pre class="note">${esc(r.text)}</pre>`; }).catch(fail);
+  main.querySelectorAll("#hl button").forEach((b) => b.onclick = () => open(b.dataset.path));
+  if (list.length) open(list.some((n) => n.path === state.note) ? state.note : list[0].path);
+}
+
+/* ---------- connections ---------- */
+async function connections() {
+  const e = await api("/api/env");
+  const ccStatus = e.claude_code_hooks ? (e.claude_code_complete ? `<span class="ok">${esc(t("con.connected"))}</span>` : `<span>${esc(t("con.partial"))}</span>`) : `<span class="badge-off">${esc(t("con.not"))}</span>`;
+  const ccBtns = e.claude_code_hooks ? `${e.claude_code_complete ? "" : `<button class="btn primary" data-env="claude_code" data-c="1">${esc(t("con.reconnect"))}</button> `}<button class="btn" data-env="claude_code" data-c="0">${esc(t("con.disconnect"))}</button>` : `<button class="btn primary" data-env="claude_code" data-c="1">${esc(t("con.connect"))}</button>`;
+  let desk;
+  if (!e.desktop_available) desk = `<section><div><h3>${esc(t("con.desk"))}</h3><p>${esc(t("con.desk.na"))}</p></div></section>`;
+  else desk = `<section><div><h3>${esc(t("con.desk"))}</h3><p>${esc(t("con.desk.d", { p: e.desktop_config }))}</p><p>${e.desktop_connected ? `<span class="ok">${esc(t("con.connected"))}</span>` : `<span class="badge-off">${esc(t("con.not"))}</span>`}</p></div>
+      <div>${e.desktop_connected ? `<button class="btn" data-env="desktop" data-c="0">${esc(t("con.disconnect"))}</button>` : `<button class="btn primary" data-env="desktop" data-c="1">${esc(t("con.connect"))}</button>`}</div>
+      <div class="full"><label for="dirs"><b>${esc(t("con.dirs"))}</b></label><div class="small muted">${esc(t("con.dirs.h"))}</div><textarea id="dirs" placeholder="${navigator.platform.startsWith("Win") ? "C:\\logs" : "/var/log/myapp"}">${esc(e.allowed_dirs.join("\n"))}</textarea><div style="margin-top:8px"><button class="btn" id="savedirs">${esc(t("con.dirs.save"))}</button></div></div></section>`;
+  main.innerHTML = `<h1>${esc(t("con.title"))}</h1><p class="lead">${esc(t("con.lead"))}</p><div class="conn">
+    <section><div><h3>${esc(t("con.cc"))}</h3><p>${esc(t("con.cc.d", { p: e.settings_path }))}</p><p>${ccStatus}</p></div><div>${ccBtns}</div></section>
+    ${desk}
+    <section><div><h3>${esc(t("con.prog"))}</h3><p class="path">${esc(e.exe)} · v${esc(e.version)}</p></div></section></div>`;
+  main.querySelectorAll("[data-env]").forEach((b) => b.onclick = () => api("/api/env", { target: b.dataset.env, connect: b.dataset.c === "1" }).then(() => { toast(b.dataset.env === "desktop" ? t("fix.restart.desk") : t("fix.restart.cc")); connections().catch(fail); }).catch(fail));
+  const sd = document.getElementById("savedirs");
+  if (sd) sd.onclick = () => api("/api/allowed", { dirs: document.getElementById("dirs").value.split("\n").map((x) => x.trim()).filter(Boolean) }).then(() => toast(t("con.dirs.saved"))).catch(fail);
+}
+
+/* ---------- start ---------- */
+applyI18n();
+show(state.tab);
+const beat = () => api("/api/heartbeat", {}).catch(() => {});
+beat(); setInterval(beat, 10000);
+</script>
+</body>
+</html>

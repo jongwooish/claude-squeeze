@@ -4,6 +4,34 @@
 
 All notable changes are listed here. Versions follow [Semantic Versioning](https://semver.org/). While the major version is 0, commands and config may still change.
 
+## [0.2.0] - 2026-11-04 — squeeze-Auditor
+
+v0.2 looks at the whole session, not one output at a time. Code in [`v0.2-Auditor/v0.2.0_squeeze-auditor/`](../v0.2-Auditor/v0.2.0_squeeze-auditor/). Includes everything in 0.1.0.
+
+### Added
+
+- Four session blockers (Claude Code):
+  - **Repeated read**: a full `Read` of a file that was already read in this session and has not changed is denied. Allowed again when the file changes or the context is compacted.
+  - **Budget pause** (`UserPromptSubmit`): when the session passes the budget (default 150K tokens), the message is held once with a suggestion to `/compact` or `/clear`. Sending it again goes through.
+  - **Handoff** (`Stop` + `SessionStart`): when the session passes the handoff size (default 120K), Claude writes a handoff note to `.squeeze/handoff/`; after `/clear` the new session starts from the note. `remind` mode only suggests `/compact`.
+  - **Fixed cost**: measures `CLAUDE.md` files and imports, skills, agents and MCP tool lists sent with every message. Turn MCP servers off per project with Claude Code's own switch, or automatically after N unused days (off by default).
+- **squeeze-Auditor** app (`squeeze-auditor`, `squeeze auditor`): dashboard of real Claude Code usage from its session logs and what squeeze kept out, the current 5-hour window, saving modes (Strong, Balanced, Light, Custom), all settings, fixed-cost diagnosis with Measure and On/Off, handoff notes, connections. Local only (`127.0.0.1`, one-time key). English and Korean.
+- **Claude desktop app** support: `squeeze mcp`, an MCP server with `read_log`, `tail_log`, `search_log`, `list_logs`, `save_handoff`, `load_handoff`, limited to folders you allow.
+- `squeeze setup [--claude-code] [--desktop] [--remove]`: connect once for all projects (`~/.claude/settings.json`) and the desktop app, with backups in `~/.squeeze/backups/`.
+- `squeeze doctor`: fixed cost per message in the terminal.
+- Installers: Windows Setup (x64, ARM64, per-user, Start menu icon, uninstaller that disconnects), macOS `.pkg` with `squeeze-Auditor.app`, Linux `.deb` with a menu entry. Not code-signed yet.
+- Global config `~/.squeeze/config.json` (a project's `.squeeze/config.json` still overrides it) and a global ledger `~/.squeeze/ledger.jsonl`.
+
+### Changed
+
+- The install scripts also install `squeeze-auditor`.
+- The release title now comes from the CHANGELOG heading. CI also builds the installers and tests the frozen v0.1.0 snapshot.
+- v0.1.0's frozen crate is named `squeeze-sentinel` (the program is still `squeeze`), so `cargo install --git … squeeze` builds v0.2.
+
+### Planned
+
+- v0.3: claude.ai in the browser and the mobile apps, with a new approach.
+
 ## [0.1.0] - 2026-11-03 — Sentinel
 
 First release. Code in [`v0.1-Sentinel/v0.1.0_squeeze-sentinel/`](../v0.1-Sentinel/v0.1.0_squeeze-sentinel/).

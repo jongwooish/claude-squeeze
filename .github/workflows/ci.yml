@@ -5,6 +5,9 @@ on:
     branches: [main]
   pull_request:
 
+env:
+  CRATE: v0.2-Auditor/v0.2.0_squeeze-auditor
+
 jobs:
   test:
     strategy:
@@ -20,6 +23,52 @@ jobs:
       - run: cargo fmt --manifest-path CARGO/Cargo.toml --check
       - run: cargo clippy --manifest-path CARGO/Cargo.toml --all-targets -- -D warnings
       - run: cargo test --manifest-path CARGO/Cargo.toml
+      - name: Frozen v0.1.0 snapshot still builds and passes
+        run: cargo test --manifest-path v0.1-Sentinel/v0.1.0_squeeze-sentinel/Cargo.toml
       - name: Bench (fixture replay)
         if: matrix.os == 'ubuntu-latest'
-        run: cargo run --manifest-path CARGO/Cargo.toml --release -- bench v0.1-Sentinel/v0.1.0_squeeze-sentinel/testdata/fixtures
+        shell: bash
+        run: cargo run --manifest-path CARGO/Cargo.toml --release -- bench "$CRATE/testdata/fixtures"
+
+  # Builds the installers on every push so they can be tried before a release
+  # (Actions → this run → Artifacts).
+  installers:
+    needs: test
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { os: windows-latest, pkg: windows, arch: x64 }
+          - { os: macos-latest, pkg: macos, arch: arm64 }
+          - { os: ubuntu-latest, pkg: deb, arch: amd64 }
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo build --manifest-path CARGO/Cargo.toml --release
+      - name: Version
+        id: ver
+        shell: bash
+        run: echo "v=$(sed -n 's/^version = "\(.*\)"/\1/p' "$CRATE/Cargo.toml" | head -1)" >> "$GITHUB_OUTPUT"
+      - name: Installer (Windows)
+        if: matrix.pkg == 'windows'
+        shell: pwsh
+        run: |
+          $iscc = "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe"
+          if (-not (Test-Path $iscc)) { choco install innosetup --no-progress -y; }
+          $bin = Resolve-Path "CARGO/target/release"
+          $out = Join-Path (Get-Location) "dist"
+          & $iscc "/DAppVersion=${{ steps.ver.outputs.v }}" "/DArch=x64" "/DBinDir=$bin" "/DOutDir=$out" "$env:CRATE/packaging/windows/squeeze-auditor.iss"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Installer (macOS)
+        if: matrix.pkg == 'macos'
+        run: bash "$CRATE/packaging/macos/build-pkg.sh" "${{ steps.ver.outputs.v }}" arm64 CARGO/target/release dist
+      - name: Installer (Linux)
+        if: matrix.pkg == 'deb'
+        run: |
+          bash "$CRATE/packaging/linux/build-deb.sh" "${{ steps.ver.outputs.v }}" amd64 CARGO/target/release dist
+          sudo dpkg -i dist/*.deb && squeeze version
+      - uses: actions/upload-artifact@v4
+        with:
+          name: installer-${{ matrix.pkg }}-${{ matrix.arch }}
+          path: dist/*

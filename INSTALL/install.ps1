@@ -1,6 +1,7 @@
 # Install squeeze from the latest GitHub release (Windows).
 #   irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.ps1 | iex
-# Pin a version:  $env:SQUEEZE_VERSION = "v0.1.0"; irm ... | iex
+# Pin a version:  $env:SQUEEZE_VERSION = "v0.2.0"; irm ... | iex
+# Prefer a Start menu icon? Use squeeze-Auditor-<version>-setup-x64.exe from the Releases page.
 $ErrorActionPreference = "Stop"
 
 $Repo = "jongwooish/claude-squeeze"
@@ -35,6 +36,8 @@ try {
     Expand-Archive (Join-Path $tmp $asset) -DestinationPath $tmp -Force
     New-Item -ItemType Directory -Path $Dir -Force | Out-Null
     Copy-Item (Join-Path $tmp "squeeze.exe") (Join-Path $Dir "squeeze.exe") -Force
+    $auditor = Join-Path $tmp "squeeze-auditor.exe"
+    if (Test-Path $auditor) { Copy-Item $auditor (Join-Path $Dir "squeeze-auditor.exe") -Force }
 
     $userPath = [Environment]::GetEnvironmentVariable("Path", "User")
     if (-not ($userPath -split ";" | Where-Object { $_ -eq $Dir })) {
@@ -42,7 +45,13 @@ try {
         Write-Host "squeeze-install: added $Dir to your user PATH (open a new terminal)"
     }
     Write-Host "squeeze-install: installed to $Dir\squeeze.exe"
-    Write-Host "squeeze-install: next: cd your-project; squeeze init"
+    if (Test-Path $auditor) {
+        Write-Host "squeeze-install: next: squeeze setup   (connect Claude Code for all projects)"
+        Write-Host "squeeze-install:       squeeze-auditor (open the dashboard)"
+        Write-Host "squeeze-install: tip: the Setup installer on the Releases page also adds a Start menu icon"
+    } else {
+        Write-Host "squeeze-install: next: cd your-project; squeeze init"
+    }
 } finally {
     Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
 }

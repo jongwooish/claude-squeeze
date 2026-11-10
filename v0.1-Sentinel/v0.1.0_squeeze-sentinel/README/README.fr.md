@@ -10,7 +10,7 @@ Sentinel monte la garde entre Claude Code et votre shell. Quand Claude s'apprêt
 
 Un seul binaire, écrit en Rust, **zéro dépendance**. Fonctionne sous macOS, Linux et Windows.
 
-**Prérequis :** aucun. C'est le programme `squeeze` de base. Les versions suivantes s'appuient dessus : v0.3 Conduit ajoute une commande à ce même programme (mettez-le à jour pour l'obtenir), tandis que v0.2 Interceptor est une extension de navigateur séparée qui fonctionne avec ou sans lui. Voir [comment les versions s'articulent](../../../README/README.fr.md#comment-les-versions-sarticulent).
+**Prérequis :** aucun. C'est le programme `squeeze` de base. Les versions suivantes sont le même programme avec plus de fonctions : [v0.2 squeeze-Auditor](../../../v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.fr.md) ajoute quatre blocages de session et un panneau de contrôle installable pour Claude Code et l'application de bureau Claude ; la v0.3 (prévue) couvre le navigateur et les applications mobiles. Voir [comment les versions s'articulent](../../../README/README.fr.md#comment-les-versions-sarticulent).
 
 ## Effet
 

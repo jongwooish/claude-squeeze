@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Install squeeze from the latest GitHub release.
 #   curl -fsSL https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/install.sh | bash
-# Pin a version:  ... | SQUEEZE_VERSION=v0.1.0 bash
+# Pin a version:  ... | SQUEEZE_VERSION=v0.2.0 bash
 # Install dir:    ... | SQUEEZE_INSTALL_DIR=$HOME/.local/bin bash
 set -euo pipefail
 
@@ -48,9 +48,15 @@ say "checksum ok"
 
 tar xzf "$tmp/$asset" -C "$tmp"
 mkdir -p "$DIR" 2>/dev/null || true
-if [ -w "$DIR" ]; then install -m 0755 "$tmp/squeeze" "$DIR/squeeze"
-else say "using sudo to write $DIR"; sudo install -m 0755 "$tmp/squeeze" "$DIR/squeeze"; fi
+bins="squeeze"; [ -f "$tmp/squeeze-auditor" ] && bins="squeeze squeeze-auditor"
+if [ -w "$DIR" ]; then sudo=""; else say "using sudo to write $DIR"; sudo="sudo"; fi
+for b in $bins; do $sudo install -m 0755 "$tmp/$b" "$DIR/$b"; done
 
 say "installed $("$DIR/squeeze" version) to $DIR/squeeze"
 case ":$PATH:" in *":$DIR:"*) ;; *) say "note: $DIR is not on your PATH" ;; esac
-say "next: cd your-project && squeeze init"
+if [ -f "$tmp/squeeze-auditor" ]; then
+  say "next: squeeze setup      (connect Claude Code for all projects)"
+  say "      squeeze-auditor    (open the dashboard)"
+else
+  say "next: cd your-project && squeeze init"
+fi

@@ -1,8 +1,7 @@
 [package]
-name = "squeeze"
+name = "squeeze-sentinel"
 version = "0.1.0"
 edition = "2021"
-workspace = "../../CARGO"
 rust-version = "1.80"
 description = "Keep long command output and large file reads out of Claude Code's context"
 license = "MIT"
@@ -11,4 +10,11 @@ readme = "README.md"
 keywords = ["claude", "claude-code", "tokens", "cli", "hooks"]
 categories = ["command-line-utilities", "development-tools"]
 
+[[bin]]
+name = "squeeze"
+path = "src/main.rs"
+
 [dependencies]
+
+# Frozen snapshot of v0.1.0. The active crate is v0.2-Auditor/v0.2.0_squeeze-auditor.
+[workspace]

@@ -9,18 +9,22 @@ on:
 permissions:
   contents: write
 
+env:
+  # the crate this release is built from
+  CRATE: v0.2-Auditor/v0.2.0_squeeze-auditor
+
 jobs:
   build:
     strategy:
       fail-fast: false
       matrix:
         include:
-          - { target: x86_64-unknown-linux-musl, os: ubuntu-latest, archive: tar.gz }
-          - { target: aarch64-unknown-linux-musl, os: ubuntu-24.04-arm, archive: tar.gz }
-          - { target: x86_64-apple-darwin, os: macos-latest, archive: tar.gz }
-          - { target: aarch64-apple-darwin, os: macos-latest, archive: tar.gz }
-          - { target: x86_64-pc-windows-msvc, os: windows-latest, archive: zip }
-          - { target: aarch64-pc-windows-msvc, os: windows-latest, archive: zip }
+          - { target: x86_64-unknown-linux-musl, os: ubuntu-latest, archive: tar.gz, pkg: deb, arch: amd64 }
+          - { target: aarch64-unknown-linux-musl, os: ubuntu-24.04-arm, archive: tar.gz, pkg: deb, arch: arm64 }
+          - { target: x86_64-apple-darwin, os: macos-latest, archive: tar.gz, pkg: macos, arch: x86_64 }
+          - { target: aarch64-apple-darwin, os: macos-latest, archive: tar.gz, pkg: macos, arch: arm64 }
+          - { target: x86_64-pc-windows-msvc, os: windows-latest, archive: zip, pkg: windows, arch: x64 }
+          - { target: aarch64-pc-windows-msvc, os: windows-latest, archive: zip, pkg: windows, arch: arm64 }
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -35,18 +39,40 @@ jobs:
       - name: Build
         shell: bash
         run: cargo build --manifest-path CARGO/Cargo.toml --release --target ${{ matrix.target }}
-      - name: Package
+      - name: Version
+        id: ver
+        shell: bash
+        run: echo "v=$(sed -n 's/^version = "\(.*\)"/\1/p' "$CRATE/Cargo.toml" | head -1)" >> "$GITHUB_OUTPUT"
+      - name: Archive
         shell: bash
         run: |
           name=squeeze-${{ matrix.target }}
+          bin=CARGO/target/${{ matrix.target }}/release
           mkdir -p dist
+          cp README/README.md LICENSE .
           if [ "${{ matrix.archive }}" = "zip" ]; then
-            cp CARGO/target/${{ matrix.target }}/release/squeeze.exe .
-            cp README/README.md . && 7z a dist/$name.zip squeeze.exe LICENSE README.md
+            cp $bin/squeeze.exe $bin/squeeze-auditor.exe .
+            7z a dist/$name.zip squeeze.exe squeeze-auditor.exe LICENSE README.md
           else
-            cp CARGO/target/${{ matrix.target }}/release/squeeze .
-            cp README/README.md . && tar czf dist/$name.tar.gz squeeze LICENSE README.md
+            cp $bin/squeeze $bin/squeeze-auditor .
+            tar czf dist/$name.tar.gz squeeze squeeze-auditor LICENSE README.md
           fi
+      - name: Installer (Windows)
+        if: matrix.pkg == 'windows'
+        shell: pwsh
+        run: |
+          $iscc = "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe"
+          if (-not (Test-Path $iscc)) { choco install innosetup --no-progress -y; }
+          $bin = Resolve-Path "CARGO/target/${{ matrix.target }}/release"
+          $out = Join-Path (Get-Location) "dist"
+          & $iscc "/DAppVersion=${{ steps.ver.outputs.v }}" "/DArch=${{ matrix.arch }}" "/DBinDir=$bin" "/DOutDir=$out" "$env:CRATE/packaging/windows/squeeze-auditor.iss"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Installer (macOS)
+        if: matrix.pkg == 'macos'
+        run: bash "$CRATE/packaging/macos/build-pkg.sh" "${{ steps.ver.outputs.v }}" ${{ matrix.arch }} CARGO/target/${{ matrix.target }}/release dist
+      - name: Installer (Linux)
+        if: matrix.pkg == 'deb'
+        run: bash "$CRATE/packaging/linux/build-deb.sh" "${{ steps.ver.outputs.v }}" ${{ matrix.arch }} CARGO/target/${{ matrix.target }}/release dist
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.target }}
@@ -57,27 +83,36 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.release.tag_name || github.ref }}
       - uses: actions/download-artifact@v4
         with:
           path: dist
           merge-multiple: true
       - name: Checksums
         run: cd dist && sha256sum * > checksums.txt && cat checksums.txt
-      - name: Release notes from CHANGELOG
+      - name: Release notes and title from CHANGELOG
+        id: notes
         run: |
           ver="${TAG#v}"
-          awk -v v="$ver" '$0 ~ "^## \\[?v?"v {f=1; next} /^## / && f {exit} f' CHANGELOG/CHANGELOG.md > notes.md
+          awk -v v="$ver" '$0 ~ "^## \\[?v?"v"\\]? " {f=1; next} /^## / && f {exit} f' CHANGELOG/CHANGELOG.md > notes.md
           [ -s notes.md ] || echo "See CHANGELOG/CHANGELOG.md" > notes.md
+          # relative links in the CHANGELOG point into the repo; make them absolute
+          sed -i "s#](\.\./#](https://github.com/$GITHUB_REPOSITORY/tree/$TAG/#g" notes.md
+          # "## [0.2.0] - 2026-11-04 — squeeze-Auditor" -> "squeeze-Auditor"
+          name="$(grep -m1 -E "^## \[?v?$ver\]? " CHANGELOG/CHANGELOG.md | sed -n 's/.* — //p')"
+          echo "title=$TAG${name:+ — $name}" >> "$GITHUB_OUTPUT"
         env:
           TAG: ${{ github.event.release.tag_name || github.ref_name }}
       - name: Publish
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.event.release.tag_name || github.ref_name }}
+          TITLE: ${{ steps.notes.outputs.title }}
         run: |
           if gh release view "$TAG" >/dev/null 2>&1; then
             gh release upload "$TAG" dist/* --clobber
-            gh release edit "$TAG" --title "$TAG — Sentinel" --notes-file notes.md
+            gh release edit "$TAG" --title "$TITLE" --notes-file notes.md
           else
-            gh release create "$TAG" dist/* --title "$TAG — Sentinel" --notes-file notes.md
+            gh release create "$TAG" dist/* --title "$TITLE" --notes-file notes.md
           fi

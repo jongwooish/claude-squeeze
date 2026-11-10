@@ -45,6 +45,7 @@ claude-squeeze 之所以不断变好，靠的是大家反馈的问题和愿望�
 ```bash
 squeeze version            # 你的版本
 squeeze report --json      # 最近 squeeze 挡在上下文之外的内容
+squeeze doctor --json      # 每条消息附带的内容（v0.2）
 SQUEEZE_SKIP=1 <command>   # 原始输出（与摘要对比）
 ```
 
