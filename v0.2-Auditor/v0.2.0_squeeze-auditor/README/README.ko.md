@@ -80,11 +80,7 @@ v0.1의 기능은 그대로 동작합니다: 출력 많은 명령은 `squeeze ru
 | macOS, Intel | `squeeze-Auditor-0.2.0-macos-x86_64.pkg` | 같음 |
 | Linux (Debian, Ubuntu) | `squeeze-auditor_0.2.0_amd64.deb` / `_arm64.deb` | `sudo apt install ./squeeze-auditor_0.2.0_amd64.deb`, 그다음 앱 메뉴 |
 
-**설치 파일에 아직 코드 서명이 없어서** 처음 한 번 경고가 뜹니다.
-- **Windows** SmartScreen: "Windows의 PC 보호" → **추가 정보** → **실행**.
-- **macOS**: "확인되지 않은 개발자" → 파일을 오른쪽 클릭 → **열기**, 또는 시스템 설정 → 개인정보 보호 및 보안 → **그래도 열기**.
-
-모든 파일은 릴리스 페이지의 `checksums.txt`(SHA-256)에 있습니다.
+**설치 파일에 아직 코드 서명이 없어서** Windows와 macOS가 처음 한 번 막을 수 있습니다. [시스템이 막을 때](#시스템이-막을-때)를 보세요.
 
 터미널로 설치(두 프로그램 모두, 시작 메뉴 아이콘 없음):
 
@@ -96,6 +92,35 @@ irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/ins
 # 소스에서 (Rust 1.80+)
 cargo install --git https://github.com/jongwooish/claude-squeeze squeeze
 ```
+
+### 시스템이 막을 때
+
+릴리스 파일에 아직 코드 서명이 없어서 Windows와 macOS는 누가 만들었는지 알 수 없습니다. 파일은 이 저장소에서 GitHub Actions가 빌드합니다. 경고를 넘기기 전에 릴리스 페이지의 `checksums.txt`와 같은지 먼저 확인하세요.
+
+```bash
+# macOS
+shasum -a 256 -c checksums.txt --ignore-missing
+# Linux
+sha256sum -c checksums.txt --ignore-missing
+# Windows (PowerShell): 릴리스 페이지의 해시와 비교
+Get-FileHash .\squeeze-Auditor-0.2.0-setup-x64.exe -Algorithm SHA256
+```
+
+**Windows**
+- **SmartScreen** ("Windows의 PC 보호"): **추가 정보** → **실행**.
+- **스마트 앱 컨트롤** ("스마트 앱 컨트롤이 안전하지 않을 수 있는 앱을 차단했습니다"): 그래도 실행하는 버튼이 없고, 모든 프로그램을 검사하기 때문에 설치한 뒤 `squeeze.exe`, `squeeze-auditor.exe`도 막힙니다. 가상 머신이나 Windows 샌드박스에서 써 보거나, 끄세요: Windows 보안 → 앱 및 브라우저 컨트롤 → 스마트 앱 컨트롤 설정 → **끄기**. Windows 11 25H2 이상은 나중에 다시 켤 수 있고, 그 전 버전은 한 번 끄면 Windows를 다시 설치할 때까지 꺼져 있습니다.
+- **브라우저로 받은 zip**: 압축을 풀기 전에 오른쪽 클릭 → 속성 → **차단 해제**, 또는 `Unblock-File .\squeeze-*.zip`.
+- **백신**: 백신 회사에 오탐으로 신고하거나 `%LOCALAPPDATA%\Programs\squeeze`를 예외로 추가하세요.
+
+**macOS**
+- **"열 수 없음" / "확인되지 않은 개발자"**: 시스템 설정 → 개인정보 보호 및 보안 → 아래로 스크롤 → 파일 이름 옆 **그래도 열기** → 암호 입력. macOS 15 이상에서는 오른쪽 클릭 → 열기로 이 검사를 건너뛸 수 없습니다.
+- **"손상되었기 때문에 열 수 없습니다"**: 다운로드 표시가 남아 있는 것입니다. `xattr -dr com.apple.quarantine /Applications/squeeze-Auditor.app`을 실행하세요.
+- **`.tar.gz`의 터미널 프로그램**: `xattr -d com.apple.quarantine squeeze squeeze-auditor`.
+
+**Linux**
+- `.deb`는 `sudo apt install ./squeeze-auditor_0.2.0_amd64.deb`로 설치하세요. 일부 소프트웨어 센터는 배포판 밖의 패키지라고 경고하지만 터미널의 apt는 그렇지 않습니다.
+- `.tar.gz` 프로그램이 **"Permission denied"**: `chmod +x squeeze squeeze-auditor`. 폴더가 `noexec`로 마운트돼 있으면(일부 `/tmp`, USB) `~/.local/bin`으로 옮기세요.
+- 다른 배포판(Fedora, Arch 등)은 `.tar.gz`나 위의 터미널 설치를 쓰세요.
 
 ## 빠른 시작
 

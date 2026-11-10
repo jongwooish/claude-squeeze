@@ -80,11 +80,7 @@ Téléchargez depuis la [dernière version](https://github.com/jongwooish/claude
 | macOS, Intel | `squeeze-Auditor-0.2.0-macos-x86_64.pkg` | Pareil |
 | Linux (Debian, Ubuntu) | `squeeze-auditor_0.2.0_amd64.deb` / `_arm64.deb` | `sudo apt install ./squeeze-auditor_0.2.0_amd64.deb`, puis le menu des applications |
 
-**Les installateurs ne sont pas encore signés**, votre système préviendra donc une fois :
-- **Windows** SmartScreen : « Windows a protégé votre ordinateur » → **Informations complémentaires** → **Exécuter quand même**.
-- **macOS** : « impossible d'ouvrir car il provient d'un développeur non identifié » → clic droit sur le fichier → **Ouvrir**, ou Réglages Système → Confidentialité et sécurité → **Ouvrir quand même**.
-
-Chaque fichier figure dans `checksums.txt` (SHA-256) sur la page de la version.
+**Les installateurs ne sont pas encore signés**, donc Windows et macOS peuvent les arrêter la première fois. Voir [Si le système le bloque](#si-le-système-le-bloque).
 
 Installation en terminal (les deux programmes, sans icône dans le menu Démarrer) :
 
@@ -96,6 +92,35 @@ irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/ins
 # Depuis les sources (Rust 1.80+)
 cargo install --git https://github.com/jongwooish/claude-squeeze squeeze
 ```
+
+### Si le système le bloque
+
+Les fichiers de la version ne sont pas encore signés, donc Windows et macOS ne savent pas qui les a créés. Ils sont compilés par GitHub Actions à partir de ce dépôt. Avant de passer outre un avertissement, vérifiez que le fichier correspond à `checksums.txt` sur la page de la version :
+
+```bash
+# macOS
+shasum -a 256 -c checksums.txt --ignore-missing
+# Linux
+sha256sum -c checksums.txt --ignore-missing
+# Windows (PowerShell): comparez avec le hash de la page de la version
+Get-FileHash .\squeeze-Auditor-0.2.0-setup-x64.exe -Algorithm SHA256
+```
+
+**Windows**
+- **SmartScreen** (« Windows a protégé votre ordinateur ») : **Informations complémentaires** → **Exécuter quand même**.
+- **Smart App Control** (« Smart App Control a bloqué une application potentiellement dangereuse ») : il n'y a pas de bouton pour l'exécuter quand même, et il vérifie chaque programme, donc `squeeze.exe` et `squeeze-auditor.exe` seraient aussi bloqués après l'installation. Essayez squeeze dans une machine virtuelle ou dans le Bac à sable Windows, ou désactivez-le : Sécurité Windows → Contrôle des applications et du navigateur → Paramètres de Smart App Control → **Désactivé**. Sous Windows 11 25H2 et versions ultérieures, vous pourrez le réactiver ; sur les versions plus anciennes, il reste désactivé jusqu'à la réinstallation de Windows.
+- **Zip téléchargé avec le navigateur** : avant l'extraction, clic droit → Propriétés → **Débloquer**, ou `Unblock-File .\squeeze-*.zip`.
+- **Antivirus** : signalez le faux positif à l'éditeur ou ajoutez une exception pour `%LOCALAPPDATA%\Programs\squeeze`.
+
+**macOS**
+- **« impossible d'ouvrir » / « développeur non identifié »** : Réglages Système → Confidentialité et sécurité → faites défiler → **Ouvrir quand même** à côté du nom du fichier, puis saisissez votre mot de passe. Sous macOS 15 et versions ultérieures, clic droit → Ouvrir ne contourne plus cette vérification.
+- **« est endommagé et ne peut pas être ouvert »** : l'app porte encore la marque de téléchargement. Lancez `xattr -dr com.apple.quarantine /Applications/squeeze-Auditor.app`.
+- **Programmes en ligne de commande du `.tar.gz`** : `xattr -d com.apple.quarantine squeeze squeeze-auditor`.
+
+**Linux**
+- Installez le `.deb` avec `sudo apt install ./squeeze-auditor_0.2.0_amd64.deb`. Certaines logithèques avertissent pour les paquets hors de votre distribution ; apt dans un terminal ne le fait pas.
+- **« Permission denied »** avec les programmes du `.tar.gz` : `chmod +x squeeze squeeze-auditor`. Si le dossier est monté en `noexec` (certains `/tmp` et clés USB), déplacez-les dans `~/.local/bin`.
+- Autres distributions (Fedora, Arch, etc.) : utilisez le `.tar.gz` ou l'installation en terminal ci-dessus.
 
 ## Démarrage rapide
 

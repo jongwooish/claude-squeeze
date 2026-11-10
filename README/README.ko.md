@@ -151,7 +151,7 @@ v0.1 전체 문서: [v0.1-Sentinel/v0.1.0_squeeze-sentinel/README.ko.md](../v0.1
 | macOS | `squeeze-Auditor-0.2.0-macos-arm64.pkg` (Intel: `-macos-x86_64.pkg`) |
 | Linux (Debian, Ubuntu) | `squeeze-auditor_0.2.0_amd64.deb` (ARM: `_arm64.deb`) |
 
-설치 파일에 아직 코드 서명이 없습니다. Windows SmartScreen: **추가 정보 → 실행**. macOS: 오른쪽 클릭 → **열기**. 자세히: [v0.2 설치](../v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.ko.md#설치).
+설치 파일에 아직 코드 서명이 없어서 Windows와 macOS가 막을 수 있습니다. SmartScreen, 스마트 앱 컨트롤, Gatekeeper, Linux 실행 권한: [시스템이 막을 때](../v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.ko.md#시스템이-막을-때).
 
 **터미널:**
 

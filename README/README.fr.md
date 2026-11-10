@@ -151,7 +151,7 @@ Documentation complète de la v0.1 : [v0.1-Sentinel/v0.1.0_squeeze-sentinel/READ
 | macOS | `squeeze-Auditor-0.2.0-macos-arm64.pkg` (Intel : `-macos-x86_64.pkg`) |
 | Linux (Debian, Ubuntu) | `squeeze-auditor_0.2.0_amd64.deb` (ARM : `_arm64.deb`) |
 
-Les installateurs ne sont pas encore signés. Windows SmartScreen : **Informations complémentaires → Exécuter quand même**. macOS : clic droit → **Ouvrir**. Détails : [installation de la v0.2](../v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.fr.md#installation).
+Les installateurs ne sont pas encore signés, donc Windows et macOS peuvent les bloquer. SmartScreen, Smart App Control, Gatekeeper et droits d'exécution sous Linux : [Si le système le bloque](../v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.fr.md#si-le-système-le-bloque).
 
 **Terminal :**
 

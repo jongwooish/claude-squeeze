@@ -151,7 +151,7 @@ v0.1 完整文档：[v0.1-Sentinel/v0.1.0_squeeze-sentinel/README.zh-CN.md](../v
 | macOS | `squeeze-Auditor-0.2.0-macos-arm64.pkg`（Intel：`-macos-x86_64.pkg`） |
 | Linux（Debian、Ubuntu） | `squeeze-auditor_0.2.0_amd64.deb`（ARM：`_arm64.deb`） |
 
-安装程序尚未进行代码签名。Windows SmartScreen：**更多信息 → 仍要运行**。macOS：右键 → **打开**。详见 [v0.2 安装](../v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.zh-CN.md#安装)。
+安装程序尚未进行代码签名，Windows 和 macOS 可能会拦截。SmartScreen、智能应用控制、Gatekeeper 和 Linux 执行权限：[被系统拦截时](../v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.zh-CN.md#被系统拦截时)。
 
 **终端：**
 

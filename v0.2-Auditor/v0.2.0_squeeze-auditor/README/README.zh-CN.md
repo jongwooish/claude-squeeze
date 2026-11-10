@@ -80,11 +80,7 @@ v0.1 的功能照常运行：输出多的命令走 `squeeze run`，大文件给�
 | macOS，Intel | `squeeze-Auditor-0.2.0-macos-x86_64.pkg` | 同上 |
 | Linux（Debian、Ubuntu） | `squeeze-auditor_0.2.0_amd64.deb` / `_arm64.deb` | `sudo apt install ./squeeze-auditor_0.2.0_amd64.deb`，然后打开应用菜单 |
 
-**安装程序尚未进行代码签名**，所以系统会提示一次：
-- **Windows** SmartScreen：“Windows 已保护你的电脑”→ **更多信息** → **仍要运行**。
-- **macOS**：“无法打开，因为它来自身份不明的开发者”→ 右键点击文件 → **打开**，或 系统设置 → 隐私与安全性 → **仍要打开**。
-
-所有文件都列在发布页面的 `checksums.txt`（SHA-256）中。
+**安装程序尚未进行代码签名**，所以 Windows 和 macOS 第一次可能会拦截。见[被系统拦截时](#被系统拦截时)。
 
 终端安装（两个程序，无开始菜单图标）：
 
@@ -96,6 +92,35 @@ irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/ins
 # 从源码（Rust 1.80+）
 cargo install --git https://github.com/jongwooish/claude-squeeze squeeze
 ```
+
+### 被系统拦截时
+
+发布文件尚未进行代码签名，所以 Windows 和 macOS 无法确认作者。文件由 GitHub Actions 从本仓库构建。绕过警告之前，先确认文件与发布页面上的 `checksums.txt` 一致：
+
+```bash
+# macOS
+shasum -a 256 -c checksums.txt --ignore-missing
+# Linux
+sha256sum -c checksums.txt --ignore-missing
+# Windows (PowerShell): 与发布页面上的哈希比较
+Get-FileHash .\squeeze-Auditor-0.2.0-setup-x64.exe -Algorithm SHA256
+```
+
+**Windows**
+- **SmartScreen**（“Windows 已保护你的电脑”）：**更多信息** → **仍要运行**。
+- **智能应用控制**（“智能应用控制已阻止可能不安全的应用”）：没有“仍要运行”按钮，而且它检查每个程序，所以安装后的 `squeeze.exe` 和 `squeeze-auditor.exe` 也会被阻止。可以在虚拟机或 Windows 沙盒中试用，或者关闭它：Windows 安全中心 → 应用和浏览器控制 → 智能应用控制设置 → **关闭**。Windows 11 25H2 及以上版本之后可以再打开；更早的版本关闭后要重装 Windows 才能再打开。
+- **用浏览器下载的 zip**：解压前右键 → 属性 → **解除锁定**，或运行 `Unblock-File .\squeeze-*.zip`。
+- **杀毒软件**：向杀毒软件厂商报告误报，或把 `%LOCALAPPDATA%\Programs\squeeze` 加入例外。
+
+**macOS**
+- **“无法打开” /“身份不明的开发者”**：系统设置 → 隐私与安全性 → 向下滚动 → 文件名旁边的 **仍要打开** → 输入密码。macOS 15 及以上版本中，右键 → 打开 不再能跳过这项检查。
+- **“已损坏，无法打开”**：应用上还留着下载标记。运行 `xattr -dr com.apple.quarantine /Applications/squeeze-Auditor.app`。
+- **`.tar.gz` 里的终端程序**：`xattr -d com.apple.quarantine squeeze squeeze-auditor`。
+
+**Linux**
+- 用 `sudo apt install ./squeeze-auditor_0.2.0_amd64.deb` 安装 `.deb`。有些软件中心会对发行版之外的软件包发出警告，终端里的 apt 不会。
+- `.tar.gz` 里的程序提示 **“Permission denied”**：`chmod +x squeeze squeeze-auditor`。如果文件夹以 `noexec` 挂载（某些 `/tmp` 和 U 盘），把它们移到 `~/.local/bin`。
+- 其他发行版（Fedora、Arch 等）：使用 `.tar.gz` 或上面的终端安装。
 
 ## 快速开始
 

@@ -16,12 +16,14 @@
 
 ### 경고 창이 뜰 때
 
-아직 코드 서명이 없어서 처음 한 번 경고가 뜹니다.
+아직 코드 서명이 없어서 처음 한 번 막힐 수 있습니다. 경고를 넘기기 전에 릴리스 페이지의 `checksums.txt`(SHA-256)와 파일이 같은지 확인하세요.
 
-- **Windows**: "Windows의 PC 보호" 창 → **추가 정보** → **실행**.
-- **macOS**: "확인되지 않은 개발자" 창 → 파일을 오른쪽 클릭 → **열기**. 또는 시스템 설정 → 개인정보 보호 및 보안 → **그래도 열기**.
+- **Windows SmartScreen** ("Windows의 PC 보호"): **추가 정보** → **실행**.
+- **Windows 스마트 앱 컨트롤**: 그래도 실행하는 버튼이 없고, 설치한 뒤 `squeeze.exe`도 막습니다. 가상 머신이나 Windows 샌드박스에서 쓰거나, Windows 보안 → 앱 및 브라우저 컨트롤 → 스마트 앱 컨트롤 설정에서 끄세요 (Windows 11 25H2 이상은 나중에 다시 켤 수 있습니다).
+- **macOS** ("열 수 없음", "확인되지 않은 개발자"): 시스템 설정 → 개인정보 보호 및 보안 → **그래도 열기**. "손상되었기 때문에 열 수 없습니다"가 뜨면 `xattr -dr com.apple.quarantine /Applications/squeeze-Auditor.app`.
+- **Linux**: `.deb`는 `sudo apt install ./파일.deb`로 설치하고, `.tar.gz` 프로그램이 "Permission denied"면 `chmod +x squeeze squeeze-auditor`.
 
-파일이 바뀌지 않았는지 확인하려면 릴리스 페이지의 `checksums.txt`(SHA-256)와 비교하세요.
+명령어까지 전부 정리한 내용: [시스템이 막을 때](../../README/README.ko.md#시스템이-막을-때).
 
 ### Windows 설치 파일이 하는 일
 

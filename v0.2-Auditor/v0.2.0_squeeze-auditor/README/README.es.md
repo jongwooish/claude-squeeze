@@ -80,11 +80,7 @@ Descarga desde la [última versión](https://github.com/jongwooish/claude-squeez
 | macOS, Intel | `squeeze-Auditor-0.2.0-macos-x86_64.pkg` | Igual |
 | Linux (Debian, Ubuntu) | `squeeze-auditor_0.2.0_amd64.deb` / `_arm64.deb` | `sudo apt install ./squeeze-auditor_0.2.0_amd64.deb` y luego el menú de aplicaciones |
 
-**Los instaladores aún no están firmados**, así que el sistema avisará una vez:
-- **Windows** SmartScreen: «Windows protegió su PC» → **Más información** → **Ejecutar de todas formas**.
-- **macOS**: «no se puede abrir porque es de un desarrollador no identificado» → clic derecho en el archivo → **Abrir**, o Ajustes del Sistema → Privacidad y seguridad → **Abrir igualmente**.
-
-Todos los archivos aparecen en `checksums.txt` (SHA-256) en la página de la versión.
+**Los instaladores aún no están firmados**, así que Windows y macOS pueden detenerlos la primera vez. Consulta [Si el sistema lo bloquea](#si-el-sistema-lo-bloquea).
 
 Instalación por terminal (ambos programas, sin icono en el menú Inicio):
 
@@ -96,6 +92,35 @@ irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/ins
 # Desde el código (Rust 1.80+)
 cargo install --git https://github.com/jongwooish/claude-squeeze squeeze
 ```
+
+### Si el sistema lo bloquea
+
+Los archivos de la versión aún no están firmados, así que Windows y macOS no pueden saber quién los hizo. Los compila GitHub Actions a partir de este repositorio. Antes de saltarte un aviso, comprueba que el archivo coincide con `checksums.txt` de la página de la versión:
+
+```bash
+# macOS
+shasum -a 256 -c checksums.txt --ignore-missing
+# Linux
+sha256sum -c checksums.txt --ignore-missing
+# Windows (PowerShell): compara con el hash de la página de la versión
+Get-FileHash .\squeeze-Auditor-0.2.0-setup-x64.exe -Algorithm SHA256
+```
+
+**Windows**
+- **SmartScreen** («Windows protegió su PC»): **Más información** → **Ejecutar de todas formas**.
+- **Control inteligente de aplicaciones** («El Control inteligente de aplicaciones bloqueó una aplicación que puede no ser segura»): no hay botón para ejecutarlo igualmente, y revisa todos los programas, así que tras instalar también bloquearía `squeeze.exe` y `squeeze-auditor.exe`. Prueba squeeze en una máquina virtual o en Windows Sandbox, o desactívalo: Seguridad de Windows → Control de aplicaciones y navegador → Configuración de Control inteligente de aplicaciones → **Desactivado**. En Windows 11 25H2 y posteriores puedes volver a activarlo; en versiones anteriores sigue desactivado hasta reinstalar Windows.
+- **Zip descargado con el navegador**: antes de extraerlo, clic derecho → Propiedades → **Desbloquear**, o `Unblock-File .\squeeze-*.zip`.
+- **Antivirus**: informa del falso positivo a tu proveedor o añade una excepción para `%LOCALAPPDATA%\Programs\squeeze`.
+
+**macOS**
+- **«no se puede abrir» / «desarrollador no identificado»**: Ajustes del Sistema → Privacidad y seguridad → desplázate hacia abajo → **Abrir igualmente** junto al nombre del archivo, y escribe tu contraseña. En macOS 15 y posteriores, clic derecho → Abrir ya no se salta esta comprobación.
+- **«está dañado y no se puede abrir»**: la app aún tiene la marca de descarga. Ejecuta `xattr -dr com.apple.quarantine /Applications/squeeze-Auditor.app`.
+- **Programas de terminal del `.tar.gz`**: `xattr -d com.apple.quarantine squeeze squeeze-auditor`.
+
+**Linux**
+- Instala el `.deb` con `sudo apt install ./squeeze-auditor_0.2.0_amd64.deb`. Algunos centros de software avisan de paquetes de fuera de tu distribución; apt en una terminal no.
+- **«Permission denied»** con los programas del `.tar.gz`: `chmod +x squeeze squeeze-auditor`. Si la carpeta está montada con `noexec` (algunos `/tmp` y USB), muévelos a `~/.local/bin`.
+- Otras distribuciones (Fedora, Arch, etc.): usa el `.tar.gz` o la instalación por terminal de arriba.
 
 ## Inicio rápido
 

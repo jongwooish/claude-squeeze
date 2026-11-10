@@ -151,7 +151,7 @@ v0.1 の詳しいドキュメント: [v0.1-Sentinel/v0.1.0_squeeze-sentinel/READ
 | macOS | `squeeze-Auditor-0.2.0-macos-arm64.pkg`（Intel: `-macos-x86_64.pkg`） |
 | Linux（Debian、Ubuntu） | `squeeze-auditor_0.2.0_amd64.deb`（ARM: `_arm64.deb`） |
 
-インストーラーはまだコード署名されていません。Windows SmartScreen: **詳細情報 → 実行**。macOS: 右クリック → **開く**。詳しくは [v0.2 のインストール](../v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.ja.md#インストール)。
+インストーラーはまだコード署名されていないため、Windows と macOS がブロックすることがあります。SmartScreen、スマート アプリ コントロール、Gatekeeper、Linux の実行権限: [システムにブロックされたとき](../v0.2-Auditor/v0.2.0_squeeze-auditor/README/README.ja.md#システムにブロックされたとき)。
 
 **ターミナル:**
 

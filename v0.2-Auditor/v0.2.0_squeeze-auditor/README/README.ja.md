@@ -80,11 +80,7 @@ v0.1 の機能はそのまま動きます: 出力の多いコマンドは `squee
 | macOS、Intel | `squeeze-Auditor-0.2.0-macos-x86_64.pkg` | 同じ |
 | Linux（Debian、Ubuntu） | `squeeze-auditor_0.2.0_amd64.deb` / `_arm64.deb` | `sudo apt install ./squeeze-auditor_0.2.0_amd64.deb`、その後アプリメニュー |
 
-**インストーラーはまだコード署名されていない**ため、最初に一度警告が出ます。
-- **Windows** SmartScreen: 「Windows によって PC が保護されました」→ **詳細情報** → **実行**。
-- **macOS**: 「開発元を確認できない」→ ファイルを右クリック → **開く**、またはシステム設定 → プライバシーとセキュリティ → **このまま開く**。
-
-すべてのファイルはリリースページの `checksums.txt`（SHA-256）に載っています。
+**インストーラーはまだコード署名されていない**ため、Windows と macOS が最初にブロックすることがあります。[システムにブロックされたとき](#システムにブロックされたとき)を見てください。
 
 ターミナルでのインストール（両プログラム、スタートメニューのアイコンなし）:
 
@@ -96,6 +92,35 @@ irm https://raw.githubusercontent.com/jongwooish/claude-squeeze/main/INSTALL/ins
 # ソースから（Rust 1.80+）
 cargo install --git https://github.com/jongwooish/claude-squeeze squeeze
 ```
+
+### システムにブロックされたとき
+
+リリースファイルはまだコード署名されていないため、Windows と macOS は作成者を確認できません。ファイルはこのリポジトリから GitHub Actions がビルドしています。警告を越える前に、リリースページの `checksums.txt` と一致するか確認してください。
+
+```bash
+# macOS
+shasum -a 256 -c checksums.txt --ignore-missing
+# Linux
+sha256sum -c checksums.txt --ignore-missing
+# Windows (PowerShell): リリースページのハッシュと比べる
+Get-FileHash .\squeeze-Auditor-0.2.0-setup-x64.exe -Algorithm SHA256
+```
+
+**Windows**
+- **SmartScreen**（「Windows によって PC が保護されました」）: **詳細情報** → **実行**。
+- **スマート アプリ コントロール**（「スマート アプリ コントロールにより、安全でない可能性のあるアプリがブロックされました」）: それでも実行するボタンはなく、すべてのプログラムを検査するため、インストール後の `squeeze.exe` と `squeeze-auditor.exe` もブロックされます。仮想マシンか Windows サンドボックスで試すか、オフにしてください: Windows セキュリティ → アプリとブラウザー コントロール → スマート アプリ コントロールの設定 → **オフ**。Windows 11 25H2 以降は後でオンに戻せます。それより前のバージョンでは、Windows を再インストールするまでオフのままです。
+- **ブラウザーで落とした zip**: 展開する前に右クリック → プロパティ → **許可する**、または `Unblock-File .\squeeze-*.zip`。
+- **ウイルス対策ソフト**: 誤検知としてベンダーに報告するか、`%LOCALAPPDATA%\Programs\squeeze` を除外に追加してください。
+
+**macOS**
+- **「開けません」/「開発元を確認できない」**: システム設定 → プライバシーとセキュリティ → 下へスクロール → ファイル名の横の **このまま開く** → パスワードを入力。macOS 15 以降では、右クリック → 開く でこの確認を飛ばせなくなりました。
+- **「壊れているため開けません」**: ダウンロードの印が残っています。`xattr -dr com.apple.quarantine /Applications/squeeze-Auditor.app` を実行してください。
+- **`.tar.gz` のターミナル用プログラム**: `xattr -d com.apple.quarantine squeeze squeeze-auditor`。
+
+**Linux**
+- `.deb` は `sudo apt install ./squeeze-auditor_0.2.0_amd64.deb` で入れてください。一部のソフトウェアセンターはディストリビューション外のパッケージとして警告しますが、ターミナルの apt は警告しません。
+- `.tar.gz` のプログラムで **「Permission denied」**: `chmod +x squeeze squeeze-auditor`。フォルダーが `noexec` でマウントされている場合（一部の `/tmp` や USB）、`~/.local/bin` に移してください。
+- ほかのディストリビューション（Fedora、Arch など）は `.tar.gz` か上のターミナルインストールを使ってください。
 
 ## クイックスタート
 
